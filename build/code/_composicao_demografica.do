@@ -28,14 +28,10 @@ global area_geografica = "Amazônia Legal"
 local type raca_branca raca_preta raca_indigena 	/*
 	*/ 	edu_1fundamental edu_2medio edu_3superior 	/*
 	*/ 	domicilio_urbano domicilio_rural 	/*
-	*/ 	homem mulher 	
-	
-/*
-local type area_regiao_metropolitana area_nregiao_metropolitana /*
+	*/ 	homem mulher area_regiao_metropolitana area_nregiao_metropolitana /*
 	*/ 	setor_agricultura setor_industria setor_construcao setor_comercio setor_servicos 	/*
 	*/ 	faixa_etaria_17 faixa_etaria_24 faixa_etaria_39 faixa_etaria_59 faixa_etaria_60
-*/	
-
+	
 * begin of loop over demographic composition
 foreach lname in `type' {
 	

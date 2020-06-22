@@ -12,17 +12,27 @@ esta pasta serve para guardar os dados brutos, e os códigos para extrair e limp
 esta pasta serve para guardar o bando de dados “limpo”, os códigos para a implementação das análises, e os seus resultados como tabelas e gráficos.
 
 3) document
+
 esta pasta serve para a construção escrita do artigo.
 
 4)  reference
+
 aqui guardaremos referências bibliográficas e outros documentos similares.
 
 Em cada uma das pastas 1) e 2), há uma seguinte subdivisão: a) input, b) code, c) output, d) tmp. No qual eu descrevo a seguir:
 
-a)       input – essa pasta serve para o armazenamento de dados ou outros arquivos serão usados para a tarefa destinada da pasta.
+a)       input 
 
-b)      code – essa pasta serve para armazenar os códigos utilizados para a tarefa destinada da pasta
+essa pasta serve para o armazenamento de dados ou outros arquivos serão usados para a tarefa destinada da pasta.
 
-c)       output – essa pasta serve para armazenar os resultados de acordo com o “input” e os “code”.
+b)      code 
 
-d)      tmp – apenas uma pasta para arquivos temporários.
+essa pasta serve para armazenar os códigos utilizados para a tarefa destinada da pasta
+
+c)       output
+
+pasta serve para armazenar os resultados de acordo com o “input” e os “code”.
+
+d)      tmp
+
+apenas uma pasta para arquivos temporários.

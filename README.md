@@ -3,18 +3,18 @@ O objetivo do projeto é descrever o mercado de trabalho na Amazônia Legal.
 
 A pasta está subdivida nas seguintes pastas: 1) build, 2) analysis, 3) document, 4) reference. No qual eu descrevo o propósito a seguir:
 
-1)      build: 
+1) build
 
 esta pasta serve para guardar os dados brutos, e os códigos para extrair e limpar os dados. O produto desta pasta deve ser um banco de dados “limpo” no qual a análise é feita.
 
-2)      analysis: 
+2) analysis
 
 esta pasta serve para guardar o bando de dados “limpo”, os códigos para a implementação das análises, e os seus resultados como tabelas e gráficos.
 
-3)      document: 
+3) document
 esta pasta serve para a construção escrita do artigo.
 
-4)      reference:
+4)  reference
 aqui guardaremos referências bibliográficas e outros documentos similares.
 
 Em cada uma das pastas 1) e 2), há uma seguinte subdivisão: a) input, b) code, c) output, d) tmp. No qual eu descrevo a seguir:

@@ -65,6 +65,8 @@ forvalues yr = 2012(1)2020{
 
 * save in the output directory
 save "$output_dir\_estrutura_emprego_amazonia_legal.dta", replace
+export excel using "$output_dir\_estrutura_emprego_amazonia_legal.xls", /*
+	*/	firstrow(varlabels) replace
 
 **********************
 **	Resto do Brasil	**
@@ -90,7 +92,8 @@ forvalues yr = 2012(1)2020{
 
 * save in the output directory
 save "$output_dir\_estrutura_emprego_resto_brasil.dta", replace
-
+export excel using "$output_dir\_estrutura_emprego_resto_brasil.xls", /*
+	*/	firstrow(varlabels) replace
 
 //////////////////////////////////////////////
 //	
@@ -122,6 +125,8 @@ forvalues yr = 2012(1)2020{
 
 * save in the output directory
 save "$output_dir\_estrutura_renda_amazonia_legal.dta", replace
+export excel using "$output_dir\_estrutura_renda_amazonia_legal.xls", /*
+	*/	firstrow(varlabels) replace
 
 **********************
 **	Resto do Brasil	**
@@ -147,7 +152,8 @@ forvalues yr = 2012(1)2020{
 
 * save in the output directory
 save "$output_dir\_estrutura_renda_resto_brasil.dta", replace
-
+export excel using "$output_dir\_estrutura_renda_resto_brasil.xls", /*
+	*/	firstrow(varlabels) replace
 
 //////////////////////////////////////////////
 //	
@@ -166,6 +172,8 @@ do "$code_dir\_programas_sociais"
 
 * save in the output directory
 save "$output_dir\_programas_sociais_amazonia_legal.dta", replace
+export excel using "$output_dir\_programas_sociais_amazonia_legal.xls", /*
+	*/	firstrow(varlabels) replace
 
 **********************
 **	Resto do Brasil	**
@@ -178,6 +186,8 @@ do "$code_dir\_programas_sociais"
 
 * save in the output directory
 save "$output_dir\_programas_sociais_resto_brasil.dta", replace
+export excel using "$output_dir\_programas_sociais_resto_brasil.xls", /*
+	*/	firstrow(varlabels) replace
 
 //////////////////////////////////////////////
 //	
@@ -216,6 +226,9 @@ preserve
 	
 * save in the output directory	
 save "$output_dir\_transicao_ocupacao_amazonia_legal_matriz.dta", replace	
+export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_matriz.xls", /*
+	*/	firstrow(varlabels) replace
+
 * restore
 restore
 
@@ -226,7 +239,10 @@ preserve
 	do "$code_dir\_transicao_ocupacao_3quarter_level"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_amazonia_legal_trimestral.dta", replace	
+save "$output_dir\_transicao_ocupacao_amazonia_legal_trimestral.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_trimestral.xls", /*
+	*/	firstrow(varlabels) replace
+
 * restore
 restore
 clear
@@ -262,7 +278,10 @@ preserve
 	do "$code_dir\_transicao_ocupacao_2matriz"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_resto_brasil_matriz.dta", replace	
+save "$output_dir\_transicao_ocupacao_resto_brasil_matriz.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_resto_brasil_matriz.xls", /*
+	*/	firstrow(varlabels) replace
+
 * restore
 restore
 
@@ -273,7 +292,10 @@ preserve
 	do "$code_dir\_transicao_ocupacao_3quarter_level"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.dta", replace	
+save "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.xls", /*
+	*/	firstrow(varlabels) replace
+		
 * restore
 restore
 clear

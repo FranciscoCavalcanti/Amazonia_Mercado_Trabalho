@@ -25,7 +25,7 @@ else if "`c(username)'" == "f.cavalcanti"   {
 }	
 
 global input_basiic		"${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\basico"  
-global input_advanc     "${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\avancado_clean"
+global input_advanc     "${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\avancado"
 global input_pnadanual	"${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_anual_20191016\Stata"      
 global tmp_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\tmp"   
 global code_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\code"   
@@ -202,7 +202,7 @@ export excel using "$output_dir\_programas_sociais_resto_brasil.xls", /*
 global area_geografica = "Amazônia Legal"
 
 * loop over all panel data
-forvalues yr = 1(1)7{
+forvalues yr = 1(1)8{
 	* call data
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
 	* run code to clean data
@@ -213,7 +213,7 @@ forvalues yr = 1(1)7{
 
 * append temporary data base
 clear
-forvalues yr = 1(1)7{
+forvalues yr = 1(1)8{
 	* call data
 	append using "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta"
 }
@@ -254,7 +254,7 @@ clear
 global area_geografica = "Resto do Brasil"
 
 * loop over all panel data
-forvalues yr = 1(1)7{
+forvalues yr = 1(1)8{
 	* call data
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
 	* run code to clean data
@@ -265,7 +265,7 @@ forvalues yr = 1(1)7{
 
 * append temporary data base
 clear
-forvalues yr = 1(1)7{
+forvalues yr = 1(1)8{
 	* call data
 	append using "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta"
 }

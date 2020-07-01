@@ -25,7 +25,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * select variables
-ds rendimento_* gini_*
+ds rendimento_* gini_* prop_*
 local type `r(varlist)'
 display "`type'"
 

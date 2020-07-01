@@ -168,7 +168,7 @@ if $time == 2012 /*
 
 else if $time == 2016 /*
 	*/ 	| 	$time == 2017 /* 
-	*/ 	| 	$time == 2019 /* 
+	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 	replace bolsa_familia=1 if V5002A==1
 	replace bolsa_familia=0 if bolsa_familia==.
@@ -188,7 +188,7 @@ if $time == 2012 /*
 
 else if $time == 2016 /*
 	*/ 	| 	$time == 2017 /* 
-	*/ 	| 	$time == 2019 /* 
+	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 		replace ajuda_gov=1 if V5002A==1 //  recebeu rendimentos de Programa Bolsa Família?
 		replace ajuda_gov=1 if V5001A==1 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
@@ -207,7 +207,7 @@ if $time == 2012 /*
 
 else if $time == 2016 /*
 	*/ 	| 	$time == 2017 /* 
-	*/ 	| 	$time == 2019 /* 
+	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 		replace bpc_loas=1 if V5001A==1 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
 }

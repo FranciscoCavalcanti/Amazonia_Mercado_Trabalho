@@ -161,12 +161,13 @@ gen bolsa_familia=.
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
 	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	$time == 2015 {
+	*/ 	| 	($time == 2015 & Trimestre ~=4) {
 		replace bolsa_familia=1 if V50101==1 //  ... recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
  		replace bolsa_familia=0 if bolsa_familia==.
 }
 
-else if $time == 2016 /*
+else if ($time == 2015 & Trimestre==4) 	/*
+	*/ 	| 	$time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
@@ -180,13 +181,14 @@ gen ajuda_gov=.
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
 	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	$time == 2015 {
+	*/ 	| 	($time == 2015 & Trimestre ~=4)  {
 		replace ajuda_gov=1 if V50101==1 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
 		replace ajuda_gov=1 if V50091==1 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
  		replace ajuda_gov=1 if V50111==1 //  recebeu rendimentos de algum outro programa social, público ou privado
 }
 
-else if $time == 2016 /*
+else if ($time == 2015 & Trimestre==4) 	/*
+	*/ 	| 	$time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
@@ -201,11 +203,12 @@ gen bpc_loas=.
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
 	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	$time == 2015 {
+	*/ 	| 	($time == 2015 & Trimestre ~=4)  {
 		replace bpc_loas=1 if V50091==1 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
 }
 
-else if $time == 2016 /*
+else if ($time == 2015 & Trimestre==4) 	/*
+	*/ 	| 	$time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {

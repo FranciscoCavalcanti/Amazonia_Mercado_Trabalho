@@ -153,6 +153,7 @@ cap drop iten*
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if desocupado == 1
 by Ano Trimestre, sort: egen n_de_desemprego = total(iten1)
+replace n_de_desemprego = round(n_de_desemprego)
 label variable n_de_desemprego "Número de desempregados"
 cap drop iten*
 cap drop tool* 
@@ -172,6 +173,7 @@ cap drop tool*
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if informal == 1
 by Ano Trimestre, sort: egen n_de_informalidade = total(iten1)
+replace n_de_informalidade = round(n_de_informalidade)
 label variable n_de_informalidade "Número de trabalhadores informais"
 cap drop iten*
 cap drop tool* 
@@ -183,48 +185,56 @@ cap drop tool*
 * Número de trabalhador com carteira assinada
 gen iten1 = 1 * V1028 if empregadoCC == 1
 by Ano Trimestre, sort: egen n_empregadoCC = total(iten1)
+replace n_empregadoCC = round(n_empregadoCC)
 label variable n_empregadoCC "Número de trabalhadores com carteira"
 cap drop iten*
 
 * Número de trabalhador sem carteira assinada
 gen iten1 = 1 * V1028 if empregadoSC == 1
 by Ano Trimestre, sort: egen n_empregadoSC = total(iten1)
+replace n_empregadoSC = round(n_empregadoSC)
 label variable n_empregadoSC "Número de trabalhadores sem carteira"
 cap drop iten*
 
 * Número de empregadores
 gen iten1 = 1 * V1028 if empregador == 1
 by Ano Trimestre, sort: egen n_empregador = total(iten1)
+replace n_empregador = round(n_empregador)
 label variable n_empregador "Número de empregadores"
 cap drop iten*
 
 * Número de trabalhadores por conta-própria
 gen iten1 = 1 * V1028 if cpropria == 1
 by Ano Trimestre, sort: egen n_cpropria = total(iten1)
+replace n_cpropria = round(n_cpropria)
 label variable n_cpropria "Número de trabalhadores por conta própria"
 cap drop iten*
 
 * Número de trabalhadores por conta-própria que contribui
 gen iten1 = 1 * V1028 if cpropriaC == 1
 by Ano Trimestre, sort: egen n_cpropriaC = total(iten1)
+replace n_cpropriaC = round(n_cpropriaC)
 label variable n_cpropriaC "Número de conta própria que contribui"
 cap drop iten*
 
 * Número de trabalhadores por conta-própria que não contribui
 gen iten1 = 1 * V1028 if cpropriaNc == 1
 by Ano Trimestre, sort: egen n_cpropriaNc = total(iten1)
+replace n_cpropriaNc = round(n_cpropriaNc)
 label variable n_cpropriaNc "Número de conta própria que não contribui"
 cap drop iten*
 
 * Número de militares
 gen iten1 = 1 * V1028 if militar == 1
 by Ano Trimestre, sort: egen n_militar = total(iten1)
+replace n_militar = round(n_militar)
 label variable n_militar "Número militares e estatutários"
 cap drop iten*
 
 * Número de trabalhadores em casa
 gen iten1 = 1 * V1028 if homeoffice == 1
 by Ano Trimestre, sort: egen n_homeoffice = total(iten1)
+replace n_homeoffice = round(n_homeoffice)
 label variable n_homeoffice "Número trabalhadores em casa"
 cap drop iten*
 

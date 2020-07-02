@@ -118,8 +118,8 @@ cap drop temp*
 	gen tempa1 = 1* V1028
 	by Ano Trimestre, sort: egen tempa2 = total(tempa1)
 
-by Ano Trimestre, sort: gen prop_rendimento_domiciliar_BF = (iten2/tempa2)*100
-label variable prop_rendimento_domiciliar_BF "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 300,00"
+by Ano Trimestre, sort: gen prop_rendimento_domiciliar_300 = (iten2/tempa2)*100
+label variable prop_rendimento_domiciliar_300 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 300,00"
 cap drop iten*
 cap drop temp*
 
@@ -145,8 +145,8 @@ cap drop temp*
 	gen tempa1 = 1* V1028
 	by Ano Trimestre, sort: egen tempa2 = total(tempa1)
 
-by Ano Trimestre, sort: gen prop_rendimento_domiciliar_BF = (iten2/tempa2)*100
-label variable prop_rendimento_domiciliar_BF "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 150,00"
+by Ano Trimestre, sort: gen prop_rendimento_domiciliar_150 = (iten2/tempa2)*100
+label variable prop_rendimento_domiciliar_150 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 150,00"
 cap drop iten*
 cap drop temp*
 

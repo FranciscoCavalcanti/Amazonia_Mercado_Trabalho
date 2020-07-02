@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.19)  20 JUN 2020 16:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6930 64-bit) (preloaded format=pdflatex 2019.1.19)  2 JUL 2020 18:44
 entering extended mode
 **./Preliminary_Results.tex
 (Preliminary_Results.tex
@@ -1245,7 +1245,16 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `\\' on input line 50.
 
-(Preliminary_Results.aux)
+(Preliminary_Results.aux
+
+LaTeX Warning: Label `tab:_transicao_ocupacao_resto_brasil_matriz' multiply def
+ined.
+
+
+LaTeX Warning: Label `tab:_transicao_ocupacao_resto_brasil_matriz' multiply def
+ined.
+
+)
 \openout1 = `Preliminary_Results.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 69.
@@ -1264,8 +1273,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 69.
 LaTeX Font Info:    ... okay on input line 69.
 LaTeX Font Info:    Try loading font information for OT1+lmss on input line 69.
 
-
-("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
+ ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd
+"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 *geometry* driver: auto-detecting
@@ -1429,50 +1438,50 @@ Package caption Info: threeparttable package is loaded.
 Package caption Info: End \AtBeginDocument code.
  (Preliminary_Results.nav)
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 73.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 75.
  [1{C:/Users/Francisco/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 ]
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 106.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 108.
 
 
 ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 106
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 108
 .
 ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 106
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 108
 .
  ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd
 "
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 106.
+(Font)              <10.95> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 106.
+(Font)              <8> on input line 108.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 106.
-LaTeX Font Info:    Try loading font information for U+msa on input line 106.
+(Font)              <6> on input line 108.
+LaTeX Font Info:    Try loading font information for U+msa on input line 108.
 
 ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.
 fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 106.
+LaTeX Font Info:    Try loading font information for U+msb on input line 108.
 
 ("C:\Users\Francisco\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.
 fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 106.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 108.
 
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <6> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 106.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 108.
 
  [2
 
@@ -1653,27 +1662,27 @@ Overfull \vbox (38.06223pt too high) detected at line 123
  <../../analysis/output/estrutura_emprego/_estrutura_emprego_prop_cpropriaNc.pn
 g (PNG copy)>]) (_sub_code/_estrutura_renda.tex
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 20.
+(Font)              <9> on input line 26.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 20.
+(Font)              <5> on input line 26.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <9> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 20.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 26.
 LaTeX Font Info:    Font shape `OT1/lmss/m/it' in size <5> not available
-(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 20.
+(Font)              Font shape `OT1/lmss/m/sl' tried instead on input line 26.
  [14
 
 ]
 <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_total.
-png, id=546, 855.195pt x 622.325pt>
+png, id=550, 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_t
 otal.png Graphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_to
 tal.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_rendimento_medio_total.png  used on input line 30.
+_rendimento_medio_total.png  used on input line 36.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 36
  []
 
 [15
@@ -1681,16 +1690,16 @@ Overfull \vbox (38.06223pt too high) detected at line 30
  <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_total
 .png (PNG copy)>]
 <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_inform
-al.png, id=578, 855.195pt x 622.325pt>
+al.png, id=582, 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_i
 nformal.png Graphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_in
 formal.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_rendimento_medio_informal.png  used on input line 40.
+_rendimento_medio_informal.png  used on input line 46.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
+Overfull \vbox (38.06223pt too high) detected at line 46
  []
 
 [16
@@ -1698,16 +1707,16 @@ Overfull \vbox (38.06223pt too high) detected at line 40
  <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_infor
 mal.png (PNG copy)>]
 <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_formal
-.png, id=610, 855.195pt x 622.325pt>
+.png, id=614, 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_f
 ormal.png Graphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_fo
 rmal.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_rendimento_medio_formal.png  used on input line 50.
+_rendimento_medio_formal.png  used on input line 56.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 50
+Overfull \vbox (38.06223pt too high) detected at line 56
  []
 
 [17
@@ -1715,91 +1724,125 @@ Overfull \vbox (38.06223pt too high) detected at line 50
  <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_medio_forma
 l.png (PNG copy)>]
 <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_domiciliar_p
-c.png, id=642, 855.195pt x 622.325pt>
+c.png, id=646, 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_domicil
 iar_pc.png Graphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_domicili
 ar_pc.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_rendimento_domiciliar_pc.png  used on input line 60.
+_rendimento_domiciliar_pc.png  used on input line 66.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 60
+Overfull \vbox (38.06223pt too high) detected at line 66
  []
 
 [18
 
  <../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_domiciliar_
 pc.png (PNG copy)>]
+<../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_domicil
+iar_150.png, id=678, 855.195pt x 622.325pt>
+File: ../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_do
+miciliar_150.png Graphic file (type png)
+<use ../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_dom
+iciliar_150.png>
+Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
+_prop_rendimento_domiciliar_150.png  used on input line 77.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 77
+ []
+
+[19
+
+ <../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_domici
+liar_150.png (PNG copy)>]
+<../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_domicil
+iar_300.png, id=711, 855.195pt x 622.325pt>
+File: ../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_do
+miciliar_300.png Graphic file (type png)
+<use ../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_dom
+iciliar_300.png>
+Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
+_prop_rendimento_domiciliar_300.png  used on input line 87.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 87
+ []
+
+[20
+
+ <../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_domici
+liar_300.png (PNG copy)>]
 <../../analysis/output/estrutura_renda/_estrutura_renda_gini_rendimento_domicil
-iar_pc.png, id=674, 855.195pt x 622.325pt>
+iar_pc.png, id=743, 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_rendimento_do
 miciliar_pc.png Graphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_rendimento_dom
 iciliar_pc.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_gini_rendimento_domiciliar_pc.png  used on input line 71.
+_gini_rendimento_domiciliar_pc.png  used on input line 97.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 71
- []
-
-[19
-
- <../../analysis/output/estrutura_renda/_estrutura_renda_gini_rendimento_domici
-liar_pc.png (PNG copy)>]
-<../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png, id=70
-7, 855.195pt x 622.325pt>
-File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png G
-raphic file (type png)
-<use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png>
-Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_gini_ocupado.png  used on input line 81.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 81
- []
-
-[20
-
- <../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png (PNG 
-copy)>]
-<../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png, id=7
-39, 855.195pt x 622.325pt>
-File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png 
-Graphic file (type png)
-<use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png>
-Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_gini_informal.png  used on input line 91.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 97
  []
 
 [21
 
+ <../../analysis/output/estrutura_renda/_estrutura_renda_gini_rendimento_domici
+liar_pc.png (PNG copy)>]
+<../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png, id=77
+5, 855.195pt x 622.325pt>
+File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png G
+raphic file (type png)
+<use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png>
+Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
+_gini_ocupado.png  used on input line 107.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 107
+ []
+
+[22
+
+ <../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png (PNG 
+copy)>]
+<../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png, id=8
+07, 855.195pt x 622.325pt>
+File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png 
+Graphic file (type png)
+<use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png>
+Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
+_gini_informal.png  used on input line 117.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 117
+ []
+
+[23
+
  <../../analysis/output/estrutura_renda/_estrutura_renda_gini_informal.png (PNG
  copy)>]
-<../../analysis/output/estrutura_renda/_estrutura_renda_gini_formal.png, id=770
+<../../analysis/output/estrutura_renda/_estrutura_renda_gini_formal.png, id=838
 , 855.195pt x 622.325pt>
 File: ../../analysis/output/estrutura_renda/_estrutura_renda_gini_formal.png Gr
 aphic file (type png)
 <use ../../analysis/output/estrutura_renda/_estrutura_renda_gini_formal.png>
 Package pdftex.def Info: ../../analysis/output/estrutura_renda/_estrutura_renda
-_gini_formal.png  used on input line 103.
+_gini_formal.png  used on input line 128.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 128
  []
 
-[22
+[24
 
  <../../analysis/output/estrutura_renda/_estrutura_renda_gini_formal.png (PNG c
-opy)>]) (_sub_code/_programas_sociais.tex [23
+opy)>]) (_sub_code/_programas_sociais.tex [25
 
 ]
 <../../analysis/output/programas_sociais/_programas_sociais_prop_ajuda_gov.png,
- id=839, 855.195pt x 622.325pt>
+ id=908, 855.195pt x 622.325pt>
 File: ../../analysis/output/programas_sociais/_programas_sociais_prop_ajuda_gov
 .png Graphic file (type png)
 <use ../../analysis/output/programas_sociais/_programas_sociais_prop_ajuda_gov.
@@ -1811,12 +1854,12 @@ iais_prop_ajuda_gov.png  used on input line 23.
 Overfull \vbox (38.06223pt too high) detected at line 23
  []
 
-[24
+[26
 
  <../../analysis/output/programas_sociais/_programas_sociais_prop_ajuda_gov.png
  (PNG copy)>]
 <../../analysis/output/programas_sociais/_programas_sociais_prop_bolsa_familia.
-png, id=871, 855.195pt x 622.325pt>
+png, id=940, 855.195pt x 622.325pt>
 File: ../../analysis/output/programas_sociais/_programas_sociais_prop_bolsa_fam
 ilia.png Graphic file (type png)
 <use ../../analysis/output/programas_sociais/_programas_sociais_prop_bolsa_fami
@@ -1828,12 +1871,12 @@ iais_prop_bolsa_familia.png  used on input line 33.
 Overfull \vbox (38.06223pt too high) detected at line 33
  []
 
-[25
+[27
 
  <../../analysis/output/programas_sociais/_programas_sociais_prop_bolsa_familia
 .png (PNG copy)>]
 <../../analysis/output/programas_sociais/_programas_sociais_prop_bpc_loas.png, 
-id=903, 855.195pt x 622.325pt>
+id=971, 855.195pt x 622.325pt>
 File: ../../analysis/output/programas_sociais/_programas_sociais_prop_bpc_loas.
 png Graphic file (type png)
 <use ../../analysis/output/programas_sociais/_programas_sociais_prop_bpc_loas.p
@@ -1845,876 +1888,984 @@ iais_prop_bpc_loas.png  used on input line 43.
 Overfull \vbox (38.06223pt too high) detected at line 43
  []
 
-[26
+[28
 
  <../../analysis/output/programas_sociais/_programas_sociais_prop_bpc_loas.png 
-(PNG copy)>]) (_sub_code/_transicao_ocupacao.tex [27
+(PNG copy)>]) (_sub_code/_transicao_ocupacao.tex [29
+
+]
+(../../analysis/output/transicao_ocupacao/_transicao_ocupacao_amazonia_legal_ma
+triz.tex
+Overfull \hbox (2.54327pt too wide) in paragraph at lines 28--30
+ [] 
+ []
+
+) [30
+
+]
+(../../analysis/output/transicao_ocupacao/_transicao_ocupacao_resto_brasil_matr
+iz.texpdfTeX warning (ext4): destination with the same identifier (name{tab:_tr
+ansicao_ocupacao_resto_brasil_matriz}) has been already used, duplicate ignored
+
+<to be read again> 
+                   \relax 
+l.29 ...b:_transicao_ocupacao_resto_brasil_matriz}
+                                                  %
+Overfull \hbox (2.54327pt too wide) in paragraph at lines 28--30
+ [] 
+ []
+
+) [31
+
+]
+(../../analysis/output/transicao_ocupacao/_transicao_ocupacao_matriz_diferenca.
+texpdfTeX warning (ext4): destination with the same identifier (name{tab:_trans
+icao_ocupacao_resto_brasil_matriz}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.29 ...b:_transicao_ocupacao_resto_brasil_matriz}
+                                                  %
+Overfull \hbox (2.54327pt too wide) in paragraph at lines 28--30
+ [] 
+ []
+
+) [32
 
 ]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_s
-h_formal.png, id=984, 855.195pt x 622.325pt>
+h_formal.png, id=1150, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempreg
 ado_sh_formal.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desemprega
 do_sh_formal.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_desempregado_sh_formal.png  used on input line 30.
+upacao_sh_desempregado_sh_formal.png  used on input line 53.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 53
  []
 
-[28
+[33
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_
 sh_formal.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_s
-h_informal.png, id=1016, 855.195pt x 622.325pt>
+h_informal.png, id=1182, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempreg
 ado_sh_informal.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desemprega
 do_sh_informal.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_desempregado_sh_informal.png  used on input line 40.
+upacao_sh_desempregado_sh_informal.png  used on input line 63.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
+Overfull \vbox (38.06223pt too high) detected at line 63
  []
 
-[29
+[34
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_
 sh_informal.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_s
-h_inativa.png, id=1048, 855.195pt x 622.325pt>
+h_inativa.png, id=1214, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempreg
 ado_sh_inativa.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desemprega
 do_sh_inativa.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_desempregado_sh_inativa.png  used on input line 50.
+upacao_sh_desempregado_sh_inativa.png  used on input line 73.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 50
+Overfull \vbox (38.06223pt too high) detected at line 73
  []
 
-[30
+[35
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_desempregado_
 sh_inativa.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_dese
-mpregado.png, id=1080, 855.195pt x 622.325pt>
+mpregado.png, id=1246, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh
 _desempregado.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_
 desempregado.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_formal_sh_desempregado.png  used on input line 60.
+upacao_sh_formal_sh_desempregado.png  used on input line 83.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 60
+Overfull \vbox (38.06223pt too high) detected at line 83
  []
 
-[31
+[36
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_des
 empregado.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_inat
-iva.png, id=1113, 855.195pt x 622.325pt>
+iva.png, id=1278, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh
 _inativa.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_
 inativa.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_formal_sh_inativa.png  used on input line 71.
+upacao_sh_formal_sh_inativa.png  used on input line 94.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 71
+Overfull \vbox (38.06223pt too high) detected at line 94
  []
 
-[32
+[37
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_ina
 tiva.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_info
-rmal.png, id=1145, 855.195pt x 622.325pt>
+rmal.png, id=1311, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh
 _informal.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_
 informal.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_formal_sh_informal.png  used on input line 81.
+upacao_sh_formal_sh_informal.png  used on input line 104.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 104
  []
 
-[33
+[38
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_inf
 ormal.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_de
-sempregado.png, id=1177, 855.195pt x 622.325pt>
+sempregado.png, id=1343, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_
 sh_desempregado.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_s
 h_desempregado.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_informal_sh_desempregado.png  used on input line 91.
+upacao_sh_informal_sh_desempregado.png  used on input line 114.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 114
  []
 
-[34
+[39
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_d
 esempregado.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_fo
-rmal.png, id=1209, 855.195pt x 622.325pt>
+rmal.png, id=1375, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_
 sh_formal.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_s
 h_formal.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_informal_sh_formal.png  used on input line 103.
+upacao_sh_informal_sh_formal.png  used on input line 126.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 126
  []
 
-[35
+[40
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_f
 ormal.png (PNG copy)>]
 <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_in
-ativa.png, id=1240, 855.195pt x 622.325pt>
+ativa.png, id=1406, 855.195pt x 622.325pt>
 File: ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_
 sh_inativa.png Graphic file (type png)
 <use ../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_s
 h_inativa.png>
 Package pdftex.def Info: ../../analysis/output/transicao_ocupacao/_transicao_oc
-upacao_sh_informal_sh_inativa.png  used on input line 113.
+upacao_sh_informal_sh_inativa.png  used on input line 136.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 136
  []
 
-[36
+[41
 
  <../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_informal_sh_i
-nativa.png (PNG copy)>]) (_sub_code/_composicao_demografica.tex [37
+nativa.png (PNG copy)>]) (_sub_code/_composicao_demografica.tex [42
 
 ]
-(_sub_code/_composicao_demografica_raca.tex [38
+(_sub_code/_composicao_demografica_raca.tex [43
 
 ]
 <../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_taxa_de_ocupacao.png, id=1368, 855.195pt x 622.325pt>
+_taxa_de_ocupacao.png, id=1536, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
 _raca_taxa_de_ocupacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
 raca_taxa_de_ocupacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_taxa_de_ocupacao.png  used on input line 30.
+posicao_demografica_raca_taxa_de_ocupacao.png  used on input line 31.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
- []
-
-[39
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_taxa_de_ocupacao.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_taxa_de_informalidade.png, id=1400, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_taxa_de_informalidade.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_taxa_de_informalidade.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_taxa_de_informalidade.png  used on input line 40.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 40
- []
-
-[40
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_taxa_de_informalidade.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_taxa_de_desemprego.png, id=1432, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_taxa_de_desemprego.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_taxa_de_desemprego.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_taxa_de_desemprego.png  used on input line 50.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 50
- []
-
-[41
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_taxa_de_desemprego.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_militar.png, id=1464, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_militar.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_militar.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_militar.png  used on input line 60.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 60
- []
-
-[42
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_militar.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_empregadoSC.png, id=1496, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_empregadoSC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_empregadoSC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_empregadoSC.png  used on input line 71.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 71
- []
-
-[43
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_empregadoSC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_empregadoCC.png, id=1529, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_empregadoCC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_empregadoCC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_empregadoCC.png  used on input line 81.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
 [44
 
  <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_empregadoCC.png (PNG copy)>]
+a_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_empregador.png, id=1561, 855.195pt x 622.325pt>
+_taxa_de_informalidade.png, id=1568, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_empregador.png Graphic file (type png)
+_raca_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_empregador.png>
+raca_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_empregador.png  used on input line 91.
+posicao_demografica_raca_taxa_de_informalidade.png  used on input line 41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
 [45
 
  <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_empregador.png (PNG copy)>]
+a_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_cpropria.png, id=1593, 855.195pt x 622.325pt>
+_taxa_de_desemprego.png, id=1600, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_cpropria.png Graphic file (type png)
+_raca_taxa_de_desemprego.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_cpropria.png>
+raca_taxa_de_desemprego.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_cpropria.png  used on input line 103.
+posicao_demografica_raca_taxa_de_desemprego.png  used on input line 51.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
 [46
 
  <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_cpropria.png (PNG copy)>]
+a_taxa_de_desemprego.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_cpropriaC.png, id=1625, 855.195pt x 622.325pt>
+_taxa_de_participacao.png, id=1632, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_cpropriaC.png Graphic file (type png)
+_raca_taxa_de_participacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_cpropriaC.png>
+raca_taxa_de_participacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_cpropriaC.png  used on input line 113.
+posicao_demografica_raca_taxa_de_participacao.png  used on input line 61.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 61
  []
 
 [47
 
  <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_cpropriaC.png (PNG copy)>]
+a_taxa_de_participacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
-_prop_cpropriaNc.png, id=1657, 855.195pt x 622.325pt>
+_prop_militar.png, id=1664, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
-_raca_prop_cpropriaNc.png Graphic file (type png)
+_raca_prop_militar.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
-raca_prop_cpropriaNc.png>
+raca_prop_militar.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
-posicao_demografica_raca_prop_cpropriaNc.png  used on input line 123.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 123
- []
-
-[48
-
- <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
-a_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_genero.tex [49
-
-]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_taxa_de_ocupacao.png, id=1740, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_taxa_de_ocupacao.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_taxa_de_ocupacao.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_taxa_de_ocupacao.png  used on input line 30.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 30
- []
-
-[50
-
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_taxa_de_ocupacao.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_taxa_de_informalidade.png, id=1772, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_taxa_de_informalidade.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_taxa_de_informalidade.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_taxa_de_informalidade.png  used on input line 40.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 40
- []
-
-[51
-
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_taxa_de_informalidade.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_taxa_de_desemprego.png, id=1804, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_taxa_de_desemprego.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_taxa_de_desemprego.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_taxa_de_desemprego.png  used on input line 50.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 50
- []
-
-[52
-
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_taxa_de_desemprego.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_militar.png, id=1836, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_militar.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_militar.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_militar.png  used on input line 60.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 60
- []
-
-[53
-
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_militar.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_empregadoSC.png, id=1868, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_empregadoSC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_empregadoSC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_empregadoSC.png  used on input line 71.
+posicao_demografica_raca_prop_militar.png  used on input line 71.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
 Overfull \vbox (38.06223pt too high) detected at line 71
  []
 
-[54
+[48
 
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_empregadoSC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_empregadoCC.png, id=1900, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_empregadoCC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_empregadoCC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_empregadoCC.png  used on input line 81.
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_militar.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_empregadoSC.png, id=1696, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_empregadoSC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_empregadoSC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_empregadoSC.png  used on input line 82.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 82
  []
 
-[55
+[49
 
- <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_empregadoCC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_empregador.png, id=1933, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_empregador.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_empregador.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_empregador.png  used on input line 91.
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_empregadoSC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_empregadoCC.png, id=1729, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_empregadoCC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_empregadoCC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_empregadoCC.png  used on input line 92.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 92
+ []
+
+[50
+
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_empregadoCC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_empregador.png, id=1761, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_empregador.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_empregador.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_empregador.png  used on input line 102.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 102
+ []
+
+[51
+
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_empregador.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_cpropria.png, id=1793, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_cpropria.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_cpropria.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_cpropria.png  used on input line 114.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 114
+ []
+
+[52
+
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_cpropria.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_cpropriaC.png, id=1825, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_cpropriaC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_cpropriaC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_cpropriaC.png  used on input line 124.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 124
+ []
+
+[53
+
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_cpropriaC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca
+_prop_cpropriaNc.png, id=1857, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/raca/_composicao_demografica
+_raca_prop_cpropriaNc.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/raca/_composicao_demografica_
+raca_prop_cpropriaNc.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/raca/_com
+posicao_demografica_raca_prop_cpropriaNc.png  used on input line 134.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 134
+ []
+
+[54
+
+ <../../analysis/output/composicao_demografica/raca/_composicao_demografica_rac
+a_prop_cpropriaNc.png (PNG copy)>])
+(_sub_code/_composicao_demografica_genero.tex [55
+
+]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_taxa_de_ocupacao.png, id=1942, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_taxa_de_ocupacao.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_taxa_de_ocupacao.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_taxa_de_ocupacao.png  used on input line 31.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
 [56
 
  <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_empregador.png (PNG copy)>]
+enero_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_cpropria.png, id=1965, 855.195pt x 622.325pt>
+nero_taxa_de_informalidade.png, id=1974, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_cpropria.png Graphic file (type png)
+ca_genero_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_cpropria.png>
+a_genero_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_cpropria.png  used on input line 103.
+omposicao_demografica_genero_taxa_de_informalidade.png  used on input line 41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
 [57
 
  <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_cpropria.png (PNG copy)>]
+enero_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_cpropriaC.png, id=1997, 855.195pt x 622.325pt>
+nero_taxa_de_desemprego.png, id=2006, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_cpropriaC.png Graphic file (type png)
+ca_genero_taxa_de_desemprego.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_cpropriaC.png>
+a_genero_taxa_de_desemprego.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_cpropriaC.png  used on input line 113.
+omposicao_demografica_genero_taxa_de_desemprego.png  used on input line 51.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
 [58
 
  <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
-enero_prop_cpropriaC.png (PNG copy)>]
+enero_taxa_de_desemprego.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
-nero_prop_cpropriaNc.png, id=2029, 855.195pt x 622.325pt>
+nero_taxa_de_participacao.png, id=2038, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
-ca_genero_prop_cpropriaNc.png Graphic file (type png)
+ca_genero_taxa_de_participacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
-a_genero_prop_cpropriaNc.png>
+a_genero_taxa_de_participacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
-omposicao_demografica_genero_prop_cpropriaNc.png  used on input line 123.
+omposicao_demografica_genero_taxa_de_participacao.png  used on input line 61.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 123
+Overfull \vbox (38.06223pt too high) detected at line 61
  []
 
 [59
 
  <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_taxa_de_participacao.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_militar.png, id=2070, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_militar.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_militar.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_militar.png  used on input line 71.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 71
+ []
+
+[60
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_militar.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_empregadoSC.png, id=2102, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_empregadoSC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_empregadoSC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_empregadoSC.png  used on input line 82.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 82
+ []
+
+[61
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_empregadoSC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_empregadoCC.png, id=2135, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_empregadoCC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_empregadoCC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_empregadoCC.png  used on input line 92.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 92
+ []
+
+[62
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_empregadoCC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_empregador.png, id=2167, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_empregador.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_empregador.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_empregador.png  used on input line 102.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 102
+ []
+
+[63
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_empregador.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_cpropria.png, id=2199, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_cpropria.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_cpropria.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_cpropria.png  used on input line 114.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 114
+ []
+
+[64
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_cpropria.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_cpropriaC.png, id=2231, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_cpropriaC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_cpropriaC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_cpropriaC.png  used on input line 124.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 124
+ []
+
+[65
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
+enero_prop_cpropriaC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/genero/_composicao_demografica_ge
+nero_prop_cpropriaNc.png, id=2263, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/genero/_composicao_demografi
+ca_genero_prop_cpropriaNc.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/genero/_composicao_demografic
+a_genero_prop_cpropriaNc.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/genero/_c
+omposicao_demografica_genero_prop_cpropriaNc.png  used on input line 134.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 134
+ []
+
+[66
+
+ <../../analysis/output/composicao_demografica/genero/_composicao_demografica_g
 enero_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_faixa_etaria.tex [60
+(_sub_code/_composicao_demografica_faixa_etaria.tex [67
 
 ]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_taxa_de_ocupacao.png, id=2111, 855.195pt x 622.325pt>
+ica_faixa_etaria_taxa_de_ocupacao.png, id=2348, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_taxa_de_ocupacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_taxa_de_ocupacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_taxa_de_ocupacao.png  used on input li
-ne 30.
+ne 31.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
-[61
+[68
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_taxa_de_informalidade.png, id=2144, 855.195pt x 622.325pt>
+ica_faixa_etaria_taxa_de_informalidade.png, id=2380, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_taxa_de_informalidade.png  used on inp
-ut line 40.
+ut line 41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
-[62
+[69
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_taxa_de_desemprego.png, id=2176, 855.195pt x 622.325pt>
+ica_faixa_etaria_taxa_de_desemprego.png, id=2412, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_taxa_de_desemprego.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_taxa_de_desemprego.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_taxa_de_desemprego.png  used on input 
-line 50.
+line 51.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 50
+Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
-[63
+[70
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_taxa_de_desemprego.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_militar.png, id=2208, 855.195pt x 622.325pt>
+ica_faixa_etaria_taxa_de_participacao.png, id=2444, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
+ografica_faixa_etaria_taxa_de_participacao.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
+grafica_faixa_etaria_taxa_de_participacao.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
+ria/_composicao_demografica_faixa_etaria_taxa_de_participacao.png  used on inpu
+t line 61.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 61
+ []
+
+[71
+
+ <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
+fica_faixa_etaria_taxa_de_participacao.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
+ica_faixa_etaria_prop_militar.png, id=2476, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_militar.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_militar.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
-ria/_composicao_demografica_faixa_etaria_prop_militar.png  used on input line 6
-0.
+ria/_composicao_demografica_faixa_etaria_prop_militar.png  used on input line 7
+1.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 60
+Overfull \vbox (38.06223pt too high) detected at line 71
  []
 
-[64
+[72
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_militar.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_empregadoSC.png, id=2240, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_empregadoSC.png, id=2508, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_empregadoSC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_empregadoSC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_empregadoSC.png  used on input li
-ne 71.
+ne 82.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 71
+Overfull \vbox (38.06223pt too high) detected at line 82
  []
 
-[65
+[73
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_empregadoSC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_empregadoCC.png, id=2272, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_empregadoCC.png, id=2541, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_empregadoCC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_empregadoCC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_empregadoCC.png  used on input li
-ne 81.
+ne 92.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 92
  []
 
-[66
+[74
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_empregadoCC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_empregador.png, id=2304, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_empregador.png, id=2573, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_empregador.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_empregador.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_empregador.png  used on input lin
-e 91.
+e 102.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 102
  []
 
-[67
+[75
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_empregador.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_cpropria.png, id=2337, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_cpropria.png, id=2605, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_cpropria.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_cpropria.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_cpropria.png  used on input line 
-103.
+114.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 114
  []
 
-[68
+[76
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_cpropria.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_cpropriaC.png, id=2369, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_cpropriaC.png, id=2637, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_cpropriaC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_cpropriaC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_cpropriaC.png  used on input line
- 113.
+ 124.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 124
  []
 
-[69
+[77
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_cpropriaC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demograf
-ica_faixa_etaria_prop_cpropriaNc.png, id=2401, 855.195pt x 622.325pt>
+ica_faixa_etaria_prop_cpropriaNc.png, id=2669, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_dem
 ografica_faixa_etaria_prop_cpropriaNc.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demo
 grafica_faixa_etaria_prop_cpropriaNc.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/faixa_eta
 ria/_composicao_demografica_faixa_etaria_prop_cpropriaNc.png  used on input lin
-e 123.
+e 134.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 123
+Overfull \vbox (38.06223pt too high) detected at line 134
  []
 
-[70
+[78
 
  <../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demogra
 fica_faixa_etaria_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_educacao.tex [71
+(_sub_code/_composicao_demografica_educacao.tex [79
 
 ]
 <../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_taxa_de_ocupacao.png, id=2483, 855.195pt x 622.325pt>
+educacao_taxa_de_ocupacao.png, id=2754, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
 fica_educacao_taxa_de_ocupacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
 ica_educacao_taxa_de_ocupacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_taxa_de_ocupacao.png  used on input line 30.
+_composicao_demografica_educacao_taxa_de_ocupacao.png  used on input line 31.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
-[72
+[80
 
  <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
 _educacao_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_taxa_de_informalidade.png, id=2515, 855.195pt x 622.325pt>
+educacao_taxa_de_informalidade.png, id=2786, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
 fica_educacao_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
 ica_educacao_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
 _composicao_demografica_educacao_taxa_de_informalidade.png  used on input line 
-40.
+41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
- []
-
-[73
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_taxa_de_informalidade.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_taxa_de_desemprego.png, id=2548, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_taxa_de_desemprego.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_taxa_de_desemprego.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_taxa_de_desemprego.png  used on input line 50.
-
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 50
- []
-
-[74
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_taxa_de_desemprego.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_militar.png, id=2580, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_militar.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_militar.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_militar.png  used on input line 60.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 60
- []
-
-[75
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_militar.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_empregadoSC.png, id=2612, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_empregadoSC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_empregadoSC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_empregadoSC.png  used on input line 71.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 71
- []
-
-[76
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_empregadoSC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_empregadoCC.png, id=2644, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_empregadoCC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_empregadoCC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_empregadoCC.png  used on input line 81.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 81
- []
-
-[77
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_empregadoCC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_empregador.png, id=2676, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_empregador.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_empregador.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_empregador.png  used on input line 91.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 91
- []
-
-[78
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_empregador.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_cpropria.png, id=2708, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_cpropria.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_cpropria.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_cpropria.png  used on input line 103.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 103
- []
-
-[79
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_cpropria.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_cpropriaC.png, id=2741, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_cpropriaC.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_cpropriaC.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_cpropriaC.png  used on input line 113.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 113
- []
-
-[80
-
- <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
-_educacao_prop_cpropriaC.png (PNG copy)>]
-<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
-educacao_prop_cpropriaNc.png, id=2773, 855.195pt x 622.325pt>
-File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
-fica_educacao_prop_cpropriaNc.png Graphic file (type png)
-<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
-ica_educacao_prop_cpropriaNc.png>
-Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
-_composicao_demografica_educacao_prop_cpropriaNc.png  used on input line 123.
-(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
-
-Overfull \vbox (38.06223pt too high) detected at line 123
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
 [81
 
  <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_taxa_de_informalidade.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_taxa_de_desemprego.png, id=2818, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_taxa_de_desemprego.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_taxa_de_desemprego.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_taxa_de_desemprego.png  used on input line 51.
+
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 51
+ []
+
+[82
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_taxa_de_desemprego.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_taxa_de_participacao.png, id=2850, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_taxa_de_participacao.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_taxa_de_participacao.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_taxa_de_participacao.png  used on input line 6
+1.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 61
+ []
+
+[83
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_taxa_de_participacao.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_militar.png, id=2882, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_militar.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_militar.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_militar.png  used on input line 71.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 71
+ []
+
+[84
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_militar.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_empregadoSC.png, id=2914, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_empregadoSC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_empregadoSC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_empregadoSC.png  used on input line 82.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 82
+ []
+
+[85
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_empregadoSC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_empregadoCC.png, id=2947, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_empregadoCC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_empregadoCC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_empregadoCC.png  used on input line 92.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 92
+ []
+
+[86
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_empregadoCC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_empregador.png, id=2979, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_empregador.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_empregador.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_empregador.png  used on input line 102.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 102
+ []
+
+[87
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_empregador.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_cpropria.png, id=3011, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_cpropria.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_cpropria.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_cpropria.png  used on input line 114.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 114
+ []
+
+[88
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_cpropria.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_cpropriaC.png, id=3043, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_cpropriaC.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_cpropriaC.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_cpropriaC.png  used on input line 124.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 124
+ []
+
+[89
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
+_educacao_prop_cpropriaC.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/educacao/_composicao_demografica_
+educacao_prop_cpropriaNc.png, id=3075, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/educacao/_composicao_demogra
+fica_educacao_prop_cpropriaNc.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/educacao/_composicao_demograf
+ica_educacao_prop_cpropriaNc.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/educacao/
+_composicao_demografica_educacao_prop_cpropriaNc.png  used on input line 134.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 134
+ []
+
+[90
+
+ <../../analysis/output/composicao_demografica/educacao/_composicao_demografica
 _educacao_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_setor.tex [82
+(_sub_code/_composicao_demografica_setor.tex [91
 
 ]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_taxa_de_informalidade.png, id=2851, 855.195pt x 622.325pt>
+or_taxa_de_informalidade.png, id=3154, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2726,12 +2877,12 @@ mposicao_demografica_setor_taxa_de_informalidade.png  used on input line 29.
 Overfull \vbox (38.06223pt too high) detected at line 29
  []
 
-[83
+[92
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_militar.png, id=2883, 855.195pt x 622.325pt>
+or_prop_militar.png, id=3186, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_militar.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2743,12 +2894,12 @@ mposicao_demografica_setor_prop_militar.png  used on input line 40.
 Overfull \vbox (38.06223pt too high) detected at line 40
  []
 
-[84
+[93
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_militar.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_empregadoSC.png, id=2915, 855.195pt x 622.325pt>
+or_prop_empregadoSC.png, id=3218, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_empregadoSC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2760,12 +2911,12 @@ mposicao_demografica_setor_prop_empregadoSC.png  used on input line 51.
 Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
-[85
+[94
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_empregadoSC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_empregadoCC.png, id=2948, 855.195pt x 622.325pt>
+or_prop_empregadoCC.png, id=3250, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_empregadoCC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2777,12 +2928,12 @@ mposicao_demografica_setor_prop_empregadoCC.png  used on input line 61.
 Overfull \vbox (38.06223pt too high) detected at line 61
  []
 
-[86
+[95
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_empregadoCC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_empregador.png, id=2980, 855.195pt x 622.325pt>
+or_prop_empregador.png, id=3282, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_empregador.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2794,12 +2945,12 @@ mposicao_demografica_setor_prop_empregador.png  used on input line 71.
 Overfull \vbox (38.06223pt too high) detected at line 71
  []
 
-[87
+[96
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_empregador.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_cpropria.png, id=3012, 855.195pt x 622.325pt>
+or_prop_cpropria.png, id=3314, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_cpropria.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2811,12 +2962,12 @@ mposicao_demografica_setor_prop_cpropria.png  used on input line 83.
 Overfull \vbox (38.06223pt too high) detected at line 83
  []
 
-[88
+[97
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_cpropria.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_cpropriaC.png, id=3044, 855.195pt x 622.325pt>
+or_prop_cpropriaC.png, id=3347, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_cpropriaC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2828,12 +2979,12 @@ mposicao_demografica_setor_prop_cpropriaC.png  used on input line 93.
 Overfull \vbox (38.06223pt too high) detected at line 93
  []
 
-[89
+[98
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_cpropriaC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/setor/_composicao_demografica_set
-or_prop_cpropriaNc.png, id=3076, 855.195pt x 622.325pt>
+or_prop_cpropriaNc.png, id=3379, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/setor/_composicao_demografic
 a_setor_prop_cpropriaNc.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/setor/_composicao_demografica
@@ -2845,381 +2996,414 @@ mposicao_demografica_setor_prop_cpropriaNc.png  used on input line 103.
 Overfull \vbox (38.06223pt too high) detected at line 103
  []
 
-[90
+[99
 
  <../../analysis/output/composicao_demografica/setor/_composicao_demografica_se
 tor_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_regiao_metro.tex [91
+(_sub_code/_composicao_demografica_regiao_metro.tex [100
 
 ]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_taxa_de_ocupacao.png, id=3159, 855.195pt x 622.325pt>
+rafica_regiao_metro_taxa_de_ocupacao.png, id=3463, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_taxa_de_ocupacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_taxa_de_ocupacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_taxa_de_ocupacao.png  used on input
- line 30.
+ line 31.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
-[92
+[101
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_taxa_de_informalidade.png, id=3191, 855.195pt x 622.325pt>
+rafica_regiao_metro_taxa_de_informalidade.png, id=3495, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_taxa_de_informalidade.png  used on 
-input line 40.
+input line 41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
-[93
+[102
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_taxa_de_desemprego.png, id=3223, 855.195pt x 622.325pt>
+rafica_regiao_metro_taxa_de_desemprego.png, id=3527, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_taxa_de_desemprego.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_taxa_de_desemprego.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_taxa_de_desemprego.png  used on inp
-ut line 50.
+ut line 51.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 50
+Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
-[94
+[103
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_taxa_de_desemprego.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_militar.png, id=3255, 855.195pt x 622.325pt>
+rafica_regiao_metro_taxa_de_participacao.png, id=3560, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
+demografica_regiao_metro_taxa_de_participacao.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
+emografica_regiao_metro_taxa_de_participacao.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
+rafica/_composicao_demografica_regiao_metro_taxa_de_participacao.png  used on i
+nput line 61.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 61
+ []
+
+[104
+
+ <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
+grafica_regiao_metro_taxa_de_participacao.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
+rafica_regiao_metro_prop_militar.png, id=3592, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_militar.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_militar.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_militar.png  used on input lin
-e 60.
+e 71.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 60
+Overfull \vbox (38.06223pt too high) detected at line 71
  []
 
-[95
+[105
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_militar.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_empregadoSC.png, id=3287, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_empregadoSC.png, id=3624, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_empregadoSC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_empregadoSC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_empregadoSC.png  used on input
- line 71.
+ line 82.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 71
+Overfull \vbox (38.06223pt too high) detected at line 82
  []
 
-[96
+[106
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_empregadoSC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_empregadoCC.png, id=3319, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_empregadoCC.png, id=3656, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_empregadoCC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_empregadoCC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_empregadoCC.png  used on input
- line 81.
+ line 92.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 92
  []
 
-[97
+[107
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_empregadoCC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_empregador.png, id=3352, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_empregador.png, id=3688, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_empregador.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_empregador.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_empregador.png  used on input 
-line 91.
+line 102.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 102
  []
 
-[98
+[108
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_empregador.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_cpropria.png, id=3384, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_cpropria.png, id=3720, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_cpropria.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_cpropria.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_cpropria.png  used on input li
-ne 103.
+ne 114.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 114
  []
 
-[99
+[109
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_cpropria.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_cpropriaC.png, id=3416, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_cpropriaC.png, id=3753, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_cpropriaC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_cpropriaC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_cpropriaC.png  used on input l
-ine 113.
+ine 124.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 124
  []
 
-[100
+[110
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_cpropriaC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_regiao_metro_prop_cpropriaNc.png, id=3448, 855.195pt x 622.325pt>
+rafica_regiao_metro_prop_cpropriaNc.png, id=3785, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_regiao_metro_prop_cpropriaNc.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_regiao_metro_prop_cpropriaNc.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_regiao_metro_prop_cpropriaNc.png  used on input 
-line 123.
+line 134.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 123
+Overfull \vbox (38.06223pt too high) detected at line 134
  []
 
-[101
+[111
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_regiao_metro_prop_cpropriaNc.png (PNG copy)>])
-(_sub_code/_composicao_demografica_rural_urbano.tex [102
+(_sub_code/_composicao_demografica_rural_urbano.tex [112
 
 ]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_taxa_de_ocupacao.png, id=3530, 855.195pt x 622.325pt>
+rafica_rural_urbano_taxa_de_ocupacao.png, id=3869, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_taxa_de_ocupacao.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_taxa_de_ocupacao.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_taxa_de_ocupacao.png  used on input
- line 30.
+ line 31.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 30
+Overfull \vbox (38.06223pt too high) detected at line 31
  []
 
-[103
+[113
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_taxa_de_ocupacao.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_taxa_de_informalidade.png, id=3563, 855.195pt x 622.325pt>
+rafica_rural_urbano_taxa_de_informalidade.png, id=3901, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_taxa_de_informalidade.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_taxa_de_informalidade.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_taxa_de_informalidade.png  used on 
-input line 40.
+input line 41.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 40
+Overfull \vbox (38.06223pt too high) detected at line 41
  []
 
-[104
+[114
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_taxa_de_informalidade.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_taxa_de_desemprego.png, id=3595, 855.195pt x 622.325pt>
+rafica_rural_urbano_taxa_de_desemprego.png, id=3933, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_taxa_de_desemprego.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_taxa_de_desemprego.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_taxa_de_desemprego.png  used on inp
-ut line 50.
+ut line 51.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 50
+Overfull \vbox (38.06223pt too high) detected at line 51
  []
 
-[105
+[115
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_taxa_de_desemprego.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_militar.png, id=3627, 855.195pt x 622.325pt>
+rafica_rural_urbano_taxa_de_participacao.png, id=3966, 855.195pt x 622.325pt>
+File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
+demografica_rural_urbano_taxa_de_participacao.png Graphic file (type png)
+<use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
+emografica_rural_urbano_taxa_de_participacao.png>
+Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
+rafica/_composicao_demografica_rural_urbano_taxa_de_participacao.png  used on i
+nput line 61.
+(pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
+
+Overfull \vbox (38.06223pt too high) detected at line 61
+ []
+
+[116
+
+ <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
+grafica_rural_urbano_taxa_de_participacao.png (PNG copy)>]
+<../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
+rafica_rural_urbano_prop_militar.png, id=3997, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_militar.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_militar.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_militar.png  used on input lin
-e 60.
+e 71.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 60
+Overfull \vbox (38.06223pt too high) detected at line 71
  []
 
-[106
+[117
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_militar.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_empregadoSC.png, id=3659, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_empregadoSC.png, id=4028, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_empregadoSC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_empregadoSC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_empregadoSC.png  used on input
- line 71.
+ line 82.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 71
+Overfull \vbox (38.06223pt too high) detected at line 82
  []
 
-[107
+[118
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_empregadoSC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_empregadoCC.png, id=3691, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_empregadoCC.png, id=4059, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_empregadoCC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_empregadoCC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_empregadoCC.png  used on input
- line 81.
+ line 92.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 81
+Overfull \vbox (38.06223pt too high) detected at line 92
  []
 
-[108
+[119
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_empregadoCC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_empregador.png, id=3723, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_empregador.png, id=4090, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_empregador.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_empregador.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_empregador.png  used on input 
-line 91.
+line 102.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 91
+Overfull \vbox (38.06223pt too high) detected at line 102
  []
 
-[109
+[120
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_empregador.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_cpropria.png, id=3756, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_cpropria.png, id=4122, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_cpropria.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_cpropria.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_cpropria.png  used on input li
-ne 103.
+ne 114.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 103
+Overfull \vbox (38.06223pt too high) detected at line 114
  []
 
-[110
+[121
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_cpropria.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_cpropriaC.png, id=3788, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_cpropriaC.png, id=4155, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_cpropriaC.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_cpropriaC.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_cpropriaC.png  used on input l
-ine 113.
+ine 124.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 113
+Overfull \vbox (38.06223pt too high) detected at line 124
  []
 
-[111
+[122
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
 grafica_rural_urbano_prop_cpropriaC.png (PNG copy)>]
 <../../analysis/output/composicao_demografica/area_geografica/_composicao_demog
-rafica_rural_urbano_prop_cpropriaNc.png, id=3820, 855.195pt x 622.325pt>
+rafica_rural_urbano_prop_cpropriaNc.png, id=4187, 855.195pt x 622.325pt>
 File: ../../analysis/output/composicao_demografica/area_geografica/_composicao_
 demografica_rural_urbano_prop_cpropriaNc.png Graphic file (type png)
 <use ../../analysis/output/composicao_demografica/area_geografica/_composicao_d
 emografica_rural_urbano_prop_cpropriaNc.png>
 Package pdftex.def Info: ../../analysis/output/composicao_demografica/area_geog
 rafica/_composicao_demografica_rural_urbano_prop_cpropriaNc.png  used on input 
-line 123.
+line 134.
 (pdftex.def)             Requested size: 307.28987pt x 223.60951pt.
 
-Overfull \vbox (38.06223pt too high) detected at line 123
+Overfull \vbox (38.06223pt too high) detected at line 134
  []
 
-[112
+[123
 
  <../../analysis/output/composicao_demografica/area_geografica/_composicao_demo
-grafica_rural_urbano_prop_cpropriaNc.png (PNG copy)>])) [113
+grafica_rural_urbano_prop_cpropriaNc.png (PNG copy)>])) [124
 
-] [114
-
-]
-[115
+] [125
 
 ]
 \tf@nav=\write6
@@ -3231,46 +3415,41 @@ grafica_rural_urbano_prop_cpropriaNc.png (PNG copy)>])) [113
 \tf@snm=\write8
 \openout8 = `Preliminary_Results.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 156.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 156.
- (Preliminary_Results.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 156.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 156.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
+
+(Preliminary_Results.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `Preliminary_Results.out' has not changed.
-(rerunfilecheck)             Checksum: EC1B97737B1CB1A15E5F6C65813BA9CA;396.
+(rerunfilecheck)             Checksum: 62732AE2F7F3A49005007F09006E81F5;402.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 34413 strings out of 492946
- 777883 string characters out of 3124490
- 747330 words of memory out of 3000000
- 37162 multiletter control sequences out of 15000+200000
+ 34643 strings out of 492946
+ 792744 string characters out of 3124490
+ 761616 words of memory out of 3000000
+ 37336 multiletter control sequences out of 15000+200000
  579554 words of font info for 62 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  58i,18n,74p,788b,560s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{Navigation116} has been referenced but does not e
-xist, replaced by a fixed one
-
-pdfTeX warning (dest): name{Navigation117} has been referenced but does not exi
-st, replaced by a fixed one
-
-{C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.
-enc}<C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm
-/lmss10.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/lm/lmss12.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmss8.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/lm/lmss9.pfb><C:/Users/Francisco/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisco/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Francisco/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Francisc
-o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.
-pfb>
-Output written on Preliminary_Results.pdf (115 pages, 7109571 bytes).
+{C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-r
+m.enc}<C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+lm/lmss10.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmss12.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmss8.pfb><C:/Users/Francisco/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/Francisco/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/Francisco/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Users/Francisco/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsso8.pfb><C:/Users/Franci
+sco/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam1
+0.pfb>
+Output written on Preliminary_Results.pdf (125 pages, 7654133 bytes).
 PDF statistics:
- 4082 PDF objects out of 4296 (max. 8388607)
- 560 named destinations out of 1000 (max. 500000)
- 629 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4431 PDF objects out of 5155 (max. 8388607)
+ 609 named destinations out of 1000 (max. 500000)
+ 669 words of extra memory for PDF output out of 10000 (max. 10000000)
 

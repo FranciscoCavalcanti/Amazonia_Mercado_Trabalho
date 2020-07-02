@@ -30,7 +30,7 @@
 \usepackage{threeparttable}
 \usepackage{pdflscape}
 \usepackage{lscape}
-\usepackage{array}
+\usepackage{array} % for defining a new column type
 \usepackage{tabulary}
 \newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
 
@@ -49,7 +49,7 @@ Flávia  Alfenas\\
 \textit{PUC-Rio} 
 }
 
-\date{Junho, 2020}
+\date{Julho, 2020}
 
 \title{Mercado de Trabalho na Amazônia Legal}
 
@@ -67,6 +67,8 @@ Flávia  Alfenas\\
 %\date{} 
 %\subject{} 
 \begin{document}
+
+\newcolumntype{M}{>{\begin{varwidth}{4cm}}l<{\end{varwidth}}} %M is for Maximal column
 
 \begin{frame}
 \titlepage

@@ -148,12 +148,92 @@ gen prop_homeoffice = (iten2/tool2)*100
 label variable prop_homeoffice "Proporção trabalhadores em casa em relação aos ocupados (%)"
 cap drop iten*
 
+/////////////////////////////////////////////////////////
+//	A) Número total de desemprego
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if desocupado == 1
+by Ano Trimestre, sort: egen n_de_desemprego = total(iten1)
+label variable n_de_desemprego "Número de desempregados"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	B) Número de ocupados
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if ocupado == 1
+by Ano Trimestre, sort: egen n_de_ocupacao = total(iten1)
+label variable n_de_ocupacao "Número de ocupados"
+cap drop iten*
+cap drop tool* 
+
+
+/////////////////////////////////////////////////////////
+//	D) Número total de informalidade
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if informal == 1
+by Ano Trimestre, sort: egen n_de_informalidade = total(iten1)
+label variable n_de_informalidade "Número de trabalhadores informais"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	E) Inserção no mercado de trabalho por tipo ocupação
+/////////////////////////////////////////////////////////
+
+* Número de trabalhador com carteira assinada
+gen iten1 = 1 * V1028 if empregadoCC == 1
+by Ano Trimestre, sort: egen n_empregadoCC = total(iten1)
+label variable n_empregadoCC "Número de trabalhadores com carteira"
+cap drop iten*
+
+* Número de trabalhador sem carteira assinada
+gen iten1 = 1 * V1028 if empregadoSC == 1
+by Ano Trimestre, sort: egen n_empregadoSC = total(iten1)
+label variable n_empregadoSC "Número de trabalhadores sem carteira"
+cap drop iten*
+
+* Número de empregadores
+gen iten1 = 1 * V1028 if empregador == 1
+by Ano Trimestre, sort: egen n_empregador = total(iten1)
+label variable n_empregador "Número de empregadores"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria
+gen iten1 = 1 * V1028 if cpropria == 1
+by Ano Trimestre, sort: egen n_cpropria = total(iten1)
+label variable n_cpropria "Número de trabalhadores por conta própria"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria que contribui
+gen iten1 = 1 * V1028 if cpropriaC == 1
+by Ano Trimestre, sort: egen n_cpropriaC = total(iten1)
+label variable n_cpropriaC "Número de conta própria que contribui"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria que não contribui
+gen iten1 = 1 * V1028 if cpropriaNc == 1
+by Ano Trimestre, sort: egen n_cpropriaNc = total(iten1)
+label variable n_cpropriaNc "Número de conta própria que não contribui"
+cap drop iten*
+
+* Número de militares
+gen iten1 = 1 * V1028 if militar == 1
+by Ano Trimestre, sort: egen n_militar = total(iten1)
+label variable n_militar "Número militares e estatutários"
+cap drop iten*
+
+* Número de trabalhadores em casa
+gen iten1 = 1 * V1028 if homeoffice == 1
+by Ano Trimestre, sort: egen n_homeoffice = total(iten1)
+label variable n_homeoffice "Número trabalhadores em casa"
+cap drop iten*
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************
 
 // attach label of variables
-local colvar prop_* taxa_*
+local colvar prop_* taxa_* n_*
 
 foreach v of var `colvar' {
     local l`v' : variable label `v'

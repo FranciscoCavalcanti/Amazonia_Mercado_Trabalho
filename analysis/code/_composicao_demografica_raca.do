@@ -24,7 +24,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * select variables
-ds prop_* taxa_*
+ds prop_* taxa_* n_*
 local type `r(varlist)'
 display "`type'"
 

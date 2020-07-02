@@ -6,7 +6,6 @@ Mais especificamente:
 A) Rendimentos real
 B) Pobreza
 C) Desigualdade
-D) Programas sociais
 */
 
 **********************
@@ -97,7 +96,7 @@ cap drop temp*
 //	B) Pobreza
 /////////////////////////////////////////////////////////
 
-* Proporção de domicilios com rendimento per capita até R$ 41,00 (Valor do Bolsa Família)
+* Proporção de indivíduos com rendimento per capita de até R$ 300,00 ($ 1.9 por dia)
 
 	* numero total de individuos nos domicilios
 	by Ano Trimestre hous_id, sort: gen temp1 =  _n
@@ -121,6 +120,33 @@ cap drop temp*
 
 by Ano Trimestre, sort: gen prop_rendimento_domiciliar_BF = (iten2/tempa2)*100
 label variable prop_rendimento_domiciliar_BF "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 300,00"
+cap drop iten*
+cap drop temp*
+
+* Proporção de domicilios com rendimento per capita de até R$ 150,00
+
+	* numero total de individuos nos domicilios
+	by Ano Trimestre hous_id, sort: gen temp1 =  _n
+	by Ano Trimestre hous_id, sort: egen temp2 =  max(temp1) // total number of individuals in each household
+
+	* rendimento total de individuos nos domicilios  (deflacionado)
+	gen tempx1 = (VD4019 * Habitual)
+	by Ano Trimestre hous_id, sort: egen tempx2 =  sum(tempx1) // total amount of earnings in each household
+	replace tempx2 = 0 if tempx2==.
+
+	* rendimento per capita no domicílio (já deflacionado)
+	gen tempk1 = tempx2 / temp2
+
+	* total de individuos em domicilios com até 150 reais per capita
+	gen tempk2 = 1 * V1028 if tempk1 <= 150
+	by Ano Trimestre, sort: egen iten2 = total(tempk2)
+
+	* numero total de individuos
+	gen tempa1 = 1* V1028
+	by Ano Trimestre, sort: egen tempa2 = total(tempa1)
+
+by Ano Trimestre, sort: gen prop_rendimento_domiciliar_BF = (iten2/tempa2)*100
+label variable prop_rendimento_domiciliar_BF "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 150,00"
 cap drop iten*
 cap drop temp*
 
@@ -163,7 +189,6 @@ gen gini_formal = .
 	}
 	
 label variable	gini_formal "GINI do rendimento habitual no setor formal"
-
 
 * Gini Coeficiente do rendimento domiciliar per capita
 gen gini_rendimento_domiciliar_pc = .

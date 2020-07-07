@@ -1,0 +1,505 @@
+\documentclass[11pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[beamer,customcolors]{hf-tikz}
+
+\tikzset{hl/.style={
+    set fill color=red!80!black!40,
+    set border color=red!80!black,
+  },
+}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\usetheme{Montpellier}
+\usepackage[utf8]{inputenc}
+\usepackage[english,american]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{array} % for defining a new column type
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+	
+\author[Francisco Cavalcanti]{Francisco Cavalcanti\\\footnotesize{PUC-Rio}
+}
+
+\author{
+Flávia  Alfenas\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and  
+Francisco Cavalcanti\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and   
+Gustavo Gonzaga \\
+\textit{PUC-Rio} 
+}
+
+\date{Julho, 2020}
+
+\title{Mercado de Trabalho na Amazônia Legal}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+\newcommand{\quotes}[1]{``#1''}
+
+
+\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\newcolumntype{M}{>{\begin{varwidth}{4cm}}l<{\end{varwidth}}} %M is for Maximal column
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\section{Introdução}
+
+
+\begin{frame}{}
+\begin{itemize}
+	\item{\textbf{Objetivo} $\Rightarrow$ Descrever o funcionamento do mercado de trabalho na Amazônia legal} 
+	\vspace{2mm}
+	\item{\textbf{Método} $\Rightarrow$ Análise descritiva e comparativa da composição e da evolução do emprego no Brasil e na Amazônia Legal
+	\vspace{1mm}
+	\begin{enumerate}
+		\item{Natureza da estrutura emprego;}
+		\item{Inserção dos tipos de ocupação no mercado de trabalho;}
+		\item{Estrutura de rendimentos, pobreza, desigualdade e programas sociais;}
+		\item{Risco de transição entre posições ocupacionais;}
+		\item{Desagregação da estrutura do emprego por composição sócio-demográfica.}
+	\end{enumerate}
+	}
+\end{itemize}
+\end{frame}
+
+\section{Considerações}
+
+
+\begin{frame}{}
+
+\begin{itemize}
+	\item{\textbf{Diferenças entre PNAD e PNAD Contínua}:		
+		\begin{itemize}
+			\item{{\footnotesize Mudanças metodológicas da PNAD e a Amazônia}}
+			\item{{\footnotesize Processo de seleção da amostra}}
+			\item{{\footnotesize Tamanho da amostra:}
+				\begin{itemize}
+				 	\item{{\scriptsize PNAD: 150 mil unidades domiciliares em um ano.}}
+				 	\item{{\scriptsize PNAD Contínua: 200 mil unidades domiciliares em um trimestre.}}
+				\end{itemize}
+			}
+		\end{itemize}					
+		}
+		\vspace{2mm}
+	\item{\textbf{Fonte dados}
+			\begin{itemize}
+			\item{{\footnotesize PNAD Contínua Trimestral (1T de 2012 até 1T de 2020)}}
+			\item{{\footnotesize PNAD Contínua Anual (2012 - 2019)}}
+			\end{itemize}					
+		}	
+		\vspace{2mm}
+	\item{\textbf{Amazônia Legal}
+			\begin{itemize}
+			\item{{\footnotesize RO, AC, AM, RR, PA, AP, TO, MT e MA (excluindo a região metropolitana e as regiões integrada de desenvolvimento econômico (RIDE))}}
+			\end{itemize}					
+		}
+\end{itemize}
+
+\end{frame}
+
+
+\section{Estrutura do Emprego}
+
+\begin{frame}
+\centering
+{\huge Estrutura do Emprego}
+
+\vspace{4mm}
+\begin{itemize}
+	\item{Principais achados:
+	\vspace{3mm}
+	\begin{enumerate}
+		\item{Taxa de \textbf{informalidade} muito maior na Amazônia, mas com tendências semelhantes.}
+		\vspace{1mm}
+		\item{Níveis e tendências semelhantes da taxa de \textbf{desemprego}.}
+		\vspace{1mm}
+		\item{Diferenças de trajetória das taxas de \textbf{ocupação} e de \textbf{participação}}
+	\end{enumerate}
+	}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_taxa_de_informalidade]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_taxa_de_informalidade.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_taxa_de_informalidade}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_taxa_de_desemprego]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_taxa_de_desemprego.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_taxa_de_desemprego}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_taxa_de_ocupacao]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_taxa_de_ocupacao.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_taxa_de_ocupacao}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_taxa_de_participacao]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_taxa_de_participacao.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_taxa_de_participacao}
+\end{figure}
+\end{frame}
+
+%\input{./_sub_code/_estrutura_emprego}
+
+\section{Inserção no mercado de trabalho}
+
+\begin{frame}
+\centering
+{\huge Inserção no mercado de trabalho}
+
+\vspace{4mm}
+\begin{itemize}
+	\item{Principais achados:
+	\vspace{3mm}
+	\begin{enumerate}
+		\item{Maiores proporções em relação aos ocupados de trabalhadores \textbf{sem carteira assinada}, conta própria que \textbf{não contribui}, \textbf{militares} e \textbf{estatutários}, mas com tendências semelhantes.}
+		\vspace{1mm}
+		\item{Menores proporções em relação aos ocupados de \textbf{empregadores},  mas com tendências semelhantes.}
+		\vspace{1mm}
+		\item{Diferença de trajetória de \textbf{conta própria que contribui}.}
+	\end{enumerate}
+	}
+\end{itemize}
+
+
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_prop_cpropriaC]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_prop_cpropriaC.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_prop_cpropriaC}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_estrutura_emprego_prop_militar_formal]{}
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\linewidth]{../../analysis/output/estrutura_emprego/_estrutura_emprego_prop_militar_formal.png}
+  \caption{}
+  \label{fig:_estrutura_emprego_prop_militar_formal}
+\end{figure}
+\end{frame}
+
+
+\section{Estrutura da Renda}
+
+\begin{frame}
+\centering
+{\huge Estrutura da Renda}
+
+\vspace{4mm}
+\begin{itemize}
+	\item{Principais achados:
+	\vspace{3mm}
+	\begin{enumerate}
+
+		\item{Amazônia com menores \textbf{rendimentos} (domicilar p.c., ocupados, informal e formal).}
+		\vspace{1mm}
+		\item{Amazônia com maior proporção de mais \textbf{pobres}}
+		\vspace{1mm}
+		\item{\textbf{Desigualdade} de rendimento semelhante ou inconclusiva}
+		\vspace{1mm}
+		\item{Maior inserção de \textbf{programas sociais} (BF \& BPC-LOAS)}
+	\end{enumerate}
+	}
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\begin{figure}[h!tpb]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/estrutura_renda/_estrutura_renda_rendimento_domiciliar_pc.png}
+  \label{fig:_estrutura_renda_rendimento_domiciliar_pc}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/estrutura_renda/_estrutura_renda_prop_rendimento_domiciliar_300.png}
+  \label{fig:_estrutura_renda_prop_rendimento_domiciliar_300}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/estrutura_renda/_estrutura_renda_gini_ocupado.png}
+  \label{fig:_estrutura_renda_gini_ocupado}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/programas_sociais/_programas_sociais_prop_ajuda_gov.png}
+  \label{fig:_programas_sociais_prop_ajuda_gov}
+\end{subfigure}
+
+\label{fig:estrutura_renda}
+\end{figure}
+\end{frame}
+
+
+%\input{./_sub_code/_estrutura_renda}
+
+%\section{Programas Sociais}
+
+%\input{./_sub_code/_programas_sociais}
+
+\section{Transição de Ocupações}
+
+\begin{frame}
+
+\centering
+{\huge Transição entre Ocupações}
+
+\vspace{4mm}
+\begin{itemize}
+	\item{Principais achados:
+	\vspace{3mm}
+	\begin{enumerate}
+
+		\item{Transições semelhantes de 
+		\begin{itemize}
+			\item{formal para desempregado}
+			\item{formal para inativo}
+			\item{informal para desempregado}
+			\item{informal para inativo}
+		\end{itemize}
+		}
+		\vspace{2mm}
+		\item{Diferenças significativas de
+		\begin{itemize}
+			\item{formal para informal}
+			\item{empregador para informal}
+		\end{itemize}
+		}
+	\end{enumerate}
+	}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[label=_transicao_ocupacao_sh_formal_sh_informal]{}
+\textit{\hyperlink{_transicao_ocupacao}{\beamerbutton{Voltar}}}
+\begin{figure}
+  \centering
+  \includegraphics[width=1.0\linewidth]{../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_formal_sh_informal.png}
+  \caption{}
+  \label{fig:_transicao_ocupacao_sh_formal_sh_informal}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_transicao_ocupacao_sh_empregador_sh_informal]{}
+\textit{\hyperlink{_transicao_ocupacao}{\beamerbutton{Voltar}}}
+\begin{figure}
+  \centering
+  \includegraphics[width=1\linewidth]{../../analysis/output/transicao_ocupacao/_transicao_ocupacao_sh_empregador_sh_informal.png}
+  \caption{}
+  \label{fig:_transicao_ocupacao_sh_empregador_sh_informal}
+\end{figure}
+\end{frame}
+
+
+%\input{./_sub_code/_transicao_ocupacao}
+
+\section{Decomposição Socio-Demográfica}
+
+\begin{frame}
+\centering
+{\huge Decomposição Socio-Demográfica}
+
+\vspace{4mm}
+\begin{itemize}
+	\item{Principais achados:
+	\vspace{3mm}
+	\begin{enumerate}
+
+		\item{Diferença em nível mas com trajetória semelhante
+		\begin{itemize}
+			\item{Taxa de \textbf{ocupação}: Raça, Gênero, Educação e Setor}
+			\item{Taxa de \textbf{desemprego}: Raça, Gênero, Educação e Setor}
+		\end{itemize}
+		}
+		\vspace{2mm}
+		\item{Diferença de tendência
+		\begin{itemize}
+			\item{Taxa de \textbf{informalidade}: Gênero, Faixa etária, Setor e Area Geográfica}
+			\item{Taxa de \textbf{participação}: Gênero, Educação e Area Geográfica}
+			\item{Conta própria que \textbf{contribui}: Faixa etária, Educação, Setor e  Area Geográfica}
+		\end{itemize}
+		}
+	\end{enumerate}
+	}
+\end{itemize}
+\end{frame}
+
+\subsection{Taxa de Informalidade}
+
+\begin{frame}
+\begin{figure}[h!tpb]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/setor/_composicao_demografica_setor_taxa_de_informalidade.png}
+  \label{fig:_composicao_demografica_setor_taxa_de_informalidade}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/genero/_composicao_demografica_genero_taxa_de_informalidade.png}
+  \label{fig:_composicao_demografica_genero_taxa_de_informalidade}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demografica_faixa_etaria_taxa_de_informalidade.png}
+  \label{fig:_composicao_demografica_faixa_etaria_taxa_de_informalidade}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/area_geografica/_composicao_demografica_regiao_metro_taxa_de_informalidade.png}
+  \label{fig:_composicao_demografica_regiao_metro_taxa_de_informalidade}
+\end{subfigure}
+
+\label{fig:composicao_demografica}
+\end{figure}
+\end{frame}
+
+\subsection{Taxa de Participação}
+
+
+\begin{frame}
+\begin{figure}[h!tpb]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/raca/_composicao_demografica_raca_taxa_de_participacao.png}
+  \label{fig:_composicao_demografica_raca_taxa_de_participacao}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/genero/_composicao_demografica_genero_taxa_de_participacao.png}
+  \label{fig:_composicao_demografica_genero_taxa_de_participacao}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demografica_faixa_etaria_taxa_de_participacao.png}
+  \label{fig:_composicao_demografica_faixa_etaria_taxa_de_participacao}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/area_geografica/_composicao_demografica_regiao_metro_taxa_de_participacao.png}
+  \label{fig:_composicao_demografica_regiao_metro_taxa_de_participacao}
+\end{subfigure}
+
+\label{fig:composicao_demografica}
+\end{figure}
+\end{frame}
+
+\subsection{Proporção de Conta Própria que Contribui}
+
+\begin{frame}
+\begin{figure}[h!tpb]
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/setor/_composicao_demografica_setor_prop_cpropriaC.png}
+  \label{fig:_composicao_demografica_setor_prop_cpropriaC}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/genero/_composicao_demografica_genero_prop_cpropriaC.png}
+  \label{fig:_composicao_demografica_genero_prop_cpropriaC}
+\end{subfigure}
+
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/faixa_etaria/_composicao_demografica_faixa_etaria_prop_cpropriaC.png}
+  \label{fig:_composicao_demografica_faixa_etaria_prop_cpropriaC}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/composicao_demografica/area_geografica/_composicao_demografica_regiao_metro_prop_cpropriaC.png}
+  \label{fig:_composicao_demografica_regiao_metro_prop_cpropriaC}
+\end{subfigure}
+
+\label{fig:composicao_demografica}
+\end{figure}
+\end{frame}
+
+%\input{./_sub_code/_composicao_demografica}
+
+\section{Comentários}
+
+
+\frame
+{
+    \begin{center}
+     \vfill
+    \textbf{Obrigado!}
+     \\
+
+     \vfill
+     \onslide<2>
+\end{center}
+}
+
+\end{document}
+
+
+

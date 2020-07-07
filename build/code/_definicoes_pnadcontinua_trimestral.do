@@ -51,6 +51,7 @@ if "$area_geografica" == "Amazônia Legal"   {
 	*/ 	| UF == 15 	/* Pará
 	*/ 	| UF == 16 	/* Amapá
 	*/ 	| UF == 17 	/* Tocantins
+	*/ 	| UF == 51 	/* Mato Grosso
 	*/ 	| (UF == 21 & V1023 == 4) 	// Maranhão & Resto da UF (Unidade da Federação, excluindo a região metropolitana e a RIDE)
 	
 	local area = "amazonia_legal"
@@ -63,6 +64,7 @@ else if "$area_geografica" == "Resto do Brasil"   {
 	*/ 	| UF == 15 	/* Pará
 	*/ 	| UF == 16 	/* Amapá
 	*/ 	| UF == 17 	/* Tocantins
+	*/ 	| UF == 51 	/* Mato Grosso
 	*/ 	| (UF == 21 & V1023 == 4) 	// Maranhão & Resto da UF (Unidade da Federação, excluindo a região metropolitana e a RIDE)
 
 	local area = "resto_brasil"

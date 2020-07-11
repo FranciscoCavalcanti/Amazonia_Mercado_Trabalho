@@ -17,17 +17,6 @@ append using "$output_dir_build\_programas_sociais_outras_rendas_resto_brasil.dt
 replace id = "Resto do Brasil" if id==""
 
 
-/* 
-Trimestre 4 de 2015 problemático
-Solução, transforma-lo em missing "."
-*/
-
-local var_names prop_bolsa_familia prop_ajuda_gov prop_bpc_loas
-foreach lname in `var_names' {
-replace `lname' = . if Ano ==2015 & Trimestre ==4
-} 
-
-
 * generate variable of quartely date
 	tostring Ano, replace
 	tostring Trimestre, replace

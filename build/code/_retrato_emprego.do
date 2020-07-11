@@ -68,7 +68,7 @@ cap drop tool*
 gen iten1 = 1 * V1028 if formal == 1
 by Ano Trimestre, sort: egen n_de_formal = total(iten1)
 replace n_de_formal = round(n_de_formal)
-label variable n_de_informalidade "Número de trabalhadores formais"
+label variable n_de_formal "Número de trabalhadores formais"
 cap drop iten*
 cap drop tool* 
 

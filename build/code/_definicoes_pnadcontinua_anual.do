@@ -51,6 +51,7 @@ if "$area_geografica" == "Amazônia Legal"   {
 	*/ 	| UF == 15 	/* Pará
 	*/ 	| UF == 16 	/* Amapá
 	*/ 	| UF == 17 	/* Tocantins
+	*/ 	| UF == 51 	/* Mato Grosso
 	*/ 	| (UF == 21 & V1023 == 4) 	// Maranhão & Resto da UF (Unidade da Federação, excluindo a região metropolitana e a RIDE)
 	
 	local area = "amazonia_legal"
@@ -63,6 +64,7 @@ else if "$area_geografica" == "Resto do Brasil"   {
 	*/ 	| UF == 15 	/* Pará
 	*/ 	| UF == 16 	/* Amapá
 	*/ 	| UF == 17 	/* Tocantins
+	*/ 	| UF == 51 	/* Mato Grosso
 	*/ 	| (UF == 21 & V1023 == 4) 	// Maranhão & Resto da UF (Unidade da Federação, excluindo a região metropolitana e a RIDE)
 
 	local area = "resto_brasil"
@@ -160,19 +162,22 @@ gen bolsa_familia=.
 
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
-	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	($time == 2015 & Trimestre ~=4) {
+	*/ 	| 	$time == 2014 {
 		replace bolsa_familia=1 if V50101==1 //  ... recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
- 		replace bolsa_familia=0 if bolsa_familia==.
 }
 
-else if ($time == 2015 & Trimestre==4) 	/*
-	*/ 	| 	$time == 2016 /* 
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace bolsa_familia=1 if V50101==1 & Trimestre ~=4 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
+		* Trimestre 4
+		replace bolsa_familia=1 if V5002A==1 & Trimestre ==4 //  recebeu rendimentos de Programa Bolsa Família?
+}
+
+if $time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 	replace bolsa_familia=1 if V5002A==1
-	replace bolsa_familia=0 if bolsa_familia==.
 }
 
 * recebeu programa social
@@ -180,15 +185,24 @@ gen ajuda_gov=.
 
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
-	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	($time == 2015 & Trimestre ~=4)  {
+	*/ 	| 	$time == 2014 {
 		replace ajuda_gov=1 if V50101==1 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
 		replace ajuda_gov=1 if V50091==1 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
  		replace ajuda_gov=1 if V50111==1 //  recebeu rendimentos de algum outro programa social, público ou privado
 }
 
-else if ($time == 2015 & Trimestre==4) 	/*
-	*/ 	| 	$time == 2016 /* 
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace ajuda_gov=1 if V50101==1 & Trimestre ~=4 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
+		replace ajuda_gov=1 if V50091==1 & Trimestre ~=4 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
+ 		replace ajuda_gov=1 if V50111==1 & Trimestre ~=4 //  recebeu rendimentos de algum outro programa social, público ou privado
+		* Trimestre 4
+		replace ajuda_gov=1 if V5002A==1 & Trimestre ==4 //  recebeu rendimentos de Programa Bolsa Família?
+		replace ajuda_gov=1 if V5001A==1 & Trimestre ==4 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
+ 		replace ajuda_gov=1 if V5003A==1 & Trimestre ==4 //  recebeu rendimentos de outros programas sociais do governo?
+}
+
+if $time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
@@ -202,18 +216,123 @@ gen bpc_loas=.
 
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
-	*/ 	| 	$time == 2014 /* 
-	*/ 	| 	($time == 2015 & Trimestre ~=4)  {
+	*/ 	| 	$time == 2014 {
 		replace bpc_loas=1 if V50091==1 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
 }
 
-else if ($time == 2015 & Trimestre==4) 	/*
-	*/ 	| 	$time == 2016 /* 
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace bpc_loas=1 if V50091==1 & Trimestre ~=4 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
+		* Trimestre 4
+		replace bpc_loas=1 if V5001A==1 & Trimestre ==4 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
+}
+
+if $time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 		replace bpc_loas=1 if V5001A==1 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
 }
+
+
+
+**************************************
+**	Outros rendimentos		 		**
+**************************************
+
+* Rendimento domiciliar per capita (habitual de todos os trabalhos e efetivo de outras fontes) 
+gen renda_anual_pc = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_anual_pc = VD5008 //  Rend habitual domiciliar per capita
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_anual_pc = VD5008 if Trimestre ~=4 //  Rend habitual domiciliar per capita
+		* Trimestre 4
+		replace renda_anual_pc = VD5011 if Trimestre ==4  //  Rend habitual domiciliar per capita
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_anual_pc = VD5011 //  Rend habitual domiciliar per capita
+}
+
+* Rendimento recebido em todas as fontes 
+gen renda_anual = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_anual = VD5008 //  Rend habitual domiciliar per capita
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_anual = VD5008 if Trimestre ~=4 //  Rend habitual domiciliar per capita
+		* Trimestre 4
+		replace renda_anual= VD5011 if Trimestre ==4  //  Rend habitual domiciliar per capita
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_anual= VD5011 //  Rend habitual domiciliar per capita
+}
+
+* Recebeu rendimentos de seguro-desemprego, seguro-defeso
+gen seguro_desemprego = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace seguro_desemprego = 1 if V50081 ==1  //  Rend habitual domiciliar per capita
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace seguro_desemprego = 1 if V50081 ==1 & Trimestre ~=4  //  Rend habitual domiciliar per capita
+		* Trimestre 4
+		replace seguro_desemprego = 1 if  V5005A ==1 & Trimestre ==4  //  Rend habitual domiciliar per capita
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace seguro_desemprego = 1 if  V5005A ==1 //  Rend habitual domiciliar per capita
+}
+
+* Recebeu rendimentos de aposentadoria ou pensão de instituto de previdência federal (INSS), estadual, municipal, ou do governo federal, estadual, municipal?
+gen aposentadoria = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace aposentadoria = 1 if V50011 ==1  //  ... recebeu aposentadoria de instituto de previdência
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace aposentadoria = 1 if V50011 ==1 & Trimestre ~=4  //  ... recebeu aposentadoria de instituto de previdência
+		* Trimestre 4
+		replace aposentadoria = 1 if  V5004A ==1 & Trimestre ==4 //  Recebeu aposentadoria e pensão "
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace aposentadoria = 1 if  V5004A ==1 //  Recebeu aposentadoria e pensão "
+}
+
+
 **************************************
 **	Editar variável trimestre 		**
 ** 									**

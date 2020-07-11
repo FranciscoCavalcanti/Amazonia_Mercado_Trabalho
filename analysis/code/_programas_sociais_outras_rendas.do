@@ -9,11 +9,11 @@
 ************************
 
 * call data 
-use "$output_dir_build\_programas_sociais_amazonia_legal.dta", clear
+use "$output_dir_build\_programas_sociais_outras_rendas_amazonia_legal.dta", clear
 gen id = "Amazônia Legal"
 
 * append data
-append using "$output_dir_build\_programas_sociais_resto_brasil.dta"
+append using "$output_dir_build\_programas_sociais_outras_rendas_resto_brasil.dta"
 replace id = "Resto do Brasil" if id==""
 
 
@@ -84,9 +84,9 @@ local label_var: variable label `lname'
 		}
 	
 * save graph 
-graph save Graph "$output_dir\programas_sociais\_programas_sociais_`lname'.gph", replace
-graph use "$output_dir\programas_sociais\_programas_sociais_`lname'.gph"
-graph export "$output_dir\programas_sociais\_programas_sociais_`lname'.png", replace		
+graph save Graph "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.gph", replace
+graph use "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.gph"
+graph export "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.png", replace		
 
 }
 

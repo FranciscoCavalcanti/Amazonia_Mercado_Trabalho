@@ -28,6 +28,13 @@ global input_dir		"${ROOT}\Amazonia_Mercado_Trabalho\analysis\input"
 set more off, perm
 
 //////////////////////////////////////////////	
+//	Descrever o retrato do emprego	
+//////////////////////////////////////////////
+
+* run do file
+do "$code_dir\_retrato_emprego.do"
+
+//////////////////////////////////////////////	
 //	1) Descrever a estrutrura do emprego	
 //////////////////////////////////////////////
 
@@ -46,7 +53,7 @@ do "$code_dir\_estrutura_renda.do"
 //////////////////////////////////////////////
 
 * run do file
-do "$code_dir\_programas_sociais.do"
+do "$code_dir\_programas_sociais_outras_rendas.do"
 
 
 //////////////////////////////////////////////	

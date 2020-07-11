@@ -161,6 +161,13 @@ gen homeoffice = 1 if   V4022 == 4  // No domicílio de residência, em local ex
 replace homeoffice = 1 if   V4022 == 5 // No domicílio de residência, sem local exclusivo para o desempenho da atividade 
 replace homeoffice = 0 if homeoffice ==. 
 
+* grandes setores da economia
+gen gstr_agricultura = 1 if VD4010 == 1 	// Agricultura
+gen gstr_industria = 1 if VD4010 == 2 	// Indústria geral
+gen gstr_construcao = 1 if VD4010 == 3 	// Construção
+gen gstr_comercio = 1 if VD4010 == 4 	// Comércio, reparação de veículos automotores e motocicletas
+gen gstr_servicos = 1 if VD4010 >= 5 	// 
+
 **************************************
 **	Editar variável trimestre 		**
 ** 									**

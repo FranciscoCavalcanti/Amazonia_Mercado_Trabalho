@@ -35,6 +35,66 @@ global input_dir		"${ROOT}\Amazonia_Mercado_Trabalho\build\input"
 * set more off 
 set more off, perm
 
+
+//////////////////////////////////////////////
+//	
+//	Retrato do Emprego
+//	
+//////////////////////////////////////////////
+**********************
+**	Amazônia Legal	**
+**********************
+
+global area_geografica = "Amazônia Legal"
+
+forvalues yr = 2020(1)2020{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	* run code
+	do "$code_dir\_retrato_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2020(1)2020 {
+	* call data
+	append using "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta"
+}
+
+* save in the output directory
+save "$output_dir\_retrato_emprego_amazonia_legal.dta", replace
+export excel using "$output_dir\_retrato_emprego_amazonia_legal.xls", /*
+	*/	firstrow(varlabels) replace
+
+**********************
+**	Resto do Brasil	**
+**********************
+
+global area_geografica = "Resto do Brasil"
+
+forvalues yr = 2020(1)2020 {
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	* run code
+	do "$code_dir\_retrato_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2020(1)2020 {
+	* call data
+	append using "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta"
+}
+
+* save in the output directory
+save "$output_dir\_retrato_emprego_resto_brasil.dta", replace
+export excel using "$output_dir\_retrato_emprego_resto_brasil.xls", /*
+	*/	firstrow(varlabels) replace
+	
 //////////////////////////////////////////////
 //	
 //	1) Descrever a estrutrura do emprego
@@ -157,7 +217,7 @@ export excel using "$output_dir\_estrutura_renda_resto_brasil.xls", /*
 
 //////////////////////////////////////////////
 //	
-//	3) Descrever relevância de programas sociais
+//	3) Descrever relevância de programas sociais e outras rendas
 //	
 //////////////////////////////////////////////
 
@@ -168,11 +228,11 @@ export excel using "$output_dir\_estrutura_renda_resto_brasil.xls", /*
 global area_geografica = "Amazônia Legal"
 
 * run code
-do "$code_dir\_programas_sociais"
+do "$code_dir\_programas_sociais_outras_rendas"
 
 * save in the output directory
-save "$output_dir\_programas_sociais_amazonia_legal.dta", replace
-export excel using "$output_dir\_programas_sociais_amazonia_legal.xls", /*
+save "$output_dir\_programas_sociais_outras_rendas_amazonia_legal.dta", replace
+export excel using "$output_dir\_programas_sociais_outras_rendas_amazonia_legal.xls", /*
 	*/	firstrow(varlabels) replace
 
 **********************
@@ -182,11 +242,11 @@ export excel using "$output_dir\_programas_sociais_amazonia_legal.xls", /*
 global area_geografica = "Resto do Brasil"
 
 * run code
-do "$code_dir\_programas_sociais"
+do "$code_dir\_programas_sociais_outras_rendas"
 
 * save in the output directory
-save "$output_dir\_programas_sociais_resto_brasil.dta", replace
-export excel using "$output_dir\_programas_sociais_resto_brasil.xls", /*
+save "$output_dir\_programas_sociais_outras_rendas_resto_brasil.dta", replace
+export excel using "$output_dir\_programas_sociais_outras_rendas_resto_brasil.xls", /*
 	*/	firstrow(varlabels) replace
 
 //////////////////////////////////////////////

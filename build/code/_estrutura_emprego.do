@@ -137,7 +137,7 @@ gen iten1 = 1 * V1028 if militar == 1
 by Ano Trimestre, sort: egen iten2 = total(iten1)
 
 gen prop_militar = (iten2/tool2)*100
-label variable prop_militar "Proporção militares e estatutários em relação aos ocupados (%)"
+label variable prop_militar "Proporção servidores públicos e militares em relação aos ocupados (%)"
 cap drop iten*
 
 * proporção de trabalhadores em casa
@@ -228,7 +228,7 @@ cap drop iten*
 gen iten1 = 1 * V1028 if militar == 1
 by Ano Trimestre, sort: egen n_militar = total(iten1)
 replace n_militar = round(n_militar)
-label variable n_militar "Número militares e estatutários"
+label variable n_militar "Número servidores públicos e militares"
 cap drop iten*
 
 * Número de trabalhadores em casa

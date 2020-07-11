@@ -38,7 +38,7 @@ label variable sh_empregadoSC_sh_empregadoSC "Transição trimestral de empregad
 label variable sh_empregadoSC_sh_empregadoCC "Transição trimestral de empregados sem carteira para empregados com carteira (%)"
 label variable sh_empregadoSC_sh_cpropria "Transição trimestral de empregados sem carteira para conta própria (%)"
 label variable sh_empregadoSC_sh_empregador "Transição trimestral de empregados sem carteira para empregadores (%)"
-label variable sh_empregadoSC_sh_militar "Transição trimestral de empregados sem carteira para militares/servidor estatutários (%)"
+label variable sh_empregadoSC_sh_militar "Transição trimestral de empregados sem carteira para servidores públicos (%)"
  
 label variable sh_empregadoCC_sh_inativa "Transição trimestral de empregados com carteira para inativos (%)"
 label variable sh_empregadoCC_sh_desempregado "Transição trimestral de empregados com carteira para desempregados (%)"
@@ -46,7 +46,7 @@ label variable sh_empregadoCC_sh_empregadoSC "Transição trimestral de empregad
 label variable sh_empregadoCC_sh_empregadoCC "Transição trimestral de empregados com carteira para empregados com carteira (%)"
 label variable sh_empregadoCC_sh_cpropria "Transição trimestral de empregados com carteira para conta própria (%)"
 label variable sh_empregadoCC_sh_empregador "Transição trimestral de empregados com carteira para empregadores (%)"
-label variable sh_empregadoCC_sh_militar "Transição trimestral de empregados com carteira para militares/servidor estatutários (%)"
+label variable sh_empregadoCC_sh_militar "Transição trimestral de empregados com carteira para servidores públicos (%)"
  
 label variable sh_cpropria_sh_inativa "Transição trimestral de conta própria com carteira para inativos (%)"
 label variable sh_cpropria_sh_desempregado "Transição trimestral de conta própria com carteira para desempregados (%)"
@@ -54,7 +54,7 @@ label variable sh_cpropria_sh_empregadoSC "Transição trimestral de conta próp
 label variable sh_cpropria_sh_empregadoCC "Transição trimestral de conta própria com carteira para empregados com carteira (%)"
 label variable sh_cpropria_sh_cpropria "Transição trimestral de conta própria com carteira para conta própria (%)"
 label variable sh_cpropria_sh_empregador "Transição trimestral de conta própria com carteira para empregadores (%)"
-label variable sh_cpropria_sh_militar "Transição trimestral de conta própria com carteira para militares/servidor estatutários (%)"
+label variable sh_cpropria_sh_militar "Transição trimestral de conta própria com carteira para servidores públicos (%)"
  
 label variable sh_empregador_sh_inativa "Transição trimestral de empregadores para inativos (%)"
 label variable sh_empregador_sh_desempregado "Transição trimestral de empregadores para desempregados (%)"
@@ -62,15 +62,15 @@ label variable sh_empregador_sh_empregadoSC "Transição trimestral de empregado
 label variable sh_empregador_sh_empregadoCC "Transição trimestral de empregadores para empregados com carteira (%)"
 label variable sh_empregador_sh_cpropria "Transição trimestral de empregadores para conta própria (%)"
 label variable sh_empregador_sh_empregador "Transição trimestral de empregadores para empregadores (%)"
-label variable sh_empregador_sh_militar "Transição trimestral de empregadores para militares/servidor estatutários (%)"
+label variable sh_empregador_sh_militar "Transição trimestral de empregadores para servidores públicos (%)"
  
-label variable sh_militar_sh_inativa "Transição trimestral de militares/servidor estatutários para inativos (%)"
-label variable sh_militar_sh_desempregado "Transição trimestral de militares/servidor estatutários para desempregados (%)"
-label variable sh_militar_sh_empregadoSC "Transição trimestral de militares/servidor estatutários para empregados sem carteira (%)"
-label variable sh_militar_sh_empregadoCC "Transição trimestral de militares/servidor estatutários para empregados com carteira (%)"
-label variable sh_militar_sh_cpropria "Transição trimestral de militares/servidor estatutários para conta própria (%)"
-label variable sh_militar_sh_empregador "Transição trimestral de militares/servidor estatutários para empregadores (%)"
-label variable sh_militar_sh_militar "Transição trimestral de militares/servidor estatutários para militares/servidor estatutários (%)"
+label variable sh_militar_sh_inativa "Transição trimestral de servidores públicos para inativos (%)"
+label variable sh_militar_sh_desempregado "Transição trimestral de servidores públicos para desempregados (%)"
+label variable sh_militar_sh_empregadoSC "Transição trimestral de servidores públicos para empregados sem carteira (%)"
+label variable sh_militar_sh_empregadoCC "Transição trimestral de servidores públicos para empregados com carteira (%)"
+label variable sh_militar_sh_cpropria "Transição trimestral de servidores públicos para conta própria (%)"
+label variable sh_militar_sh_empregador "Transição trimestral de servidores públicos para empregadores (%)"
+label variable sh_militar_sh_militar "Transição trimestral de servidores públicos para servidores públicos (%)"
 
 * keep relevant variables
 keep Ano Trimestre sh_*

@@ -50,6 +50,7 @@ global area_geografica = "Amazônia Legal"
 forvalues yr = 2020(1)2020{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
 	* run code
 	do "$code_dir\_retrato_emprego"
 	* save as temporary
@@ -77,6 +78,7 @@ global area_geografica = "Resto do Brasil"
 forvalues yr = 2020(1)2020 {
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
 	* run code
 	do "$code_dir\_retrato_emprego"
 	* save as temporary
@@ -110,6 +112,7 @@ global area_geografica = "Amazônia Legal"
 forvalues yr = 2012(1)2020{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
 	* run code
 	do "$code_dir\_estrutura_emprego"
 	* save as temporary
@@ -137,6 +140,7 @@ global area_geografica = "Resto do Brasil"
 forvalues yr = 2012(1)2020{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
 	* run code
 	do "$code_dir\_estrutura_emprego"
 	* save as temporary
@@ -170,6 +174,7 @@ global area_geografica = "Amazônia Legal"
 forvalues yr = 2012(1)2020{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
 	* run code
 	do "$code_dir\_estrutura_renda"
 	* save as temporary
@@ -265,6 +270,7 @@ global area_geografica = "Amazônia Legal"
 forvalues yr = 1(1)8{
 	* call data
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
+	*sample 1
 	* run code to clean data
 	do "$code_dir\_transicao_ocupacao_1clean"
 	* save as temporary
@@ -317,6 +323,7 @@ global area_geografica = "Resto do Brasil"
 forvalues yr = 1(1)8{
 	* call data
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
+	*sample 1
 	* run code to clean data
 	do "$code_dir\_transicao_ocupacao_1clean"
 	* save as temporary

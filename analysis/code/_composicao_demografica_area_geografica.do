@@ -26,7 +26,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * select variables
-ds prop_* taxa_* n_*
+ds prop_* taxa_* 
 local type `r(varlist)'
 display "`type'"
 
@@ -45,10 +45,67 @@ local label_var: variable label `lname'
 * 		Grafico 
 		graph twoway connected `lname' trim 	if domicilio_rural == 1 || /*
 		*/  connected `lname' trim 	if domicilio_urbano == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range(0 20) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+		else if "`lname'" == "taxa_de_ocupacao" 	/*
+		*/ 	| "`lname'" == "taxa_de_informalidade" 	/*
+		*/ 	| "`lname'" == "taxa_de_participacao" 	{
+* 		Grafico 
+		graph twoway connected `lname' trim 	if domicilio_rural == 1 || /*
+		*/  connected `lname' trim 	if domicilio_urbano == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+		** Y-axis between ()
+		else {
+		graph twoway connected `lname' trim 	if domicilio_rural == 1 || /*
+		*/  connected `lname' trim 	if domicilio_urbano == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range(0 ) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+	
+* save graph 
+graph save Graph "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_rural_urbano_`lname'.gph", replace
+graph use "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_rural_urbano_`lname'.gph"
+graph export "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_rural_urbano_`lname'.png", replace		
+
+}
+
+* select variables
+ds n_*
+local type `r(varlist)'
+display "`type'"
+
+foreach lname in `type' {
+
+local label_var: variable label `lname'
+
+	* Graphs separated by the range of Y-axis
+		** Y-axis between (0 20)
+		if "`lname'" == "" {
+* 		Grafico 
+		graph twoway connected `lname' trim 	if domicilio_rural == 1 || /*
+		*/  connected `lname' trim 	if domicilio_urbano == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#6, angle(0) format(%12.0fc) ) 		/*
 		*/	yscale( axis(1) range(0 20) lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
@@ -58,11 +115,11 @@ local label_var: variable label `lname'
 		else {
 		graph twoway connected `lname' trim 	if domicilio_rural == 1 || /*
 		*/  connected `lname' trim 	if domicilio_urbano == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
-		*/	ylabel(#9, angle(0) ) 		/*
-		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
+		*/	ylabel(#6, angle(0) format(%12.0fc) ) 		/*
+		*/	yscale( axis(1) range(0 ) lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
@@ -120,7 +177,7 @@ local label_var: variable label `lname'
 * 		Grafico 
 		graph twoway connected `lname' trim 	if area_regiao_metropolitana == 1 || /*
 		*/  connected `lname' trim 	if area_nregiao_metropolitana == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
@@ -128,18 +185,75 @@ local label_var: variable label `lname'
 		*/	legend( order(1 2) cols(2) label(1 "Região Metropolitana") label(2 "Fora de Região Metropolitana") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
-	
-		** Y-axis between ()
-		else {
+		else if "`lname'" == "taxa_de_ocupacao" 	/*
+		*/ 	| "`lname'" == "taxa_de_informalidade" 	/*
+		*/ 	| "`lname'" == "taxa_de_participacao" 	{
 * 		Grafico 
 		graph twoway connected `lname' trim 	if area_regiao_metropolitana == 1 || /*
 		*/  connected `lname' trim 	if area_nregiao_metropolitana == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2) cols(2) label(1 "Região Metropolitana") label(2 "Fora de Região Metropolitana") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}	
+		** Y-axis between ()
+		else {
+* 		Grafico 
+		graph twoway connected `lname' trim 	if area_regiao_metropolitana == 1 || /*
+		*/  connected `lname' trim 	if area_nregiao_metropolitana == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range(0 ) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Região Metropolitana") label(2 "Fora de Região Metropolitana") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+	
+* save graph 
+graph save Graph "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_regiao_metro_`lname'.gph", replace
+graph use "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_regiao_metro_`lname'.gph"
+graph export "$output_dir\composicao_demografica\area_geografica\_composicao_demografica_regiao_metro_`lname'.png", replace		
+
+}
+
+* select variables
+ds n_*
+local type `r(varlist)'
+display "`type'"
+
+foreach lname in `type' {
+
+local label_var: variable label `lname'
+
+	* Graphs separated by the range of Y-axis
+		** Y-axis between (0 20)
+		if "`lname'" == "" {
+* 		Grafico 
+		graph twoway connected `lname' trim 	if area_regiao_metropolitana == 1 || /*
+		*/  connected `lname' trim 	if area_nregiao_metropolitana == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#6, angle(0) format(%12.0fc) ) 		/*
+		*/	yscale( axis(1) range(0 20) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+	
+		** Y-axis between ()
+		else {
+		graph twoway connected `lname' trim 	if area_regiao_metropolitana == 1 || /*
+		*/  connected `lname' trim 	if area_nregiao_metropolitana == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#6, angle(0) format(%12.0fc) ) 		/*
+		*/	yscale( axis(1) range(0 ) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Domicílios rural") label(2 "Domicílios urbano") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
 	

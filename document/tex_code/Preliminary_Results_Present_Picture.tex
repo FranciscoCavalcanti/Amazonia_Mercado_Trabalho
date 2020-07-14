@@ -1,0 +1,303 @@
+\documentclass[11pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[beamer,customcolors]{hf-tikz}
+
+\tikzset{hl/.style={
+    set fill color=red!80!black!40,
+    set border color=red!80!black,
+  },
+}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\usetheme{Montpellier}
+\usepackage[utf8]{inputenc}
+\usepackage[english,american]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{array} % for defining a new column type
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+	
+\author[Francisco Cavalcanti]{Francisco Cavalcanti\\\footnotesize{PUC-Rio}
+}
+
+\author{
+Flávia  Alfenas\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and  
+Francisco Cavalcanti\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and   
+Gustavo Gonzaga \\
+\textit{PUC-Rio} 
+}
+
+\date{Julho, 2020}
+
+\title{Retrato do Mercado de Trabalho na Amazônia Legal}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+\newcommand{\quotes}[1]{``#1''}
+
+
+\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\newcolumntype{M}{>{\begin{varwidth}{4cm}}l<{\end{varwidth}}} %M is for Maximal column
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\section{Introdução}
+
+\begin{frame}[label=indice_principal]{Índice Principal}
+{\footnotesize Fonte de dados: Dados da PNAD Contínua Trimestral (2020)}
+\begin{itemize}  
+	
+\item{
+	\hyperlink{_retrato_emprego_bar_formalidade}{\beamerbutton{Tabelas de Barras}} - {\scriptsize Descreve o número de ocupados entre formais e informais}
+	}  
+
+\item{
+	\hyperlink{_retrato_emprego_pie_formalidade}{\beamerbutton{Gráficos Pizza}} - {\scriptsize Descreve a proporção de ocupados entre formais e informais}
+	}  
+
+\item{
+	\hyperlink{_retrato_emprego_bar_n_de_ocupado_gstr}{\beamerbutton{Tabelas de Barras}} - {\scriptsize Descreve o número de ocupados entre setores ocupacionais}
+	}  
+		
+		
+\item{
+	\hyperlink{_retrato_emprego_pie_n_de_ocupado_gstr}{\beamerbutton{Gráficos Pizza}} - {\scriptsize Descreve a proporção de ocupados entre setores ocupacionais}
+	}  
+		
+\item{
+	\hyperlink{_retrato_emprego_bar_n_de_formal_gstr}{\beamerbutton{Tabelas de Barras}} - {\scriptsize Descreve o número de trabalhadores formais entre setores ocupacionais}
+	}  
+		
+		
+\item{
+	\hyperlink{_retrato_emprego_pie_n_de_formal_gstr}{\beamerbutton{Gráficos Pizza}} - {\scriptsize Descreve a proporção de trabalhadores formais entre setores ocupacionais}
+	}  
+			
+
+\item{
+	\hyperlink{_retrato_emprego_bar_n_de_informal_gstr}{\beamerbutton{Tabelas de Barras}} - {\scriptsize Descreve o número de trabalhadores informais entre setores ocupacionais}
+	}  
+		
+\item{
+	\hyperlink{_retrato_emprego_pie_n_de_informal_gstr}{\beamerbutton{Gráficos Pizza}} - {\scriptsize Descreve a proporção de trabalhadores informais entre setores ocupacionais}
+	}  		
+\end{itemize}
+
+\end{frame}
+
+\section{Retrato do Emprego}
+
+\begin{frame}[label=_retrato_emprego_bar_formalidade]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_formalidade_amazonia_legal.png}
+  \label{fig:_retrato_emprego_bar_formalidade_amazonia_legal}
+  \caption{{\tiny Número de ocupados na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_formalidade_resto_brasil.png}
+  \label{fig:_retrato_emprego_bar_formalidade_resto_brasil}
+   \caption{{\tiny Número de ocupados no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_retrato_emprego_pie_formalidade]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_formalidade_amazonia_legal.png}
+  \label{fig:_retrato_emprego_pie_formalidade_amazonia_legal}
+  \caption{{\tiny Proporção de ocupados na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_formalidade_resto_brasil.png}
+  \label{fig:_retrato_emprego_pie_formalidade_resto_brasil}
+   \caption{{\tiny Proporção de ocupados no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[label=_retrato_emprego_bar_n_de_ocupado_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_ocupado_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_bar_n_de_ocupado_gstr_amazonia_legal}
+  \caption{{\tiny N. de ocupados na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_ocupado_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_bar_n_de_ocupado_gstr_resto_brasil}
+   \caption{{\tiny N. de ocupados no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_retrato_emprego_pie_n_de_ocupado_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_ocupado_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_pie_n_de_ocupado_gstr_amazonia_legal}
+  \caption{{\tiny $(\%)$ de ocupados na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_ocupado_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_pie_n_de_ocupado_gstr_resto_brasil}
+   \caption{{\tiny $(\%)$ de ocupados no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[label=_retrato_emprego_bar_n_de_formal_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_formal_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_bar_n_de_formal_gstr_amazonia_legal}
+  \caption{{\tiny N. de trabalhadores formais na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_formal_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_bar_n_de_formal_gstr_resto_brasil}
+   \caption{{\tiny N. de trabalhadores formais no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\begin{frame}[label=_retrato_emprego_pie_n_de_formal_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_formal_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_pie_n_de_formal_gstr_amazonia_legal}
+  \caption{{\tiny $(\%)$ de trabalhadores formais na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_formal_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_pie_n_de_formal_gstr_resto_brasil}
+   \caption{{\tiny $(\%)$ de trabalhadores formais no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[label=_retrato_emprego_bar_n_de_informal_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_informal_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_bar_n_de_informal_gstr_amazonia_legal}
+  \caption{{\tiny N. de trabalhadores informais na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_bar_n_de_informal_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_bar_n_de_informal_gstr_resto_brasil}
+   \caption{{\tiny N. de trabalhadores informais no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}[label=_retrato_emprego_pie_n_de_informal_gstr]{}
+\textit{\hyperlink{indice_principal}{\beamerbutton{Voltar}}}
+\begin{figure}
+\centering
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_informal_gstr_amazonia_legal.png}
+  \label{fig:_retrato_emprego_pie_n_de_informal_gstr_amazonia_legal}
+  \caption{{\tiny $(\%)$ de trabalhadores informais na \textbf{Amazônia Legal}}}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[width=.95\linewidth]{../../analysis/output/retrato_emprego/_retrato_emprego_pie_n_de_informal_gstr_resto_brasil.png}
+  \label{fig:_retrato_emprego_pie_n_de_informal_gstr_resto_brasil}
+   \caption{{\tiny $(\%)$ de trabalhadores informais no \textbf{Resto do Brasil}}}
+\end{subfigure}
+\end{figure}
+\end{frame}
+
+\section{Comentários}
+
+
+\frame
+{
+    \begin{center}
+     \vfill
+    \textbf{Obrigado!}
+     \\
+
+     \begin{small}
+     \end{small}
+     \vfill
+     \onslide<2>
+\end{center}
+}
+
+\end{document}
+
+
+

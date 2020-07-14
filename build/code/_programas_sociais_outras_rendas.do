@@ -36,11 +36,11 @@ global time  `year'
 
 do "$code_dir\_definicoes_pnadcontinua_anual"
 
-* select just a small sample for training data
+* select just a small *sample for training data
 cap drop __*
 cap drop iten*
 cap drop tool*
-*sample 2
+**sample 2
 
 
 /////////////////////////////////////////////////////////
@@ -129,12 +129,22 @@ by Ano Trimestre, sort: egen total_renda_anual = total(iten1)
 cap drop iten*
 cap drop tool*
 
+/////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 300,00 ($ 1.9 por dia)
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 300
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_300 = tool2
+cap drop iten*
+cap drop tool*
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************
 
 	// attach label of variables
-	local colvar n_* total_*
+	local colvar n_* total_* 
 
 	foreach v of var `colvar' {
     local l`v' : variable label `v'
@@ -168,7 +178,7 @@ cap drop iten*
 
 do "$code_dir\_definicoes_pnadcontinua_anual"
 
-* select just a small sample for training data
+* select just a small *sample for training data
 cap drop __*
 cap drop iten*
 cap drop tool*
@@ -255,12 +265,26 @@ by Ano Trimestre, sort: egen total_renda_anual = total(iten1)
 cap drop iten*
 cap drop tool*
 
+/////////////////////////////////////////////////////////
+//	B) Pobreza
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 300,00 ($ 1.9 por dia)
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 300
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_300 = tool2
+cap drop iten*
+cap drop tool*
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************
 
 	// attach label of variables
-	local colvar n_* total_*
+	local colvar n_* total_* 
 
 	foreach v of var `colvar' {
     local l`v' : variable label `v'
@@ -301,7 +325,7 @@ sort  Ano Trimestre
 	foreach v of var `colvar' {
     	local l`v' : variable label `v'
 	}
-collapse (sum) n_* total_*, by(Ano Trimestre)	
+collapse (sum) n_* total_* , by(Ano Trimestre)	
 	// copy back the label of variables
 	foreach v of var `colvar' {
     	label var `v' "`l`v''"
@@ -329,7 +353,12 @@ cap drop iten* tool*
 
 * Proporção da população aposentadoria em (%)
 gen prop_aposentadoria = (n_aposentadoria/n_populacao)*100
-label variable prop_aposentadoria "Proporção da população aposentadoria (%)"
+label variable prop_aposentadoria "Proporção da população que recebeu aposentadoria (%)"
+cap drop iten* tool* 
+
+* Proporção da população aposentadoria em (%)
+gen prop_renda_anual_pc_300 = (n_renda_anual_pc_300/n_populacao)*100
+label variable prop_renda_anual_pc_300 "Proporção da população com rendimento per capita de até R$ 300,00 (%)"
 cap drop iten* tool* 
 
 * Rendimento domiciliar per capita (R$)

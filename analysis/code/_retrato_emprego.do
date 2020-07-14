@@ -53,7 +53,7 @@ foreach lname in `type' {
 		*/	,  title("", size(Medium large)) 	/*
 		*/	pie(_all, color(%50) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(1) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agricultura") label(5 "Serviços") size(small) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.0f))
+		*/	plabel(_all percent, size(Medium) format(%12.0f)  lstyle(p1solid) ) 
 		
 		* save graph 
 	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_pie_`lname'_gstr_amazonia_legal.gph", replace
@@ -90,7 +90,7 @@ set scheme s1mono
 		*/	,  title("", size(Medium large)) 	/*
 		*/	pie(_all, color(%100) explode) 	/*
 		*/	legend(on position(1) ring(0) order(1 2) cols(1) label(1 "Informal") label(2 "Formal") size(small) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.0f))
+		*/	plabel(_all percent, size(Medium) format(%12.0f)  lstyle(p1solid) ) 
 		
 		* save graph 
 	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_pie_formalidade_amazonia_legal.gph", replace
@@ -135,7 +135,7 @@ foreach lname in `type' {
 		*/	,  title("", size(Medium large)) 	/*
 		*/	pie(_all, color(%50) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(1) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agricultura") label(5 "Serviços") size(small) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.0f))
+		*/	plabel(_all percent, size(Medium) format(%12.0f)  lstyle(p1solid) ) 
 		
 		* save graph 
 	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_pie_`lname'_gstr_resto_brasil.gph", replace
@@ -172,7 +172,7 @@ set scheme s1mono
 		*/	,  title("", size(Medium large)) 	/*
 		*/	pie(_all, color(%100) explode) 	/*
 		*/	legend(on position(1) ring(0) order(1 2) cols(1) label(1 "Informal") label(2 "Formal") size(small) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.0f))
+		*/	plabel(_all percent, size(Medium) format(%12.0f)  lstyle(p1solid) ) 
 		
 		* save graph 
 	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_pie_formalidade_resto_brasil.gph", replace

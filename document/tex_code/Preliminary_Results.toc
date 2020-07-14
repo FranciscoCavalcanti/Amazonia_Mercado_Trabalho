@@ -1,8 +1,0 @@
-\babel@toc {american}{}
-\beamer@sectionintoc {1}{Introdu\IeC {\c c}\IeC {\~a}o}{2}{0}{1}
-\beamer@sectionintoc {2}{Estrutura do Emprego}{3}{0}{2}
-\beamer@sectionintoc {3}{Estrutura da Renda}{14}{0}{3}
-\beamer@sectionintoc {4}{Programas Sociais}{25}{0}{4}
-\beamer@sectionintoc {5}{Transi\IeC {\c c}\IeC {\~a}o de Ocupa\IeC {\c c}\IeC {\~o}es}{29}{0}{5}
-\beamer@sectionintoc {6}{Composi\IeC {\c c}\IeC {\~a}o Demogr\IeC {\'a}fica}{42}{0}{6}
-\beamer@sectionintoc {7}{Coment\IeC {\'a}rios}{124}{0}{7}

@@ -29,7 +29,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * select variables
-ds prop_* taxa_* n_*
+ds prop_* taxa_* 
 local type `r(varlist)'
 display "`type'"
 
@@ -51,11 +51,83 @@ local label_var: variable label `lname'
 		*/  connected `lname' trim 	if setor_comercio   == 1  || /*
 		*/  connected `lname' trim 	if setor_servicos   == 1  || /*
 		*/  connected `lname' trim 	if setor_construcao  == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/	yscale( axis(1) range(0 20) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2 3 4 5) cols(5) label(1 "Agricultura") label(2 "Indústria") label(3 "Comércio") label(4 "Serviços") label(5 "Construção") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+		else if "`lname'" == "taxa_de_ocupacao" 	/*
+		*/ 	| "`lname'" == "taxa_de_informalidade" 	/*
+		*/ 	| "`lname'" == "taxa_de_participacao" 	{
+* 		Grafico 
+		graph twoway connected `lname' trim 	if setor_agricultura  == 1 || /*
+		*/  connected `lname' trim 	if setor_industria  == 1  || /*
+		*/  connected `lname' trim 	if setor_comercio   == 1  || /*
+		*/  connected `lname' trim 	if setor_servicos   == 1  || /*
+		*/  connected `lname' trim 	if setor_construcao  == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2 3 4 5) cols(5) label(1 "Agricultura") label(2 "Indústria") label(3 "Comércio") label(4 "Serviços") label(5 "Construção") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}			
+		** Y-axis between ()
+		else {
+* 		Grafico 
+		graph twoway connected `lname' trim 	if setor_agricultura  == 1 || /*
+		*/  connected `lname' trim 	if setor_industria  == 1  || /*
+		*/  connected `lname' trim 	if setor_comercio   == 1  || /*
+		*/  connected `lname' trim 	if setor_servicos   == 1  || /*
+		*/  connected `lname' trim 	if setor_construcao  == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) ) 		/*
+		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2 3 4 5) cols(5) label(1 "Agricultura") label(2 "Indústria") label(3 "Comércio") label(4 "Serviços") label(5 "Construção") size(vsmall) )	/*
+		*/ 	xlabel(#8, grid angle(45))	
+		}
+	
+* save graph 
+graph save Graph "$output_dir\composicao_demografica\setor\_composicao_demografica_setor_`lname'.gph", replace
+graph use "$output_dir\composicao_demografica\setor\_composicao_demografica_setor_`lname'.gph"
+graph export "$output_dir\composicao_demografica\setor\_composicao_demografica_setor_`lname'.png", replace		
+
+}
+
+
+* select variables
+ds n_*
+local type `r(varlist)'
+display "`type'"
+
+* set design of graph
+set scheme s1mono
+
+* begin of loop over variables
+foreach lname in `type' {
+
+local label_var: variable label `lname'
+
+	* Graphs separated by the range of Y-axis
+		** Y-axis between (0 20)
+		if "`lname'" == "" {
+* 		Grafico 
+		graph twoway connected `lname' trim 	if setor_agricultura  == 1 || /*
+		*/  connected `lname' trim 	if setor_industria  == 1  || /*
+		*/  connected `lname' trim 	if setor_comercio   == 1  || /*
+		*/  connected `lname' trim 	if setor_servicos   == 1  || /*
+		*/  connected `lname' trim 	if setor_construcao  == 1 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
+		*/ 	ytitle("") 	/*
+		*/ 	xtitle("")	/*	
+		*/	ylabel(#9, angle(0) format(%12.0fc) ) 		/*
+		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2 3 4 5) cols(5) label(1 "Agricultura") label(2 "Indústria") label(3 "Comércio") label(4 "Serviços") label(5 "Construção") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
@@ -68,11 +140,11 @@ local label_var: variable label `lname'
 		*/  connected `lname' trim 	if setor_comercio   == 1  || /*
 		*/  connected `lname' trim 	if setor_servicos   == 1  || /*
 		*/  connected `lname' trim 	if setor_construcao  == 1 	/*
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
-		*/	ylabel(#9, angle(0) ) 		/*
-		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
+		*/	ylabel(#9, angle(0) format(%12.0fc) ) 		/*
+		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2 3 4 5) cols(5) label(1 "Agricultura") label(2 "Indústria") label(3 "Comércio") label(4 "Serviços") label(5 "Construção") size(vsmall) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
@@ -83,6 +155,5 @@ graph use "$output_dir\composicao_demografica\setor\_composicao_demografica_seto
 graph export "$output_dir\composicao_demografica\setor\_composicao_demografica_setor_`lname'.png", replace		
 
 }
-
 *
 clear

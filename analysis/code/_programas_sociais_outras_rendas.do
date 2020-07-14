@@ -44,16 +44,16 @@ local label_var: variable label `lname'
 
 	* Graphs separated by the range of Y-axis
 		** Y-axis between (0 20)
-		if "`lname'" == "" 	{
+		if "`lname'" == "prop_seguro_desemprego" | "`lname'" == "prop_bpc_loas"   	{
 * 		Grafico 
 		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
 		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
-		*/	yscale( axis(1) range(0 20) lstyle(none) )	/* how y axis looks
-		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(small) )	/*
+		*/	yscale( axis(1) range(0 3) lstyle(none) )	/* how y axis looks
+		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
 	
@@ -61,21 +61,21 @@ local label_var: variable label `lname'
 		else {
 		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
 		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
 		*/	yscale( axis(1) )	/* how y axis looks	
-		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(small) )	/*
+		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium) )	/*
 		*/	legend(on) 	/*		
 		*/ 	xlabel(#8, grid angle(45))	
 		}
 	
 * save graph 
-graph save Graph "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.gph", replace
-graph use "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.gph"
-graph export "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas`lname'.png", replace		
+graph save Graph "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas_`lname'.gph", replace
+graph use "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas_`lname'.gph"
+graph export "$output_dir\programas_sociais_outras_rendas\_programas_sociais_outras_rendas_`lname'.png", replace		
 
 }
 

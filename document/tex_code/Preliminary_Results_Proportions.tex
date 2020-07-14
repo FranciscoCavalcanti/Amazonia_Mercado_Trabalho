@@ -1,0 +1,151 @@
+\documentclass[11pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[beamer,customcolors]{hf-tikz}
+
+\tikzset{hl/.style={
+    set fill color=red!80!black!40,
+    set border color=red!80!black,
+  },
+}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\usetheme{Montpellier}
+\usepackage[utf8]{inputenc}
+\usepackage[english,american]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{array} % for defining a new column type
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+	
+\author[Francisco Cavalcanti]{Francisco Cavalcanti\\\footnotesize{PUC-Rio}
+}
+
+\author{
+Flávia  Alfenas\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and  
+Francisco Cavalcanti\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and   
+Gustavo Gonzaga \\
+\textit{PUC-Rio} 
+}
+
+\date{Julho, 2020}
+
+\title{Mercado de Trabalho na Amazônia Legal \\ Proporções e Taxas}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+\newcommand{\quotes}[1]{``#1''}
+
+
+\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\newcolumntype{M}{>{\begin{varwidth}{4cm}}l<{\end{varwidth}}} %M is for Maximal column
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\section{Introdução}
+
+\begin{frame}[label=indice_principal]{Índice Principal}
+
+\begin{itemize}
+\item{
+	\hyperlink{_estrutura_emprego}{\beamerbutton{Estrutrura do Emprego}} - Descreve a estrutura e evolução do emprego da Amazônia Legal e compara com o resto do Brasil.
+	}   
+		
+\item{
+	\hyperlink{_estrutura_renda}{\beamerbutton{Estrutura da Renda}} - Descreve a estrutura e evolução de rendimentos e desigualdade da Amazônia Legal e compara com o resto do Brasil.
+	}  
+	
+\item{
+	\hyperlink{_programas_sociais}{\beamerbutton{Programas Sociais}} - Descreve a presença de programas sociais na Amazônia Legal e compara com o resto do Brasil.
+	}  
+	
+\item{
+	\hyperlink{_transicao_ocupacao}{\beamerbutton{Transição de Ocupações}} - Descreve o risco associado a cada ocupação e como esse risco evoluiu ao longo do tempo para a Amazônia Legal e compara com o resto do Brasil.
+	}  
+	
+\item{
+	\hyperlink{_composicao_demografica}{\beamerbutton{Composição Demográfica}} - Esta seção destrincha a estrutura do mercado de trabalho na Amazônia Legal por composições demográficas.
+	}  
+
+\end{itemize}
+
+\end{frame}
+
+\section{Estrutura do Emprego}
+
+\input{./_sub_code_proportions/_estrutura_emprego}
+
+\section{Estrutura da Renda}
+
+\input{./_sub_code_proportions/_estrutura_renda}
+
+\section{Programas Sociais e Outras Rendas}
+
+\input{./_sub_code_proportions/_programas_sociais_outras_rendas}
+
+\section{Transição de Ocupações}
+
+\input{./_sub_code_proportions/_transicao_ocupacao}
+
+\section{Composição Demográfica}
+
+\input{./_sub_code_proportions/_composicao_demografica}
+
+\section{Comentários}
+
+
+\frame
+{
+    \begin{center}
+     \vfill
+    \textbf{Obrigado!}
+     \\
+
+     \begin{small}
+     email: francisco.lima.cavalcanti@gmail.com
+     \end{small}
+     \vfill
+     \onslide<2>
+\end{center}
+}
+
+\end{document}
+
+
+

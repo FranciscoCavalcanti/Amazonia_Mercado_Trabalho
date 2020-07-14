@@ -45,12 +45,12 @@ local label_var: variable label `lname'
 * 		Grafico 
 		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
 		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
-		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(small))	/*
+		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium))	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
 	
@@ -58,12 +58,12 @@ local label_var: variable label `lname'
 		else {
 		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
 		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
-		*/ 	,  title("`label_var'", size(small)) 	/*
+		*/ 	,  title("`label_var'", size(Medium)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
-		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(small))	/*
+		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium))	/*
 		*/ 	xlabel(#8, grid angle(45))	
 		}
 	

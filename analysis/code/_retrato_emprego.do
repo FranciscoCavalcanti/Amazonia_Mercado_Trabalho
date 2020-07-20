@@ -29,9 +29,6 @@ ds prop_* taxa_* n_*
 local type `r(varlist)'
 display "`type'"
 
-**
-**
-
 **********************
 **	Amazônia Legal	**
 **********************

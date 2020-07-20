@@ -47,7 +47,7 @@ set more off, perm
 
 global area_geografica = "Amazônia Legal"
 
-forvalues yr = 2020(1)2020{
+forvalues yr = 2019(1)2019{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	*sample 1
@@ -59,7 +59,7 @@ forvalues yr = 2020(1)2020{
 
 * append temporary data base
 clear
-forvalues yr = 2020(1)2020 {
+forvalues yr = 2019(1)2019 {
 	* call data
 	append using "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta"
 }
@@ -75,7 +75,7 @@ export excel using "$output_dir\_retrato_emprego_amazonia_legal.xls", /*
 
 global area_geografica = "Resto do Brasil"
 
-forvalues yr = 2020(1)2020 {
+forvalues yr = 2019(1)2019 {
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	*sample 1
@@ -87,7 +87,7 @@ forvalues yr = 2020(1)2020 {
 
 * append temporary data base
 clear
-forvalues yr = 2020(1)2020 {
+forvalues yr = 2019(1)2019 {
 	* call data
 	append using "$tmp_dir\_temp_retrato_emprego_PNADC`yr'.dta"
 }

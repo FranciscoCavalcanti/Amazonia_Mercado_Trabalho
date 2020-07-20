@@ -30,17 +30,11 @@ local type `r(varlist)'
 display "`type'"
 
 
-
-
 **********************
 **	Amazônia Legal	**
 **********************
 
 **	GRANDES SETORES	**
-* set design of graph
-*set scheme s1mono
-*set scheme economist
-*set scheme sj
 set scheme s1color 
 
 * begin of loop over variables
@@ -87,7 +81,6 @@ foreach lname in `type' {
 }
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-
 set scheme s1color 
 
 * begin of loop over variables
@@ -139,9 +132,9 @@ foreach lname in `type' {
 	
 }
 
-**	informalidade x formalidade	**
-
+**	INFORMALIDADE x FORMALIDADE	**
 set scheme s1mono
+
 	graph pie n_de_informalidade n_de_formal 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("", size(Medium large)) 	/*
@@ -175,10 +168,6 @@ set scheme s1mono
 **********************
 
 **	GRANDES SETORES	**
-* set design of graph
-*set scheme s1mono
-*set scheme economist
-*set scheme sj
 set scheme s1color 
 
 * begin of loop over variables
@@ -225,7 +214,6 @@ foreach lname in `type' {
 }
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-
 set scheme s1color 
 
 * begin of loop over variables
@@ -277,8 +265,9 @@ foreach lname in `type' {
 	
 }
 		
-* informalidade x formalidade		
+**	INFORMALIDADE x FORMALIDADE	**
 set scheme s1mono
+
 	graph pie n_de_informalidade n_de_formal 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("", size(Medium large)) 	/*

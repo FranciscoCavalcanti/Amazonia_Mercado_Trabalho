@@ -168,6 +168,19 @@ gen gstr_construcao = 1 if VD4010 == 3 	// Construção
 gen gstr_comercio = 1 if VD4010 == 4 	// Comércio, reparação de veículos automotores e motocicletas
 gen gstr_servicos = 1 if VD4010 >= 5 	// 
 
+* Grupamentos de atividade principal do empreendimento do trabalho 
+gen gape_agricultura = 1 if VD4010 == 1 	// Agricultura, pecuária, produção florestal, pesca e aquicultura 
+gen gape_industria = 1 if VD4010 == 2 	// Indústria geral
+gen gape_construcao = 1 if VD4010 == 3 	// Construção
+gen gape_comercio = 1 if VD4010 == 4 	// Comércio, reparação de veículos automotores e motocicletas
+gen gape_transporte = 1 if VD4010 == 5 	// Transporte, armazenagem e correio 
+gen gape_alimentacao = 1 if VD4010 == 6 	// Alojamento e alimentação 
+gen gape_informacao = 1 if VD4010 == 7 	// Informação, comunicação e atividades financeiras, imobiliárias, profissionais e administrativas
+gen gape_publica = 1 if VD4010 == 8 	// Administração pública, defesa e seguridade social 
+gen gape_educacao = 1 if VD4010 == 9 	// Educação, saúde humana e serviços sociais
+gen gape_outros  = 1 if VD4010 == 10 	// Outros Serviços
+gen gape_domestico = 1 if VD4010 == 11 	// Serviços domésticos
+
 **************************************
 **	Editar variável trimestre 		**
 ** 									**

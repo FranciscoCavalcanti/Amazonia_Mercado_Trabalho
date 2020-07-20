@@ -163,7 +163,7 @@ replace n_de_ocupado_gstr_construcao = round(n_de_ocupado_gstr_construcao)
 label variable n_de_ocupado_gstr_construcao "Número de ocupados no setor de construção"
 cap drop iten*
 
-gen iten1 = 1 * V1028 if ocupado == 1 & gstr_servicos==1
+gen iten1 = 1 * V1028 if ocupado == 1 & gstr_comercio==1
 by Ano Trimestre, sort: egen n_de_ocupado_gstr_comercio = total(iten1)
 replace n_de_ocupado_gstr_comercio = round(n_de_ocupado_gstr_comercio)
 label variable n_de_ocupado_gstr_comercio "Número de ocupados no setor de comércio"
@@ -240,6 +240,215 @@ by Ano Trimestre, sort: egen n_de_informal_gstr_servicos = total(iten1)
 replace n_de_informal_gstr_servicos = round(n_de_informal_gstr_servicos)
 label variable n_de_informal_gstr_servicos "Número de informais no setor de serviços"
 cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de ocupados por atividade principal do empreendimento do trabalho
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_agricultura==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_agricultura = total(iten1)
+replace n_de_ocupado_gape_agricultura = round(n_de_ocupado_gape_agricultura)
+label variable n_de_ocupado_gape_agricultura "Agricultura, pecuária, produção florestal, pesca e aquicultura "
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_industria==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_industria = total(iten1)
+replace n_de_ocupado_gape_industria = round(n_de_ocupado_gape_industria)
+label variable n_de_ocupado_gape_industria "Indústria geral"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_construcao==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_construcao = total(iten1)
+replace n_de_ocupado_gape_construcao = round(n_de_ocupado_gape_construcao)
+label variable n_de_ocupado_gape_construcao "Construção"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_comercio==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_comercio = total(iten1)
+replace n_de_ocupado_gape_comercio = round(n_de_ocupado_gape_comercio)
+label variable n_de_ocupado_gape_comercio "Comércio, reparação de veículos automotores e motocicletas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_transporte==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_transporte = total(iten1)
+replace n_de_ocupado_gape_transporte = round(n_de_ocupado_gape_transporte)
+label variable n_de_ocupado_gape_transporte "Transporte, armazenagem e correio"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_alimentacao==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_alimentacao = total(iten1)
+replace n_de_ocupado_gape_alimentacao = round(n_de_ocupado_gape_alimentacao)
+label variable n_de_ocupado_gape_alimentacao "Alojamento e alimentação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_informacao==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_informacao = total(iten1)
+replace n_de_ocupado_gape_informacao = round(n_de_ocupado_gape_informacao)
+label variable n_de_ocupado_gape_informacao "Informação, comunicação e atividades financeiras, imobiliárias, profissionais e administrativas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_publica==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_publica = total(iten1)
+replace n_de_ocupado_gape_publica = round(n_de_ocupado_gape_publica)
+label variable n_de_ocupado_gape_publica "Administração pública, defesa e seguridade social"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_educacao==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_educacao = total(iten1)
+replace n_de_ocupado_gape_educacao = round(n_de_ocupado_gape_educacao)
+label variable n_de_ocupado_gape_educacao "Educação, saúde humana e serviços sociais"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_outros ==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_outros  = total(iten1)
+replace n_de_ocupado_gape_outros  = round(n_de_ocupado_gape_outros )
+label variable n_de_ocupado_gape_outros  "Outros Serviços"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & gape_domestico==1
+by Ano Trimestre, sort: egen n_de_ocupado_gape_domestico = total(iten1)
+replace n_de_ocupado_gape_domestico = round(n_de_ocupado_gape_domestico)
+label variable n_de_ocupado_gape_domestico "Serviços domésticos"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de formal  por atividade principal do empreendimento do trabalho
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if formal == 1 & gape_agricultura==1
+by Ano Trimestre, sort: egen n_de_formal_gape_agricultura = total(iten1)
+replace n_de_formal_gape_agricultura = round(n_de_formal_gape_agricultura)
+label variable n_de_formal_gape_agricultura "Agricultura, pecuária, produção florestal, pesca e aquicultura "
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_industria==1
+by Ano Trimestre, sort: egen n_de_formal_gape_industria = total(iten1)
+replace n_de_formal_gape_industria = round(n_de_formal_gape_industria)
+label variable n_de_formal_gape_industria "Indústria geral"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_construcao==1
+by Ano Trimestre, sort: egen n_de_formal_gape_construcao = total(iten1)
+replace n_de_formal_gape_construcao = round(n_de_formal_gape_construcao)
+label variable n_de_formal_gape_construcao "Construção"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_comercio==1
+by Ano Trimestre, sort: egen n_de_formal_gape_comercio = total(iten1)
+replace n_de_formal_gape_comercio = round(n_de_formal_gape_comercio)
+label variable n_de_formal_gape_comercio "Comércio, reparação de veículos automotores e motocicletas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_transporte==1
+by Ano Trimestre, sort: egen n_de_formal_gape_transporte = total(iten1)
+replace n_de_formal_gape_transporte = round(n_de_formal_gape_transporte)
+label variable n_de_formal_gape_transporte "Transporte, armazenagem e correio"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_alimentacao==1
+by Ano Trimestre, sort: egen n_de_formal_gape_alimentacao = total(iten1)
+replace n_de_formal_gape_alimentacao = round(n_de_formal_gape_alimentacao)
+label variable n_de_formal_gape_alimentacao "Alojamento e alimentação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_informacao==1
+by Ano Trimestre, sort: egen n_de_formal_gape_informacao = total(iten1)
+replace n_de_formal_gape_informacao = round(n_de_formal_gape_informacao)
+label variable n_de_formal_gape_informacao "Informação, comunicação e atividades financeiras, imobiliárias, profissionais e administrativas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_publica==1
+by Ano Trimestre, sort: egen n_de_formal_gape_publica = total(iten1)
+replace n_de_formal_gape_publica = round(n_de_formal_gape_publica)
+label variable n_de_formal_gape_publica "Administração pública, defesa e seguridade social"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_educacao==1
+by Ano Trimestre, sort: egen n_de_formal_gape_educacao = total(iten1)
+replace n_de_formal_gape_educacao = round(n_de_formal_gape_educacao)
+label variable n_de_formal_gape_educacao "Educação, saúde humana e serviços sociais"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_outros ==1
+by Ano Trimestre, sort: egen n_de_formal_gape_outros  = total(iten1)
+replace n_de_formal_gape_outros  = round(n_de_formal_gape_outros )
+label variable n_de_formal_gape_outros  "Outros Serviços"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & gape_domestico==1
+by Ano Trimestre, sort: egen n_de_formal_gape_domestico = total(iten1)
+replace n_de_formal_gape_domestico = round(n_de_formal_gape_domestico)
+label variable n_de_formal_gape_domestico "Serviços domésticos"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de informal  por atividade principal do empreendimento do trabalho
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if informal == 1 & gape_agricultura==1
+by Ano Trimestre, sort: egen n_de_informal_gape_agricultura = total(iten1)
+replace n_de_informal_gape_agricultura = round(n_de_informal_gape_agricultura)
+label variable n_de_informal_gape_agricultura "Agricultura, pecuária, produção florestal, pesca e aquicultura "
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_industria==1
+by Ano Trimestre, sort: egen n_de_informal_gape_industria = total(iten1)
+replace n_de_informal_gape_industria = round(n_de_informal_gape_industria)
+label variable n_de_informal_gape_industria "Indústria geral"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_construcao==1
+by Ano Trimestre, sort: egen n_de_informal_gape_construcao = total(iten1)
+replace n_de_informal_gape_construcao = round(n_de_informal_gape_construcao)
+label variable n_de_informal_gape_construcao "Construção"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_comercio==1
+by Ano Trimestre, sort: egen n_de_informal_gape_comercio = total(iten1)
+replace n_de_informal_gape_comercio = round(n_de_informal_gape_comercio)
+label variable n_de_informal_gape_comercio "Comércio, reparação de veículos automotores e motocicletas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_transporte==1
+by Ano Trimestre, sort: egen n_de_informal_gape_transporte = total(iten1)
+replace n_de_informal_gape_transporte = round(n_de_informal_gape_transporte)
+label variable n_de_informal_gape_transporte "Transporte, armazenagem e correio"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_alimentacao==1
+by Ano Trimestre, sort: egen n_de_informal_gape_alimentacao = total(iten1)
+replace n_de_informal_gape_alimentacao = round(n_de_informal_gape_alimentacao)
+label variable n_de_informal_gape_alimentacao "Alojamento e alimentação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_informacao==1
+by Ano Trimestre, sort: egen n_de_informal_gape_informacao = total(iten1)
+replace n_de_informal_gape_informacao = round(n_de_informal_gape_informacao)
+label variable n_de_informal_gape_informacao "Informação, comunicação e atividades financeiras, imobiliárias, profissionais e administrativas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_publica==1
+by Ano Trimestre, sort: egen n_de_informal_gape_publica = total(iten1)
+replace n_de_informal_gape_publica = round(n_de_informal_gape_publica)
+label variable n_de_informal_gape_publica "Administração pública, defesa e seguridade social"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_educacao==1
+by Ano Trimestre, sort: egen n_de_informal_gape_educacao = total(iten1)
+replace n_de_informal_gape_educacao = round(n_de_informal_gape_educacao)
+label variable n_de_informal_gape_educacao "Educação, saúde humana e serviços sociais"
+cap drop iten*
+
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_outros ==1
+by Ano Trimestre, sort: egen n_de_informal_gape_outros  = total(iten1)
+replace n_de_informal_gape_outros  = round(n_de_informal_gape_outros )
+label variable n_de_informal_gape_outros  "Outros Serviços"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & gape_domestico==1
+by Ano Trimestre, sort: egen n_de_informal_gape_domestico = total(iten1)
+replace n_de_informal_gape_domestico = round(n_de_informal_gape_domestico)
+label variable n_de_informal_gape_domestico "Serviços domésticos"
+cap drop iten*
+
 
 **************************************
 **	Colapsar ao nível do trimestre 	**

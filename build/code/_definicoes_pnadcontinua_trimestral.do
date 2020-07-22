@@ -181,6 +181,39 @@ gen gape_educacao = 1 if VD4010 == 9 	// Educação, saúde humana e serviços s
 gen gape_outros  = 1 if VD4010 == 10 	// Outros Serviços
 gen gape_domestico = 1 if VD4010 == 11 	// Serviços domésticos
 
+* Faixa educacional
+gen faixa_educ1 = 1 if VD3004 ==1 	// Sem instrução e menos de 1 ano de estudo
+gen faixa_educ2 = 1 if VD3004 ==2 	// Fundamental incompleto ou equivalente 
+gen faixa_educ3 = 1 if VD3004 ==3 	// Fundamental completo ou equivalente
+gen faixa_educ4 = 1 if VD3004 ==4 	// Médio incompleto ou equivalente
+replace faixa_educ4 = 1 if VD3004 ==5 	// Médio completo ou equivalente
+replace faixa_educ4 = 1 if VD3004 ==6 	// Superior incompleto ou equivalente
+gen faixa_educ5 = 1 if VD3004 ==7 	// Superior completo 
+
+* Faixa etaria
+gen faixa_etaria1 = 1 if V2009 >= 18 & V2009 <= 24
+gen faixa_etaria2 = 1 if V2009 >= 25 & V2009 <= 39
+gen faixa_etaria3 = 1 if V2009 >= 40 & V2009 <= 59
+gen faixa_etaria4 = 1 if V2009 >= 60
+
+* Faixa genero
+gen faixa_genero1 = 1 if V2007 ==1 // 1 Homem
+gen faixa_genero2 = 1 if V2007 ==2 // 1 Mulher
+
+* area_regiao_metropolitana
+gen faixa_metro = 1 if V1023 == 1 	//  Capital
+replace faixa_metro = 1 if V1023 == 2 	// 	Resto da RM (Região Metropolitana, excluindo a capital)
+
+* area_nregiao_metropolitana
+gen faixa_nmetro = 1 if V1023 == 3 	//  Resto da RIDE (Região Integrada de Desenvolvimento Econômico, excluindo a capital) 
+replace faixa_nmetro = 1 if V1023 == 4 	// 	Resto da UF  (Unidade da Federação, excluindo a região metropolitana e a RIDE)
+
+* area_regiao_metropolitana
+gen faixa_rural = 1 if V1022 ==2 // 2 Rural
+
+* area_nregiao_metropolitana
+gen faixa_urbana = 1 if V1022 ==1 // 1 Urbana
+
 **************************************
 **	Editar variável trimestre 		**
 ** 									**

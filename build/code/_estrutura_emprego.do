@@ -31,7 +31,7 @@ gen tool1 = 1 * V1028 if forcatrabalho == 1
 by Ano Trimestre, sort: egen tool2 = total(tool1)
 
 gen taxa_de_desemprego = (iten2/tool2)*100
-label variable taxa_de_desemprego "Taxa de desemprego em relação a força de trabalho (%)"
+label variable taxa_de_desemprego "Taxa de desemprego em relação à força de trabalho (%)"
 cap drop iten*
 cap drop tool* 
 
@@ -45,7 +45,7 @@ gen tool1 = 1 * V1028 if pia == 1
 by Ano Trimestre, sort: egen tool2 = total(tool1)
 
 gen taxa_de_ocupacao = (iten2/tool2)*100
-label variable taxa_de_ocupacao "Taxa de ocupação em relação a PIA (%)"
+label variable taxa_de_ocupacao "Taxa de ocupação em relação à PIA (%)"
 cap drop iten* tool* 
 
 /////////////////////////////////////////////////////////
@@ -58,7 +58,7 @@ gen tool1 = 1 * V1028 if pia == 1
 by Ano Trimestre, sort: egen tool2 = total(tool1)
 
 gen taxa_de_participacao = (iten2/tool2)*100
-label variable taxa_de_participacao "Taxa de participação em relação a PIA (%)"
+label variable taxa_de_participacao "Taxa de participação em relação à PIA (%)"
 cap drop iten*
 cap drop tool* 
 

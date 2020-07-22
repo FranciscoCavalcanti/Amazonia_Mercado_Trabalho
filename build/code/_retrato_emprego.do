@@ -148,7 +148,7 @@ cap drop iten*
 gen iten1 = 1 * V1028 if ocupado == 1 & gstr_agricultura==1
 by Ano Trimestre, sort: egen n_de_ocupado_gstr_agricultura = total(iten1)
 replace n_de_ocupado_gstr_agricultura = round(n_de_ocupado_gstr_agricultura)
-label variable n_de_ocupado_gstr_agricultura "Número de ocupados no setor de agricultura"
+label variable n_de_ocupado_gstr_agricultura "Número de ocupados no setor de agropecuária"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if ocupado == 1 & gstr_industria==1
@@ -181,7 +181,7 @@ cap drop iten*
 gen iten1 = 1 * V1028 if formal == 1 & gstr_agricultura==1
 by Ano Trimestre, sort: egen n_de_formal_gstr_agricultura = total(iten1)
 replace n_de_formal_gstr_agricultura = round(n_de_formal_gstr_agricultura)
-label variable n_de_formal_gstr_agricultura "Número de formal no setor de agricultura"
+label variable n_de_formal_gstr_agricultura "Número de formal no setor de agropecuária"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if formal == 1 & gstr_industria==1
@@ -214,7 +214,7 @@ cap drop iten*
 gen iten1 = 1 * V1028 if informal == 1 & gstr_agricultura==1
 by Ano Trimestre, sort: egen n_de_informal_gstr_agricultura = total(iten1)
 replace n_de_informal_gstr_agricultura = round(n_de_informal_gstr_agricultura)
-label variable n_de_informal_gstr_agricultura "Número de informais no setor de agricultura"
+label variable n_de_informal_gstr_agricultura "Número de informais no setor de agropecuária"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if informal == 1 & gstr_industria==1
@@ -311,7 +311,7 @@ label variable n_de_ocupado_gape_domestico "Serviços domésticos"
 cap drop iten*
 
 /////////////////////////////////////////////////////////
-//	Número de formal  por atividade principal do empreendimento do trabalho
+//	Número de formal por atividade principal do empreendimento do trabalho
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if formal == 1 & gape_agricultura==1
 by Ano Trimestre, sort: egen n_de_formal_gape_agricultura = total(iten1)
@@ -436,7 +436,6 @@ replace n_de_informal_gape_educacao = round(n_de_informal_gape_educacao)
 label variable n_de_informal_gape_educacao "Educação, saúde humana e serviços sociais"
 cap drop iten*
 
-
 gen iten1 = 1 * V1028 if informal == 1 & gape_outros ==1
 by Ano Trimestre, sort: egen n_de_informal_gape_outros  = total(iten1)
 replace n_de_informal_gape_outros  = round(n_de_informal_gape_outros )
@@ -449,6 +448,122 @@ replace n_de_informal_gape_domestico = round(n_de_informal_gape_domestico)
 label variable n_de_informal_gape_domestico "Serviços domésticos"
 cap drop iten*
 
+/////////////////////////////////////////////////////////
+//	E) Inserção no mercado de trabalho por tipo ocupação
+/////////////////////////////////////////////////////////
+
+* Número de trabalhador com carteira assinada
+gen iten1 = 1 * V1028 if empregadoCC == 1
+by Ano Trimestre, sort: egen n_empregadoCC = total(iten1)
+replace n_empregadoCC = round(n_empregadoCC)
+label variable n_empregadoCC "Trabalhadores com carteira"
+cap drop iten*
+
+* Número de trabalhador sem carteira assinada
+gen iten1 = 1 * V1028 if empregadoSC == 1
+by Ano Trimestre, sort: egen n_empregadoSC = total(iten1)
+replace n_empregadoSC = round(n_empregadoSC)
+label variable n_empregadoSC "Trabalhadores sem carteira"
+cap drop iten*
+
+* Número de empregadores
+gen iten1 = 1 * V1028 if empregador == 1
+by Ano Trimestre, sort: egen n_empregador = total(iten1)
+replace n_empregador = round(n_empregador)
+label variable n_empregador "Empregadores"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria
+gen iten1 = 1 * V1028 if cpropria == 1
+by Ano Trimestre, sort: egen n_cpropria = total(iten1)
+replace n_cpropria = round(n_cpropria)
+label variable n_cpropria "Trabalhadores por conta própria"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria que contribui
+gen iten1 = 1 * V1028 if cpropriaC == 1
+by Ano Trimestre, sort: egen n_cpropriaC = total(iten1)
+replace n_cpropriaC = round(n_cpropriaC)
+label variable n_cpropriaC "Conta própria que contribui"
+cap drop iten*
+
+* Número de trabalhadores por conta-própria que não contribui
+gen iten1 = 1 * V1028 if cpropriaNc == 1
+by Ano Trimestre, sort: egen n_cpropriaNc = total(iten1)
+replace n_cpropriaNc = round(n_cpropriaNc)
+label variable n_cpropriaNc "Conta própria que não contribui"
+cap drop iten*
+
+* Número de militares
+gen iten1 = 1 * V1028 if militar == 1
+by Ano Trimestre, sort: egen n_militar = total(iten1)
+replace n_militar = round(n_militar)
+label variable n_militar "Servidores públicos e militares"
+cap drop iten*
+
+* Número de trabalhadores em casa
+gen iten1 = 1 * V1028 if homeoffice == 1
+by Ano Trimestre, sort: egen n_homeoffice = total(iten1)
+replace n_homeoffice = round(n_homeoffice)
+label variable n_homeoffice "Trabalhadores em casa"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Caracterização por faixas de etarias, educacional, genero
+/////////////////////////////////////////////////////////
+
+// attach label of variables
+local faixa faixa_*
+
+foreach v of var `faixa' {
+
+    local l`v' : variable label `v'
+    /////////////////////////////////////////////////////////
+	//	Número total
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if `v'==1
+	by Ano Trimestre, sort: egen n_`v' = total(iten1)
+	replace n_`v' = round(n_`v')
+	label variable n_`v' "Número total"
+	cap drop iten*
+
+	/////////////////////////////////////////////////////////
+	//	Número de ocupados 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if ocupado == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_ocupado_`v' = total(iten1)
+	replace n_de_ocupado_`v' = round(n_de_ocupado_`v')
+	label variable n_de_ocupado_`v' "Número de ocupados"
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de formal 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if formal == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_formal_`v' = total(iten1)
+	replace n_de_formal_`v' = round(n_de_formal_`v')
+	label variable n_de_formal_`v' "Número de formal"
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de informal  
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if informal == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_informal_`v' = total(iten1)
+	replace n_de_informal_`v' = round(n_de_informal_`v')
+	label variable n_de_informal_`v' "Número de informais"
+	cap drop iten*
+
+	/////////////////////////////////////////////////////////
+	//	Número de economicamente ativo (PEA)  
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if pea == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_pea_`v' = total(iten1)
+	replace n_de_pea_`v' = round(n_de_pea_`v')
+	label variable n_de_pea_`v' "Número de PEA"
+	cap drop iten*
+
+}
 
 **************************************
 **	Colapsar ao nível do trimestre 	**

@@ -41,6 +41,9 @@ do "$code_dir\_retrato_emprego.do"
 * run do file
 do "$code_dir\_estrutura_emprego.do"
 
+* run do file
+do "$code_dir\_estrutura_emprego_faixa.do"
+
 //////////////////////////////////////////////	
 //	2) Descrever a estrutura da renda	
 //////////////////////////////////////////////

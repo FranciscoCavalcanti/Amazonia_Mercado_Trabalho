@@ -238,6 +238,64 @@ replace n_homeoffice = round(n_homeoffice)
 label variable n_homeoffice "Número trabalhadores em casa"
 cap drop iten*
 
+
+/////////////////////////////////////////////////////////
+//	Caracterização por faixas de etarias, educacional, genero
+/////////////////////////////////////////////////////////
+
+// attach label of variables
+local faixa faixa_*
+
+foreach v of var `faixa' {
+
+    local l`v' : variable label `v'
+    /////////////////////////////////////////////////////////
+	//	Número total
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if `v'==1
+	by Ano Trimestre, sort: egen n_`v' = total(iten1)
+	replace n_`v' = round(n_`v')
+	label variable n_`v' "Número total"
+	cap drop iten*
+
+	/////////////////////////////////////////////////////////
+	//	Número de ocupados 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if ocupado == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_ocupado_`v' = total(iten1)
+	replace n_de_ocupado_`v' = round(n_de_ocupado_`v')
+	label variable n_de_ocupado_`v' "Número de ocupados"
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de formal 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if formal == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_formal_`v' = total(iten1)
+	replace n_de_formal_`v' = round(n_de_formal_`v')
+	label variable n_de_formal_`v' "Número de formal"
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de informal  
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if informal == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_informal_`v' = total(iten1)
+	replace n_de_informal_`v' = round(n_de_informal_`v')
+	label variable n_de_informal_`v' "Número de informais"
+	cap drop iten*
+
+	/////////////////////////////////////////////////////////
+	//	Número de economicamente ativo (PEA)  
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if pea == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_pea_`v' = total(iten1)
+	replace n_de_pea_`v' = round(n_de_pea_`v')
+	label variable n_de_pea_`v' "Número de PEA"
+	cap drop iten*
+
+}
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************

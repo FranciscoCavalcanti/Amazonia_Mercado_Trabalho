@@ -31,6 +31,20 @@ do "$code_dir\_retrato_emprego_setor_gstr.do"
 * run do file
 do "$code_dir\_retrato_emprego_setor_gape.do"
 
+//////////////////////////////////////////
+//	Composição setorial	de Industria
+/////////////////////////////////////////
+
+* run do file
+do "$code_dir\_retrato_emprego_setor_sgap_industria.do"
+
+//////////////////////////////////////////
+//	Composição setorial	de Agricultura
+/////////////////////////////////////////
+
+* run do file
+do "$code_dir\_retrato_emprego_setor_sgap_agricultura.do"
+
 /////////////////////////////////////////
 // Posicao na Ocupacao
 /////////////////////////////////////////

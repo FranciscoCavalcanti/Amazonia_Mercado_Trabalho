@@ -449,6 +449,146 @@ label variable n_de_informal_gape_domestico "Serviços domésticos"
 cap drop iten*
 
 /////////////////////////////////////////////////////////
+//	SUB-CATEGORIAS DE AGRICULTURA E INDUSTRIA
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//	Número de ocupados por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_agricultura==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_agricultura = total(iten1)
+replace n_de_ocupado_sgap_agricultura = round(n_de_ocupado_sgap_agricultura)
+label variable n_de_ocupado_sgap_agricultura "Número de ocupados no setor de agricultura"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_animal==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_animal = total(iten1)
+replace n_de_ocupado_sgap_animal = round(n_de_ocupado_sgap_animal)
+label variable n_de_ocupado_sgap_animal "Número de ocupados no setor de agropecuária"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_florestal==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_florestal = total(iten1)
+replace n_de_ocupado_sgap_florestal = round(n_de_ocupado_sgap_florestal)
+label variable n_de_ocupado_sgap_florestal "Número de ocupados no setor de produção florestal"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_extrativa==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_extrativa = total(iten1)
+replace n_de_ocupado_sgap_extrativa = round(n_de_ocupado_sgap_extrativa)
+label variable n_de_ocupado_sgap_extrativa "Número de ocupados na indústria extrativa"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_transformacao==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_transformacao = total(iten1)
+replace n_de_ocupado_sgap_transformacao = round(n_de_ocupado_sgap_transformacao)
+label variable n_de_ocupado_sgap_transformacao "Número de ocupados na indústria de transformação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_energia==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_energia = total(iten1)
+replace n_de_ocupado_sgap_energia = round(n_de_ocupado_sgap_energia)
+label variable n_de_ocupado_sgap_energia "Número de ocupados no setor de eletricidade e gás"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_agua==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_agua = total(iten1)
+replace n_de_ocupado_sgap_agua = round(n_de_ocupado_sgap_agua)
+label variable n_de_ocupado_sgap_agua "Número de ocupados no setor de água"
+cap drop iten*
+
+
+/////////////////////////////////////////////////////////
+//	Número de formal por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if formal == 1 & sgap_agricultura==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_agricultura = total(iten1)
+replace n_de_formal_sgap_agricultura = round(n_de_formal_sgap_agricultura)
+label variable n_de_formal_sgap_agricultura "Número de formal no setor de agricultura"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_animal==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_animal = total(iten1)
+replace n_de_formal_sgap_animal = round(n_de_formal_sgap_animal)
+label variable n_de_formal_sgap_animal "Número de formal no setor de agropecuária"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_florestal==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_florestal = total(iten1)
+replace n_de_formal_sgap_florestal = round(n_de_formal_sgap_florestal)
+label variable n_de_formal_sgap_florestal "Número de formal no setor de produção florestal"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_extrativa==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_extrativa = total(iten1)
+replace n_de_formal_sgap_extrativa = round(n_de_formal_sgap_extrativa)
+label variable n_de_formal_sgap_extrativa "Número de formal na indústria extrativa"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_transformacao==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_transformacao= total(iten1)
+replace n_de_formal_sgap_transformacao = round(n_de_formal_sgap_transformacao)
+label variable n_de_formal_sgap_transformacao "Número de formal na indústria de transformação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_energia==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_energia = total(iten1)
+replace n_de_formal_sgap_energia = round(n_de_formal_sgap_energia)
+label variable n_de_formal_sgap_energia "Número de formal no setor de eletricidade e gás"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_agua==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_agua = total(iten1)
+replace n_de_formal_sgap_agua = round(n_de_formal_sgap_agua)
+label variable n_de_formal_sgap_agua "Número de formal no setor de água"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de informal por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if informal == 1 & sgap_agricultura==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_agricultura = total(iten1)
+replace n_de_informal_sgap_agricultura = round(n_de_informal_sgap_agricultura)
+label variable n_de_informal_sgap_agricultura "Número de informais no setor de agricultura"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_animal==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_animal = total(iten1)
+replace n_de_informal_sgap_animal = round(n_de_informal_sgap_animal)
+label variable n_de_informal_sgap_animal "Número de informais no setor de agropecuária"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_florestal==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_florestal = total(iten1)
+replace n_de_informal_sgap_florestal = round(n_de_informal_sgap_florestal)
+label variable n_de_informal_sgap_florestal "Número de informais no setor de produção florestal"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_extrativa==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_extrativa = total(iten1)
+replace n_de_informal_sgap_extrativa = round(n_de_informal_sgap_extrativa)
+label variable n_de_informal_sgap_extrativa "Número de informais na indústria extrativa"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_transformacao==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_transformacao = total(iten1)
+replace n_de_informal_sgap_transformacao = round(n_de_informal_sgap_transformacao)
+label variable n_de_informal_sgap_transformacao "Número de informais na indústria de transformação"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_energia==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_energia = total(iten1)
+replace n_de_informal_sgap_energia = round(n_de_informal_sgap_energia)
+label variable n_de_informal_sgap_energia "Número de informais no setor de eletricidade e gás"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_agua==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_agua = total(iten1)
+replace n_de_informal_sgap_agua = round(n_de_informal_sgap_agua)
+label variable n_de_informal_sgap_agua "Número de informais no setor de água"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
 //	E) Inserção no mercado de trabalho por tipo ocupação
 /////////////////////////////////////////////////////////
 

@@ -181,6 +181,23 @@ gen gape_educacao = 1 if VD4010 == 9 	// Educação, saúde humana e serviços s
 gen gape_outros  = 1 if VD4010 == 10 	// Outros Serviços
 gen gape_domestico = 1 if VD4010 == 11 	// Serviços domésticos
 
+* Sub-grupamentos de atividade principal do empreendimento do trabalho 
+** agricultura
+gen sgap_agricultura = 1 if V4013 >= 1101 & V4013 <= 1119
+replace sgap_agricultura = 1 if V4013 == 1401
+gen sgap_animal = 1 if V4013 >= 1201 & V4013 <= 1209
+replace sgap_animal = 1 if V4013 == 1402
+replace sgap_animal = 1 if V4013 == 1500
+replace sgap_animal = 1 if V4013 == 1999
+replace sgap_animal = 1 if V4013 == 3001
+replace sgap_animal = 1 if V4013 == 3002
+gen sgap_florestal = 1 if V4013 == 2000
+** industria
+gen sgap_extrativa = 1 if V4013 >= 5000 & V4013 <= 9000
+gen sgap_transformacao = 1 if V4013 >= 10010 & V4013 <= 33002
+gen sgap_energia = 1 if V4013 >= 35010 & V4013 <= 35022
+gen sgap_agua = 1 if V4013 >= 36000 & V4013 <= 39000
+
 * Faixa educacional
 gen faixa_educ1 = 1 if VD3004 ==1 	// Sem instrução e menos de 1 ano de estudo
 gen faixa_educ2 = 1 if VD3004 ==2 	// Fundamental incompleto ou equivalente 

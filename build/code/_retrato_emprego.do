@@ -479,10 +479,10 @@ replace n_de_ocupado_sgap_extrativa = round(n_de_ocupado_sgap_extrativa)
 label variable n_de_ocupado_sgap_extrativa "Número de ocupados na indústria extrativa"
 cap drop iten*
 
-gen iten1 = 1 * V1028 if ocupado == 1 & sgap_transformacao==1
-by Ano Trimestre, sort: egen n_de_ocupado_sgap_transformacao = total(iten1)
-replace n_de_ocupado_sgap_transformacao = round(n_de_ocupado_sgap_transformacao)
-label variable n_de_ocupado_sgap_transformacao "Número de ocupados na indústria de transformação"
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans = total(iten1)
+replace n_de_ocupado_sgap_trans = round(n_de_ocupado_sgap_trans)
+label variable n_de_ocupado_sgap_trans "Número de ocupados na indústria de transformação"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if ocupado == 1 & sgap_energia==1
@@ -525,10 +525,10 @@ replace n_de_formal_sgap_extrativa = round(n_de_formal_sgap_extrativa)
 label variable n_de_formal_sgap_extrativa "Número de formal na indústria extrativa"
 cap drop iten*
 
-gen iten1 = 1 * V1028 if formal == 1 & sgap_transformacao==1
-by Ano Trimestre, sort: egen n_de_formal_sgap_transformacao= total(iten1)
-replace n_de_formal_sgap_transformacao = round(n_de_formal_sgap_transformacao)
-label variable n_de_formal_sgap_transformacao "Número de formal na indústria de transformação"
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans= total(iten1)
+replace n_de_formal_sgap_trans = round(n_de_formal_sgap_trans)
+label variable n_de_formal_sgap_trans "Número de formal na indústria de transformação"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if formal == 1 & sgap_energia==1
@@ -570,10 +570,10 @@ replace n_de_informal_sgap_extrativa = round(n_de_informal_sgap_extrativa)
 label variable n_de_informal_sgap_extrativa "Número de informais na indústria extrativa"
 cap drop iten*
 
-gen iten1 = 1 * V1028 if informal == 1 & sgap_transformacao==1
-by Ano Trimestre, sort: egen n_de_informal_sgap_transformacao = total(iten1)
-replace n_de_informal_sgap_transformacao = round(n_de_informal_sgap_transformacao)
-label variable n_de_informal_sgap_transformacao "Número de informais na indústria de transformação"
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans = total(iten1)
+replace n_de_informal_sgap_trans = round(n_de_informal_sgap_trans)
+label variable n_de_informal_sgap_trans "Número de informais na indústria de transformação"
 cap drop iten*
 
 gen iten1 = 1 * V1028 if informal == 1 & sgap_energia==1

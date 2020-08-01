@@ -194,7 +194,7 @@ replace sgap_animal = 1 if V4013 == 3002
 gen sgap_florestal = 1 if V4013 == 2000
 ** industria
 gen sgap_extrativa = 1 if V4013 >= 5000 & V4013 <= 9000
-gen sgap_transformacao = 1 if V4013 >= 10010 & V4013 <= 33002
+gen sgap_trans = 1 if V4013 >= 10010 & V4013 <= 33002
 gen sgap_energia = 1 if V4013 >= 35010 & V4013 <= 35022
 gen sgap_agua = 1 if V4013 >= 36000 & V4013 <= 39000
 

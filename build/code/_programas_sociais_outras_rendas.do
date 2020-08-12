@@ -27,6 +27,7 @@ forvalues year = 2012(1)2019 {
 use "$input_pnadanual\PNADC_anual_`year'_visita1.dta", clear
 cap drop iten*
 *sample 1
+gen visita = 1
 
 **********************
 **	 Definitions	**
@@ -111,23 +112,33 @@ drop if _merge==2
 drop _merge
 cap destring Trimestre, replace
 
-* Rendimento domiciliar per capita (R$)
-gen tool1 = 1 * V1032
-gen iten1 = (renda_anual_pc * Habitual) * V1032
-by Ano Trimestre, sort: egen total_renda_anual_pc = total(iten1)
-cap drop iten*
-cap drop tool*
-
 /////////////////////////////////////////////////////////
-//	G) Rendimento recebido em todas as fontes (R$)
+//	H) Composição de rendimentos recebido em todas as fontes (R$)
 /////////////////////////////////////////////////////////
 
-* Rendimento recebido em todas as fontes (R$)
-gen tool1 = 1 * V1032
-gen iten1 = (renda_anual * Habitual) * V1032
-by Ano Trimestre, sort: egen total_renda_anual = total(iten1)
-cap drop iten*
-cap drop tool*
+// loop over common variables
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico*
+
+foreach v of var `faixa' {
+	* Rendimento recebido as fonte (R$)
+	gen iten1 = (`v' * Habitual) * V1032 if `v'~=.
+	by Ano Trimestre, sort: egen total_`v' = total(iten1)
+	cap drop iten*
+	cap drop tool*
+	
+	/////////////////////////////////////////////////////////
+	// Número indivíduos com rendimento esse tipo de recebimento da fonte
+	/////////////////////////////////////////////////////////
+	gen tool1 = 1 * V1032 if `v' ~= .
+	by Ano Trimestre, sort: egen tool2 = total(tool1)
+	gen n_`v' = tool2
+	cap drop iten*
+	cap drop tool*
+}
+
+/////////////////////////////////////////////////////////
+//	I) Pobreza
+/////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
 // Número indivíduos com rendimento per capita de até R$ 300,00 ($ 1.9 por dia)
@@ -144,7 +155,7 @@ cap drop tool*
 **************************************
 
 	// attach label of variables
-	local colvar n_* total_* 
+	local colvar visita n_* total_* 
 
 	foreach v of var `colvar' {
     local l`v' : variable label `v'
@@ -171,6 +182,7 @@ forvalues year = 2016(1)2019 {
 use "$input_pnadanual\PNADC_anual_`year'_visita5.dta", clear
 cap drop iten*
 *sample 1
+gen visita = 5
 
 **********************
 **	 Definitions	**
@@ -237,7 +249,7 @@ cap drop iten*
 cap drop tool*
 
 /////////////////////////////////////////////////////////
-//	F) Rendimento domiciliar per capita (R$)
+//	F) Rendimentos (R$)
 /////////////////////////////////////////////////////////
 
 * Merge na base de dados com o deflator
@@ -247,26 +259,32 @@ drop if _merge==2
 drop _merge
 cap destring Trimestre, replace
 
-* Rendimento domiciliar per capita (R$)
-gen tool1 = 1 * V1032
-gen iten1 = (renda_anual_pc * Habitual) * V1032
-by Ano Trimestre, sort: egen total_renda_anual_pc = total(iten1)
-cap drop iten*
-cap drop tool*
-
 /////////////////////////////////////////////////////////
-//	G) Rendimento recebido em todas as fontes (R$)
+//	H) Composição de rendimentos recebido em todas as fontes (R$)
 /////////////////////////////////////////////////////////
 
-* Rendimento recebido em todas as fontes (R$)
-gen tool1 = 1 * V1032
-gen iten1 = (renda_anual * Habitual) * V1032
-by Ano Trimestre, sort: egen total_renda_anual = total(iten1)
-cap drop iten*
-cap drop tool*
+// loop over common variables
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico*
+
+foreach v of var `faixa' {
+	* Rendimento recebido as fonte (R$)
+	gen iten1 = (`v' * Habitual) * V1032 if `v'~=.
+	by Ano Trimestre, sort: egen total_`v' = total(iten1)
+	cap drop iten*
+	cap drop tool*
+	
+	/////////////////////////////////////////////////////////
+	// Número indivíduos com rendimento esse tipo de recebimento da fonte
+	/////////////////////////////////////////////////////////
+	gen tool1 = 1 * V1032 if `v' ~= .
+	by Ano Trimestre, sort: egen tool2 = total(tool1)
+	gen n_`v' = tool2
+	cap drop iten*
+	cap drop tool*
+}
 
 /////////////////////////////////////////////////////////
-//	B) Pobreza
+//	I) Pobreza
 /////////////////////////////////////////////////////////
 
 /////////////////////////////////////////////////////////
@@ -284,7 +302,7 @@ cap drop tool*
 **************************************
 
 	// attach label of variables
-	local colvar n_* total_* 
+	local colvar visita n_* total_* 
 
 	foreach v of var `colvar' {
     local l`v' : variable label `v'
@@ -317,9 +335,10 @@ clear
 	}
 
 * sort	 
-sort  Ano Trimestre
+sort  Ano Trimestre visita
 
 * Somar numeros totais por cada trimestre
+** Atenção!!! Apenas proporções ou valor per capita são válidos apartir daqui
 	// attach label of variables
 	local colvar n_* total_*
 	foreach v of var `colvar' {
@@ -346,7 +365,7 @@ gen prop_bpc_loas = (n_bpc_loas/n_populacao)*100
 label variable prop_bpc_loas "Proporção da população que recebeu BPC-LOAS (%)"
 cap drop iten* tool* 
 
-* roporção da população que recebeu seguro desemprego em (%)
+* Proporção da população que recebeu seguro desemprego em (%)
 gen prop_seguro_desemprego = (n_seguro_desemprego/n_populacao)*100
 label variable prop_seguro_desemprego "Proporção da população que recebeu seguro desemprego (%)"
 cap drop iten* tool* 
@@ -362,16 +381,120 @@ label variable prop_renda_anual_pc_300 "Proporção da população com rendiment
 cap drop iten* tool* 
 
 * Rendimento domiciliar per capita (R$)
-gen renda_anual_pc_total = (total_renda_anual_pc/n_populacao)
+cap gen renda_anual_pc_total = (total_renda_anual_pc/n_populacao)
 label variable	renda_anual_pc_total "Rendimento domiciliar per capita (R$)"
 cap drop iten*
 cap drop tool*
 
 * Rendimento recebido em todas as fontes (R$)
-gen renda_anual_total = (total_renda_anual/n_populacao)
+cap gen renda_anual_total = (total_renda_anual/n_populacao)
 label variable	renda_anual_total "Rendimento recebido em todas as fontes (R$)"
 cap drop iten*
 cap drop tool*
+
+// attach label of variables
+local faixa  renda_ajuda_gov  /*
+ 	*/ 	renda_seguro_desemprego 	/*
+ 	*/ 	renda_aposentadoria 	/*
+ 	*/ 	renda_doacao 	/*
+ 	*/ 	renda_aluguel 	/*
+ 	*/ 	renda_outro 	/*
+ 	*/ 	renda_setorpublico 	/*
+ 	*/ 	renda_anual_pc
+	
+// loop over common variables
+foreach v in `faixa' {
+    gen `v' = (total_`v'/n_populacao)
+    // loop sobre faixas de rendimentos
+    forvalues num = 1(1)7 {
+		gen `v'`num' = (total_`v'`num'/n_renda_anual_pc`num')
+		replace `v'`num' = 0 if `v'`num'==.
+		cap drop iten*
+		cap drop tool*
+	}
+}
+
+label variable	renda_ajuda_gov "Programas sociais"
+label variable	renda_ajuda_gov1 "Programas sociais"
+label variable	renda_ajuda_gov2 "Programas sociais"
+label variable	renda_ajuda_gov3 "Programas sociais"
+label variable	renda_ajuda_gov4 "Programas sociais"
+label variable	renda_ajuda_gov5 "Programas sociais"
+label variable	renda_ajuda_gov6 "Programas sociais"
+label variable	renda_ajuda_gov7 "Programas sociais"
+
+label variable	renda_seguro_desemprego  "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego1 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego2 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego3 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego4 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego5 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego6 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemprego7 "Seguro-desemprego e seguro-defeso"
+
+label variable	renda_aposentadoria "Aposentadoria e pensão"
+label variable	renda_aposentadoria1 "Aposentadoria e pensão"
+label variable	renda_aposentadoria2 "Aposentadoria e pensão"
+label variable	renda_aposentadoria3 "Aposentadoria e pensão"
+label variable	renda_aposentadoria4 "Aposentadoria e pensão"
+label variable	renda_aposentadoria5 "Aposentadoria e pensão"
+label variable	renda_aposentadoria6 "Aposentadoria e pensão"
+label variable	renda_aposentadoria7 "Aposentadoria e pensão"
+
+label variable	renda_doacao "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao1 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao2 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao3 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao4 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao5 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao6 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacao7 "Pensão alimentícia, doação e mesada"
+
+label variable	renda_aluguel "Aluguel e arrendamento"
+label variable	renda_aluguel1 "Aluguel e arrendamento"
+label variable	renda_aluguel2 "Aluguel e arrendamento"
+label variable	renda_aluguel3 "Aluguel e arrendamento"
+label variable	renda_aluguel4 "Aluguel e arrendamento"
+label variable	renda_aluguel5 "Aluguel e arrendamento"
+label variable	renda_aluguel6 "Aluguel e arrendamento"
+label variable	renda_aluguel7 "Aluguel e arrendamento"
+
+label variable	renda_outro "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro1 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro2 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro3 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro4 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro5 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outro7 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+
+label variable	renda_setorpublico "Setor público"
+label variable	renda_setorpublico1 "Setor público"
+label variable	renda_setorpublico2 "Setor público"
+label variable	renda_setorpublico3 "Setor público"
+label variable	renda_setorpublico4 "Setor público"
+label variable	renda_setorpublico5 "Setor público"
+label variable	renda_setorpublico6 "Setor público"
+label variable	renda_setorpublico7 "Setor público"
+
+* Rendimentos do trabalho restante
+gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemprego + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico)
+  // loop sobre faixas de rendimentos
+forvalues num = 1(1)7 {
+	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemprego`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num')
+	replace renda_privado`num' = 0 if renda_privado`num'==.
+	cap drop iten*
+	cap drop tool*
+}
+
+label variable	renda_privado "Setor privado"
+label variable	renda_privado1 "Setor privado"
+label variable	renda_privado2 "Setor privado"
+label variable	renda_privado3 "Setor privado"
+label variable	renda_privado4 "Setor privado"
+label variable	renda_privado5 "Setor privado"
+label variable	renda_privado6 "Setor privado"
+label variable	renda_privado7 "Setor privado"
 
 * keep only relavant variables
 keep Ano Trimestre  prop_* renda_*

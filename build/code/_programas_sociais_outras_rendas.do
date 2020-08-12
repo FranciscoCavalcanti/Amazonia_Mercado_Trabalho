@@ -477,6 +477,15 @@ label variable	renda_setorpublico5 "Setor público"
 label variable	renda_setorpublico6 "Setor público"
 label variable	renda_setorpublico7 "Setor público"
 
+label variable	renda_anual_pc "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc1 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc2 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc3 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc4 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc5 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc6 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pc7 "Rendimento domiciliar per capita (R$)"
+
 * Rendimentos do trabalho restante
 gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemprego + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico)
   // loop sobre faixas de rendimentos

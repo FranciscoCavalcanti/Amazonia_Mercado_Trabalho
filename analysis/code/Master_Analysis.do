@@ -59,7 +59,10 @@ do "$code_dir\_estrutura_renda.do"
 do "$code_dir\_programas_sociais_outras_rendas.do"
 
 * run do file
-do "$code_dir\_programas_sociais_outras_rendas_composicao.do"
+do "$code_dir\_outras_rendas_composicao.do"
+
+* run do file
+do "$code_dir\_outros_emprego_caracterizacao.do"
 
 //////////////////////////////////////////////	
 //	4) Matriz de transições de ocupações

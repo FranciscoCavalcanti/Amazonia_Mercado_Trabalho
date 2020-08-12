@@ -62,7 +62,6 @@ label variable n_bolsa_familia "Número que recebeu Bolsa Família"
 cap drop iten*
 cap drop tool*
 
-
 /////////////////////////////////////////////////////////
 //	B) Número da população que recebeu programas sociais
 /////////////////////////////////////////////////////////
@@ -297,6 +296,41 @@ gen n_renda_anual_pc_300 = tool2
 cap drop iten*
 cap drop tool*
 
+/////////////////////////////////////////////////////////
+//	J) Número de trabalhadores não remunerados e consumo próprio
+//	(está análise só é possível através das Visitas 5 PNAD Contínua anual)
+/////////////////////////////////////////////////////////
+
+// loop over common variables
+local faixa trab_*
+
+foreach v of var `faixa' {
+	gen tool1 = 1 * V1032 if `v' ~= .
+	by Ano Trimestre, sort: egen tool2 = total(tool1)
+	gen n_`v' = tool2
+	cap drop iten*
+	cap drop tool*
+}
+
+/////////////////////////////////////////////////////////
+//	L) Número de trabalhadores infantis
+//	(está análise só é possível através das Visitas 5 PNAD Contínua anual)
+/////////////////////////////////////////////////////////
+
+// Qtd de pessoas de 5 a 13 anos de idade
+gen tool1 = 1 * V1032 if infantil == 1
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_infantil = tool2
+cap drop iten*
+cap drop tool*
+
+// Qtd de pessoas de 5 a 13 anos de idade que trabalham
+gen tool1 = 1 * V1032 if infantil_trab == 1
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_infantil_trab = tool2
+cap drop iten*
+cap drop tool*
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************
@@ -336,6 +370,9 @@ clear
 
 * sort	 
 sort  Ano Trimestre visita
+** Atenção!!! Temos casos de Trimestres duplicados (representando visita 1 e 5)
+*** decidir criar variáveis auxiliares: a média da população para casos onde só há informação na visita 5
+gen mean_n_populacao = n_populacao
 
 * Somar numeros totais por cada trimestre
 ** Atenção!!! Apenas proporções ou valor per capita são válidos apartir daqui
@@ -344,12 +381,15 @@ sort  Ano Trimestre visita
 	foreach v of var `colvar' {
     	local l`v' : variable label `v'
 	}
-collapse (sum) n_* total_* , by(Ano Trimestre)	
+collapse (mean) mean_n_populacao (sum) n_* total_* , by(Ano Trimestre)	
 	// copy back the label of variables
 	foreach v of var `colvar' {
     	label var `v' "`l`v''"
 	}
-	
+
+//////////////////////////////////////////////////////
+// Proporções onde há variáveis em todas as visitas (Visita 1 e Visita 5)
+//////////////////////////////////////////////////////
 * Proporção da população que recebeu Bolsa Família em (%)
 gen prop_bolsa_familia = (n_bolsa_familia/n_populacao)*100
 label variable prop_bolsa_familia "Proporção da população que recebeu Bolsa Família (%)"
@@ -380,6 +420,37 @@ gen prop_renda_anual_pc_300 = (n_renda_anual_pc_300/n_populacao)*100
 label variable prop_renda_anual_pc_300 "Proporção da população com rendimento per capita de até R$ 300,00 (%)"
 cap drop iten* tool* 
 
+//////////////////////////////////////////////////////
+// Proporções onde há variáveis em apenas na Visita 5
+//////////////////////////////////////////////////////
+
+// attach label of variables
+local faixa  trab_nremun  /*
+ 	*/ 	trab_cprop 	/*
+ 	*/ 	trab_volun 	/*
+ 	*/ 	trab_domes 	
+	
+// loop over common variables
+foreach v in `faixa' {
+	* Proporção da população em (%)
+	gen prop_`v' = (n_`v'/mean_n_populacao)*100
+	*label variable prop_`v' "Proporção da população (%)"
+	cap drop iten* tool* 
+}
+
+label variable prop_trab_nremun "Proporção de trabalhador não remunerado sobre a população (%)"
+label variable prop_trab_cprop "Proporção de quem produz para próprio consumo sobre a população (%)"
+label variable prop_trab_volun "Proporção de trabalhadores voluntários sobre a população (%)"
+label variable prop_trab_domes "Proporção de quem faz afazers domésticos sobre a população (%)"
+
+* Proporção trabalhador infantil (pessoas de 5 a 13 anos de idade) em (%)
+gen prop_infantil_trab = (n_infantil_trab/n_infantil)*100
+label variable prop_infantil_trab "Proporção de crianças que trabalham (%)"
+cap drop iten* tool* 
+
+//////////////////////////////////////////////////////
+// Rendimentos
+//////////////////////////////////////////////////////
 * Rendimento domiciliar per capita (R$)
 cap gen renda_anual_pc_total = (total_renda_anual_pc/n_populacao)
 label variable	renda_anual_pc_total "Rendimento domiciliar per capita (R$)"

@@ -510,6 +510,43 @@ foreach v in `faixa' {
 	gen `v'7 = `v' if VD5009 == 7
 }
 
+******************************************************
+**	Trabalhadores não remunerados e consumo próprio	**
+******************************************************
+gen trab_nremun = .
+gen trab_cprop = .
+gen trab_volun = .
+gen trab_domes = .
+
+if visita == 5 {
+	replace trab_nremun = 1 if V40121 ==1  // Em ajuda a conta própria ou empregador	
+	replace trab_nremun = 1 if V40121 ==2  // Em ajuda a empregado 
+	replace trab_nremun = 1 if V40121 ==3  // Em ajuda a trabalhador doméstico
+	
+	replace trab_cprop = 1 if V4099 ==1  // exerceu atividades em cultivo, pesca, caça ou criação de animais destinadas somente à alimentação das pessoas moradoras do domicílio ou de parente?
+	replace trab_cprop = 1 if V4102 ==1  // exerceu atividades na produção de carvão, corte ou coleta de lenha, coleta de água, extração de sementes, de ervas, de areia, argila ou outro material destinado somente ao próprio uso das pessoas moradoras do domicílio ou de parente?
+	replace trab_cprop = 1 if V4105 ==1  // exerceu atividades na fabricação de roupas, tricô, crochê, bordado, cerâmicas, rede de pesca, alimentos ou bebidas alcóolicas, produtos medicinais ou outros produtos destinados somente ao próprio uso das pessoas do domicílio ou de parente?
+	replace trab_cprop = 1 if V4108 ==1  // exerceu atividades de construção casa, cômodo, muro, telhado, forno ou churrasqueira, cerca, estrada, abrigo para animais ou outras obras destinadas somente ao próprio uso das pessoas moradoras do domicílio ou de parente?
+	
+	replace trab_volun = 1 if V4111 ==1  // trabalhou, durante pelo menos uma hora, voluntariamente e sem remuneração?
+	
+	replace trab_domes = 1 if V4120 ==1  // fez tarefas domésticas para o próprio domicílio?
+}
+
+**************************************************************
+**	Trabalhador infantil (pessoas de 5 a 13 anos de idade)	**
+**************************************************************
+gen infantil =.
+gen infantil_trab = .
+
+if visita == 5 & Ano == 2016 {
+	replace infantil = 1 if S06001 ~=.  // Características de trabalho das pessoas de 5 a 13 anos de idade
+	replace infantil_trab = 1 if S06001 ==1  // trabalhou, durante pelo menos 1 hora, em alguma atividade remunerada em dinheiro?
+	replace infantil_trab = 1 if S06002 ==1  // trabalhou,  durante pelo menos 1 hora, em alguma atividade remunerada em produtos, mercadorias, moradia, alimentação etc.?
+	replace infantil_trab = 1 if S06003 ==1  // Fez algum bico pelo menos de 1 hr
+	replace infantil_trab = 1 if S06004 ==1  // Ajudou sem receber no domic. 1 hr
+	replace infantil_trab = 1 if S06005 ==1  // tinha algum trabalho remunerado do qual estava temporariamente afastado por motivo de férias, folga, doença, acidente, más condições de tempo etc.?
+}
 
 **************************************
 **	Editar variável trimestre 		**

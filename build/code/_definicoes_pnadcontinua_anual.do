@@ -234,8 +234,6 @@ if $time == 2016 /*
 		replace bpc_loas=1 if V5001A==1 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
 }
 
-
-
 **************************************
 **	Outros rendimentos		 		**
 **************************************
@@ -330,6 +328,186 @@ if $time == 2016 /*
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
 		replace aposentadoria = 1 if  V5004A ==1 //  Recebeu aposentadoria e pensão "
+}
+
+**************************************
+**	Composição de  rendimentos      **
+**************************************
+
+* Rendimento recebido de programa sociais
+gen renda_ajuda_gov=.
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_ajuda_gov= V501011 if V50101==1 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
+		replace renda_ajuda_gov= V500911 if V50091==1 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
+ 		replace renda_ajuda_gov= V501111 if V50111==1 //  recebeu rendimentos de algum outro programa social, público ou privado
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_ajuda_gov= V501011 if V50101==1 & Trimestre ~=4 //  recebeu Bolsa família ou do Programa de Erradicação do Trabalho Infantil - PETI
+		replace renda_ajuda_gov= V500911 if V50091==1 & Trimestre ~=4 //  recebeu Benefício Assistencial de Prestação Continuada - BPC - LOAS
+ 		replace renda_ajuda_gov= V501111 if V50111==1 & Trimestre ~=4 //  recebeu rendimentos de algum outro programa social, público ou privado
+		* Trimestre 4
+		replace renda_ajuda_gov= V5002A2 if V5002A==1 & Trimestre ==4 //  recebeu rendimentos de Programa Bolsa Família?
+		replace renda_ajuda_gov= V5001A2 if V5001A==1 & Trimestre ==4 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
+ 		replace renda_ajuda_gov= V5003A2 if V5003A==1 & Trimestre ==4 //  recebeu rendimentos de outros programas sociais do governo?
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_ajuda_gov= V5002A2 if V5002A==1 //  recebeu rendimentos de Programa Bolsa Família?
+		replace renda_ajuda_gov= V5001A2 if V5001A==1 //  recebeu rendimentos de Benefício Assistencial de Prestação Continuada – BPC-LOAS?
+ 		replace renda_ajuda_gov= V5003A2 if V5003A==1 //  recebeu rendimentos de outros programas sociais do governo?
+}
+
+* Rendimento recebido de seguro-desemprego, seguro-defeso
+gen renda_seguro_desemprego = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_seguro_desemprego = V500811 if V50081 ==1  //  Rend de seguro desemprego
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_seguro_desemprego = V500811 if V50081 ==1 & Trimestre ~=4  //   seguro-desemprego, seguro-defeso
+		* Trimestre 4
+		replace renda_seguro_desemprego = V5005A2 if  V5005A ==1 & Trimestre ==4  //   seguro-desemprego, seguro-defeso
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_seguro_desemprego = V5005A2 if  V5005A ==1 //   seguro-desemprego, seguro-defeso
+}
+
+* Rendimento de renda_aposentadoria ou pensão de instituto de previdência federal (INSS), estadual, municipal, ou do governo federal, estadual, municipal?
+gen renda_aposentadoria = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_aposentadoria = V500111 if V50011 ==1   //  ... recebeu aposentadoria de instituto de previdência
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_aposentadoria = V500111 if V50011 ==1  & Trimestre ~=4  //  ... recebeu aposentadoria de instituto de previdência
+		* Trimestre 4
+		replace renda_aposentadoria = V5004A2 if V5004A ==1  & Trimestre ==4 //  Recebeu aposentadoria e pensão "
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_aposentadoria = V5004A2 if V5004A ==1  //  Recebeu aposentadoria e pensão "
+}
+
+* Rendimento de rendimentos de pensão alimentícia, doação ou mesada em dinheiro de pessoa que não morava no domicílio?
+gen renda_doacao = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_doacao = V500511 if V50051 ==1   //  ... recebeu pensão alimentícia
+		replace renda_doacao = V500711 if V50071 ==1   //  ... recebeu doação em dinheiro
+
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_doacao = V500511 if V50051 ==1  & Trimestre ~=4  //  ... recebeu pensão alimentícia
+		replace renda_doacao = V500711 if V50071 ==1  & Trimestre ~=4  //  ... recebeu doação em dinheiro		
+		* Trimestre 4
+		replace renda_doacao = V5006A2 if V5006A ==1  & Trimestre ==4 //   recebeu rendimentos de pensão alimentícia, doação ou mesada em dinheiro de pessoa que não morava no domicílio?
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_doacao = V5006A2 if V5006A ==1  //   recebeu rendimentos de pensão alimentícia, doação ou mesada em dinheiro de pessoa que não morava no domicílio?
+}
+
+* Rendimento de rendimentos de aluguel ou arrendamento
+gen renda_aluguel = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_aluguel = V50061 if V5006 ==1   //  ... recebeu aluguel ou arrendamento
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_aluguel = V50061 if V5006 ==1  & Trimestre ~=4  //  ... recebeu aluguel ou arrendamento
+		* Trimestre 4
+		replace renda_aluguel = V5007A2 if V5007A ==1  & Trimestre ==4 //   recebeu rendimentos de aluguel ou arrendamento?
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_aluguel = V5007A2 if V5007A ==1  //   recebeu rendimentos de aluguel ou arrendamento?
+}
+
+* Rendimento de outros rendimentos (bolsa de estudos, rendimento de caderneta de poupança, aplicações financeiras, etc.). 
+gen renda_outro = .
+
+if $time == 2012 /*
+	*/ 	| 	$time == 2013 /* 
+	*/ 	| 	$time == 2014 {
+		replace renda_outro = V501211 if V50121 ==1   //  ... recebeu rendimentos de poupança
+		replace renda_outro = V501311 if V50131 ==1   //  ... recebeu rendimentos de parceria, direitos autoriais	
+}
+
+if $time == 2015 {
+		* Trimestre 1, 2, 3
+		replace renda_outro = V501211 if V50121 ==1  & Trimestre ~=4  //  ... recebeu rendimentos de poupança
+		replace renda_outro = V501311 if V50131 ==1  & Trimestre ~=4  //  ... recebeu rendimentos de parceria, direitos autoriais			
+		* Trimestre 4
+		replace renda_outro = V5008A2 if V5008A ==1  & Trimestre ==4 //    recebeu outros rendimentos (bolsa de estudos, rendimento de caderneta de poupança, aplicações financeiras, etc.). 
+}
+
+if $time == 2016 /* 
+	*/ 	| 	$time == 2017 /* 
+	*/ 	| 	$time == 2018 /* 
+	*/ 	| 	$time == 2019 {
+		replace renda_outro = V5008A2 if V5008A ==1  //    recebeu outros rendimentos (bolsa de estudos, rendimento de caderneta de poupança, aplicações financeiras, etc.). 
+}
+
+* Rendimento no setor publico
+gen renda_setorpublico = .
+
+replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 5 	// Empregado no setor público com carteira de trabalho assinada
+replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 6 	// Empregado no setor público sem carteira de trabalho assinada
+replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 7 	// Militar e servidor estatutário
+
+
+**************************************
+**	Composição de  rendimentos por faixa de renda     **
+**************************************
+//  Loop over common variables
+local faixa  renda_anual renda_anual_pc renda_ajuda_gov  renda_seguro_desemprego  renda_aposentadoria  renda_doacao  renda_aluguel  renda_outro  renda_setorpublico
+
+foreach v in `faixa' {
+	* Rendimento recebido em todas as fontes (R$)
+	gen `v'1 = `v' if VD5009 == 1
+	gen `v'2 = `v' if VD5009 == 2
+	gen `v'3 = `v' if VD5009 == 3
+	gen `v'4 = `v' if VD5009 == 4
+	gen `v'5 = `v' if VD5009 == 5
+	gen `v'6 = `v' if VD5009 == 6
+	gen `v'7 = `v' if VD5009 == 7
 }
 
 

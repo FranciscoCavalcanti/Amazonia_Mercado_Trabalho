@@ -58,6 +58,8 @@ do "$code_dir\_estrutura_renda.do"
 * run do file
 do "$code_dir\_programas_sociais_outras_rendas.do"
 
+* run do file
+do "$code_dir\_programas_sociais_outras_rendas_composicao.do"
 
 //////////////////////////////////////////////	
 //	4) Matriz de transições de ocupações

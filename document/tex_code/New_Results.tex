@@ -1,0 +1,143 @@
+\documentclass[11pt]{beamer}
+
+\usepackage{lmodern}
+\usepackage[beamer,customcolors]{hf-tikz}
+
+\tikzset{hl/.style={
+    set fill color=red!80!black!40,
+    set border color=red!80!black,
+  },
+}
+
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+
+\usetheme{Montpellier}
+\usepackage[utf8]{inputenc}
+\usepackage[english,american]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{subcaption}
+\usepackage{threeparttable}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{array} % for defining a new column type
+\usepackage{tabulary}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+
+	
+\author[Francisco Cavalcanti]{Francisco Cavalcanti\\\footnotesize{PUC-Rio}
+}
+
+\author{
+Flávia  Alfenas\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and  
+Francisco Cavalcanti\\
+\textit{PUC-Rio}\\ \vspace{3mm}
+\and   
+Gustavo Gonzaga \\
+\textit{PUC-Rio} 
+}
+
+\date{Agosto, 2020}
+
+\title{Mercado de Trabalho na Amazônia Legal \\ Novos Resultados}
+
+\usepackage{tikz}
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;} 
+
+
+\newcommand{\quotes}[1]{``#1''}
+
+
+\setbeamercovered{transparent} 
+%\setbeamertemplate{navigation symbols}{} 
+%\logo{} 
+%\institute{} 
+%\date{} 
+%\subject{} 
+\begin{document}
+
+\newcolumntype{M}{>{\begin{varwidth}{4cm}}l<{\end{varwidth}}} %M is for Maximal column
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%\begin{frame}
+%\tableofcontents
+%\end{frame}
+
+\section{Introdução}
+
+
+\begin{frame}[label=indice_principal]{Índice Principal}
+
+\begin{itemize}
+\item{
+	\hyperlink{_outras_rendas_composicao}{\beamerbutton{Análise da composição da renda}} 
+	}   
+		
+\item{
+	\hyperlink{_retrato_emprego_sgap_industria}{\beamerbutton{Composição Setorial: Industria}}
+	}  
+	
+\item{
+	\hyperlink{_retrato_emprego_sgap_agricultura}{\beamerbutton{Composição Setorial: Agricultura}} 
+	}  
+	
+\item{
+	\hyperlink{_outros_emprego}{\beamerbutton{Caracterização do mercado de trabalho:  Outros trabalhos}}
+	}  
+
+\end{itemize}
+
+\end{frame}
+
+
+\section{Composição da Renda}
+
+\input{./_sub_code_proportions/_outras_rendas_composicao}
+
+\section{Composição Setorial: Industria}
+
+\input{./_sub_code_proportions/_retrato_emprego_sgap_industria}
+
+\section{Composição Setorial: Agricultura}
+
+\input{./_sub_code_proportions/_retrato_emprego_sgap_agricultura}
+
+
+\section{Outras Formas de Trabalho}
+
+\input{./_sub_code_proportions/_outros_emprego_caracterizacao}
+
+\section{Comentários}
+
+
+\frame
+{
+    \begin{center}
+     \vfill
+    \textbf{Obrigado!}
+     \\
+
+     \vfill
+     \onslide<2>
+\end{center}
+}
+
+\end{document}
+
+
+

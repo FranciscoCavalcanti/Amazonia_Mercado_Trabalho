@@ -116,7 +116,7 @@ cap destring Trimestre, replace
 /////////////////////////////////////////////////////////
 
 // loop over common variables
-local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico*
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
 
 foreach v of var `faixa' {
 	* Rendimento recebido as fonte (R$)
@@ -263,7 +263,7 @@ cap destring Trimestre, replace
 /////////////////////////////////////////////////////////
 
 // loop over common variables
-local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico*
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
 
 foreach v of var `faixa' {
 	* Rendimento recebido as fonte (R$)
@@ -471,6 +471,8 @@ local faixa  renda_ajuda_gov  /*
  	*/ 	renda_aluguel 	/*
  	*/ 	renda_outro 	/*
  	*/ 	renda_setorpublico 	/*
+ 	*/ 	renda_privadoformal 	/*
+ 	*/ 	renda_privadoinformal 	/*
  	*/ 	renda_anual_pc
 	
 // loop over common variables
@@ -548,6 +550,24 @@ label variable	renda_setorpublico5 "Setor público"
 label variable	renda_setorpublico6 "Setor público"
 label variable	renda_setorpublico7 "Setor público"
 
+label variable	renda_privadoformal "Privado formal"
+label variable	renda_privadoformal1 "Privado formal"
+label variable	renda_privadoformal2 "Privado formal"
+label variable	renda_privadoformal3 "Privado formal"
+label variable	renda_privadoformal4 "Privado formal"
+label variable	renda_privadoformal5 "Privado formal"
+label variable	renda_privadoformal6 "Privado formal"
+label variable	renda_privadoformal7 "Privado formal"
+
+label variable	renda_privadoinformal "Privado informal"
+label variable	renda_privadoinformal1 "Privado informal"
+label variable	renda_privadoinformal2 "Privado informal"
+label variable	renda_privadoinformal3 "Privado informal"
+label variable	renda_privadoinformal4 "Privado informal"
+label variable	renda_privadoinformal5 "Privado informal"
+label variable	renda_privadoinformal6 "Privado informal"
+label variable	renda_privadoinformal7 "Privado informal"
+
 label variable	renda_anual_pc "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc1 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc2 "Rendimento domiciliar per capita (R$)"
@@ -558,23 +578,23 @@ label variable	renda_anual_pc6 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc7 "Rendimento domiciliar per capita (R$)"
 
 * Rendimentos do trabalho restante
-gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemprego + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico)
+gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemprego + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico + renda_privadoinformal)
   // loop sobre faixas de rendimentos
 forvalues num = 1(1)7 {
-	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemprego`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num')
+	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemprego`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num' + renda_privadoinformal`num')
 	replace renda_privado`num' = 0 if renda_privado`num'==.
 	cap drop iten*
 	cap drop tool*
 }
 
-label variable	renda_privado "Setor privado"
-label variable	renda_privado1 "Setor privado"
-label variable	renda_privado2 "Setor privado"
-label variable	renda_privado3 "Setor privado"
-label variable	renda_privado4 "Setor privado"
-label variable	renda_privado5 "Setor privado"
-label variable	renda_privado6 "Setor privado"
-label variable	renda_privado7 "Setor privado"
+label variable	renda_privado "Setor privado formal"
+label variable	renda_privado1 "Setor privado formal"
+label variable	renda_privado2 "Setor privado formal"
+label variable	renda_privado3 "Setor privado formal"
+label variable	renda_privado4 "Setor privado formal"
+label variable	renda_privado5 "Setor privado formal"
+label variable	renda_privado6 "Setor privado formal"
+label variable	renda_privado7 "Setor privado formal"
 
 * keep only relavant variables
 keep Ano Trimestre  prop_* renda_*

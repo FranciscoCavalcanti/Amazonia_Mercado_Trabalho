@@ -492,12 +492,25 @@ replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 5 	// Empregado 
 replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 6 	// Empregado no setor público sem carteira de trabalho assinada
 replace renda_setorpublico = VD4019 if VD4002 == 1 &  VD4009 == 7 	// Militar e servidor estatutário
 
+* Rendimento no setor privado formal
+gen renda_privadoformal = .
+
+replace renda_privadoformal = VD4019 if VD4002 == 1 &  VD4009 == 1 	// Empregado no setor privado com carteira de trabalho assinada
+replace renda_privadoformal = VD4019 if VD4002 == 1 &  VD4009 == 3 	// Trabalhador doméstico com carteira de trabalho assinada
+replace renda_privadoformal = VD4019 if VD4002 == 1 &  VD4009 == 9 & VD4012 == 1  // Conta-própria & Contribuinte
+
+* Rendimento no setor privado informal
+gen renda_privadoinformal =.
+replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 2 	// Empregado no setor privado sem carteira de trabalho assinada 
+replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 4 	// Trabalhador doméstico sem carteira de trabalho assinada
+replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 9 & VD4012 == 2 	// Conta-própria & Não contribuinte
+replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 10 	// Trabalhador familiar auxiliar
 
 **************************************
 **	Composição de  rendimentos por faixa de renda     **
 **************************************
 //  Loop over common variables
-local faixa  renda_anual renda_anual_pc renda_ajuda_gov  renda_seguro_desemprego  renda_aposentadoria  renda_doacao  renda_aluguel  renda_outro  renda_setorpublico
+local faixa  renda_anual renda_anual_pc renda_ajuda_gov  renda_seguro_desemprego  renda_aposentadoria  renda_doacao  renda_aluguel  renda_outro  renda_setorpublico renda_privadoformal renda_privadoinformal
 
 foreach v in `faixa' {
 	* Rendimento recebido em todas as fontes (R$)

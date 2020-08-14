@@ -34,6 +34,15 @@ display "`type'"
 
 collapse (mean) `type', by(Ano id2 id)
 
+* edit new groups of variables
+gen renda_programas = renda_ajuda_gov + renda_seguro_desemprego
+gen renda_diversos = renda_outro + renda_doacao + renda_aluguel
+
+forvalues num = 1(1)7 {
+	gen renda_programas`num' = renda_ajuda_gov`num' + renda_seguro_desemprego`num'
+	gen renda_diversos`num' = renda_outro`num' + renda_doacao`num' + renda_aluguel`num'
+}
+
 * set design of graph
 set scheme s2gcolor 
 
@@ -41,33 +50,29 @@ set scheme s2gcolor
 	**	Gráfico Pizzas	**
 	**********************
 
-	graph pie renda_ajuda_gov 	/*
-		*/ 	renda_seguro_desemprego 	/*
-		*/ 	renda_aposentadoria 	/*
-		*/ 	renda_doacao 	/*
-		*/ 	renda_aluguel 	/*
-		*/ 	renda_outro 	/*
+	graph pie renda_privadoformal 	/*
+		*/ 	renda_privadoinformal 	/*
 		*/ 	renda_setorpublico 	/*
-		*/ 	renda_privado 	/*
+		*/ 	renda_aposentadoria 	/*
+		*/ 	renda_programas 	/*
+		*/ 	renda_diversos 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Programas sociais") label(2 "Seguro-desemprego e seguro-defeso") label(3 "Aposentadoria e pensão") label(4 "Pensão alimentícia, doação e mesada") label(5 "Aluguel e arrendamento") label(6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras") label(7 "Setor público") label(8 "Setor privado") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
-	graph pie renda_ajuda_gov 	/*
-		*/ 	renda_seguro_desemprego 	/*
-		*/ 	renda_aposentadoria 	/*
-		*/ 	renda_doacao 	/*
-		*/ 	renda_aluguel 	/*
-		*/ 	renda_outro 	/*
+	graph pie renda_privadoformal 	/*
+		*/ 	renda_privadoinformal 	/*
 		*/ 	renda_setorpublico 	/*
-		*/ 	renda_privado 	/*
+		*/ 	renda_aposentadoria 	/*
+		*/ 	renda_programas 	/*
+		*/ 	renda_diversos 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Programas sociais") label(2 "Seguro-desemprego e seguro-defeso") label(3 "Aposentadoria e pensão") label(4 "Pensão alimentícia, doação e mesada") label(5 "Aluguel e arrendamento") label(6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras") label(7 "Setor público") label(8 "Setor privado") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
@@ -95,33 +100,29 @@ forvalues num = 1(1)7 {
 	**	Gráfico Pizzas	**
 	**********************
 
-	graph pie renda_ajuda_gov`num' 	/*
-		*/ 	renda_seguro_desemprego`num' 	/*
-		*/ 	renda_aposentadoria`num' 	/*
-		*/ 	renda_doacao`num' 	/*
-		*/ 	renda_aluguel`num' 	/*
-		*/ 	renda_outro`num' 	/*
+	graph pie renda_privadoformal`num' 	/*
+		*/ 	renda_privadoinformal`num' 	/*
 		*/ 	renda_setorpublico`num' 	/*
-		*/ 	renda_privado`num' 	/*
+		*/ 	renda_aposentadoria`num' 	/*
+		*/ 	renda_programas`num' 	/*
+		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Programas sociais") label(2 "Seguro-desemprego e seguro-defeso") label(3 "Aposentadoria e pensão") label(4 "Pensão alimentícia, doação e mesada") label(5 "Aluguel e arrendamento") label(6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras") label(7 "Setor público") label(8 "Setor privado") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
-	graph pie renda_ajuda_gov`num' 	/*
-		*/ 	renda_seguro_desemprego`num' 	/*
-		*/ 	renda_aposentadoria`num' 	/*
-		*/ 	renda_doacao`num' 	/*
-		*/ 	renda_aluguel`num' 	/*
-		*/ 	renda_outro`num' 	/*
+	graph pie renda_privadoformal`num' 	/*
+		*/ 	renda_privadoinformal`num' 	/*
 		*/ 	renda_setorpublico`num' 	/*
-		*/ 	renda_privado`num' 	/*
+		*/ 	renda_aposentadoria`num' 	/*
+		*/ 	renda_programas`num' 	/*
+		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Programas sociais") label(2 "Seguro-desemprego e seguro-defeso") label(3 "Aposentadoria e pensão") label(4 "Pensão alimentícia, doação e mesada") label(5 "Aluguel e arrendamento") label(6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras") label(7 "Setor público") label(8 "Setor privado") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		

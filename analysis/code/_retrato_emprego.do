@@ -45,6 +45,12 @@ do "$code_dir\_retrato_emprego_setor_sgap_industria.do"
 * run do file
 do "$code_dir\_retrato_emprego_setor_sgap_agricultura.do"
 
+//////////////////////////////////////////
+//	Composição sub-setorial	de Industria de Transfornmação
+/////////////////////////////////////////
+* run do file
+do "$code_dir\_retrato_emprego_setor_sgap_trans.do"
+
 /////////////////////////////////////////
 // Posicao na Ocupacao
 /////////////////////////////////////////

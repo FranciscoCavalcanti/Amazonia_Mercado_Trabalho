@@ -20,7 +20,7 @@ do "$code_dir\_definicoes_pnadcontinua_trimestral"
 * select just a small sample for training data
 cap drop __*
 cap drop iten*
-*sample 2
+*sample 1
 
 /////////////////////////////////////////////////////////
 //	A) População
@@ -586,6 +586,163 @@ gen iten1 = 1 * V1028 if informal == 1 & sgap_agua==1
 by Ano Trimestre, sort: egen n_de_informal_sgap_agua = total(iten1)
 replace n_de_informal_sgap_agua = round(n_de_informal_sgap_agua)
 label variable n_de_informal_sgap_agua "Número de informais no setor de água"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	SUB-CATEGORIAS INDUSTRIA DE TRANFORMAÇÃO
+/////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////
+//	Número de ocupados por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans01==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans01 = total(iten1)
+replace n_de_ocupado_sgap_trans01 = round(n_de_ocupado_sgap_trans01)
+label variable n_de_ocupado_sgap_trans01 "Número de ocupados em fabricação de produtos alimentícios"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans02==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans02 = total(iten1)
+replace n_de_ocupado_sgap_trans02 = round(n_de_ocupado_sgap_trans02)
+label variable n_de_ocupado_sgap_trans02 "Número de ocupados em fabricação de produtos têxteis"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans03==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans03 = total(iten1)
+replace n_de_ocupado_sgap_trans03 = round(n_de_ocupado_sgap_trans03)
+label variable n_de_ocupado_sgap_trans03 "Número de ocupados em fabricação de produtos de madeira"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans04==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans04 = total(iten1)
+replace n_de_ocupado_sgap_trans04 = round(n_de_ocupado_sgap_trans04)
+label variable n_de_ocupado_sgap_trans04 "Número de ocupados em fabricação de produtos químicos"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans05==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans05 = total(iten1)
+replace n_de_ocupado_sgap_trans05 = round(n_de_ocupado_sgap_trans05)
+label variable n_de_ocupado_sgap_trans05 "Número de ocupados em fabricação de produtos minerais"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans06==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans06 = total(iten1)
+replace n_de_ocupado_sgap_trans06 = round(n_de_ocupado_sgap_trans06)
+label variable n_de_ocupado_sgap_trans06 "Número de ocupados em fabricação de máquinas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans07==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans07 = total(iten1)
+replace n_de_ocupado_sgap_trans07 = round(n_de_ocupado_sgap_trans07)
+label variable n_de_ocupado_sgap_trans07 "Número de ocupados em fabricação de equipamentos de transporte"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if ocupado == 1 & sgap_trans08==1
+by Ano Trimestre, sort: egen n_de_ocupado_sgap_trans08 = total(iten1)
+replace n_de_ocupado_sgap_trans08 = round(n_de_ocupado_sgap_trans08)
+label variable n_de_ocupado_sgap_trans08 "Número de ocupados em outros"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de formal por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans01==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans01 = total(iten1)
+replace n_de_formal_sgap_trans01 = round(n_de_formal_sgap_trans01)
+label variable n_de_formal_sgap_trans01 "Número de formal em fabricação de produtos alimentícios"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans02==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans02 = total(iten1)
+replace n_de_formal_sgap_trans02 = round(n_de_formal_sgap_trans02)
+label variable n_de_formal_sgap_trans02 "Número de formal em fabricação de produtos têxteis"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans03==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans03 = total(iten1)
+replace n_de_formal_sgap_trans03 = round(n_de_formal_sgap_trans03)
+label variable n_de_formal_sgap_trans03 "Número de formal em fabricação de produtos de madeira"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans04==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans04 = total(iten1)
+replace n_de_formal_sgap_trans04 = round(n_de_formal_sgap_trans04)
+label variable n_de_formal_sgap_trans04 "Número de formal em fabricação de produtos químicos"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans05==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans05 = total(iten1)
+replace n_de_formal_sgap_trans05 = round(n_de_formal_sgap_trans05)
+label variable n_de_formal_sgap_trans05 "Número de formal em fabricação de produtos minerais"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans06==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans06 = total(iten1)
+replace n_de_formal_sgap_trans06 = round(n_de_formal_sgap_trans06)
+label variable n_de_formal_sgap_trans06 "Número de formal em fabricação de máquinas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans07==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans07 = total(iten1)
+replace n_de_formal_sgap_trans07 = round(n_de_formal_sgap_trans07)
+label variable n_de_formal_sgap_trans07 "Número de formal em fabricação de equipamentos de transporte"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if formal == 1 & sgap_trans08==1
+by Ano Trimestre, sort: egen n_de_formal_sgap_trans08 = total(iten1)
+replace n_de_formal_sgap_trans08 = round(n_de_formal_sgap_trans08)
+label variable n_de_formal_sgap_trans08 "Número de formal em outros"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
+//	Número de informal por setor
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans01==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans01 = total(iten1)
+replace n_de_informal_sgap_trans01 = round(n_de_informal_sgap_trans01)
+label variable n_de_informal_sgap_trans01 "Número de informais em fabricação de produtos alimentícios"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans02==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans02 = total(iten1)
+replace n_de_informal_sgap_trans02 = round(n_de_informal_sgap_trans02)
+label variable n_de_informal_sgap_trans02 "Número de informais em fabricação de produtos têxteis"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans03==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans03 = total(iten1)
+replace n_de_informal_sgap_trans03 = round(n_de_informal_sgap_trans03)
+label variable n_de_informal_sgap_trans03 "Número de informais em fabricação de produtos de madeira"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans04==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans04 = total(iten1)
+replace n_de_informal_sgap_trans04 = round(n_de_informal_sgap_trans04)
+label variable n_de_informal_sgap_trans04 "Número de informais em fabricação de produtos químicos"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans05==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans05 = total(iten1)
+replace n_de_informal_sgap_trans05 = round(n_de_informal_sgap_trans05)
+label variable n_de_informal_sgap_trans05 "Número de informais em fabricação de produtos minerais"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans06==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans06 = total(iten1)
+replace n_de_informal_sgap_trans06 = round(n_de_informal_sgap_trans06)
+label variable n_de_informal_sgap_trans06 "Número de informais em fabricação de máquinas"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans07==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans07 = total(iten1)
+replace n_de_informal_sgap_trans07 = round(n_de_informal_sgap_trans07)
+label variable n_de_informal_sgap_trans07 "Número de informais em fabricação de equipamentos de transporte"
+cap drop iten*
+
+gen iten1 = 1 * V1028 if informal == 1 & sgap_trans08==1
+by Ano Trimestre, sort: egen n_de_informal_sgap_trans08 = total(iten1)
+replace n_de_informal_sgap_trans08 = round(n_de_informal_sgap_trans08)
+label variable n_de_informal_sgap_trans08 "Número de informais em outros"
 cap drop iten*
 
 /////////////////////////////////////////////////////////

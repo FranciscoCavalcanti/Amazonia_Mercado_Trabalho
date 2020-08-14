@@ -198,6 +198,23 @@ gen sgap_trans = 1 if V4013 >= 10010 & V4013 <= 33002
 gen sgap_energia = 1 if V4013 >= 35010 & V4013 <= 35022
 gen sgap_agua = 1 if V4013 >= 36000 & V4013 <= 39000
 
+*** industria de transformacao
+gen sgap_trans01 = 1 if V4013 >= 10010 & V4013 <= 11000 // FABRICAÇÃO DE PRODUTOS ALIMENTÍCIOS
+gen sgap_trans02 = 1 if V4013 >= 13001 & V4013 <= 15020 // FABRICAÇÃO DE PRODUTOS TÊXTEIS
+														// CONFECÇÃO DE ARTIGOS DO VESTUÁRIO E ACESSÓRIOS
+														// PREPARAÇÃO DE COUROS E FABRICAÇÃO DE ARTEFATOS DE COURO, ARTIGOS DE VIAGEM E CALÇADOS
+gen sgap_trans03 = 1 if V4013 >= 16001 & V4013 <= 17002 // FABRICAÇÃO DE PRODUTOS DE MADEIRA
+														// FABRICAÇÃO DE CELULOSE, PAPEL E PRODUTOS DE PAPEL
+replace sgap_trans03 = 1 if sgap_trans03 ==. & V4013 == 18000  // IMPRESSÃO E REPRODUÇÃO DE GRAVAÇÕES
+
+gen sgap_trans04 = 1 if V4013 >= 19010 & V4013 <= 22020 // FABRICAÇÃO DE PRODUTOS QUÍMICOS
+gen sgap_trans05 = 1 if V4013 >= 23010 & V4013 <= 25002 // FABRICAÇÃO DE PRODUTOS DE MINERAIS NÃO-METÁLICOS
+gen sgap_trans06 = 1 if V4013 >= 26010 & V4013 <= 28000 // FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS
+gen sgap_trans07 = 1 if V4013 >= 29001 & V4013 <= 30090 // FABRICAÇÃO DE EQUIPAMENTOS DE TRANSPORTE
+gen sgap_trans08 = . // OUTROS
+replace sgap_trans08 = 1 if sgap_trans08 ==. & V4013 >= 31000 & V4013 <= 33002 // FABRICAÇÃO DE MÓVEIS
+replace sgap_trans08 = 1 if sgap_trans08 ==. & V4013 == 12000  // FABRICAÇÃO DE PRODUTOS DO FUMO
+
 * Faixa educacional
 gen faixa_educ1 = 1 if VD3004 ==1 	// Sem instrução e menos de 1 ano de estudo
 gen faixa_educ2 = 1 if VD3004 ==2 	// Fundamental incompleto ou equivalente 

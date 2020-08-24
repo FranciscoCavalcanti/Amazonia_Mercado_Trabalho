@@ -506,6 +506,9 @@ replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 4 	// Trabalh
 replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 9 & VD4012 == 2 	// Conta-própria & Não contribuinte
 replace renda_privadoinformal = VD4019 if VD4002 == 1 &  VD4009 == 10 	// Trabalhador familiar auxiliar
 
+* Faixa de renda por quintil 
+xtile renda_quintil = VD5008 [w=V1032] , nq(5)
+
 **************************************
 **	Composição de  rendimentos por faixa de renda     **
 **************************************
@@ -521,6 +524,13 @@ foreach v in `faixa' {
 	gen `v'5 = `v' if VD5009 == 5
 	gen `v'6 = `v' if VD5009 == 6
 	gen `v'7 = `v' if VD5009 == 7
+	
+	* Faixa de quintil
+	gen `v'q1 = `v' if renda_quintil == 1
+	gen `v'q2 = `v' if renda_quintil == 2
+	gen `v'q3 = `v' if renda_quintil == 3
+	gen `v'q4 = `v' if renda_quintil == 4
+	gen `v'q5 = `v' if renda_quintil == 5	
 }
 
 ******************************************************

@@ -225,10 +225,13 @@ replace faixa_educ4 = 1 if VD3004 ==6 	// Superior incompleto ou equivalente
 gen faixa_educ5 = 1 if VD3004 ==7 	// Superior completo 
 
 * Faixa etaria
-gen faixa_etaria1 = 1 if V2009 >= 18 & V2009 <= 24
-gen faixa_etaria2 = 1 if V2009 >= 25 & V2009 <= 39
-gen faixa_etaria3 = 1 if V2009 >= 40 & V2009 <= 59
-gen faixa_etaria4 = 1 if V2009 >= 60
+gen faixa_etaria1 = 1 if V2009 >= 14 & V2009 <= 17
+gen faixa_etaria2 = 1 if V2009 >= 18 & V2009 <= 24
+gen faixa_etaria3 = 1 if V2009 >= 25 & V2009 <= 32
+gen faixa_etaria4 = 1 if V2009 >= 33 & V2009 <= 39
+gen faixa_etaria5 = 1 if V2009 >= 40 & V2009 <= 49
+gen faixa_etaria6 = 1 if V2009 >= 50 & V2009 <= 59
+gen faixa_etaria7 = 1 if V2009 >= 60
 
 * Faixa genero
 gen faixa_genero1 = 1 if V2007 ==1 // 1 Homem

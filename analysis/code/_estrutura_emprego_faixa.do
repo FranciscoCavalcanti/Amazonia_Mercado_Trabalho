@@ -25,7 +25,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * select variables
-local type faixa_educ1 faixa_educ2 faixa_educ3 faixa_educ4 faixa_educ5 faixa_etaria1 faixa_etaria2 faixa_etaria3 faixa_etaria4 faixa_genero1 faixa_genero2 faixa_metro faixa_nmetro faixa_rural faixa_urbana
+local type faixa_educ1 faixa_educ2 faixa_educ3 faixa_educ4 faixa_educ5 faixa_etaria1 faixa_etaria2 faixa_etaria3 faixa_etaria4 faixa_etaria5 faixa_etaria6 faixa_etaria7 faixa_genero1 faixa_genero2 faixa_metro faixa_nmetro faixa_rural faixa_urbana
 
 * label variable
 label variable n_de_ocupado_faixa_educ1 "Taxa de ocupação com menos 1 ano de estudo (%)"
@@ -34,10 +34,13 @@ label variable n_de_ocupado_faixa_educ3 "Taxa de ocupação com fundamental comp
 label variable n_de_ocupado_faixa_educ4 "Taxa de ocupação com ensino médio completo (%)"
 label variable n_de_ocupado_faixa_educ5 "Taxa de ocupação com ensino superior (%)"
 
-label variable n_de_ocupado_faixa_etaria1 "Taxa de ocupação entre 18 e 24 anos (%) "
-label variable n_de_ocupado_faixa_etaria2 "Taxa de ocupação entre 25 e 39 anos (%)"
-label variable n_de_ocupado_faixa_etaria3 "Taxa de ocupação entre 40 e 59 anos (%)"
-label variable n_de_ocupado_faixa_etaria4 "Taxa de ocupação acima de 60 anos (%)"
+label variable n_de_ocupado_faixa_etaria1 "Taxa de ocupação entre 14 e 17 anos (%) "
+label variable n_de_ocupado_faixa_etaria2 "Taxa de ocupação entre 18 e 24 anos (%) "
+label variable n_de_ocupado_faixa_etaria3 "Taxa de ocupação entre 25 e 32 anos (%)"
+label variable n_de_ocupado_faixa_etaria4 "Taxa de ocupação entre 33 e 39 anos (%)"
+label variable n_de_ocupado_faixa_etaria5 "Taxa de ocupação entre 40 e 49 anos (%)"
+label variable n_de_ocupado_faixa_etaria6 "Taxa de ocupação entre 50 e 59 anos (%)"
+label variable n_de_ocupado_faixa_etaria7 "Taxa de ocupação acima de 60 anos (%)"
 
 label variable n_de_ocupado_faixa_genero1 "Taxa de ocupação entre homens (%) "
 label variable n_de_ocupado_faixa_genero2 "Taxa de ocupação entre mullheres (%)"
@@ -58,6 +61,14 @@ label variable n_de_pea_faixa_etaria1 "Taxa de participação entre 18 e 24 anos
 label variable n_de_pea_faixa_etaria2 "Taxa de participação entre 25 e 39 anos (%)"
 label variable n_de_pea_faixa_etaria3 "Taxa de participação entre 40 e 59 anos (%)"
 label variable n_de_pea_faixa_etaria4 "Taxa de participação acima de 60 anos (%)"
+
+label variable n_de_pea_faixa_etaria1 "Taxa de participação entre 14 e 17 anos (%) "
+label variable n_de_pea_faixa_etaria2 "Taxa de participação entre 18 e 24 anos (%) "
+label variable n_de_pea_faixa_etaria3 "Taxa de participação entre 25 e 32 anos (%)"
+label variable n_de_pea_faixa_etaria4 "Taxa de participação entre 33 e 39 anos (%)"
+label variable n_de_pea_faixa_etaria5 "Taxa de participação entre 40 e 49 anos (%)"
+label variable n_de_pea_faixa_etaria6 "Taxa de participação entre 50 e 59 anos (%)"
+label variable n_de_pea_faixa_etaria7 "Taxa de participação acima de 60 anos (%)"
 
 label variable n_de_pea_faixa_genero1 "Taxa de participação entre homens (%) "
 label variable n_de_pea_faixa_genero2 "Taxa de participação entre mullheres (%)"

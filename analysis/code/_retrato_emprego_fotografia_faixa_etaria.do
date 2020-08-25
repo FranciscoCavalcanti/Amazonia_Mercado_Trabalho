@@ -50,7 +50,7 @@ foreach v of var `colvar' {
 }
 
 **	Taxa de participacao	**
-set scheme s1mono
+set scheme s2gcolor   
 
 *preserve
 preserve 
@@ -59,22 +59,28 @@ preserve
 	gen iten2 = (n_de_pea_faixa_etaria2/n_faixa_etaria2)*100
 	gen iten3 = (n_de_pea_faixa_etaria3/n_faixa_etaria3)*100
 	gen iten4 = (n_de_pea_faixa_etaria4/n_faixa_etaria4)*100	
+	gen iten5 = (n_de_pea_faixa_etaria5/n_faixa_etaria5)*100
+	gen iten6 = (n_de_pea_faixa_etaria6/n_faixa_etaria6)*100
+	gen iten7 = (n_de_pea_faixa_etaria7/n_faixa_etaria7)*100
 	
-	graph bar iten1 iten2 iten3 iten4	/*
+	graph bar iten1 iten2 iten3 iten4 iten5 iten6 iten7	/*
 		*/	,  over(id2)	 /* 
 		*/ 	title("", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(eltgreen%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%65)) 	/*
+		*/	bar(2, fcolor(%65)) 	/*
 		*/	bar(3, fcolor(%65)) 	/*
 		*/	bar(4, fcolor(%65)) 	/*
+		*/	bar(5, fcolor(%65)) 	/*
+		*/	bar(6, fcolor(%65)) 	/*
+		*/	bar(7, fcolor(%65)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
-		*/ 	legend(on cols(4) label(1 "18 à 24 anos") label(2 "25 à 39 anos") label(3 "40 à 59 anos") label(4 "> de 60 anos") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(4) label(1 "14 à 17 anos") label(2 "18 à 24 anos") label(3 "25 à 32 anos") label(4 "33 à 39 anos") label(5 "40 à 49 anos") label(6 "50 à 59 anos") label(7 "> de 60 anos")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/  saving("$tmp_dir\iten1", replace)
 		
 				* save graph 
@@ -87,7 +93,7 @@ preserve
 restore	
 
 **	Taxa de ocupação	**
-set scheme s1mono
+set scheme s2gcolor   
 
 *preserve
 preserve 
@@ -96,22 +102,28 @@ preserve
 	gen iten2 = (n_de_ocupado_faixa_etaria2/n_faixa_etaria2)*100
 	gen iten3 = (n_de_ocupado_faixa_etaria3/n_faixa_etaria3)*100
 	gen iten4 = (n_de_ocupado_faixa_etaria4/n_faixa_etaria4)*100	
+	gen iten5 = (n_de_ocupado_faixa_etaria5/n_faixa_etaria5)*100
+	gen iten6 = (n_de_ocupado_faixa_etaria6/n_faixa_etaria6)*100
+	gen iten7 = (n_de_ocupado_faixa_etaria7/n_faixa_etaria7)*100
 	
-	graph bar iten1 iten2 iten3 iten4	/*
+	graph bar iten1 iten2 iten3 iten4 iten5 iten6 iten7	/*
 		*/	,  over(id2)	 /* 
 		*/ 	title("", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(eltgreen%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%65)) 	/*
+		*/	bar(2, fcolor(%65)) 	/*
 		*/	bar(3, fcolor(%65)) 	/*
 		*/	bar(4, fcolor(%65)) 	/*
+		*/	bar(5, fcolor(%65)) 	/*
+		*/	bar(6, fcolor(%65)) 	/*
+		*/	bar(7, fcolor(%65)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
-		*/ 	legend(on cols(4) label(1 "18 à 24 anos") label(2 "25 à 39 anos") label(3 "40 à 59 anos") label(4 "> de 60 anos") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(4) label(1 "14 à 17 anos") label(2 "18 à 24 anos") label(3 "25 à 32 anos") label(4 "33 à 39 anos") label(5 "40 à 49 anos") label(6 "50 à 59 anos") label(7 "> de 60 anos")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/  saving("$tmp_dir\iten1", replace)
 		
 				* save graph 

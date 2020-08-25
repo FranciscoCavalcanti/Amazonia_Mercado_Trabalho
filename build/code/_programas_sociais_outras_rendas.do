@@ -85,9 +85,9 @@ cap drop tool*
 /////////////////////////////////////////////////////////
 //	D) Número da população que recebeu seguro-desemprego
 /////////////////////////////////////////////////////////
-gen tool1 = 1 * V1032 if seguro_desemprego == 1
+gen tool1 = 1 * V1032 if seguro_desemp == 1
 by Ano Trimestre, sort: egen tool2 = total(tool1)
-gen n_seguro_desemprego = tool2
+gen n_seguro_desemp = tool2
 cap drop iten*
 cap drop tool*
 
@@ -116,7 +116,7 @@ cap destring Trimestre, replace
 /////////////////////////////////////////////////////////
 
 // loop over common variables
-local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemp* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
 
 foreach v of var `faixa' {
 	* Rendimento recebido as fonte (R$)
@@ -232,9 +232,9 @@ cap drop tool*
 /////////////////////////////////////////////////////////
 //	D) Número da população que recebeu seguro-desemprego
 /////////////////////////////////////////////////////////
-gen tool1 = 1 * V1032 if seguro_desemprego == 1
+gen tool1 = 1 * V1032 if seguro_desemp == 1
 by Ano Trimestre, sort: egen tool2 = total(tool1)
-gen n_seguro_desemprego = tool2
+gen n_seguro_desemp = tool2
 cap drop iten*
 cap drop tool*
 
@@ -263,7 +263,7 @@ cap destring Trimestre, replace
 /////////////////////////////////////////////////////////
 
 // loop over common variables
-local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemprego* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
+local faixa renda_anual* renda_ajuda_gov* renda_seguro_desemp* renda_aposentadoria* renda_doacao* renda_aluguel* renda_outro* renda_setorpublico* renda_privado*
 
 foreach v of var `faixa' {
 	* Rendimento recebido as fonte (R$)
@@ -406,8 +406,8 @@ label variable prop_bpc_loas "Proporção da população que recebeu BPC-LOAS (%
 cap drop iten* tool* 
 
 * Proporção da população que recebeu seguro desemprego em (%)
-gen prop_seguro_desemprego = (n_seguro_desemprego/n_populacao)*100
-label variable prop_seguro_desemprego "Proporção da população que recebeu seguro desemprego (%)"
+gen prop_seguro_desemp = (n_seguro_desemp/n_populacao)*100
+label variable prop_seguro_desemp "Proporção da população que recebeu seguro desemprego (%)"
 cap drop iten* tool* 
 
 * Proporção da população aposentadoria em (%)
@@ -465,7 +465,7 @@ cap drop tool*
 
 // attach label of variables
 local faixa  renda_ajuda_gov  /*
- 	*/ 	renda_seguro_desemprego 	/*
+ 	*/ 	renda_seguro_desemp 	/*
  	*/ 	renda_aposentadoria 	/*
  	*/ 	renda_doacao 	/*
  	*/ 	renda_aluguel 	/*
@@ -496,14 +496,14 @@ label variable	renda_ajuda_gov5 "Programas sociais"
 label variable	renda_ajuda_gov6 "Programas sociais"
 label variable	renda_ajuda_gov7 "Programas sociais"
 
-label variable	renda_seguro_desemprego  "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego1 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego2 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego3 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego4 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego5 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego6 "Seguro-desemprego e seguro-defeso"
-label variable	renda_seguro_desemprego7 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp  "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp1 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp2 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp3 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp4 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp5 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp6 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desemp7 "Seguro-desemprego e seguro-defeso"
 
 label variable	renda_aposentadoria "Aposentadoria e pensão"
 label variable	renda_aposentadoria1 "Aposentadoria e pensão"
@@ -578,10 +578,10 @@ label variable	renda_anual_pc6 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc7 "Rendimento domiciliar per capita (R$)"
 
 * Rendimentos do trabalho restante
-gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemprego + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico + renda_privadoinformal)
+gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemp + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico + renda_privadoinformal)
   // loop sobre faixas de rendimentos
 forvalues num = 1(1)7 {
-	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemprego`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num' + renda_privadoinformal`num')
+	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemp`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num' + renda_privadoinformal`num')
 	replace renda_privado`num' = 0 if renda_privado`num'==.
 	cap drop iten*
 	cap drop tool*

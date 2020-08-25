@@ -285,26 +285,26 @@ if $time == 2016 /*
 }
 
 * Recebeu rendimentos de seguro-desemprego, seguro-defeso
-gen seguro_desemprego = .
+gen seguro_desemp = .
 
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
 	*/ 	| 	$time == 2014 {
-		replace seguro_desemprego = 1 if V50081 ==1  //  Rend habitual domiciliar per capita
+		replace seguro_desemp = 1 if V50081 ==1  //  Rend habitual domiciliar per capita
 }
 
 if $time == 2015 {
 		* Trimestre 1, 2, 3
-		replace seguro_desemprego = 1 if V50081 ==1 & Trimestre ~=4  //  Rend habitual domiciliar per capita
+		replace seguro_desemp = 1 if V50081 ==1 & Trimestre ~=4  //  Rend habitual domiciliar per capita
 		* Trimestre 4
-		replace seguro_desemprego = 1 if  V5005A ==1 & Trimestre ==4  //  Rend habitual domiciliar per capita
+		replace seguro_desemp = 1 if  V5005A ==1 & Trimestre ==4  //  Rend habitual domiciliar per capita
 }
 
 if $time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
-		replace seguro_desemprego = 1 if  V5005A ==1 //  Rend habitual domiciliar per capita
+		replace seguro_desemp = 1 if  V5005A ==1 //  Rend habitual domiciliar per capita
 }
 
 * Recebeu rendimentos de aposentadoria ou pensão de instituto de previdência federal (INSS), estadual, municipal, ou do governo federal, estadual, municipal?
@@ -366,26 +366,26 @@ if $time == 2016 /*
 }
 
 * Rendimento recebido de seguro-desemprego, seguro-defeso
-gen renda_seguro_desemprego = .
+gen renda_seguro_desemp = .
 
 if $time == 2012 /*
 	*/ 	| 	$time == 2013 /* 
 	*/ 	| 	$time == 2014 {
-		replace renda_seguro_desemprego = V500811 if V50081 ==1  //  Rend de seguro desemprego
+		replace renda_seguro_desemp = V500811 if V50081 ==1  //  Rend de seguro desemprego
 }
 
 if $time == 2015 {
 		* Trimestre 1, 2, 3
-		replace renda_seguro_desemprego = V500811 if V50081 ==1 & Trimestre ~=4  //   seguro-desemprego, seguro-defeso
+		replace renda_seguro_desemp = V500811 if V50081 ==1 & Trimestre ~=4  //   seguro-desemprego, seguro-defeso
 		* Trimestre 4
-		replace renda_seguro_desemprego = V5005A2 if  V5005A ==1 & Trimestre ==4  //   seguro-desemprego, seguro-defeso
+		replace renda_seguro_desemp = V5005A2 if  V5005A ==1 & Trimestre ==4  //   seguro-desemprego, seguro-defeso
 }
 
 if $time == 2016 /* 
 	*/ 	| 	$time == 2017 /* 
 	*/ 	| 	$time == 2018 /* 
 	*/ 	| 	$time == 2019 {
-		replace renda_seguro_desemprego = V5005A2 if  V5005A ==1 //   seguro-desemprego, seguro-defeso
+		replace renda_seguro_desemp = V5005A2 if  V5005A ==1 //   seguro-desemprego, seguro-defeso
 }
 
 * Rendimento de renda_aposentadoria ou pensão de instituto de previdência federal (INSS), estadual, municipal, ou do governo federal, estadual, municipal?
@@ -513,7 +513,7 @@ xtile renda_quintil = VD5008 [w=V1032] , nq(5)
 **	Composição de  rendimentos por faixa de renda     **
 **************************************
 //  Loop over common variables
-local faixa  renda_anual renda_anual_pc renda_ajuda_gov  renda_seguro_desemprego  renda_aposentadoria  renda_doacao  renda_aluguel  renda_outro  renda_setorpublico renda_privadoformal renda_privadoinformal
+local faixa  renda_anual renda_anual_pc renda_ajuda_gov  renda_seguro_desemp  renda_aposentadoria  renda_doacao  renda_aluguel  renda_outro  renda_setorpublico renda_privadoformal renda_privadoinformal
 
 foreach v in `faixa' {
 	* Rendimento recebido em todas as fontes (R$)

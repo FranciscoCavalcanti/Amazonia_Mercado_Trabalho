@@ -52,7 +52,6 @@ forvalues num = 1(1)5 {
 	**********************
 	**	Gráfico Pizzas	**
 	**********************
-
 	graph pie renda_privadoformalq`num' 	/*
 		*/ 	renda_privadoinformalq`num' 	/*
 		*/ 	renda_setorpublicoq`num' 	/*
@@ -62,8 +61,8 @@ forvalues num = 1(1)5 {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	plabel(_all percent, size(small) gap(5cm) format(%12.1f) bexpand ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
 	graph pie renda_privadoformalq`num' 	/*
@@ -75,8 +74,8 @@ forvalues num = 1(1)5 {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	plabel(_all percent, size(small) gap(5cm) format(%12.1f)  bexpand ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
 	* Combing graphs with the same legend

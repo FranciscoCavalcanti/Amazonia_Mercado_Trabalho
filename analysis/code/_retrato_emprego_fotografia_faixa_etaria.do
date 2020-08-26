@@ -65,7 +65,7 @@ preserve
 	
 	graph bar iten1 iten2 iten3 iten4 iten5 iten6 iten7	/*
 		*/	,  over(id2)	 /* 
-		*/ 	title("", size(Medium)) 	 	/*
+		*/ 	title("Taxa de Participação", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(%65)) 	/*
@@ -108,7 +108,7 @@ preserve
 	
 	graph bar iten1 iten2 iten3 iten4 iten5 iten6 iten7	/*
 		*/	,  over(id2)	 /* 
-		*/ 	title("", size(Medium)) 	 	/*
+		*/ 	title("Taxa de Ocupação", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(%65)) 	/*
@@ -134,3 +134,17 @@ preserve
 	
 * restore
 restore	
+
+* Combing graphs with the same legend
+	grc1leg "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_prop_ocupacao.gph" "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_prop_participacao.gph",  	/*
+	*/ 	legendfrom("$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_prop_ocupacao.gph") 	/*
+	*/ 	title("") 	/*
+	*/ 	cols(4) 	/*
+	*/ 	ycommon 	/* ycommon
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/	
+				* save graph 
+	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria.gph", replace
+	graph use "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria.gph"
+	graph export "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria.png", replace

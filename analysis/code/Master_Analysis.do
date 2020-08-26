@@ -62,6 +62,12 @@ do "$code_dir\_programas_sociais_outras_rendas.do"
 do "$code_dir\_outras_rendas_composicao.do"
 
 * run do file
+do "$code_dir\_outras_rendas_composicao_porquintil.do"
+
+* run do file
+do "$code_dir\_outras_rendas_composicao_porfaixas.do"
+
+* run do file
 do "$code_dir\_outros_emprego_caracterizacao.do"
 
 //////////////////////////////////////////////	

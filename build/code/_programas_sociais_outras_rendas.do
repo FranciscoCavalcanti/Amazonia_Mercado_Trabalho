@@ -478,7 +478,7 @@ local faixa  renda_ajuda_gov  /*
 // loop over common variables
 foreach v in `faixa' {
     gen `v' = (total_`v'/n_populacao)
-    // loop sobre faixas de rendimentos
+    
     forvalues num = 1(1)7 {
 		gen `v'`num' = (total_`v'`num'/n_renda_anual_pc`num')
 		replace `v'`num' = 0 if `v'`num'==.
@@ -486,6 +486,18 @@ foreach v in `faixa' {
 		cap drop tool*
 	}
 }
+
+// loop over common variables
+foreach v in `faixa' {
+    // loop sobre quintil de rendimentos
+    forvalues num = 1(1)5 {
+		gen `v'q`num' = (total_`v'q`num'/n_renda_anual_pcq`num')
+		replace `v'q`num' = 0 if `v'q`num'==.
+		cap drop iten*
+		cap drop tool*
+	}
+}
+
 
 label variable	renda_ajuda_gov "Programas sociais"
 label variable	renda_ajuda_gov1 "Programas sociais"
@@ -496,6 +508,12 @@ label variable	renda_ajuda_gov5 "Programas sociais"
 label variable	renda_ajuda_gov6 "Programas sociais"
 label variable	renda_ajuda_gov7 "Programas sociais"
 
+label variable	renda_ajuda_govq1 "Programas sociais"
+label variable	renda_ajuda_govq2 "Programas sociais"
+label variable	renda_ajuda_govq3 "Programas sociais"
+label variable	renda_ajuda_govq4 "Programas sociais"
+label variable	renda_ajuda_govq5 "Programas sociais"
+
 label variable	renda_seguro_desemp  "Seguro-desemprego e seguro-defeso"
 label variable	renda_seguro_desemp1 "Seguro-desemprego e seguro-defeso"
 label variable	renda_seguro_desemp2 "Seguro-desemprego e seguro-defeso"
@@ -504,6 +522,12 @@ label variable	renda_seguro_desemp4 "Seguro-desemprego e seguro-defeso"
 label variable	renda_seguro_desemp5 "Seguro-desemprego e seguro-defeso"
 label variable	renda_seguro_desemp6 "Seguro-desemprego e seguro-defeso"
 label variable	renda_seguro_desemp7 "Seguro-desemprego e seguro-defeso"
+
+label variable	renda_seguro_desempq1 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desempq2 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desempq3 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desempq4 "Seguro-desemprego e seguro-defeso"
+label variable	renda_seguro_desempq5 "Seguro-desemprego e seguro-defeso"
 
 label variable	renda_aposentadoria "Aposentadoria e pensão"
 label variable	renda_aposentadoria1 "Aposentadoria e pensão"
@@ -514,6 +538,12 @@ label variable	renda_aposentadoria5 "Aposentadoria e pensão"
 label variable	renda_aposentadoria6 "Aposentadoria e pensão"
 label variable	renda_aposentadoria7 "Aposentadoria e pensão"
 
+label variable	renda_aposentadoriaq1 "Aposentadoria e pensão"
+label variable	renda_aposentadoriaq2 "Aposentadoria e pensão"
+label variable	renda_aposentadoriaq3 "Aposentadoria e pensão"
+label variable	renda_aposentadoriaq4 "Aposentadoria e pensão"
+label variable	renda_aposentadoriaq5 "Aposentadoria e pensão"
+
 label variable	renda_doacao "Pensão alimentícia, doação e mesada"
 label variable	renda_doacao1 "Pensão alimentícia, doação e mesada"
 label variable	renda_doacao2 "Pensão alimentícia, doação e mesada"
@@ -522,6 +552,18 @@ label variable	renda_doacao4 "Pensão alimentícia, doação e mesada"
 label variable	renda_doacao5 "Pensão alimentícia, doação e mesada"
 label variable	renda_doacao6 "Pensão alimentícia, doação e mesada"
 label variable	renda_doacao7 "Pensão alimentícia, doação e mesada"
+
+label variable	renda_doacaoq1 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq2 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq3 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq4 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq5 "Pensão alimentícia, doação e mesada"
+
+label variable	renda_doacaoq1 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq2 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq3 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq4 "Pensão alimentícia, doação e mesada"
+label variable	renda_doacaoq5 "Pensão alimentícia, doação e mesada"
 
 label variable	renda_aluguel "Aluguel e arrendamento"
 label variable	renda_aluguel1 "Aluguel e arrendamento"
@@ -532,6 +574,12 @@ label variable	renda_aluguel5 "Aluguel e arrendamento"
 label variable	renda_aluguel6 "Aluguel e arrendamento"
 label variable	renda_aluguel7 "Aluguel e arrendamento"
 
+label variable	renda_aluguelq1 "Aluguel e arrendamento"
+label variable	renda_aluguelq2 "Aluguel e arrendamento"
+label variable	renda_aluguelq3 "Aluguel e arrendamento"
+label variable	renda_aluguelq4 "Aluguel e arrendamento"
+label variable	renda_aluguelq5 "Aluguel e arrendamento"
+
 label variable	renda_outro "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
 label variable	renda_outro1 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
 label variable	renda_outro2 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
@@ -540,6 +588,12 @@ label variable	renda_outro4 "Bolsa de estudos, caderneta de poupança e aplicaç
 label variable	renda_outro5 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
 label variable	renda_outro6 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
 label variable	renda_outro7 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+
+label variable	renda_outroq1 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outroq2 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outroq3 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outroq4 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
+label variable	renda_outroq5 "Bolsa de estudos, caderneta de poupança e aplicações financeiras"
 
 label variable	renda_setorpublico "Setor público"
 label variable	renda_setorpublico1 "Setor público"
@@ -550,6 +604,18 @@ label variable	renda_setorpublico5 "Setor público"
 label variable	renda_setorpublico6 "Setor público"
 label variable	renda_setorpublico7 "Setor público"
 
+label variable	renda_setorpublicoq1 "Setor público"
+label variable	renda_setorpublicoq2 "Setor público"
+label variable	renda_setorpublicoq3 "Setor público"
+label variable	renda_setorpublicoq4 "Setor público"
+label variable	renda_setorpublicoq5 "Setor público"
+
+label variable	renda_setorpublicoq1 "Setor público"
+label variable	renda_setorpublicoq2 "Setor público"
+label variable	renda_setorpublicoq3 "Setor público"
+label variable	renda_setorpublicoq4 "Setor público"
+label variable	renda_setorpublicoq5 "Setor público"
+
 label variable	renda_privadoformal "Privado formal"
 label variable	renda_privadoformal1 "Privado formal"
 label variable	renda_privadoformal2 "Privado formal"
@@ -558,6 +624,18 @@ label variable	renda_privadoformal4 "Privado formal"
 label variable	renda_privadoformal5 "Privado formal"
 label variable	renda_privadoformal6 "Privado formal"
 label variable	renda_privadoformal7 "Privado formal"
+
+label variable	renda_privadoformalq1 "Privado formal"
+label variable	renda_privadoformalq2 "Privado formal"
+label variable	renda_privadoformalq3 "Privado formal"
+label variable	renda_privadoformalq4 "Privado formal"
+label variable	renda_privadoformalq5 "Privado formal"
+
+label variable	renda_privadoformalq1 "Privado formal"
+label variable	renda_privadoformalq2 "Privado formal"
+label variable	renda_privadoformalq3 "Privado formal"
+label variable	renda_privadoformalq4 "Privado formal"
+label variable	renda_privadoformalq5 "Privado formal"
 
 label variable	renda_privadoinformal "Privado informal"
 label variable	renda_privadoinformal1 "Privado informal"
@@ -568,6 +646,12 @@ label variable	renda_privadoinformal5 "Privado informal"
 label variable	renda_privadoinformal6 "Privado informal"
 label variable	renda_privadoinformal7 "Privado informal"
 
+label variable	renda_privadoinformalq1 "Privado informal"
+label variable	renda_privadoinformalq2 "Privado informal"
+label variable	renda_privadoinformalq3 "Privado informal"
+label variable	renda_privadoinformalq4 "Privado informal"
+label variable	renda_privadoinformalq5 "Privado informal"
+
 label variable	renda_anual_pc "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc1 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc2 "Rendimento domiciliar per capita (R$)"
@@ -577,12 +661,26 @@ label variable	renda_anual_pc5 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc6 "Rendimento domiciliar per capita (R$)"
 label variable	renda_anual_pc7 "Rendimento domiciliar per capita (R$)"
 
+label variable	renda_anual_pcq1 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pcq2 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pcq3 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pcq4 "Rendimento domiciliar per capita (R$)"
+label variable	renda_anual_pcq5 "Rendimento domiciliar per capita (R$)"
+
 * Rendimentos do trabalho restante
 gen renda_privado = renda_anual_pc - (renda_ajuda_gov + renda_seguro_desemp + renda_aposentadoria + renda_doacao + renda_aluguel + renda_outro + renda_setorpublico + renda_privadoinformal)
   // loop sobre faixas de rendimentos
 forvalues num = 1(1)7 {
 	gen renda_privado`num' = renda_anual_pc`num' - (renda_ajuda_gov`num' + renda_seguro_desemp`num' + renda_aposentadoria`num' + renda_doacao`num' + renda_aluguel`num' + renda_outro`num' + renda_setorpublico`num' + renda_privadoinformal`num')
 	replace renda_privado`num' = 0 if renda_privado`num'==.
+	cap drop iten*
+	cap drop tool*
+}
+
+  // loop sobre quintil de rendimentos
+forvalues num = 1(1)5 {
+	gen renda_privadoq`num' = renda_anual_pcq`num' - (renda_ajuda_govq`num' + renda_seguro_desempq`num' + renda_aposentadoriaq`num' + renda_doacaoq`num' + renda_aluguelq`num' + renda_outroq`num' + renda_setorpublicoq`num' + renda_privadoinformalq`num')
+	replace renda_privadoq`num' = 0 if renda_privadoq`num'==.
 	cap drop iten*
 	cap drop tool*
 }
@@ -595,6 +693,12 @@ label variable	renda_privado4 "Setor privado formal"
 label variable	renda_privado5 "Setor privado formal"
 label variable	renda_privado6 "Setor privado formal"
 label variable	renda_privado7 "Setor privado formal"
+
+label variable	renda_privadoq1 "Setor privado formal"
+label variable	renda_privadoq2 "Setor privado formal"
+label variable	renda_privadoq3 "Setor privado formal"
+label variable	renda_privadoq4 "Setor privado formal"
+label variable	renda_privadoq5 "Setor privado formal"
 
 * keep only relavant variables
 keep Ano Trimestre  prop_* renda_*

@@ -38,19 +38,30 @@ collapse (mean) `type', by(Ano id2 id)
 gen renda_programas = renda_ajuda_gov + renda_seguro_desemp
 gen renda_diversos = renda_outro + renda_doacao + renda_aluguel
 
+forvalues num = 1(1)7 {
+	gen renda_programas`num' = renda_ajuda_gov`num' + renda_seguro_desemp`num'
+	gen renda_diversos`num' = renda_outro`num' + renda_doacao`num' + renda_aluguel`num'
+}
+
 * set design of graph
 set scheme s2gcolor 
 
+////////////////////////////////////////
+// Loop sobre faixas de rendimentos
+////////////////////////////////////////
+
+forvalues num = 1(1)7 {
+	
 	**********************
 	**	Gráfico Pizzas	**
 	**********************
 
-	graph pie renda_privadoformal 	/*
-		*/ 	renda_privadoinformal 	/*
-		*/ 	renda_setorpublico 	/*
-		*/ 	renda_aposentadoria 	/*
-		*/ 	renda_programas 	/*
-		*/ 	renda_diversos 	/*
+	graph pie renda_privadoformal`num' 	/*
+		*/ 	renda_privadoinformal`num' 	/*
+		*/ 	renda_setorpublico`num' 	/*
+		*/ 	renda_aposentadoria`num' 	/*
+		*/ 	renda_programas`num' 	/*
+		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
@@ -58,12 +69,12 @@ set scheme s2gcolor
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
-	graph pie renda_privadoformal 	/*
-		*/ 	renda_privadoinformal 	/*
-		*/ 	renda_setorpublico 	/*
-		*/ 	renda_aposentadoria 	/*
-		*/ 	renda_programas 	/*
-		*/ 	renda_diversos 	/*
+	graph pie renda_privadoformal`num' 	/*
+		*/ 	renda_privadoinformal`num' 	/*
+		*/ 	renda_setorpublico`num' 	/*
+		*/ 	renda_aposentadoria`num' 	/*
+		*/ 	renda_programas`num' 	/*
+		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
@@ -79,9 +90,11 @@ set scheme s2gcolor
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/
 	
-* save graph 
-graph save Graph "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.gph", replace
-graph use "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.gph"
-graph export "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.png", replace		
+	* save graph 
+	graph save Graph "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas`num'.gph", replace
+	graph use "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas`num'.gph"
+	graph export "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas`num'.png", replace		
 
+}
+*
 clear

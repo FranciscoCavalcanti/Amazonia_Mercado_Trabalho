@@ -136,3 +136,22 @@ graph export "$output_dir\estrutura_emprego\_estrutura_emprego_`lname'.png", rep
 }
 *
 clear
+
+********************************
+**	Unindo gráficos
+********************************
+
+*Combing graphs with the same legend
+	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao.gph" /*
+	*/	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao.gph",  	/*	
+	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao.gph") 	/*
+	*/ 	title("") 	/*
+	*/ 	cols(2) 	/*
+	*/ 	ycommon 	/* ycommon
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/	
+				* save graph 
+	graph save Graph "$output_dir\estrutura_emprego\_estrutura_emprego.gph", replace
+	graph use "$output_dir\estrutura_emprego\_estrutura_emprego.gph"
+	graph export "$output_dir\estrutura_emprego\_estrutura_emprego.png", replace

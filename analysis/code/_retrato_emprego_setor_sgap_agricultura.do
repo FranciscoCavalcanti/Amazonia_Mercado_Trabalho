@@ -33,7 +33,7 @@ local type `r(varlist)'
 display "`type'"
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-set scheme s2gcolor 
+set scheme meta 
 
 * begin of loop over variables
 local type n_de_informal n_de_formal n_de_ocupado
@@ -48,8 +48,9 @@ foreach lname in `type' {
 		*/ 	`lname'_sgap_florestal 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação animal") label(3 "Produção florestal") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
@@ -58,8 +59,9 @@ foreach lname in `type' {
 		*/ 	`lname'_sgap_florestal 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
@@ -67,6 +69,7 @@ foreach lname in `type' {
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/
@@ -84,13 +87,14 @@ foreach lname in `type' {
 		*/ 	`lname'_sgap_florestal 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bar(1, color(%65)) 	/*
 		*/	bar(2, color(%65)) 	/*
 		*/	bar(3, color(%65)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
 	graph bar `lname'_sgap_agricultura 	/*
@@ -98,13 +102,14 @@ foreach lname in `type' {
 		*/ 	`lname'_sgap_florestal 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bar(1, color(%65)) 	/*
 		*/	bar(2, color(%65)) 	/*
 		*/	bar(3, color(%65)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 	
 		
 		
@@ -112,6 +117,7 @@ foreach lname in `type' {
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/		

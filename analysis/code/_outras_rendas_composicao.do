@@ -53,9 +53,15 @@ set scheme s2gcolor
 		*/ 	renda_diversos 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
+		*/	graphregion(fcolor(white)) 	/*			
+		*/	pie(_all, color(%55) explode) 	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	plabel(1 percent, size(Medium) gap(5) format(%12.1f) ) /* 
+		*/	plabel(2 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(3 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(4 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(5 percent, size(Medium) gap(-5) format(%12.1f) ) /*
+		*/	plabel(6 percent, size(Medium) gap(5) format(%12.1f) ) /*	
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
 	graph pie renda_privadoformal 	/*
@@ -66,22 +72,29 @@ set scheme s2gcolor
 		*/ 	renda_diversos 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
-		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
+		*/	graphregion(fcolor(white)) 	/*			
+		*/	pie(_all, color(%55) explode) 	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	plabel(1 percent, size(Medium) gap(5) format(%12.1f) ) /* 
+		*/	plabel(2 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(3 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(4 percent, size(Medium) gap(5) format(%12.1f) ) /*
+		*/	plabel(5 percent, size(Medium) gap(-5) format(%12.1f) ) /*
+		*/	plabel(6 percent, size(Medium) gap(5) format(%12.1f) ) /*
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
 	* Combing graphs with the same legend
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/
 	
 * save graph 
-graph save Graph "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.gph", replace
-graph use "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.gph"
-graph export "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao_porfaixas.png", replace		
+graph save Graph "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao.gph", replace
+graph use "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao.gph"
+graph export "$output_dir\programas_sociais_outras_rendas\_outras_rendas_composicao.png", replace		
 
 clear

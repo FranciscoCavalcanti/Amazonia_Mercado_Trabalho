@@ -32,27 +32,29 @@ display "`type'"
 
 * set design of graph
 set scheme s1mono
-set scheme s1color 
+set scheme s2color 
 			
 	graph twoway line prop_empregadoCC prop_empregadoSC prop_empregador prop_cpropriaC prop_cpropriaNc prop_militar trim if id == "Amazônia Legal" /*
 		*/ 	,  title("Amazônia Legal", size(Medium)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/ 	lwidth(thick thick thick thick thick thick) 	/*		
 		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
-		*/ 	legend(on cols(2) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(3) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/ 	xlabel(#8, grid angle(45)) 	/*
 		*/  saving("$tmp_dir\iten1", replace) 	
 			
 	graph twoway line prop_empregadoCC prop_empregadoSC prop_empregador prop_cpropriaC prop_cpropriaNc prop_militar trim if id == "Resto do Brasil" /*	
 		*/ 	,  title("Resto do Brasil", size(Medium)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/ 	ytitle("") 	/*
 		*/ 	xtitle("")	/*	
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/ 	lwidth(thick thick thick thick thick thick) 	/*		
 		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
-		*/ 	legend(on cols(2) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(3) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/ 	xlabel(#8, grid angle(45)) 	/*
 		*/  saving("$tmp_dir\iten2", replace) 	
 	
@@ -68,6 +70,7 @@ set scheme s1color
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	cols(4) 	/*
 	*/ 	ycommon 	/* ycommon
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")

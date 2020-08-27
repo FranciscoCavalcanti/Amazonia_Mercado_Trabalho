@@ -135,3 +135,38 @@ foreach lname in `type' {
 	graph use "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_`lname'.gph"
 	graph export "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_`lname'.png", replace			
 }
+
+* Combing graphs with the same legend
+	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria2.gph" 	/* 
+	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria2.gph",  	/*
+
+	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria2.gph") 	/*
+	*/ 	title("") 	/*
+	*/ 	cols(2) 	/*
+	*/	graphregion(fcolor(white)) 	/*	
+	*/ 	ycommon 	/* ycommon
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/	
+	
+	graph save Graph "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.gph", replace
+	graph use "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.gph"
+	graph export "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.png", replace
+	
+	
+* Combing graphs with the same legend
+	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria3.gph" 	/* 
+	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria3.gph",  	/*
+
+	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria3.gph") 	/*
+	*/ 	title("") 	/*
+	*/ 	cols(2) 	/*
+	*/	graphregion(fcolor(white)) 	/*	
+	*/ 	ycommon 	/* ycommon
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/	
+				* save graph 
+	graph save Graph "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.gph", replace
+	graph use "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.gph"
+	graph export "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.png", replace

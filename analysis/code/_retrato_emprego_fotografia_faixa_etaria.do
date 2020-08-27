@@ -67,6 +67,7 @@ preserve
 		*/	,  over(id2)	 /* 
 		*/ 	title("Taxa de Participação", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*	
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(%65)) 	/*
 		*/	bar(2, fcolor(%65)) 	/*
@@ -110,6 +111,7 @@ preserve
 		*/	,  over(id2)	 /* 
 		*/ 	title("Taxa de Ocupação", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*			
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(%65)) 	/*
 		*/	bar(2, fcolor(%65)) 	/*
@@ -140,6 +142,7 @@ restore
 	*/ 	legendfrom("$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_prop_ocupacao.gph") 	/*
 	*/ 	title("") 	/*
 	*/ 	cols(4) 	/*
+	*/	graphregion(fcolor(white)) 	/*	
 	*/ 	ycommon 	/* ycommon
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")

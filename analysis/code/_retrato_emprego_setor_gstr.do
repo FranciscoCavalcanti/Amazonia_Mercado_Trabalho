@@ -50,6 +50,7 @@ foreach lname in `type' {
 		*/ 	`lname'_gstr_servicos 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt))	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
@@ -62,6 +63,7 @@ foreach lname in `type' {
 		*/ 	`lname'_gstr_servicos 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	pie(_all, color(%65) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
@@ -71,6 +73,7 @@ foreach lname in `type' {
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/
@@ -90,6 +93,7 @@ foreach lname in `type' {
 		*/ 	`lname'_gstr_servicos 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bar(1, color(%65)) 	/*
 		*/	bar(2, color(%65)) 	/*
 		*/	bar(3, color(%65)) 	/*
@@ -97,7 +101,7 @@ foreach lname in `type' {
 		*/	bar(5, color(%65)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt) )	/* 
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
@@ -108,6 +112,7 @@ foreach lname in `type' {
 		*/ 	`lname'_gstr_servicos 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	 	/*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bar(1, color(%65)) 	/*
 		*/	bar(2, color(%65)) 	/*
 		*/	bar(3, color(%65)) 	/*
@@ -115,7 +120,7 @@ foreach lname in `type' {
 		*/	bar(5, color(%65)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/  saving("$tmp_dir\iten2", replace) 	
 		
@@ -124,6 +129,7 @@ foreach lname in `type' {
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/		

@@ -33,7 +33,11 @@ local type `r(varlist)'
 display "`type'"
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-set scheme s2color 
+*set scheme s2color 
+*set scheme burd5
+*set scheme mrc
+set scheme s1color 
+
 
 * begin of loop over variables
 local type n_de_informal n_de_formal n_de_ocupado

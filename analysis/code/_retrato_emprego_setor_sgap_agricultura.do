@@ -32,11 +32,25 @@ ds prop_* taxa_* n_*
 local type `r(varlist)'
 display "`type'"
 
-**	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-set scheme meta 
+**	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE AGRICULTURA	**
+set scheme s1color
+*set scheme burd
+
+* 
+*Qualitative (view)
+*Accent       8 accented colors for qualitative data
+*Dark28 dark colors for qualitative data
+*Paired       12 paired colors for qualitative data
+*Pastel1      9 pastel colors for qualitative data
+*Pastel2      8 pastel colors for qualitative data
+*Set1 9 colors for qualitative data
+*Set2 8 colors for qualitative data
+*Set3         12 colors for qualitative data
+colorpalette Accent, globals
 
 * begin of loop over variables
 local type n_de_informal n_de_formal n_de_ocupado
+
 foreach lname in `type' {
 	
 	**********************
@@ -49,8 +63,10 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	pie(1, color($p5%75) explode) 	/*
+		*/	pie(2, color($p3%75) explode) 	/*
+		*/	pie(3, color($p1%75) explode) 	/*		
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
@@ -60,8 +76,10 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	pie(1, color($p5%75) explode) 	/*
+		*/	pie(2, color($p3%75) explode) 	/*
+		*/	pie(3, color($p1%75) explode) 	/*	
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
@@ -88,13 +106,13 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color(%65)) 	/*
-		*/	bar(2, color(%65)) 	/*
-		*/	bar(3, color(%65)) 	/*
+		*/	bar(1, color($p5%75)) 	/*
+		*/	bar(2, color($p3%75)) 	/*
+		*/	bar(3, color($p1%75)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
 	graph bar `lname'_sgap_agricultura 	/*
@@ -103,13 +121,13 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color(%65)) 	/*
-		*/	bar(2, color(%65)) 	/*
-		*/	bar(3, color(%65)) 	/*
+		*/	bar(1, color($p5%75)) 	/*
+		*/	bar(2, color($p3%75)) 	/*
+		*/	bar(3, color($p1%75)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Criação e manuseio animal") label(3 "Produção florestal")  size(vsmall) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 	
 		
 		

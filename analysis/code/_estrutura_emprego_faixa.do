@@ -36,8 +36,8 @@ label variable n_de_ocupado_faixa_educ5 "Taxa de ocupação com ensino superior 
 
 label variable n_de_ocupado_faixa_etaria1 "Taxa de ocupação entre 14 e 17 anos (%) "
 label variable n_de_ocupado_faixa_etaria2 "Taxa de ocupação entre 18 e 24 anos (%) "
-label variable n_de_ocupado_faixa_etaria3 "Taxa de ocupação entre 25 e 32 anos (%)"
-label variable n_de_ocupado_faixa_etaria4 "Taxa de ocupação entre 33 e 39 anos (%)"
+label variable n_de_ocupado_faixa_etaria3 "Taxa de ocupação entre 25 e 29 anos (%)"
+label variable n_de_ocupado_faixa_etaria4 "Taxa de ocupação entre 30 e 39 anos (%)"
 label variable n_de_ocupado_faixa_etaria5 "Taxa de ocupação entre 40 e 49 anos (%)"
 label variable n_de_ocupado_faixa_etaria6 "Taxa de ocupação entre 50 e 59 anos (%)"
 label variable n_de_ocupado_faixa_etaria7 "Taxa de ocupação acima de 60 anos (%)"
@@ -64,8 +64,8 @@ label variable n_de_pea_faixa_etaria4 "Taxa de participação acima de 60 anos (
 
 label variable n_de_pea_faixa_etaria1 "Taxa de participação entre 14 e 17 anos (%) "
 label variable n_de_pea_faixa_etaria2 "Taxa de participação entre 18 e 24 anos (%) "
-label variable n_de_pea_faixa_etaria3 "Taxa de participação entre 25 e 32 anos (%)"
-label variable n_de_pea_faixa_etaria4 "Taxa de participação entre 33 e 39 anos (%)"
+label variable n_de_pea_faixa_etaria3 "Taxa de participação entre 25 e 29 anos (%)"
+label variable n_de_pea_faixa_etaria4 "Taxa de participação entre 30 e 39 anos (%)"
 label variable n_de_pea_faixa_etaria5 "Taxa de participação entre 40 e 49 anos (%)"
 label variable n_de_pea_faixa_etaria6 "Taxa de participação entre 50 e 59 anos (%)"
 label variable n_de_pea_faixa_etaria7 "Taxa de participação acima de 60 anos (%)"
@@ -137,10 +137,9 @@ foreach lname in `type' {
 }
 
 * Combing graphs with the same legend
-	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria2.gph" 	/* 
-	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria2.gph",  	/*
-
-	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria2.gph") 	/*
+	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria2.gph" 	/* 
+	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria2.gph",  	/*
+	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria2.gph") 	/*
 	*/ 	title("") 	/*
 	*/ 	cols(2) 	/*
 	*/	graphregion(fcolor(white)) 	/*	
@@ -149,16 +148,15 @@ foreach lname in `type' {
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	
 	
-	graph save Graph "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.gph", replace
-	graph use "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.gph"
-	graph export "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria2.png", replace
+	graph save Graph "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria2.gph", replace
+	graph use "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria2.gph"
+	graph export "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria2.png", replace
 	
 	
 * Combing graphs with the same legend
-	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria3.gph" 	/* 
-	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria3.gph",  	/*
-
-	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria3.gph") 	/*
+	grc1leg "$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria3.gph" 	/* 
+	*/ 	"$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_participacao_faixa_etaria3.gph",  	/*
+	*/ 	legendfrom("$output_dir\estrutura_emprego\_estrutura_emprego_taxa_de_ocupacao_faixa_etaria3.gph") 	/*
 	*/ 	title("") 	/*
 	*/ 	cols(2) 	/*
 	*/	graphregion(fcolor(white)) 	/*	
@@ -167,6 +165,6 @@ foreach lname in `type' {
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	
 				* save graph 
-	graph save Graph "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.gph", replace
-	graph use "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.gph"
-	graph export "$output_dir\retrato_emprego\_estrutura_emprego_faixa_etaria3.png", replace
+	graph save Graph "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria3.gph", replace
+	graph use "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria3.gph"
+	graph export "$output_dir\estrutura_emprego\_estrutura_emprego_faixa_etaria3.png", replace

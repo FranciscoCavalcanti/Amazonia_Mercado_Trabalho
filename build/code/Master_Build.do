@@ -272,7 +272,7 @@ forvalues yr = 1(1)8{
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
 	*sample 1
 	* run code to clean data
-	do "$code_dir\_transicao_ocupacao_1clean"
+	do "$code_dir\_transicao_ocupacao_1clean_quarter"
 	* save as temporary
 	save "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta", replace
 }
@@ -325,7 +325,7 @@ forvalues yr = 1(1)8{
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
 	*sample 1
 	* run code to clean data
-	do "$code_dir\_transicao_ocupacao_1clean"
+	do "$code_dir\_transicao_ocupacao_1clean_quarter"
 	* save as temporary
 	save "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta", replace
 }
@@ -367,6 +367,118 @@ export excel using "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.xls"
 restore
 clear
 	
+//////////////////////////////////////////////
+//	
+//	3.1) Matriz de transições de ocupações (Anualizadas)
+//	
+//////////////////////////////////////////////
+
+**********************
+**	Amazônia Legal	**
+**********************
+
+global area_geografica = "Amazônia Legal"
+
+* loop over all panel data
+forvalues yr = 2(1)7{
+	* call data
+	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
+	*sample 1
+	* run code to clean data
+	do "$code_dir\_transicao_ocupacao_1clean_annual"
+	* save as temporary
+	save "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2(1)7{
+	* call data
+	append using "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta"
+}
+
+* generate matriz
+* preserve
+preserve 
+	* run code
+	do "$code_dir\_transicao_ocupacao_2matriz"
+	
+* save in the output directory	
+save "$output_dir\_transicao_ocupacao_amazonia_legal_matriz.dta", replace	
+export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_matriz_anual.xls", /*
+	*/	firstrow(varlabels) replace
+
+* restore
+restore
+
+* convert to quarter level
+* preserve
+preserve 
+	* run code
+	do "$code_dir\_transicao_ocupacao_3annual_level"
+	
+* save in the output directory	
+save "$output_dir\_transicao_ocupacao_amazonia_legal_trimestral.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_anual.xls", /*
+	*/	firstrow(varlabels) replace
+
+* restore
+restore
+clear
+
+**********************
+**	Resto do Brasil	**
+**********************
+
+global area_geografica = "Resto do Brasil"
+
+* loop over all panel data
+forvalues yr = 2(1)7{
+	* call data
+	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
+	*sample 1
+	* run code to clean data
+	do "$code_dir\_transicao_ocupacao_1clean_annual"
+	* save as temporary
+	save "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2(1)7{
+	* call data
+	append using "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta"
+}
+
+
+* generate matriz
+* preserve
+preserve 
+	* run code
+	do "$code_dir\_transicao_ocupacao_2matriz"
+	
+* save in the output directory	
+save "$output_dir\_transicao_ocupacao_resto_brasil_matriz.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_resto_brasil_matriz_anual.xls", /*
+	*/	firstrow(varlabels) replace
+
+* restore
+restore
+
+* convert to quarter level
+* preserve
+preserve 
+	* run code
+	do "$code_dir\_transicao_ocupacao_3annual_level"
+	
+* save in the output directory	
+save "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.dta", replace
+export excel using "$output_dir\_transicao_ocupacao_resto_brasil_anual.xls", /*
+	*/	firstrow(varlabels) replace
+		
+* restore
+restore
+clear	
 //////////////////////////////////////////////
 //	
 //	4) Composição demográfica no mercado trabalho

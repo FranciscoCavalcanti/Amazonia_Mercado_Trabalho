@@ -27,7 +27,7 @@ sort idind Ano Trimestre
 * keep only individuals with identification
 keep if idind !=""
 
-* keep only individuals in panel (_n > 1)
+* keep only individuals in painel (_n > 1)
 by idind, sort: gen iten1 = _n
 by idind, sort: egen iten2 = max(iten1)
 keep if iten2 > 1
@@ -76,7 +76,7 @@ VD4009
 * 4) Empregador:	VD4009 == 8
 * 5) Militar e servidor estatutário:	VD4009 == 7
 
-local tem_var_y inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar
+local tem_var_y inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar desalento nemnem
 
 * Definitions regarding the position of the indiviual in ACTUAL period
 * Horizontal axis in the Table 6 (Ribas Soares, 2008)
@@ -91,7 +91,7 @@ local tem_var_y inativa desempregado formal informal empregadoSC empregadoCC cpr
 * F) Empregador:	VD4009 == 8
 * G) Militar e servidor estatutário:	VD4009 == 7
 
-local tem_var_x inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar
+local tem_var_x inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar desalento nemnem
 
 * begin loop for vertical variables	
 foreach yy of local tem_var_y {

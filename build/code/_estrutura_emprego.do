@@ -77,6 +77,34 @@ cap drop iten*
 cap drop tool* 
 
 /////////////////////////////////////////////////////////
+//	C.1) Taxa de desalentados
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if desalento == 1
+by Ano Trimestre, sort: egen iten2 = total(iten1)
+
+gen tool1 = 1 * V1028 if pia == 1
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+
+gen taxa_de_desalento = (iten2/tool2)*100
+label variable taxa_de_desalento "Taxa de desalentados em relação a PIA (%)"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	C.1) Taxa de nem-nem
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if nemnem == 1
+by Ano Trimestre, sort: egen iten2 = total(iten1)
+
+gen tool1 = 1 * V1028 if pia == 1
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+
+gen taxa_de_nemnem = (iten2/tool2)*100
+label variable taxa_de_nemnem "Taxa de nem-nem em relação a PIA (%)"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
 //	E) Inserção no mercado de trabalho por tipo ocupação
 /////////////////////////////////////////////////////////
 
@@ -167,7 +195,6 @@ label variable n_de_ocupacao "Número de ocupados"
 cap drop iten*
 cap drop tool* 
 
-
 /////////////////////////////////////////////////////////
 //	D) Número total de informalidade
 /////////////////////////////////////////////////////////
@@ -175,6 +202,26 @@ gen iten1 = 1 * V1028 if informal == 1
 by Ano Trimestre, sort: egen n_de_informalidade = total(iten1)
 replace n_de_informalidade = round(n_de_informalidade)
 label variable n_de_informalidade "Número de trabalhadores informais"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	D.1) Número total de desalentados
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if desalento == 1
+by Ano Trimestre, sort: egen n_de_desalento = total(iten1)
+replace n_de_desalento = round(n_de_desalento)
+label variable n_de_desalento "Número de desalentados"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	D.2) Número total de nem-nem
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if nemnem == 1
+by Ano Trimestre, sort: egen n_de_nemnem= total(iten1)
+replace n_de_nemnem = round(n_de_nemnem)
+label variable n_de_nemnem "Número de nem-nem"
 cap drop iten*
 cap drop tool* 
 
@@ -294,6 +341,23 @@ foreach v of var `faixa' {
 	label variable n_de_pea_`v' "Número de PEA"
 	cap drop iten*
 
+	/////////////////////////////////////////////////////////
+	//	Número de desalentados 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if desalento == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_desa_`v' = total(iten1)
+	replace n_de_desa_`v' = round(n_de_desa_`v')
+	label variable n_de_desa_`v' "Número de desalentados"
+	cap drop iten*	
+
+	/////////////////////////////////////////////////////////
+	//	Número de nem-nem 
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if nemnem == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_nemnem_`v' = total(iten1)
+	replace n_de_nemnem_`v' = round(n_de_nemnem_`v')
+	label variable n_de_nemnem_`v' "Número de nem-nem"
+	cap drop iten*	
 }
 
 **************************************

@@ -124,6 +124,21 @@ replace inativa = 0 if inativa ==.
 gen desempregado = 1 if VD4001 == 1 & VD4002 == 2 // pessoa na força de trabalho & população desocupada
 replace desempregado = 0 if desempregado ==. 
 
+* pessoa desalentada (não tomou tomou alguma providência para conseguir trabalho)
+* ou V4074 =3 Desistiu de procurar por não conseguir encontrar trabalho
+* e
+* V4074 =4  Acha que não vai encontrar trabalho por ser muito jovem ou muito idoso
+gen desalento = 1 if VD4005 ==1 // Pessoas desalentadas
+replace desalento = 0 if desalento ==. 
+
+* pessoa nem-nem
+gen nemnem = 1 if VD4002 ==2  // população desocupada
+cap replace nemnem = 1 if VD4001 == 2 & V3002 == 2 // Fora da força de trabalho e não estuda
+cap replace nemnem = 0 if V3002 == 1 // frequenta escola? Sim
+cap replace nemnem = 0 if V4074 == 6 // Qual foi o principal motivo de não ter tomado providência para conseguir trabalho? Estudo
+cap replace nemnem = 0 if V4074A == 8 // Estava estudando (curso de qualquer tipo ou por conta própria)
+replace nemnem = 0 if nemnem ==. 
+
 * pessoa empregado SC
 gen empregadoSC = 1 if VD4009 == 2 | VD4009 == 4 | VD4009 == 6 | VD4009 == 10 // trabalhadores informais
 replace empregadoSC = 0 if empregadoSC ==. 

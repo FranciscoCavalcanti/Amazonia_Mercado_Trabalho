@@ -149,6 +149,26 @@ gen n_renda_anual_pc_300 = tool2
 cap drop iten*
 cap drop tool*
 
+/////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 89,00 
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 89
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_89 = tool2
+cap drop iten*
+cap drop tool*
+
+/////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 178,00 
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 178
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_178 = tool2
+cap drop iten*
+cap drop tool*
+
 **************************************
 **	Colapsar ao nível do trimestre 	**
 **************************************
@@ -297,6 +317,26 @@ cap drop iten*
 cap drop tool*
 
 /////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 89,00 
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 89
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_89 = tool2
+cap drop iten*
+cap drop tool*
+
+/////////////////////////////////////////////////////////
+// Número indivíduos com rendimento per capita de até R$ 178,00 
+/////////////////////////////////////////////////////////
+gen iten0 = renda_anual_pc * Habitual
+gen tool1 = 1 * V1032 if iten0 <= 178
+by Ano Trimestre, sort: egen tool2 = total(tool1)
+gen n_renda_anual_pc_178 = tool2
+cap drop iten*
+cap drop tool*
+
+/////////////////////////////////////////////////////////
 //	J) Número de trabalhadores não remunerados e consumo próprio
 //	(está análise só é possível através das Visitas 5 PNAD Contínua anual)
 /////////////////////////////////////////////////////////
@@ -415,10 +455,21 @@ gen prop_aposentadoria = (n_aposentadoria/n_populacao)*100
 label variable prop_aposentadoria "Proporção da população que recebeu aposentadoria (%)"
 cap drop iten* tool* 
 
-* Proporção da população aposentadoria em (%)
+* Proporção da população abaixo de uma linha pobreza (%)
 gen prop_renda_anual_pc_300 = (n_renda_anual_pc_300/n_populacao)*100
 label variable prop_renda_anual_pc_300 "Proporção da população com rendimento per capita de até R$ 300,00 (%)"
 cap drop iten* tool* 
+
+* Proporção da população abaixo de uma linha pobreza (%)
+gen n_renda_anual_pc_89 = (n_renda_anual_pc_89/n_populacao)*100
+label variable n_renda_anual_pc_89 "Proporção da população com rendimento per capita de até R$ 89,00 (%)"
+cap drop iten* tool* 
+
+* Proporção da população abaixo de uma linha pobreza (%)
+gen prop_renda_anual_pc_178 = (n_renda_anual_pc_178/n_populacao)*100
+label variable prop_renda_anual_pc_300 "Proporção da população com rendimento per capita de até R$ 178,00 (%)"
+cap drop iten* tool* 
+
 
 //////////////////////////////////////////////////////
 // Proporções onde há variáveis em apenas na Visita 5

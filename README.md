@@ -1,7 +1,7 @@
 # Amazonia_Mercado_Trabalho
 O objetivo do projeto é descrever o mercado de trabalho na Amazônia Legal.
 
-A pasta está subdivida nas seguintes pastas: 1) build, 2) analysis, 3) document, 4) reference. No qual eu descrevo o propósito a seguir:
+A pasta está subdivida nas seguintes pastas: 1) [build](./build), 2) [analysis](./analysis), 3) [document](./document), 4) [reference](./reference). No qual eu descrevo o propósito a seguir:
 
 1)  [build](./build): esta pasta serve para guardar os dados brutos, e os códigos para extrair e limpar os dados. O produto desta pasta deve ser um banco de dados “limpo” no qual a análise é feita.
 
@@ -11,12 +11,12 @@ A pasta está subdivida nas seguintes pastas: 1) build, 2) analysis, 3) document
 
 4)  [reference](./reference): aqui guardaremos referências bibliográficas e outros documentos similares.
 
-Em cada uma das pastas 1) e 2), há uma seguinte subdivisão: a) input, b) code, c) output, d) tmp. No qual eu descrevo a seguir:
+Em cada uma das pastas 1) e 2), há uma seguinte subdivisão: a) **input**, b) **code**, c) **output**, d) **tmp**. No qual eu descrevo a seguir:
 
-* input: essa pasta serve para o armazenamento de dados ou outros arquivos serão usados para a tarefa destinada da pasta.
+* a) **input**: essa pasta serve para o armazenamento de dados ou outros arquivos serão usados para a tarefa destinada da pasta.
 
-* code: essa pasta serve para armazenar os códigos utilizados para a tarefa destinada da pasta
+* b) **code**: essa pasta serve para armazenar os códigos utilizados para a tarefa destinada da pasta
 
-* output: pasta serve para armazenar os resultados de acordo com o “input” e os “code”.
+* c) **output**: pasta serve para armazenar os resultados de acordo com o “input” e os “code”.
 
-* tmp: apenas uma pasta para arquivos temporários.
+* d) **tmp**: apenas uma pasta para arquivos temporários.

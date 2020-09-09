@@ -488,7 +488,43 @@ clear
 	* run code
 	do "$code_dir\_composicao_demografica"
 	
-* delete temporary files
+//////////////////////////////////////////////
+//	
+//	5) Desigualdade de renda
+//	
+//////////////////////////////////////////////
+
+**********************
+**	Amazônia Legal	**
+**********************
+
+global area_geografica = "Amazônia Legal"
+
+* run code
+do "$code_dir\_desigualdade_renda"
+
+* save in the output directory
+save "$output_dir\_desigualdade_renda_amazonia_legal.dta", replace
+export excel using "$output_dir\_desigualdade_renda_amazonia_legal.xls", /*
+	*/	firstrow(varlabels) replace
+
+**********************
+**	Resto do Brasil	**
+**********************
+
+global area_geografica = "Resto do Brasil"
+
+* run code
+do "$code_dir\_desigualdade_renda"
+
+* save in the output directory
+save "$output_dir\_desigualdade_renda_resto_brasil.dta", replace
+export excel using "$output_dir\_desigualdade_renda_rendas_resto_brasil.xls", /*
+	*/	firstrow(varlabels) replace
+
+******************************************
+** delete temporary files
+******************************************
 
 cd  "${tmp_dir}/"
 local datafiles: dir "${tmp_dir}/" files "*.dta"

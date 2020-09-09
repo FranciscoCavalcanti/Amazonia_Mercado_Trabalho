@@ -96,6 +96,13 @@ do "$code_dir\_transicao_ocupacao_anual_combine.do"
 * run do file
 do "$code_dir\_composicao_demografica.do"
 
+
+//////////////////////////////////////////////	
+//	6) Desigualdade de renda
+//////////////////////////////////////////////
+
+* run do file
+do "$code_dir\_retrato_emprego_fotografia_desigualdade_renda.do"
 	
 * delete temporary files
 

@@ -95,3 +95,70 @@ set scheme s1color
 	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao.gph", replace
 	graph use "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao.gph"
 	graph export "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao.png", replace
+	
+	
+//////// BAR /////////////////////
+set scheme s1color 
+	
+	graph bar n_empregadoCC 	/*
+		*/ 	n_militar 	/*
+		*/ 	n_empregador  	/*
+		*/ 	n_cpropriaC  	/*
+		*/ 	n_cpropriaNc 	/*
+		*/ 	n_empregadoSC 	/*
+		*/ 	if id == "Amazônia Legal" 	/*
+		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
+		*/	bargap(10) 	/*	
+		*/	bar(1, fcolor(%65)) 	/*
+		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(3, fcolor(%65)) 	/*
+		*/	bar(4, fcolor(%65)) 	/*
+		*/	bar(5, fcolor(%65)) 	/*
+		*/	bar(6, fcolor(%65)) 	/*
+		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
+		*/	legend(on position(11) ring(3) order(1 2 3 4 5 6) cols(2) label(1 "Trabalhador com carteira") label(2 "Servidor público e militares")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Trabalhador sem carteira") size(small) )	/*
+		*/  saving("$tmp_dir\iten3", replace) 	
+			
+		graph bar n_empregadoCC 	/*
+		*/ 	n_militar 	/*
+		*/ 	n_empregador  	/*
+		*/ 	n_cpropriaC  	/*
+		*/ 	n_cpropriaNc 	/*
+		*/ 	n_empregadoSC 	/*
+		*/ 	if id == "Resto do Brasil" 	/*
+		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
+		*/	graphregion(fcolor(white)) 	/*
+		*/	bargap(10) 	/*	
+		*/	bar(1, fcolor(%65)) 	/*
+		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(3, fcolor(%65)) 	/*
+		*/	bar(4, fcolor(%65)) 	/*
+		*/	bar(5, fcolor(%65)) 	/*
+		*/	bar(6, fcolor(%65)) 	/*
+		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
+		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
+		*/	legend(off position(11) ring(3) order(1 2 3 4 5) cols(2) label(1 "Com carteira") label(2 "")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Sem carteira") size(small) )	/*
+		*/  saving("$tmp_dir\iten4", replace) 	
+	
+	
+	/*
+	 graph combine "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
+	*/ 	title("Inserção da Ocupação") 	/*
+	*/ 	subtitle("Amazônia Legal vs. Resto do Brasil") 	/*
+	*/ 	note("Fonte: PNAD Contínua 2019")		
+	*/
+	
+	* Combing graphs with the same legend
+	grc1leg "$tmp_dir\iten3" "$tmp_dir\iten4",  	/*
+	*/ 	legendfrom("$tmp_dir\iten3") 	/*
+	*/ 	title("") 	/*
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/
+	
+		* save graph 
+	graph save Graph "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao_bar.gph", replace
+	graph use "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao_bar.gph"
+	graph export "$output_dir\retrato_emprego\_retrato_emprego_insercao_ocupacao_bar.png", replace	

@@ -81,7 +81,7 @@ preserve
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
-		*/ 	legend(on cols(4) label(1 "14 à 17 anos") label(2 "18 à 24 anos") label(3 "25 à 32 anos") label(4 "33 à 39 anos") label(5 "40 à 49 anos") label(6 "50 à 59 anos") label(7 "> de 60 anos")  size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(4) label(1 "14 a 17 anos") label(2 "18 a 24 anos") label(3 "25 a 29 anos") label(4 "30 a 39 anos") label(5 "40 a 49 anos") label(6 "50 a 59 anos") label(7 "> de 60 anos")  size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/  saving("$tmp_dir\iten1", replace)
 		
 				* save graph 
@@ -125,7 +125,7 @@ preserve
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
-		*/ 	legend(on cols(4) label(1 "14 à 17 anos") label(2 "18 à 24 anos") label(3 "25 à 32 anos") label(4 "33 à 39 anos") label(5 "40 à 49 anos") label(6 "50 à 59 anos") label(7 "> de 60 anos")  size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(4) label(1 "14 a 17 anos") label(2 "18 a 24 anos") label(3 "25 a 29 anos") label(4 "30 a 39 anos") label(5 "40 a 49 anos") label(6 "50 a 59 anos") label(7 "> de 60 anos")  size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/  saving("$tmp_dir\iten1", replace)
 		
 				* save graph 

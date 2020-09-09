@@ -8,7 +8,7 @@
 use "$output_dir_build\_transicao_ocupacao_amazonia_legal_matriz_anual.dta", clear
 gen id = "Amazônia Legal"
 
-append data
+*append data
 append using "$output_dir_build\_transicao_ocupacao_resto_brasil_matriz_anual.dta"
 replace id = "Resto do Brasil" if id==""
 	

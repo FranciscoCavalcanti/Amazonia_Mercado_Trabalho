@@ -13,6 +13,9 @@
 * run do file
 do "$code_dir\_retrato_emprego_caracterizacao.do"
 
+* run do file: table
+do "$code_dir\_retrato_emprego_caracterizacao_table.do"
+
 ///////////////////////////////////////////
 // Composicao setorial da ocupacao (%)
 /////////////////////////////////////////
@@ -21,41 +24,56 @@ do "$code_dir\_retrato_emprego_caracterizacao.do"
 //	Composição setorial	
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_setor_gstr.do"
+
+* run do file: table
+do "$code_dir\_retrato_emprego_setor_gstr_table.do"
 
 //////////////////////////////////////////
 //	Composição setorial	de Serviços
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_setor_gape.do"
+* run do file: table
+do "$code_dir\_retrato_emprego_setor_gape_table_n_de_formal.do"
+do "$code_dir\_retrato_emprego_setor_gape_table_n_de_informal.do"
 
 //////////////////////////////////////////
 //	Composição setorial	de Industria
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_setor_sgap_industria.do"
+* run do file: table
+do "$code_dir\_retrato_emprego_setor_sgap_industria_table_n_de_formal.do"
+do "$code_dir\_retrato_emprego_setor_sgap_industria_table_n_de_informal.do"
 
 //////////////////////////////////////////
 //	Composição setorial	de Agricultura
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_setor_sgap_agricultura.do"
+* run do file: table
+do "$code_dir\_retrato_emprego_setor_sgap_agricultura_table_n_de_formal.do"
+do "$code_dir\_retrato_emprego_setor_sgap_agricultura_table_n_de_informal.do"
 
 //////////////////////////////////////////
 //	Composição sub-setorial	de Industria de Transfornmação
 /////////////////////////////////////////
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_setor_sgap_trans.do"
+* run do file: table
+do "$code_dir\_retrato_emprego_setor_sgap_trans_table_n_de_formal.do"
+do "$code_dir\_retrato_emprego_setor_sgap_trans_table_n_de_informal.do"
 
 /////////////////////////////////////////
 // Posicao na Ocupacao
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_insercao_ocupacao.do"
 
 ///////////////////////////////////////// 
@@ -69,7 +87,7 @@ do "$code_dir\_retrato_emprego_insercao_ocupacao.do"
 *taxa de ocupacao / taxa de informalidade
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_contrafactual.do"
 
 /////////////////////////////////////////
@@ -90,7 +108,7 @@ do "$code_dir\_retrato_emprego_contrafactual.do"
 *pelo ocupado
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_fotografia_faixa_etaria.do"
 
 /////////////////////////////////////////
@@ -110,9 +128,9 @@ do "$code_dir\_retrato_emprego_fotografia_faixa_etaria.do"
 *(2019)
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_fotografia_regiao_metropolitana.do"
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_fotografia_regiao_rural.do"
 
 /////////////////////////////////////////
@@ -127,7 +145,7 @@ do "$code_dir\_retrato_emprego_fotografia_regiao_rural.do"
 *(2019)
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_fotografia_rendimentos.do"
 
 /////////////////////////////////////////
@@ -146,7 +164,7 @@ do "$code_dir\_retrato_emprego_fotografia_rendimentos.do"
 * Programas sociais
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_fotografia_programas_sociais.do"
 
 
@@ -154,5 +172,5 @@ do "$code_dir\_retrato_emprego_fotografia_programas_sociais.do"
 //	Informalidade vs. Formalidade
 /////////////////////////////////////////
 
-* run do file
+* run do file: graph
 do "$code_dir\_retrato_emprego_formalidade.do"

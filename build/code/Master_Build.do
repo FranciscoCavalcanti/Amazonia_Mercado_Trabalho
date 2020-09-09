@@ -404,7 +404,7 @@ preserve
 	do "$code_dir\_transicao_ocupacao_2matriz"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_amazonia_legal_matriz.dta", replace	
+save "$output_dir\_transicao_ocupacao_amazonia_legal_matriz_anual.dta", replace	
 export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_matriz_anual.xls", /*
 	*/	firstrow(varlabels) replace
 
@@ -418,7 +418,7 @@ preserve
 	do "$code_dir\_transicao_ocupacao_3annual_level"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_amazonia_legal_trimestral.dta", replace
+save "$output_dir\_transicao_ocupacao_amazonia_legal_anual.dta", replace
 export excel using "$output_dir\_transicao_ocupacao_amazonia_legal_anual.xls", /*
 	*/	firstrow(varlabels) replace
 
@@ -458,7 +458,7 @@ preserve
 	do "$code_dir\_transicao_ocupacao_2matriz"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_resto_brasil_matriz.dta", replace
+save "$output_dir\_transicao_ocupacao_resto_brasil_matriz_anual.dta", replace
 export excel using "$output_dir\_transicao_ocupacao_resto_brasil_matriz_anual.xls", /*
 	*/	firstrow(varlabels) replace
 
@@ -472,7 +472,7 @@ preserve
 	do "$code_dir\_transicao_ocupacao_3annual_level"
 	
 * save in the output directory	
-save "$output_dir\_transicao_ocupacao_resto_brasil_trimestral.dta", replace
+save "$output_dir\_transicao_ocupacao_resto_brasil_anual.dta", replace
 export excel using "$output_dir\_transicao_ocupacao_resto_brasil_anual.xls", /*
 	*/	firstrow(varlabels) replace
 		

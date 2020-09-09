@@ -80,6 +80,14 @@ do "$code_dir\_outros_emprego_caracterizacao.do"
 * run do file
 do "$code_dir\_transicao_ocupacao.do"
 
+* run do file
+do "$code_dir\_transicao_ocupacao_combine.do"
+
+* run do file
+do "$code_dir\_transicao_ocupacao_anual.do"
+
+* run do file
+do "$code_dir\_transicao_ocupacao_anual_combine.do"
 
 //////////////////////////////////////////////	
 //	5) Composição demográfica no mercado trabalho

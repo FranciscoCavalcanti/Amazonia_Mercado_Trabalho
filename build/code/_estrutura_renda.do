@@ -57,7 +57,6 @@ gen rendimento_medio_formal = (total_rendimento_formal/total_formal)
 drop iten*
 label variable	rendimento_medio_formal "Rendimento médio habitual real no setor formal (R$)"
 
-
 * Rendimento medio habitual real dos ocupados no setor informal
 gen iten1 = informal * (VD4019 * Habitual) * V1028
 by Ano Trimestre, sort: egen total_rendimento_informal = total(iten1)
@@ -96,7 +95,7 @@ cap drop temp*
 //	B) Pobreza
 /////////////////////////////////////////////////////////
 
-* Proporção de indivíduos com rendimento per capita de até R$ 300,00 ($ 1.9 por dia)
+* Proporção de indivíduos com rendimento per capita de até R$ 178,00 
 
 	* numero total de individuos nos domicilios
 	by Ano Trimestre hous_id, sort: gen temp1 =  _n
@@ -110,20 +109,20 @@ cap drop temp*
 	* rendimento per capita no domicílio (já deflacionado)
 	gen tempk1 = tempx2 / temp2
 
-	* total de individuos em domicilios com até 300 reais ($ 1.9 por dia) per capita
-	gen tempk2 = 1 * V1028 if tempk1 <= 300
+	* total de individuos em domicilios com até 178 reais per capita
+	gen tempk2 = 1 * V1028 if tempk1 <= 178
 	by Ano Trimestre, sort: egen iten2 = total(tempk2)
 
 	* numero total de individuos
 	gen tempa1 = 1* V1028
 	by Ano Trimestre, sort: egen tempa2 = total(tempa1)
 
-by Ano Trimestre, sort: gen prop_rendimento_domiciliar_300 = (iten2/tempa2)*100
-label variable prop_rendimento_domiciliar_300 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 300,00"
+by Ano Trimestre, sort: gen prop_rendimento_domiciliar_178 = (iten2/tempa2)*100
+label variable prop_rendimento_domiciliar_178 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 178,00"
 cap drop iten*
 cap drop temp*
 
-* Proporção de domicilios com rendimento per capita de até R$ 150,00
+* Proporção de domicilios com rendimento per capita de até R$ 89,00
 
 	* numero total de individuos nos domicilios
 	by Ano Trimestre hous_id, sort: gen temp1 =  _n
@@ -137,16 +136,16 @@ cap drop temp*
 	* rendimento per capita no domicílio (já deflacionado)
 	gen tempk1 = tempx2 / temp2
 
-	* total de individuos em domicilios com até 150 reais per capita
-	gen tempk2 = 1 * V1028 if tempk1 <= 150
+	* total de individuos em domicilios com até 89 reais per capita
+	gen tempk2 = 1 * V1028 if tempk1 <= 89
 	by Ano Trimestre, sort: egen iten2 = total(tempk2)
 
 	* numero total de individuos
 	gen tempa1 = 1* V1028
 	by Ano Trimestre, sort: egen tempa2 = total(tempa1)
 
-by Ano Trimestre, sort: gen prop_rendimento_domiciliar_150 = (iten2/tempa2)*100
-label variable prop_rendimento_domiciliar_150 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 150,00"
+by Ano Trimestre, sort: gen prop_rendimento_domiciliar_89 = (iten2/tempa2)*100
+label variable prop_rendimento_domiciliar_89 "(%) de indivíduos com renda mensal domiciliar per capita de até R$ 89,00"
 cap drop iten*
 cap drop temp*
 

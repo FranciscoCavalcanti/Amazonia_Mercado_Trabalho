@@ -11,7 +11,7 @@ Ribas, Rafael Perez and Soares, Sergei Suarez Dillon
 * select just a small sample for training data
 cap drop __*
 cap drop iten*
-*sample 2
+*sample 4
 
 **********************
 **	 Definitions	**
@@ -77,6 +77,7 @@ VD4009
 * 5) Militar e servidor estatutário:	VD4009 == 7
 
 local tem_var_y inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar desalento nemnem
+*local tem_var_y  desempregado
 
 * Definitions regarding the position of the indiviual in ACTUAL period
 * Horizontal axis in the Table 6 (Ribas Soares, 2008)
@@ -92,6 +93,7 @@ local tem_var_y inativa desempregado formal informal empregadoSC empregadoCC cpr
 * G) Militar e servidor estatutário:	VD4009 == 7
 
 local tem_var_x inativa desempregado formal informal empregadoSC empregadoCC cpropria cpropriaC cpropriaNc empregador militar desalento nemnem
+*local tem_var_x  formal 
 
 * begin loop for vertical variables	
 foreach yy of local tem_var_y {
@@ -110,9 +112,9 @@ gen iten1 = V1028 	/*
 * From those tem_var_y in the previous period, how many are in tem_var_x now?
 by idind, sort: gen itenA = V1028 	/*
 	*/ 	if position_pre[_n] == 1 	/*
-	*/ 	& position_act[_n+5] ==1 	/*
+	*/ 	& position_act[_n+4] ==1 	/*
 	*/ 	& `yy'[_n] == 1 	/*
-	*/ 	& `xx'[_n+5] == 1	 // individual who are tem_var_x
+	*/ 	& `xx'[_n+4] == 1	 // individual who are tem_var_x
 	
 * By quarter, the number of individuals in the previous and actual period
 capture by trim, sort: egen n_`yy' = total(iten1)

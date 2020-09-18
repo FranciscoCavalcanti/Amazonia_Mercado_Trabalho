@@ -32,7 +32,7 @@ drop if Ano =="2019" & Trimestre == "4"
 
 * select variables
 *ds sh_* 
-ds sh_desempregado_sh_inativa sh_desempregado_sh_formal sh_formal_sh_informal sh_formal_sh_desempregado sh_informal_sh_desempregado sh_informal_sh_formal
+ds sh_empregador_sh_informal sh_empregador_sh_empregador 
 
 local type `r(varlist)'
 display "`type'"
@@ -47,8 +47,6 @@ local label_var: variable label `lname'
 
 	* Graphs separated by the range of Y-axis
 		** Y-axis between (0 20)
-		if "`lname'" == "prop_bolsa_familia" 	{
-* 		Grafico 
 		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
 		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
 		*/ 	,  title("`label_var'", size(Medium)) 	/*
@@ -58,20 +56,7 @@ local label_var: variable label `lname'
 		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
 		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium) )	/*
 		*/ 	xlabel(#8, grid angle(45))	
-		}
-	
-		** Y-axis between (0 100)
-		else {
-		graph twoway connected `lname' trim 	if id == "Amazônia Legal" || /*
-		*/  connected `lname' trim 	if id == "Resto do Brasil"  	/*  
-		*/ 	,  title("`label_var'", size(Medium)) 	/*
-		*/ 	ytitle("") 	/*
-		*/ 	xtitle("")	/*	
-		*/	ylabel(#9, angle(0) ) 		/*
-		*/	yscale( axis(1) range() lstyle(none) )	/* how y axis looks
-		*/	legend( order(1 2) cols(2) label(1 "Amazônia Legal") label(2 "Resto do Brasil") size(Medium) )	/*
-		*/ 	xlabel(#8, grid angle(45))	
-		}
+
 	
 * save graph 
 graph save Graph "$output_dir\transicao_ocupacao\_transicao_ocupacao_anual_`lname'.gph", replace

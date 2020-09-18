@@ -103,3 +103,23 @@ set scheme s1mono
 	graph save Graph "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_informal.gph", replace
 	graph use "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_informal.gph"
 	graph export "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_informal.png", replace		
+	
+
+* Empregador
+
+	* Combing graphs with the same legend
+	grc1leg "$output_dir\transicao_ocupacao\_transicao_ocupacao_sh_empregador_sh_informal" 	/*
+	*/ 	"$output_dir\transicao_ocupacao\_transicao_ocupacao_sh_empregador_sh_empregador",  	/*
+	*/ 	legendfrom("$output_dir\transicao_ocupacao\_transicao_ocupacao_sh_empregador_sh_informal") 	/*
+	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
+	*/ 	cols(2) 	/*
+	*/ 	ycommon 	/* ycommon
+	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
+	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
+	*/
+	
+		* save graph 
+	graph save Graph "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_empregador.gph", replace
+	graph use "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_empregador.gph"
+	graph export "$output_dir\transicao_ocupacao\_transicao_ocupacao_combine_empregador.png", replace				

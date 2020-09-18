@@ -1,0 +1,19 @@
+% Encoding: UTF-8
+
+@InProceedings{Wong2005,
+  author    = {Wong, L and Carvalho, Jos{\'e} Alberto M de},
+  booktitle = {XXV IUSSP general population conference. Tours, France},
+  title     = {Demographic bonuses and challenges of the age structural transition in Brazil},
+  year      = {2005},
+  pages     = {18--23},
+}
+
+@Book{Faria1989,
+  author    = {Faria, Vilmar},
+  publisher = {ANPOCS. Ciências sociais hoje. São Paulo: Anpocs/Vértice},
+  title     = {Pol{\'\i}ticas de governo e regula{\c{c}}{\~a}o da fecundidade: conseq{\"u}{\^e}ncias n{\~a}o antecipadas e efeitos perversos},
+  year      = {1989},
+  number    = {p. 62-103},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

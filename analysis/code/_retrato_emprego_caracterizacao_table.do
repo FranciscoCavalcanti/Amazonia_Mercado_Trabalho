@@ -27,11 +27,11 @@ encode id, generate(id2)
 tsset id2 trim, quarterly 
 format %tqCCYY trim
 
-* Keep if
-keep if Trimestre == "4"
+* Gerar n_de_pia
+gen n_de_pia = ( n_de_ocupacao /  (taxa_de_ocupacao/100) )
 
 * select variables
-ds n_populacao n_de_desemprego n_de_ocupacao n_de_informalidade n_de_desalento
+ds n_populacao n_de_desemprego n_de_ocupacao n_de_informalidade n_de_desalento n_de_pia
 local type `r(varlist)'
 display "`type'"
 
@@ -62,7 +62,7 @@ mkmat v1 v2, matrix(A) rownames(_varname)
 
 * local notes
 local ttitle "Números de absolutos do mercado de trabalho - 2019"
-local tnotes "Valores referentes ao quarto trimestre da PNAD Contínua 2019"
+local tnotes "Valores correspondem a média entre os trimestres da PNAD Contínua 2019"
 
 #delim ;    
 esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_emprego_caracterizacao_table.tex", 
@@ -94,6 +94,7 @@ esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_empre
 	nomtitle 
 	coeflabels(
 		n_populacao "População" 
+		n_de_pia "População com idade ativa (PIA)"
 		n_de_ocupacao "Ocupados"
 		n_de_informalidade "Informais" 
 		n_de_desemprego "Desempregados"

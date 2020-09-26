@@ -28,7 +28,7 @@ tsset id2 trim, quarterly
 format %tqCCYY trim
 
 * keep 2019
-keep if Ano =="2019" & Trimestre =="4"
+keep if Ano =="2019" 
 
 **************************************
 **	Colapsar ao nível do Ano 	**
@@ -99,7 +99,7 @@ mkmat v1 v2, matrix(A) rownames(_varname)
 
 * local notes
 local ttitle "Número total de \textbf{ocupados} por grupos etários - 2019"
-local tnotes "Valores referentes ao último trimestre da PNAD Contínua 2019"
+local tnotes "Valores correspondem a média entre os trimestres da PNAD Contínua 2019"
 
 #delim ;    
 esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_table_ocupados.tex", 
@@ -167,7 +167,7 @@ mkmat v1 v2, matrix(A) rownames(_varname)
 
 * local notes
 local ttitle "Número total de \textbf{participação} por grupos etários - 2019"
-local tnotes "Valores referentes ao último trimestre da PNAD Contínua 2019"
+local tnotes "Valores correspondem a média entre os trimestres da PNAD Contínua 2019"
 
 #delim ;    
 esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_table_participacao.tex", 
@@ -235,7 +235,7 @@ mkmat v1 v2, matrix(A) rownames(_varname)
 
 * local notes
 local ttitle "Número total de \textbf{desalentados} por grupos etários - 2019"
-local tnotes "Valores referentes ao último trimestre da PNAD Contínua 2019"
+local tnotes "Valores correspondem a média entre os trimestres da PNAD Contínua 2019"
 
 #delim ;    
 esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_table_desalentados.tex", 
@@ -303,7 +303,7 @@ mkmat v1 v2, matrix(A) rownames(_varname)
 
 * local notes
 local ttitle "Número total da \textbf{população} por grupos etários - 2019"
-local tnotes "Valores referentes ao último trimestre da PNAD Contínua 2019"
+local tnotes "Valores correspondem a média entre os trimestres da PNAD Contínua 2019"
 
 #delim ;    
 esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_emprego_fotografia_faixa_etaria_table_populacao.tex", 

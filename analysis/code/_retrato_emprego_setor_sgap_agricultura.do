@@ -66,7 +66,7 @@ foreach lname in `type' {
 		*/	pie(1, color($p5%75) explode) 	/*
 		*/	pie(2, color($p3%75) explode) 	/*
 		*/	pie(3, color($p1%75) explode) 	/*		
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Pecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
@@ -79,7 +79,7 @@ foreach lname in `type' {
 		*/	pie(1, color($p5%75) explode) 	/*
 		*/	pie(2, color($p3%75) explode) 	/*
 		*/	pie(3, color($p1%75) explode) 	/*	
-		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
+		*/	legend(on position(11) ring(1) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Pecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
 		
@@ -112,7 +112,7 @@ foreach lname in `type' {
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Pecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
 		
 	graph bar `lname'_sgap_agricultura 	/*
@@ -127,7 +127,7 @@ foreach lname in `type' {
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
-		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Agropecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
+		*/	legend(on position(11) ring(3) order(1 2 3 4) cols(3) label(1 "Agricultura") label(2 "Pecuária") label(3 "Produção florestal") size(small) forcesize symysize(3pt) symxsize(3pt) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 	
 		
 		

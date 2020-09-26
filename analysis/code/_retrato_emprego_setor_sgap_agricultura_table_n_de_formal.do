@@ -95,7 +95,7 @@ esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_empre
 	nomtitle 
 	coeflabels(
 		n_de_formal_sgap_agricultura "Agricultura" 
-		n_de_formal_sgap_animal "Agropecuária"
+		n_de_formal_sgap_animal "Pecuária"
 		n_de_formal_sgap_florestal "Produção florestal" 
 	)
     ;

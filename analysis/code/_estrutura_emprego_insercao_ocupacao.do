@@ -32,9 +32,9 @@ display "`type'"
 
 * set design of graph
 set scheme s1mono
-set scheme s2color 
+set scheme s1color  
 			
-	graph twoway line prop_empregadoCC prop_empregadoSC prop_empregador prop_cpropriaC prop_cpropriaNc prop_militar trim if id == "Amazônia Legal" /*
+	graph twoway line prop_empregadoCC prop_militar prop_empregador prop_cpropriaC prop_cpropriaNc prop_empregadoSC trim if id == "Amazônia Legal" /*
 		*/ 	,  title("Amazônia Legal", size(Medium)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/ 	ytitle("") 	/*
@@ -42,11 +42,11 @@ set scheme s2color
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/ 	lwidth(thick thick thick thick thick thick) 	/*		
 		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
-		*/ 	legend(on cols(3) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(3) label(1 "Trabalhador com carteira") label(2 "Servidor público e militares")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Trabalhador sem carteira") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/ 	xlabel(#8, grid angle(45)) 	/*
 		*/  saving("$tmp_dir\iten1", replace) 	
 			
-	graph twoway line prop_empregadoCC prop_empregadoSC prop_empregador prop_cpropriaC prop_cpropriaNc prop_militar trim if id == "Resto do Brasil" /*	
+	graph twoway line prop_empregadoCC prop_militar prop_empregador prop_cpropriaC prop_cpropriaNc prop_empregadoSC trim if id == "Resto do Brasil" /*	
 		*/ 	,  title("Resto do Brasil", size(Medium)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/ 	ytitle("") 	/*
@@ -54,7 +54,7 @@ set scheme s2color
 		*/	ylabel(#9, angle(0) ) 		/*
 		*/ 	lwidth(thick thick thick thick thick thick) 	/*		
 		*/	yscale( axis(1) range(0) lstyle(none) )	/* how y axis looks
-		*/ 	legend(on cols(3) label(1 "Com carteira assinada") label(2 "Sem carteira assinada") label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Servidor público") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
+		*/ 	legend(on cols(3) label(1 "Trabalhador com carteira") label(2 "Servidor público e militares")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Trabalhador sem carteira") size(small) forcesize symysize(3pt) symxsize(3pt) ) 	/*
 		*/ 	xlabel(#8, grid angle(45)) 	/*
 		*/  saving("$tmp_dir\iten2", replace) 	
 	

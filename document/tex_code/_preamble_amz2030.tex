@@ -1,0 +1,196 @@
+%_ PACKAGES __________________________________________________________________________ %
+
+    %__ INPUT/OUTPUT LANGUAGE _________________________________ %
+    \usepackage[brazil]{babel}
+    %\usepackage[utf8]{inputenc}
+    \usepackage[default]{lato}
+	\usepackage[T1]{fontenc}
+    %\usepackage{indentfirst}
+
+    %__ MATH __________________________________________________ %
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{amsthm}
+    \usepackage{bbm}
+
+    %__ GRAPHS & TABLES________________________________________ %
+    \usepackage{graphicx}
+    \usepackage{booktabs}
+    \usepackage{multirow}
+    \usepackage{array}
+    \usepackage{caption}
+    \usepackage{subcaption}
+    \usepackage[flushleft,online,para]{threeparttable}
+    \usepackage{multirow}
+    \usepackage{eso-pic} % important for \AddToShipoutPictureBG
+    \usepackage{tikz}
+
+    \usepackage{parskip}	% WHAT IS THIS FOR?
+
+    \usepackage{floatrow}
+        \floatsetup[table]{style=plaintop}	% LEAVE TABLE CAPTIONS AT THE TOP
+
+    \usepackage{tabularx}
+        \newcolumntype{Z}{>{\centering\arraybackslash}X}
+        \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+    \usepackage{dcolumn}
+        \newcolumntype{d}[1]{D{.}{.}{#1}}
+
+    \usepackage{rotating}	% for **sideways**tables
+    \usepackage{pdflscape}
+
+    %__ BIBLIOGRAPHY __________________________________________ %
+    \usepackage[round,longnamesfirst]{natbib}
+
+    %__ PDF, DISPLAY & PRODUCTIVITY ___________________________ %
+    \usepackage{xcolor}
+        \definecolor{darkblue}{rgb}{0,0,0.5}
+        \definecolor{marrom_amz2030}{RGB}{113,87,79}
+        \definecolor{verde_amz2030}{RGB}{77,158,80}
+        \definecolor{cinza_amz2030}{RGB}{65,64,66}
+        
+    \usepackage{hyperref}
+        \hypersetup{
+            colorlinks = true,
+            linkcolor = darkblue,
+            citecolor = darkblue,
+            pdfborder = 0 0 0,
+            pdfdisplaydoctitle = true,
+            pdfhighlight = /N,
+            pdfpagelayout = OneColumn,
+            pdfpagemode = UseNone,
+            pdfstartview = {FitH},
+            pdfauthor = {{Cavalcanti}},
+            pdftitle = {{}},
+            pdfsubject = {{}}
+        }
+
+    \usepackage[textsize=footnotesize, colorinlistoftodos, obeyDraft, textwidth=3cm]{todonotes}
+    \usepackage{geometry}
+    	\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
+    \usepackage{setspace}
+        \onehalfspacing
+
+    \usepackage[bottom, multiple]{footmisc}	% keep footnotes at the bottom of the page, and allow for multiple footnotes at one place.
+
+    \usepackage{verbatim}
+    \usepackage[normalem]{ulem}	% strikethrough fonts
+    \usepackage{mathpazo}
+
+    %\usepackage{syntonly}	 % if uncommented, this will prevent latex to produce
+    %\syntaxonly	%   any output. latex will only check for syntax.
+    %\usepackage[displaymath,tightpage]{preview}
+    %\graphicspath{{//graphs/}}
+
+    %__ APPENDIX _____________________________________________ %
+    \usepackage[toc,page]{appendix}
+
+%__ COMMANDS _________________________________________________________________________ %
+    \newcommand{\mc}{\multicolumn}
+    \newcommand{\lbar}{\underline}
+    \newcommand{\ubar}{\overline}
+    \providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+	\providecommand{\jelcodes}[1]{\textbf{\textit{JEL Classification---}} #1}
+	
+
+%%%%%%%%%%%%%%%%%%%
+%%  COVER PAGE   %%
+%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\coveramz}{
+\thispagestyle{empty} % no number page
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{capa_amz2030} \AtPageLowerLeft*{ \includegraphics[width = 0.99 cm]{logo_puc.png}}  }
+\AddToShipoutPictureFG*{ 
+    \AtPageLowerLeft{ 
+        \includegraphics[width = 3.85 cm]{logo_cpi.png}
+        \hspace{1cm} 
+        \includegraphics[width = 0.99 cm]{logo_puc.png}
+        \hspace{1cm}
+        \includegraphics[width = 2.96 cm]{logo_imazon.png}
+        \hspace{1cm}
+        }
+    }
+\begin{center}
+% Title position
+\vspace*{.40\textheight}
+% Title name
+{\fontsize{24}{24}\selectfont {\textcolor{marrom_amz2030}{\textbf{Mercado de trabalho na Amazônia Legal} \\ Uma análise comparativa com o resto do Brasil }}}
+\end{center}
+%if you want something in the bottom of the page just use \vfill before that.
+\vfill
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  SECOND PAGE   %%
+%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\secondpageamz}{
+\thispagestyle{empty} % no number page
+
+%\vspace*{.05\textheight}
+
+{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Autores}}}
+\newline
+
+Flávia  Alfenas \\
+PUC-Rio \\
+\href{mailto:flaviaalfenas@yahoo.com.br}{\nolinkurl{flaviaalfenas@yahoo.com.br}}  \\
+\newline
+Francisco Cavalcanti \\
+PUC-Rio \\
+\href{mailto:francisco.lima.cavalcanti@gmail.com}{\nolinkurl{francisco.lima.cavalcanti@gmail.com}} \\
+\newline
+Gustavo Gonzaga \\
+PUC-Rio \\
+\href{mailto:gmgonzaga2@gmail.com}{\nolinkurl{gmgonzaga2@gmail.com}} \\
+\newline\newline
+
+{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Agradecimentos}}}
+\newline
+
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nunc, laoreet nec neque at, efficitur vestibulum lectus. Ut non molestie metus. In gravida dapibus nunc, quis ultricies nisi imperdiet quis. Pellentesque at metus eu est pharetra tristique. In sed accumsan justo. Donec vel libero porta, pharetra nibh ac, ultricies neque}
+\newline\newline
+
+{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{O que é Amazônia 2030}}} 
+\newline
+
+{O projeto \textbf{Amazônia 2030} é uma iniciativa de pesquisadores brasileiros para desenvolver um plano de ações para a Amazônia brasileira. Nosso objetivo é que a região tenha condições de alcançar um patamar maior de desenvolvimento econômico e humano e atingir o uso sustentável dos recursos naturais em 2030.}
+\newline\newline
+
+{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Palavras-chave}}} 
+\newline
+
+{Amazônia Legal, Mercado de trabalho}
+\newline\newline
+
+%if you want something in the bottom of the page just use \vfill before that.
+\vfill
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  END PAGE    %%
+%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\finalpageamz}{
+
+\vspace*{.35\textheight}
+
+
+\begin{center}
+
+{\fontsize{24}{24}\selectfont  \textcolor{marrom_amz2030}{ www.amazonia2030.org.br }}
+
+
+
+\end{center}
+
+%if you want something in the bottom of the page just use \vfill before that.
+\vfill
+}
+\makeatother

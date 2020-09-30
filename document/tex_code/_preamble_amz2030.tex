@@ -2,8 +2,10 @@
 
     %__ INPUT/OUTPUT LANGUAGE _________________________________ %
     \usepackage[brazil]{babel}
+        \addto\captionsbrazil{\renewcommand{\contentsname}{Índice}} % change the NAME of table of contents 
     %\usepackage[utf8]{inputenc}
     \usepackage[default]{lato}
+        \renewcommand{\mddefault}{l} % switch default weight to light
 	\usepackage[T1]{fontenc}
     %\usepackage{indentfirst}
 
@@ -24,6 +26,7 @@
     \usepackage[flushleft,online,para]{threeparttable}
     \usepackage{multirow}
     \usepackage{eso-pic} % important for \AddToShipoutPictureBG
+        \newcommand\AtPageUpperRight[1]{\AtPageUpperLeft{\makebox[\paperwidth][r]{#1}}}
     \usepackage{tikz}
 
     \usepackage{parskip}	% WHAT IS THIS FOR?
@@ -54,8 +57,11 @@
     \usepackage{hyperref}
         \hypersetup{
             colorlinks = true,
-            linkcolor = darkblue,
-            citecolor = darkblue,
+            linkcolor = blue,
+            anchorcolor = blue,
+            citecolor = blue,
+            filecolor = blue,
+            urlcolor = blue,
             pdfborder = 0 0 0,
             pdfdisplaydoctitle = true,
             pdfhighlight = /N,
@@ -87,13 +93,21 @@
     %__ APPENDIX _____________________________________________ %
     \usepackage[toc,page]{appendix}
 
-%__ COMMANDS _________________________________________________________________________ %
+    %__ COMMANDS _________________________________________________________________________ %
     \newcommand{\mc}{\multicolumn}
     \newcommand{\lbar}{\underline}
     \newcommand{\ubar}{\overline}
-    \providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
-	\providecommand{\jelcodes}[1]{\textbf{\textit{JEL Classification---}} #1}
-	
+    \renewcommand{\contentsname}{Índice}
+        %\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+        %\providecommand{\jelcodes}[1]{\textbf{\textit{JEL Classification---}} #1}
+
+    %__SECTION_COLOR___________________________________________________________%
+    \usepackage{sectsty}
+        \sectionfont{\textcolor{verde_amz2030}}
+        \subsectionfont{\textcolor{verde_amz2030}}
+        %\subsubsectionfont{\textcolor{verde_amz2030}}
+
+
 
 %%%%%%%%%%%%%%%%%%%
 %%  COVER PAGE   %%
@@ -103,15 +117,38 @@
 \thispagestyle{empty} % no number page
 \AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{capa_amz2030} \AtPageLowerLeft*{ \includegraphics[width = 0.99 cm]{logo_puc.png}}  }
 \AddToShipoutPictureFG*{ 
-    \AtPageLowerLeft{ 
-        \includegraphics[width = 3.85 cm]{logo_cpi.png}
-        \hspace{1cm} 
-        \includegraphics[width = 0.99 cm]{logo_puc.png}
-        \hspace{1cm}
-        \includegraphics[width = 2.96 cm]{logo_imazon.png}
-        \hspace{1cm}
+    \AtPageLowerLeft{
+        \raisebox{0.5\height}{
+            \hspace{0.5cm}
+            \includegraphics[width = 3.85 cm]{logo_cpi.png}
+            \hspace{1cm} 
+            \includegraphics[width = 0.99 cm]{logo_puc.png}
+            \hspace{1cm}
+            \includegraphics[width = 2.96 cm]{logo_imazon.png}
+            \hspace{1cm}
         }
     }
+    \AtPageUpperRight{
+        \raisebox{-5.5\height}{                         
+                \textcolor{marrom_amz2030}{
+                \textbf{
+                MÊS ANO\hspace{1.2 cm}               
+                }
+                }          
+        }
+    }
+    \AtPageUpperRight{
+        \raisebox{-9.5\height}{                          
+                \textcolor{marrom_amz2030}{
+                \textbf{
+                N$^{\circ}$ 01\hspace{1.2 cm}
+                }
+                }          
+        }
+    }    
+}
+
+
 \begin{center}
 % Title position
 \vspace*{.40\textheight}
@@ -136,17 +173,17 @@
 {\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Autores}}}
 \newline
 
-Flávia  Alfenas \\
-PUC-Rio \\
-\href{mailto:flaviaalfenas@yahoo.com.br}{\nolinkurl{flaviaalfenas@yahoo.com.br}}  \\
+Autor \\
+Filiação \\
+\href{mailto:Autor@yahoo.com.br}{\nolinkurl{Autor@yahoo.com.br}}  \\
 \newline
-Francisco Cavalcanti \\
-PUC-Rio \\
-\href{mailto:francisco.lima.cavalcanti@gmail.com}{\nolinkurl{francisco.lima.cavalcanti@gmail.com}} \\
+Autor \\
+Filiação \\
+\href{mailto:Autor@gmail.com}{\nolinkurl{Autor@gmail.com}} \\
 \newline
-Gustavo Gonzaga \\
-PUC-Rio \\
-\href{mailto:gmgonzaga2@gmail.com}{\nolinkurl{gmgonzaga2@gmail.com}} \\
+Autor \\
+Filiação \\
+\href{mailto:Autor@gmail.com}{\nolinkurl{Autor@gmail.com}} \\
 \newline\newline
 
 {\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Agradecimentos}}}
@@ -167,30 +204,30 @@ PUC-Rio \\
 {Amazônia Legal, Mercado de trabalho}
 \newline\newline
 
+{Footer: Creative Commons texto da licença }
+
 %if you want something in the bottom of the page just use \vfill before that.
 \vfill
 }
 \makeatother
-
 
 %%%%%%%%%%%%%%%%%%%%
 %%  END PAGE    %%
 %%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \newcommand{\finalpageamz}{
-
 \vspace*{.35\textheight}
-
-
 \begin{center}
-
 {\fontsize{24}{24}\selectfont  \textcolor{marrom_amz2030}{ www.amazonia2030.org.br }}
-
-
-
 \end{center}
-
 %if you want something in the bottom of the page just use \vfill before that.
 \vfill
 }
 \makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  DEFAULT PAGE   %%
+%%%%%%%%%%%%%%%%%%%%
+

@@ -42,13 +42,15 @@ foreach v of var `colvar' {
 }
 
 * colapse
-collapse (firstnm) `colvar' , by(Ano id2)
+collapse (mean) `colvar' , by(Ano id2)
 
 // copy back the label of variables
 foreach v of var `colvar' {
     label var `v' "`l`v''"
 }
 
+* set design of graph
+set scheme s1mono
 
 **	Taxa de ocupacao	**
 set scheme s1mono
@@ -66,13 +68,14 @@ preserve
 		*/	,  	 /* 
 		*/ 	title("Taxa de Ocupação", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(eltblue%65)) 	/*
 		*/	bar(2, fcolor(green%65)) 	/*
-		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
+		*/ 	blabel(bar,format(%12.1fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
 		*/ legend(on label(1 "Fora de região metropolitana") label(2 "Região metropolitana")) 	/*
 		*/  saving("$tmp_dir\iten1", replace)
@@ -93,13 +96,14 @@ preserve
 		*/	,  	 /* 
 		*/ 	title("Taxa de Desemprego", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(eltblue%65)) 	/*
 		*/	bar(2, fcolor(green%65)) 	/*
-		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
+		*/ 	blabel(bar,format(%12.1fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
 		*/  saving("$tmp_dir\iten2", replace)		
 		
@@ -117,13 +121,14 @@ preserve
 		*/	,  	 /* 
 		*/ 	title("Taxa de Participação", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(eltblue%65)) 	/*
 		*/	bar(2, fcolor(green%65)) 	/*
-		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
+		*/ 	blabel(bar,format(%12.1fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*  
 		*/  saving("$tmp_dir\iten3", replace) 		
 * restore
@@ -140,13 +145,14 @@ preserve
 		*/	,  	 /* 
 		*/ 	title("Taxa de Informalidade", size(Medium)) 	 	/*
 		*/  /*
+		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
 		*/	bar(1, fcolor(eltblue%65)) 	/*
 		*/	bar(2, fcolor(green%65)) 	/*
-		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
+		*/ 	blabel(bar,format(%12.1fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
-		*/	ylabel(#9, format(%12.0fc) angle(0) ) 	/*
+		*/	ylabel(#9, format(%12.1fc) angle(0) ) 	/*
 		*/	ytitle( "")	/*   
 		*/  saving("$tmp_dir\iten4", replace) 			
 * restore
@@ -170,6 +176,7 @@ restore
 	*/ 	title("") 	/*
 	*/ 	cols(4) 	/*
 	*/ 	ycommon 	/* ycommon
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	

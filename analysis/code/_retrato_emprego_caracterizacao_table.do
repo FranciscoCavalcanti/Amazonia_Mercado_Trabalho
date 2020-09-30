@@ -29,9 +29,10 @@ format %tqCCYY trim
 
 * Gerar n_de_pia
 gen n_de_pia = ( n_de_ocupacao /  (taxa_de_ocupacao/100) )
+gen n_de_pea = ( n_de_pia *  (taxa_de_participacao/100) )
 
 * select variables
-ds n_populacao n_de_desemprego n_de_ocupacao n_de_informalidade n_de_desalento n_de_pia
+ds n_populacao n_de_desemprego n_de_ocupacao n_de_informalidade n_de_desalento n_de_pia n_de_pea
 local type `r(varlist)'
 display "`type'"
 
@@ -95,6 +96,7 @@ esttab matrix(A, fmt(%16,0fc)) using "$output_dir\retrato_emprego\_retrato_empre
 	coeflabels(
 		n_populacao "População" 
 		n_de_pia "População com idade ativa (PIA)"
+		n_de_pea "População economicamente ativa (PEA)"
 		n_de_ocupacao "Ocupados"
 		n_de_informalidade "Informais" 
 		n_de_desemprego "Desempregados"

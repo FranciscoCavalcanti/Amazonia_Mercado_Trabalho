@@ -90,4 +90,21 @@
   url    = {https://sidra.ibge.gov.br/home/pms/brasil},
 }
 
+@Article{Corseuil2019,
+  author   = {Carlos Henrique Corseuil and Miguel N. Foguel and Gustavo Gonzaga},
+  journal  = {Labour Economics},
+  title    = {Apprenticeship as a stepping stone to better jobs: Evidence from Brazilian matched employer-employee data},
+  year     = {2019},
+  issn     = {0927-5371},
+  pages    = {177 - 194},
+  volume   = {57},
+  abstract = {The objective of this paper is to evaluate the Brazilian Apprenticeship program adopted at a large scale since 2000. In particular, we investigate whether the program is a better stepping stone to permanent jobs when compared to other forms of temporary jobs. Similar to other apprenticeship initiatives around the world, the Brazilian program trains young workers under special temporary contracts aiming to help them successfully complete the transition from school to work. We make use of a matched employee-employer dataset covering all formal employees in Brazil, including apprentices. Our identification strategy exploits a discontinuity in the eligibility to enter the program in the early 2000s, when 17 was the age limit to take part in the program. This strategy allows us to consider selection based on unobservable characteristics. We find that the program increases the probability of employment in permanent jobs and decreases turnover rates and formal labor market experience in 2-3- and 4-5-year horizons. These results are consistent with a positive effect of the program on reservation utilities of workers and on their efforts to expand skills. This is also confirmed by the data as we find substantial impacts on schooling attainment. We also find evidence that the skill requirements of the apprentices’ occupation affect the likelihood of obtaining an open-ended job in the short run and the education achievement in the medium run. The results also evince much larger effects of the program for workers who had their first job in large firms.},
+  doi      = {https://doi.org/10.1016/j.labeco.2019.02.002},
+  keywords = {Apprenticeship, Youth-targeted training program, Adjusted matching},
+  url      = {http://www.sciencedirect.com/science/article/pii/S0927537119300089},
+}
+
+@Article{,
+}
+
 @Comment{jabref-meta: databaseType:bibtex;}

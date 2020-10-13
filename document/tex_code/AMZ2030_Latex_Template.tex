@@ -1,4 +1,4 @@
-\documentclass[10.5pt,a4paper]{article}
+\documentclass[10.5pt,17.35pt,a4paper]{article}
 
 \input{_preamble_amz2030}
 
@@ -14,10 +14,29 @@
 \newpage
 
 {
-\hypersetup{linkcolor = verde_amz2030}
+\thispagestyle{empty}
+\hypersetup{linkcolor = cinza_amz2030}
 %\textcolor{verde_amz2030}
 \tableofcontents
 }
+
+\newpage
+
+{
+\thispagestyle{empty}
+\hypersetup{linkcolor = cinza_amz2030}
+%\textcolor{verde_amz2030}
+\listoffigures
+}
+
+{
+\thispagestyle{empty}
+\hypersetup{linkcolor = cinza_amz2030}
+%\textcolor{verde_amz2030}
+\listoftables
+}
+
+
 
 \newpage
 
@@ -42,7 +61,7 @@ Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae ven
 
 \subsection{Aplicar estilo H3}
 
-Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus.
+Ed fermentum, \citep{Faria1989, Wong2005, Goncalves2019} eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus.
 
 \subsubsection{Aplicar estilo H4}
  
@@ -58,8 +77,14 @@ Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae ven
 
 \subsubsection{Aplicar estilo H4}
  
-Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. 
+Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. Ed fermentum, eros vel fringilla posuere, ante quam ullamcorper justo, vitae venenatis mauris tellus ut orci. Nulla facilisi. Fusce volutpat ornare ipsum quis faucibus. In hac habitasse platea dictumst. Nam a turpis lacus. \citep{Rajao2020, Staal2020}.
 \newpage
+
+\renewcommand{\refname}{Referências Bibliográficas}
+\bibliographystyle{Chicago}
+\bibliography{bibliografia.bib}
+\newpage
+
 
 \finalpageamz
 

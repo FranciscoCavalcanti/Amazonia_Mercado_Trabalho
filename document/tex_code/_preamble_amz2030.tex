@@ -3,10 +3,11 @@
     %__ INPUT/OUTPUT LANGUAGE _________________________________ %
     \usepackage[brazil]{babel}
         \addto\captionsbrazil{\renewcommand{\contentsname}{Índice}} % change the NAME of table of contents 
+
     %\usepackage[utf8]{inputenc}
     \usepackage[default]{lato}
         \renewcommand{\mddefault}{l} % switch default weight to light
-	\usepackage[T1]{fontenc}
+    \usepackage[T1]{fontenc}
     %\usepackage{indentfirst}
 
     %__ MATH __________________________________________________ %
@@ -29,10 +30,10 @@
         \newcommand\AtPageUpperRight[1]{\AtPageUpperLeft{\makebox[\paperwidth][r]{#1}}}
     \usepackage{tikz}
 
-    \usepackage{parskip}	% WHAT IS THIS FOR?
+    \usepackage{parskip}    % WHAT IS THIS FOR?
 
     \usepackage{floatrow}
-        \floatsetup[table]{style=plaintop}	% LEAVE TABLE CAPTIONS AT THE TOP
+        \floatsetup[table]{style=plaintop}  % LEAVE TABLE CAPTIONS AT THE TOP
 
     \usepackage{tabularx}
         \newcolumntype{Z}{>{\centering\arraybackslash}X}
@@ -41,11 +42,13 @@
     \usepackage{dcolumn}
         \newcolumntype{d}[1]{D{.}{.}{#1}}
 
-    \usepackage{rotating}	% for **sideways**tables
+    \usepackage{rotating}   % for **sideways**tables
     \usepackage{pdflscape}
 
     %__ BIBLIOGRAPHY __________________________________________ %
     \usepackage[round,longnamesfirst]{natbib}
+        \renewcommand{\refname}{Referências bibliográficas}
+
 
     %__ PDF, DISPLAY & PRODUCTIVITY ___________________________ %
     \usepackage{xcolor}
@@ -53,7 +56,11 @@
         \definecolor{marrom_amz2030}{RGB}{113,87,79}
         \definecolor{verde_amz2030}{RGB}{77,158,80}
         \definecolor{cinza_amz2030}{RGB}{65,64,66}
-        
+        \definecolor{azul_amz2030}{RGB}{41,84,204}
+        \definecolor{vermelho_amz2030}{RGB}{219,65,62}
+
+    \usepackage{fancyhdr} % for text footer and header        
+ 
     \usepackage{hyperref}
         \hypersetup{
             colorlinks = true,
@@ -75,18 +82,18 @@
 
     \usepackage[textsize=footnotesize, colorinlistoftodos, obeyDraft, textwidth=3cm]{todonotes}
     \usepackage{geometry}
-    	\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
+        \geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
     \usepackage{setspace}
         \onehalfspacing
 
-    \usepackage[bottom, multiple]{footmisc}	% keep footnotes at the bottom of the page, and allow for multiple footnotes at one place.
+    \usepackage[bottom, multiple]{footmisc} % keep footnotes at the bottom of the page, and allow for multiple footnotes at one place.
 
     \usepackage{verbatim}
-    \usepackage[normalem]{ulem}	% strikethrough fonts
+    \usepackage[normalem]{ulem} % strikethrough fonts
     \usepackage{mathpazo}
 
-    %\usepackage{syntonly}	 % if uncommented, this will prevent latex to produce
-    %\syntaxonly	%   any output. latex will only check for syntax.
+    %\usepackage{syntonly}   % if uncommented, this will prevent latex to produce
+    %\syntaxonly    %   any output. latex will only check for syntax.
     %\usepackage[displaymath,tightpage]{preview}
     %\graphicspath{{//graphs/}}
 
@@ -115,30 +122,32 @@
 \makeatletter
 \newcommand{\coveramz}{
 \thispagestyle{empty} % no number page
-\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{capa_amz2030} \AtPageLowerLeft*{ \includegraphics[width = 0.99 cm]{logo_puc.png}}  }
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{capa_amz2030} }
 \AddToShipoutPictureFG*{ 
     \AtPageLowerLeft{
         \raisebox{0.5\height}{
             \hspace{0.5cm}
-            \includegraphics[width = 3.85 cm]{logo_cpi.png}
-            \hspace{1cm} 
+            \includegraphics[width = 2.84 cm]{logo_centro.png}
+            \hspace{3mm}
+            \includegraphics[width = 3.04 cm]{logo_cpi.png}
+            \hspace{3mm} 
+            \includegraphics[width = 2.44 cm]{logo_imazon.png}
+            \hspace{3mm}
             \includegraphics[width = 0.99 cm]{logo_puc.png}
-            \hspace{1cm}
-            \includegraphics[width = 2.96 cm]{logo_imazon.png}
-            \hspace{1cm}
+            \hspace{3mm}
         }
     }
     \AtPageUpperRight{
         \raisebox{-5.5\height}{                         
                 \textcolor{marrom_amz2030}{
                 \textbf{
-                MÊS ANO\hspace{1.2 cm}               
+                OUTUBRO 2020\hspace{1.2 cm}               
                 }
                 }          
         }
     }
     \AtPageUpperRight{
-        \raisebox{-9.5\height}{                          
+        \raisebox{-7.5\height}{                          
                 \textcolor{marrom_amz2030}{
                 \textbf{
                 N$^{\circ}$ 01\hspace{1.2 cm}
@@ -166,48 +175,71 @@
 %%%%%%%%%%%%%%%%%%%%
 \makeatletter
 \newcommand{\secondpageamz}{
-\thispagestyle{empty} % no number page
+%\thispagestyle{empty} % no number page
 
 %\vspace*{.05\textheight}
 
-{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Autores}}}
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Autores}}}
 \newline
 
-Autor \\
-Filiação \\
-\href{mailto:Autor@yahoo.com.br}{\nolinkurl{Autor@yahoo.com.br}}  \\
+Flávia  Alfenas \\
+PUC-Rio \\
+%\href{mailto:flaviaalfenas@yahoo.com.br}{\nolinkurl{flaviaalfenas@yahoo.com.br}}  \\
 \newline
-Autor \\
-Filiação \\
-\href{mailto:Autor@gmail.com}{\nolinkurl{Autor@gmail.com}} \\
+Francisco Cavalcanti \\
+PUC-Rio \\
+%\href{mailto:francisco.lima.cavalcanti@gmail.com}{\nolinkurl{francisco.lima.cavalcanti@gmail.com}} \\
 \newline
-Autor \\
-Filiação \\
-\href{mailto:Autor@gmail.com}{\nolinkurl{Autor@gmail.com}} \\
-\newline\newline
+Gustavo Gonzaga \\
+PUC-Rio \\
+%\href{mailto:gmgonzaga2@gmail.com}{\nolinkurl{gmgonzaga2@gmail.com}} \\
+\newline
 
-{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Agradecimentos}}}
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Agradecimentos}}}
 \newline
 
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nunc, laoreet nec neque at, efficitur vestibulum lectus. Ut non molestie metus. In gravida dapibus nunc, quis ultricies nisi imperdiet quis. Pellentesque at metus eu est pharetra tristique. In sed accumsan justo. Donec vel libero porta, pharetra nibh ac, ultricies neque}
-\newline\newline
+\newline
 
-{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{O que é Amazônia 2030}}} 
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{O que é Amazônia 2030}}} 
 \newline
 
 {O projeto \textbf{Amazônia 2030} é uma iniciativa de pesquisadores brasileiros para desenvolver um plano de ações para a Amazônia brasileira. Nosso objetivo é que a região tenha condições de alcançar um patamar maior de desenvolvimento econômico e humano e atingir o uso sustentável dos recursos naturais em 2030.}
-\newline\newline
+\newline
 
-{\fontsize{13}{24}\selectfont  \textcolor{verde_amz2030}{\textbf{Palavras-chave}}} 
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Palavras-chave}}} 
 \newline
 
 {Amazônia Legal, Mercado de trabalho}
-\newline\newline
+\newline
 
-{Footer: Creative Commons texto da licença }
+
 
 %if you want something in the bottom of the page just use \vfill before that.
+
 \vfill
+
+\AddToShipoutPictureFG*{
+    \AtPageLowerLeft{
+        \raisebox{1.1\height}{
+            \hspace{0.5cm}
+            \includegraphics[width = 1.84 cm]{logo_licenca.png}
+        }
+    }
+}
+
+
+
+\thispagestyle{fancyplain} % no number page with footer
+%\pagenumbering{gobble} 
+\chead{}
+\rhead{}
+\lhead{}
+\cfoot{}
+\rfoot{}
+\lfoot{\fontsize{9}{11.7pt}\selectfont  \textcolor{cinza_amz2030}{ Conteúdo sob licença Creative Commons Atribuição 4.0 Internacional. Os textos desta publicação podem ser reproduzidos no todo ou em parte desde que a fonte e os respectivos autores sejam citados.}}
+
+
 }
 \makeatother
 

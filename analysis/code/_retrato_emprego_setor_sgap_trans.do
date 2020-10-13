@@ -33,8 +33,8 @@ local type `r(varlist)'
 display "`type'"
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE INDUSTRIA DE TRANSFORMAÇÃO	**
-set scheme s1color
-*set scheme burd
+* set design of graph
+set scheme amz2030
 
 * 
 *Qualitative (view)
@@ -46,7 +46,7 @@ set scheme s1color
 *Set1 9 colors for qualitative data
 *Set2 8 colors for qualitative data
 *Set3         12 colors for qualitative data
-colorpalette w3 food , globals
+* colorpalette w3 food , globals
 
 * begin of loop over variables
 local type n_de_informal n_de_formal n_de_ocupado
@@ -67,14 +67,14 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(1, color($w3_food_apple%75) explode) 	/*
-		*/	pie(2, color($w3_food_orange%75) explode) 	/*
-		*/	pie(3, color($w3_food_plum%75) explode) 	/*	
-		*/	pie(4, color($w3_food_carrot%75) explode) 	/*
-		*/	pie(5, color($w3_food_cranberry%75) explode) 	/*
-		*/	pie(6, color($w3_food_spearmint%75) explode) 	/*
-		*/	pie(7, color($w3_food_tomato%75) explode) 	/*	
-		*/	pie(8, color($w3_food_mustard%75) explode) 	/*		
+		*/	pie(1, color(%75) explode) 	/*
+		*/	pie(2, color(%75) explode) 	/*
+		*/	pie(3, color(%75) explode) 	/*	
+		*/	pie(4, color(%75) explode) 	/*
+		*/	pie(5, color(%75) explode) 	/*
+		*/	pie(6, color(%75) explode) 	/*
+		*/	pie(7, color(%75) explode) 	/*	
+		*/	pie(8, color(%75) explode) 	/*		
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Alimentos, bebidas e fumo") label(2 "Acessórios, vestuário e produtos têxteis") label(3 "Madeira, celulose e papel") label(4 "Químicos, biocombustíveis e derivados de petróleo") label(5 "Minerais e metalurgia") label(6 "Informática, máquinas e equipamentos") label(7 "Veículos automotores e equipamentos de transporte") label(8 "Outros produtos") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
@@ -90,14 +90,14 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(1, color($w3_food_apple%75) explode) 	/*
-		*/	pie(2, color($w3_food_orange%75) explode) 	/*
-		*/	pie(3, color($w3_food_plum%75) explode) 	/*	
-		*/	pie(4, color($w3_food_carrot%75) explode) 	/*
-		*/	pie(5, color($w3_food_cranberry%75) explode) 	/*
-		*/	pie(6, color($w3_food_spearmint%75) explode) 	/*
-		*/	pie(7, color($w3_food_tomato%75) explode) 	/*	
-		*/	pie(8, color($w3_food_mustard%75) explode) 	/*	
+		*/	pie(1, color(%75) explode) 	/*
+		*/	pie(2, color(%75) explode) 	/*
+		*/	pie(3, color(%75) explode) 	/*	
+		*/	pie(4, color(%75) explode) 	/*
+		*/	pie(5, color(%75) explode) 	/*
+		*/	pie(6, color(%75) explode) 	/*
+		*/	pie(7, color(%75) explode) 	/*	
+		*/	pie(8, color(%75) explode) 	/*	
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6 7 8) cols(2) label(1 "Alimentos, bebidas e fumo") label(2 "Acessórios, vestuário e produtos têxteis") label(3 "Madeira, celulose e papel") label(4 "Químicos, biocombustíveis e derivados de petróleo") label(5 "Minerais e metalurgia") label(6 "Informática, máquinas e equipamentos") label(7 "Veículos automotores e equipamentos de transporte") label(8 "Outros produtos") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
@@ -130,14 +130,14 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color($w3_food_apple%75) ) 	/*
-		*/	bar(2, color($w3_food_orange%75) ) 	/*
-		*/	bar(3, color($w3_food_plum%75) ) 	/*	
-		*/	bar(4, color($w3_food_carrot%75) ) 	/*
-		*/	bar(5, color($w3_food_cranberry%75) ) 	/*
-		*/	bar(6, color($w3_food_spearmint%75) ) 	/*
-		*/	bar(7, color($w3_food_tomato%75) ) 	/*	
-		*/	bar(8, color($w3_food_mustard%75) ) 	/*	
+		*/	bar(1, color(%75) ) 	/*
+		*/	bar(2, color(%75) ) 	/*
+		*/	bar(3, color(%75) ) 	/*	
+		*/	bar(4, color(%75) ) 	/*
+		*/	bar(5, color(%75) ) 	/*
+		*/	bar(6, color(%75) ) 	/*
+		*/	bar(7, color(%75) ) 	/*	
+		*/	bar(8, color(%75) ) 	/*	
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
@@ -155,14 +155,14 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color($w3_food_apple%75) ) 	/*
-		*/	bar(2, color($w3_food_orange%75) ) 	/*
-		*/	bar(3, color($w3_food_plum%75) ) 	/*	
-		*/	bar(4, color($w3_food_carrot%75) ) 	/*
-		*/	bar(5, color($w3_food_cranberry%75) ) 	/*
-		*/	bar(6, color($w3_food_spearmint%75) ) 	/*
-		*/	bar(7, color($w3_food_tomato%75) ) 	/*	
-		*/	bar(8, color($w3_food_mustard%75) ) 	/*	
+		*/	bar(1, color(%75) ) 	/*
+		*/	bar(2, color(%75) ) 	/*
+		*/	bar(3, color(%75) ) 	/*	
+		*/	bar(4, color(%75) ) 	/*
+		*/	bar(5, color(%75) ) 	/*
+		*/	bar(6, color(%75) ) 	/*
+		*/	bar(7, color(%75) ) 	/*	
+		*/	bar(8, color(%75) ) 	/*	
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*

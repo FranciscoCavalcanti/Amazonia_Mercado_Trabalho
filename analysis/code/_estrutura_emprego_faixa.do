@@ -80,7 +80,8 @@ label variable n_de_pea_faixa_urbana "Taxa de participação na área urbana (%)
 
 
 * set design of graph
-set scheme s1mono
+* set scheme s1mono
+set scheme amz2030  
 
 * begin of loop over variables
 foreach lname in `type' {

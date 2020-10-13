@@ -43,6 +43,10 @@ forvalues num = 1(1)5 {
 	gen renda_diversosq`num' = renda_outroq`num' + renda_doacaoq`num' + renda_aluguelq`num'
 }
 
+* set design of graph
+set scheme amz2030   
+
+
 ////////////////////////////////////////
 // Loop sobre faixas de rendimentos
 ////////////////////////////////////////
@@ -61,7 +65,7 @@ forvalues num = 1(1)5 {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*			
-		*/	pie(_all, color(%55) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(1 percent, size(Medium) gap(5) format(%12.1f) ) /* 
 		*/	plabel(2 percent, size(Medium) gap(5) format(%12.1f) ) /*
@@ -80,7 +84,7 @@ forvalues num = 1(1)5 {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*			
-		*/	pie(_all, color(%55) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Auxílios e programas sociais") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(1 percent, size(Medium) gap(5) format(%12.1f) ) /* 
 		*/	plabel(2 percent, size(Medium) gap(5) format(%12.1f) ) /*

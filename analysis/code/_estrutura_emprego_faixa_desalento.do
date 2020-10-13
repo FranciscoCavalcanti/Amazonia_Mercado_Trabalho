@@ -80,7 +80,8 @@ label variable n_de_nemnem_faixa_urbana "Nem-nem na área urbana (%)  "
 
 
 * set design of graph
-set scheme s1mono
+* set scheme s1mono
+set scheme amz2030  
 
 * begin of loop over variables
 foreach lname in `type' {

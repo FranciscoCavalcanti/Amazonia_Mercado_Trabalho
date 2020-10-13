@@ -7,7 +7,7 @@
 * call data 
 
 * set design of graph
-set scheme s1mono
+set scheme amz2030
 
 
 * Desempregado

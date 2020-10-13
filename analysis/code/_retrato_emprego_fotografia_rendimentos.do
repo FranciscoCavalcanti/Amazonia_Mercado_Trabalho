@@ -49,6 +49,8 @@ foreach v of var `colvar' {
     label var `v' "`l`v''"
 }
 
+* set scheme
+set scheme amz2030   
 
 *preserve
 preserve 
@@ -64,8 +66,8 @@ preserve
 		*/ 	title("Ocupados", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(small) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -91,8 +93,8 @@ preserve
 		*/ 	title("Setor formal", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(small) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -115,8 +117,8 @@ preserve
 		*/ 	title("Setor informal", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(small) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -138,8 +140,8 @@ preserve
 		*/ 	title("Domiciliar per capita", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(small) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -156,6 +158,7 @@ restore
 	*/ 	title("") 	/*
 	*/ 	cols(4) 	/*
 	*/ 	ycommon 	/* ycommon
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	

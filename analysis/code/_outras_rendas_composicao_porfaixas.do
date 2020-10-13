@@ -44,7 +44,8 @@ forvalues num = 1(1)7 {
 }
 
 * set design of graph
-set scheme s2gcolor 
+* set scheme s2gcolor 
+set scheme amz2030   
 
 ////////////////////////////////////////
 // Loop sobre faixas de rendimentos
@@ -64,7 +65,7 @@ forvalues num = 1(1)7 {
 		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
@@ -77,7 +78,7 @@ forvalues num = 1(1)7 {
 		*/ 	renda_diversos`num' 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Setor privado formal") label(2 "Setor privado informal") label(3 "Setor público") label(4 "Aposentadoria e pensão") label(5 "Programas e auxílio estatal") label(6 "Outros tipos renda") size(vsmall) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
@@ -86,6 +87,7 @@ forvalues num = 1(1)7 {
 	grc1leg "$tmp_dir\iten1" "$tmp_dir\iten2",  	/*
 	*/ 	legendfrom("$tmp_dir\iten1") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/

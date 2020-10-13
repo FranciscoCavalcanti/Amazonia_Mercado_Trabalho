@@ -50,7 +50,8 @@ foreach v of var `colvar' {
 }
 
 **	Taxa de participacao	**
-set scheme s2gcolor   
+*set scheme s2gcolor   
+set scheme amz2030   
 
 *preserve
 preserve 
@@ -69,13 +70,13 @@ preserve
 		*/  /*
 		*/	graphregion(fcolor(white)) 	/*	
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
-		*/	bar(3, fcolor(%65)) 	/*
-		*/	bar(4, fcolor(%65)) 	/*
-		*/	bar(5, fcolor(%65)) 	/*
-		*/	bar(6, fcolor(%65)) 	/*
-		*/	bar(7, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
+		*/	bar(3, fcolor(%75)) 	/*
+		*/	bar(4, fcolor(%75)) 	/*
+		*/	bar(5, fcolor(%75)) 	/*
+		*/	bar(6, fcolor(%75)) 	/*
+		*/	bar(7, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -94,7 +95,8 @@ preserve
 restore	
 
 **	Taxa de ocupação	**
-set scheme s2gcolor   
+*set scheme s2gcolor   
+set scheme amz2030  
 
 *preserve
 preserve 
@@ -113,13 +115,13 @@ preserve
 		*/  /*
 		*/	graphregion(fcolor(white)) 	/*			
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
-		*/	bar(3, fcolor(%65)) 	/*
-		*/	bar(4, fcolor(%65)) 	/*
-		*/	bar(5, fcolor(%65)) 	/*
-		*/	bar(6, fcolor(%65)) 	/*
-		*/	bar(7, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
+		*/	bar(3, fcolor(%75)) 	/*
+		*/	bar(4, fcolor(%75)) 	/*
+		*/	bar(5, fcolor(%75)) 	/*
+		*/	bar(6, fcolor(%75)) 	/*
+		*/	bar(7, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks

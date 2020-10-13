@@ -30,6 +30,9 @@ format %tqCCYY trim
 * keep 2019
 keep if Ano =="2019"
 
+* set design of graph
+set scheme amz2030   
+
 **************************************
 **	Colapsar ao nível do Ano 	**
 **************************************
@@ -61,8 +64,8 @@ preserve
 		*/ 	title("Programas Sociais", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -87,8 +90,8 @@ preserve
 		*/ 	title("Bolsa Família", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -114,8 +117,8 @@ preserve
 		*/ 	title("BPC-LOAS", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -138,8 +141,8 @@ preserve
 		*/ 	title("Aposentadoria", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(sienna%65)) 	/*
-		*/	bar(2, fcolor(stone%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -156,6 +159,7 @@ restore
 	*/ 	title("") 	/*
 	*/ 	cols(4) 	/*
 	*/ 	ycommon 	/* ycommon
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	

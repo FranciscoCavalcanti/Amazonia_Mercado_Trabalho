@@ -48,7 +48,8 @@ foreach v of var `colvar' {
 }
 
 * set design of graph
-set scheme s1mono
+* set scheme s1mono
+set scheme amz2030   
 
 *preserve
 preserve 
@@ -64,8 +65,8 @@ preserve
 		*/ 	title("Taxa de Ocupação", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(green%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.1f) position(center) color(bg) size(Medium) ) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	xtitle() 	/*	
@@ -92,8 +93,8 @@ preserve
 		*/ 	title("Taxa de Desemprego", size(Medium)) 	 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(green%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.1f) position(center) color(bg) size(Medium) ) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	xtitle() 	/*	
@@ -118,8 +119,8 @@ preserve
 		*/	graphregion(fcolor(white)) 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(green%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.1f) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -142,8 +143,8 @@ preserve
 		*/	graphregion(fcolor(white)) 	/*
 		*/  /*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(green%65)) 	/*
-		*/	bar(2, fcolor(blue%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.1f) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks

@@ -39,12 +39,12 @@ format %tqCCYY trim
 
 * select variables
 *ds sh_* 
-ds sh_empregador_sh_informal sh_empregador_sh_empregador 
+ds sh_empregador_sh_informal sh_empregador_sh_empregador sh_desempregado_sh_inativa sh_desempregado_sh_formal sh_formal_sh_informal sh_formal_sh_desempregado sh_informal_sh_desempregado sh_informal_sh_formal
 local type `r(varlist)'
 display "`type'"
 
 * set design of graph
-set scheme s1mono
+set scheme amz2030
 
 * begin of loop over variables
 foreach lname in `type' {

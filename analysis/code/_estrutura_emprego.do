@@ -30,7 +30,8 @@ local type `r(varlist)'
 display "`type'"
 
 * set design of graph
-set scheme s1mono
+* set scheme s1mono
+set scheme amz2030  
 
 * begin of loop over variables
 foreach lname in `type' {
@@ -93,7 +94,8 @@ local type `r(varlist)'
 display "`type'"
 
 * set design of graph
-set scheme s1mono
+* set scheme s1mono
+set scheme amz2030  
 
 * begin of loop over variables
 foreach lname in `type' {
@@ -148,6 +150,7 @@ clear
 	*/ 	title("") 	/*
 	*/ 	cols(2) 	/*
 	*/ 	ycommon 	/* ycommon
+	*/	graphregion(fcolor(white)) 	/*
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/	

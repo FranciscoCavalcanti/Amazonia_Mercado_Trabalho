@@ -33,10 +33,8 @@ local type `r(varlist)'
 display "`type'"
 
 **	GRUPAMENTOS DA ATIVIDADE PRINCIPAL NO SETOR DE SERVIÇO	**
-*set scheme s2color 
-*set scheme burd5
-*set scheme mrc
-set scheme s1color 
+* set design of graph
+set scheme amz2030  
 
 
 * begin of loop over variables
@@ -55,7 +53,7 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt))	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 			
@@ -68,7 +66,7 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(11) ring(0) order(1 2 3 4 5) cols(5) label(1 "Indústria") label(2 "Construção")  label(3 "Comércio") label(4 "Agropecuária") label(5 "Serviços") size(small) forcesize symysize(3pt) symxsize(3pt) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 			
@@ -98,11 +96,11 @@ foreach lname in `type' {
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color(%65)) 	/*
-		*/	bar(2, color(%65)) 	/*
-		*/	bar(3, color(%65)) 	/*
-		*/	bar(4, color(%65)) 	/*
-		*/	bar(5, color(%65)) 	/*
+		*/	bar(1, color(%75)) 	/*
+		*/	bar(2, color(%75)) 	/*
+		*/	bar(3, color(%75)) 	/*
+		*/	bar(4, color(%75)) 	/*
+		*/	bar(5, color(%75)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
@@ -117,11 +115,11 @@ foreach lname in `type' {
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
-		*/	bar(1, color(%65)) 	/*
-		*/	bar(2, color(%65)) 	/*
-		*/	bar(3, color(%65)) 	/*
-		*/	bar(4, color(%65)) 	/*
-		*/	bar(5, color(%65)) 	/*
+		*/	bar(1, color(%75)) 	/*
+		*/	bar(2, color(%75)) 	/*
+		*/	bar(3, color(%75)) 	/*
+		*/	bar(4, color(%75)) 	/*
+		*/	bar(5, color(%75)) 	/*
 		*/	bargap(10) 	/*	
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*

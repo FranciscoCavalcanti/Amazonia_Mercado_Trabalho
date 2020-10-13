@@ -31,8 +31,9 @@ local type `r(varlist)'
 display "`type'"
 
 * set design of graph
-set scheme s1mono
-set scheme s1color  
+* set scheme s1mono
+* set scheme s1color  
+set scheme amz2030  
 			
 	graph twoway line prop_empregadoCC prop_militar prop_empregador prop_cpropriaC prop_cpropriaNc prop_empregadoSC trim if id == "Amazônia Legal" /*
 		*/ 	,  title("Amazônia Legal", size(Medium)) 	/*

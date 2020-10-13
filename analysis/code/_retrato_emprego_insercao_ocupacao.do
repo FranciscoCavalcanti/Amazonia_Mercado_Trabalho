@@ -47,7 +47,8 @@ foreach v of var `colvar' {
 }
 
 
-set scheme s1color 
+* set scheme s1color 
+set scheme amz2030   
 	
 	graph pie n_empregadoCC 	/*
 		*/ 	n_militar 	/*
@@ -57,7 +58,7 @@ set scheme s1color
 		*/ 	n_empregadoSC 	/*
 		*/ 	if id == "Amazônia Legal" 	/*
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(on position(6) ring(1) order(1 2 3 4 5 6) cols(2) label(1 "Trabalhador com carteira") label(2 "Servidor público e militares")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Trabalhador sem carteira") size(small) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten1", replace) 	
@@ -70,7 +71,7 @@ set scheme s1color
 		*/ 	n_empregadoSC 	/*
 		*/ 	if id == "Resto do Brasil" 	/*
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
-		*/	pie(_all, color(%65) explode) 	/*
+		*/	pie(_all, color(%75) explode) 	/*
 		*/	legend(off position(9) ring(0) order(1 2 3 4 5) cols(1) label(1 "Com carteira") label(2 "")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Sem carteira") size(small) )	/*
 		*/	plabel(_all percent, size(Medium) format(%12.1f)  lstyle(p1solid) ) /*  
 		*/  saving("$tmp_dir\iten2", replace) 	
@@ -98,7 +99,8 @@ set scheme s1color
 	
 	
 //////// BAR /////////////////////
-set scheme s1color 
+* set scheme s1color 
+set scheme amz2030   
 	
 	graph bar n_empregadoCC 	/*
 		*/ 	n_militar 	/*
@@ -110,12 +112,12 @@ set scheme s1color
 		*/	,  title("Amazônia Legal", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
-		*/	bar(3, fcolor(%65)) 	/*
-		*/	bar(4, fcolor(%65)) 	/*
-		*/	bar(5, fcolor(%65)) 	/*
-		*/	bar(6, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
+		*/	bar(3, fcolor(%75)) 	/*
+		*/	bar(4, fcolor(%75)) 	/*
+		*/	bar(5, fcolor(%75)) 	/*
+		*/	bar(6, fcolor(%75)) 	/*
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
 		*/	legend(on position(11) ring(3) order(1 2 3 4 5 6) cols(2) label(1 "Trabalhador com carteira") label(2 "Servidor público e militares")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Trabalhador sem carteira") size(small) )	/*
@@ -131,12 +133,12 @@ set scheme s1color
 		*/	,  title("Resto do Brasil", size(Medium large)) 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
-		*/	bar(3, fcolor(%65)) 	/*
-		*/	bar(4, fcolor(%65)) 	/*
-		*/	bar(5, fcolor(%65)) 	/*
-		*/	bar(6, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
+		*/	bar(3, fcolor(%75)) 	/*
+		*/	bar(4, fcolor(%75)) 	/*
+		*/	bar(5, fcolor(%75)) 	/*
+		*/	bar(6, fcolor(%75)) 	/*
 		*/	yscale( axis(1) range() lstyle(none)  )	/* how y axis looks
 		*/	ylabel(#9, format(%12,0fc) angle(0) ) 	/*
 		*/	legend(off position(11) ring(3) order(1 2 3 4 5) cols(2) label(1 "Com carteira") label(2 "")  label(3 "Empregador") label(4 "Conta própria que contribui") label(5 "Conta própria que não contribui") label(6 "Sem carteira") size(small) )	/*
@@ -154,6 +156,7 @@ set scheme s1color
 	grc1leg "$tmp_dir\iten3" "$tmp_dir\iten4",  	/*
 	*/ 	legendfrom("$tmp_dir\iten3") 	/*
 	*/ 	title("") 	/*
+	*/	graphregion(fcolor(white)) 	/*	
 	*/ 	 	/* subtitle("Amazônia Legal vs. Resto do Brasil")
 	*/ 	 	/* note("Fonte: PNAD Contínua 2019")
 	*/

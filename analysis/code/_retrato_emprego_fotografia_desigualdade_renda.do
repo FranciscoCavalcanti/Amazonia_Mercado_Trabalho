@@ -67,7 +67,8 @@ foreach v of var `type' {
 *set scheme s2color 
 *set scheme burd5
 *set scheme mrc
-set scheme s1color 
+* set scheme s1color 
+set scheme amz2030  
 
 *preserve
 preserve 
@@ -83,8 +84,8 @@ preserve
 		*/ 	title("(%) < R$ 89,00", size(Medium)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -110,8 +111,8 @@ preserve
 		*/ 	title("(%) < R$ 178,00", size(Medium)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12.0fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -137,8 +138,8 @@ preserve
 		*/ 	title("GINI de RDPC", size(Medium)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12,2fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks
@@ -161,8 +162,8 @@ preserve
 		*/ 	title("GINI dos ocupados", size(Medium)) 	 	/*
 		*/	graphregion(fcolor(white)) 	/*
 		*/	bargap(10) 	/*	
-		*/	bar(1, fcolor(%65)) 	/*
-		*/	bar(2, fcolor(%65)) 	/*
+		*/	bar(1, fcolor(%75)) 	/*
+		*/	bar(2, fcolor(%75)) 	/*
 		*/ 	blabel(bar,format(%12,2fc) position(center) color(bg) size(Medium) ) 	/*
 		*/	xtitle() 	/*	
 		*/	yscale( axis(1) range( ) lstyle(none)  )	/* how y axis looks

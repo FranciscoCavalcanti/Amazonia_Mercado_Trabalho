@@ -1,0 +1,281 @@
+%_ PACKAGES __________________________________________________________________________ %
+
+    %__ INPUT/OUTPUT LANGUAGE _________________________________ %
+    \usepackage[brazil]{babel}
+        \addto\captionsbrazil{\renewcommand{\contentsname}{Índice}} % change the NAME of table of contents 
+
+    %\usepackage[utf8]{inputenc}
+    %\usepackage[default]{lato}
+    %    \renewcommand{\mddefault}{l} % switch default weight to light
+    %\usepackage[T1]{fontenc}
+    %\usepackage[utf8]{inputenc}
+    \usepackage{fontspec}
+
+        \setmainfont{Calibri} 
+    %\usepackage{indentfirst}
+
+
+    %__ MATH __________________________________________________ %
+    \usepackage{amsfonts}
+    \usepackage{amssymb}
+    \usepackage{amsmath}
+    \usepackage{amsthm}
+    \usepackage{bbm}
+
+    %__ GRAPHS & TABLES________________________________________ %
+    \usepackage{graphicx}
+    \usepackage{booktabs}
+    \usepackage{multirow}
+    \usepackage{array}
+    \usepackage{caption}
+    \usepackage{subcaption}
+    \usepackage[flushleft,online,para]{threeparttable}
+    \usepackage{multirow}
+    \usepackage{eso-pic} % important for \AddToShipoutPictureBG
+        \newcommand\AtPageUpperRight[1]{\AtPageUpperLeft{\makebox[\paperwidth][r]{#1}}}
+    \usepackage{tikz}
+
+    \usepackage{parskip}    % WHAT IS THIS FOR?
+
+    \usepackage{floatrow}
+        \floatsetup[table]{style=plaintop}  % LEAVE TABLE CAPTIONS AT THE TOP
+
+    \usepackage{tabularx}
+        \newcolumntype{Z}{>{\centering\arraybackslash}X}
+        \newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+    \usepackage{dcolumn}
+        \newcolumntype{d}[1]{D{.}{.}{#1}}
+
+    \usepackage{rotating}   % for **sideways**tables
+    \usepackage{pdflscape}
+
+    %__ BIBLIOGRAPHY __________________________________________ %
+    \usepackage[round,longnamesfirst]{natbib}
+        \renewcommand{\refname}{Referências bibliográficas}
+
+
+    %__ PDF, DISPLAY & PRODUCTIVITY ___________________________ %
+    \usepackage{xcolor}
+        \definecolor{darkblue}{rgb}{0,0,0.5}
+        \definecolor{marrom_amz2030}{RGB}{113,87,79}
+        \definecolor{verde_amz2030}{RGB}{77,158,80}
+        \definecolor{cinza_amz2030}{RGB}{65,64,66}
+        \definecolor{azul_amz2030}{RGB}{41,84,204}
+        \definecolor{vermelho_amz2030}{RGB}{219,65,62}
+
+    \usepackage{fancyhdr} % for text footer and header    
+
+    \usepackage[absolute,overlay]{textpos} % for text position    
+ 
+    \usepackage{hyperref}
+        \hypersetup{
+            colorlinks = true,
+            linkcolor = blue,
+            anchorcolor = blue,
+            citecolor = blue,
+            filecolor = blue,
+            urlcolor = blue,
+            pdfborder = 0 0 0,
+            pdfdisplaydoctitle = true,
+            pdfhighlight = /N,
+            pdfpagelayout = OneColumn,
+            pdfpagemode = UseNone,
+            pdfstartview = {FitH},
+            pdfauthor = {{Cavalcanti}},
+            pdftitle = {{}},
+            pdfsubject = {{}}
+        }
+
+    \usepackage[textsize=footnotesize, colorinlistoftodos, obeyDraft, textwidth=3cm]{todonotes}
+    \usepackage{geometry}
+        \geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=3cm}
+    \usepackage{setspace}
+        \onehalfspacing
+
+    \usepackage[bottom, multiple]{footmisc} % keep footnotes at the bottom of the page, and allow for multiple footnotes at one place.
+
+    \usepackage{verbatim}
+    \usepackage[normalem]{ulem} % strikethrough fonts
+    \usepackage{mathpazo}
+
+    %\usepackage{syntonly}   % if uncommented, this will prevent latex to produce
+    %\syntaxonly    %   any output. latex will only check for syntax.
+    %\usepackage[displaymath,tightpage]{preview}
+    %\graphicspath{{//graphs/}}
+
+    %__ APPENDIX _____________________________________________ %
+    \usepackage[toc,page]{appendix}
+
+    %__ COMMANDS _________________________________________________________________________ %
+    \newcommand{\mc}{\multicolumn}
+    \newcommand{\lbar}{\underline}
+    \newcommand{\ubar}{\overline}
+    \renewcommand{\contentsname}{Índice}
+        %\providecommand{\keywords}[1]{\textbf{\textit{Keywords---}} #1}
+        %\providecommand{\jelcodes}[1]{\textbf{\textit{JEL Classification---}} #1}
+
+    %__SECTION_COLOR___________________________________________________________%
+    \usepackage{sectsty}
+        \sectionfont{\textcolor{verde_amz2030}}
+        \subsectionfont{\textcolor{verde_amz2030}}
+        %\subsubsectionfont{\textcolor{verde_amz2030}}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%%  COVER PAGE   %%
+%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\coveramz}{
+\thispagestyle{empty} % no number page
+\AddToShipoutPictureBG*{\includegraphics[width=\paperwidth,height=\paperheight]{capa_amz2030_v2} }
+\AddToShipoutPictureFG*{ 
+    \AtPageLowerLeft{
+        \raisebox{0.5\height}{
+            \hspace{0.5cm}
+            \includegraphics[width = 2.84 cm]{logo_centro.png}
+            \hspace{3mm}
+            \includegraphics[width = 3.04 cm]{logo_cpi.png}
+            \hspace{3mm} 
+            \includegraphics[width = 2.44 cm]{logo_imazon.png}
+            \hspace{3mm}
+            \includegraphics[width = 0.99 cm]{logo_puc.png}
+            \hspace{3mm}
+        }
+    }
+    \AtPageUpperRight{
+        \raisebox{-5.5\height}{                         
+                \textcolor{marrom_amz2030}{
+                \textbf{
+                OUTUBRO 2020\hspace{1.2 cm}               
+                }
+                }          
+        }
+    }
+    \AtPageUpperRight{
+        \raisebox{-7.5\height}{                          
+                \textcolor{marrom_amz2030}{
+                \textbf{
+                N$^{\circ}$ 01\hspace{1.2 cm}
+                }
+                }          
+        }
+    }    
+}
+
+
+\begin{textblock*}{14cm}(1cm,20.75cm) % {block width} (coords) 
+{\fontsize{26}{28}\selectfont {\textcolor{marrom_amz2030}{\textbf{Mercado de trabalho na Amazônia Legal} \\ Uma análise comparativa com o resto do Brasil }}}
+\end{textblock*}
+
+\begin{textblock*}{3cm}(17.2cm,23.0cm) % {block width} (coords) 
+{\fontsize{11}{12}\selectfont {\textcolor{marrom_amz2030}{\textbf{  \begin{flushright} Outubro \\ 2020 \end{flushright} }}}}
+\end{textblock*}
+
+
+\raisebox{0.0\width}[0.9\textheight][0.1\width]{
+    \hspace{0.5cm}
+{\fontsize{26}{28}\selectfont {\textcolor{marrom_amz2030}{\textbf{Mercado de trabalho na Amazônia Legal} \\ Uma análise comparativa com o resto do Brasil }}}
+    \hspace{3mm}
+}
+
+%if you want something in the bottom of the page just use \vfill before that.
+\vfill
+}
+\makeatother
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  SECOND PAGE   %%
+%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\secondpageamz}{
+%\thispagestyle{empty} % no number page
+
+%\vspace*{.05\textheight}
+
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Autores}}}
+\newline
+
+Flávia  Alfenas \\
+PUC-Rio \\
+%\href{mailto:flaviaalfenas@yahoo.com.br}{\nolinkurl{flaviaalfenas@yahoo.com.br}}  \\
+\newline
+Francisco Cavalcanti \\
+PUC-Rio \\
+%\href{mailto:francisco.lima.cavalcanti@gmail.com}{\nolinkurl{francisco.lima.cavalcanti@gmail.com}} \\
+\newline
+Gustavo Gonzaga \\
+PUC-Rio \\
+%\href{mailto:gmgonzaga2@gmail.com}{\nolinkurl{gmgonzaga2@gmail.com}} \\
+\newline
+
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Agradecimentos}}}
+\newline
+
+{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lorem nunc, laoreet nec neque at, efficitur vestibulum lectus. Ut non molestie metus. In gravida dapibus nunc, quis ultricies nisi imperdiet quis. Pellentesque at metus eu est pharetra tristique. In sed accumsan justo. Donec vel libero porta, pharetra nibh ac, ultricies neque}
+\newline
+
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{O que é Amazônia 2030}}} 
+\newline
+
+{O projeto \textbf{Amazônia 2030} é uma iniciativa de pesquisadores brasileiros para desenvolver um plano de ações para a Amazônia brasileira. Nosso objetivo é que a região tenha condições de alcançar um patamar maior de desenvolvimento econômico e humano e atingir o uso sustentável dos recursos naturais em 2030.}
+\newline
+
+{\fontsize{13}{15.6}\selectfont  \textcolor{verde_amz2030}{\textbf{Palavras-chave}}} 
+\newline
+
+{Amazônia Legal, Mercado de trabalho}
+\newline
+
+
+
+%if you want something in the bottom of the page just use \vfill before that.
+
+\vfill
+
+\AddToShipoutPictureFG*{
+    \AtPageLowerLeft{
+        \raisebox{1.1\height}{
+            \hspace{0.5cm}
+            \includegraphics[width = 1.84 cm]{logo_licenca.png}
+        }
+    }
+}
+
+
+
+\thispagestyle{fancyplain} % no number page with footer
+%\pagenumbering{gobble} 
+\chead{}
+\rhead{}
+\lhead{}
+\cfoot{}
+\rfoot{}
+\lfoot{\fontsize{9}{11.7pt}\selectfont  \textcolor{cinza_amz2030}{ Conteúdo sob licença Creative Commons Atribuição 4.0 Internacional. Os textos desta publicação podem ser reproduzidos no todo ou em parte desde que a fonte e os respectivos autores sejam citados.}}
+
+
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%
+%%  END PAGE    %%
+%%%%%%%%%%%%%%%%%%%%
+\makeatletter
+\newcommand{\finalpageamz}{
+\vspace*{.35\textheight}
+\begin{center}
+{\fontsize{24}{24}\selectfont  \textcolor{marrom_amz2030}{ www.amazonia2030.org.br }}
+\end{center}
+%if you want something in the bottom of the page just use \vfill before that.
+\vfill
+}
+\makeatother
+
+
+
+%%%%%%%%%%%%%%%%%%%%
+%%  DEFAULT PAGE   %%
+%%%%%%%%%%%%%%%%%%%%
+

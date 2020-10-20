@@ -3,7 +3,7 @@
 @InProceedings{Wong2005,
   author    = {Wong, L and Carvalho, Jos{\'e} Alberto M de},
   booktitle = {XXV IUSSP general population conference. Tours, France},
-  title     = {Demographic bonuses and challenges of the age structural transition in Brazil},
+  title     = {Demographic bonuses and challenges of the age structural transition in {B}razil},
   year      = {2005},
   pages     = {18--23},
 }
@@ -28,7 +28,7 @@
 @Article{Teixeira1996,
   author  = {Teixeira, P},
   journal = {Cadernos de Estudos Sociais},
-  title   = {Níveis e tendências da mortalidade na Região Norte},
+  title   = {Níveis e tendências da mortalidade na Região {N}orte},
   year    = {1996},
   month   = jul,
   number  = {2},
@@ -39,7 +39,7 @@
 @Article{Turra2009,
   author  = {Turra, Cassio M and Queiroz, Bernardo L},
   journal = {Notas de poblaci{\'o}n},
-  title   = {Antes de que sea demasiado tarde: transici{\'o}n demogr{\'a}fica, mano de obra disponible y problemas de la seguridad social en el Brasil},
+  title   = {Antes de que sea demasiado tarde: transici{\'o}n demogr{\'a}fica, mano de obra disponible y problemas de la seguridad social en el {B}rasil},
   year    = {2009},
   number  = {86},
 }
@@ -47,7 +47,7 @@
 @Article{Alves2015,
   author  = {Alves, Jos{\'e} Eust{\'a}quio Diniz},
   journal = {Revista Longeviver},
-  title   = {O fim do b{\^o}nus demogr{\'a}fico e o processo de envelhecimento no Brasil.},
+  title   = {O fim do b{\^o}nus demogr{\'a}fico e o processo de envelhecimento no {B}rasil.},
   year    = {2015},
   number  = {45},
 }
@@ -80,7 +80,7 @@
 @Unpublished{DiretoriaIBGE,
   author = {IBGE},
   note   = {IBGE. Diretoria de Pesquisas. Coordenação de População e Indicadores Sociais. Gerência de Estudos e Análises da Dinâmica Demográfica},
-  title  = {Projeção da população do Brasil e Unidades da Federação por sexo e idade para o período 2010-2060},
+  title  = {Projeção da população do {B}rasil e Unidades da Federação por sexo e idade para o período 2010-2060},
   url    = {https://sidra.ibge.gov.br/home/pms/brasil},
 }
 
@@ -93,7 +93,7 @@
 @Article{Corseuil2019,
   author   = {Carlos Henrique Corseuil and Miguel N. Foguel and Gustavo Gonzaga},
   journal  = {Labour Economics},
-  title    = {Apprenticeship as a stepping stone to better jobs: Evidence from Brazilian matched employer-employee data},
+  title    = {Apprenticeship as a stepping stone to better jobs: Evidence from {B}razilian matched employer-employee data},
   year     = {2019},
   issn     = {0927-5371},
   pages    = {177 - 194},
@@ -104,7 +104,32 @@
   url      = {http://www.sciencedirect.com/science/article/pii/S0927537119300089},
 }
 
-@Article{,
+@Article{Rajao2020,
+  author  = {Rajão, Raoni and Soares-Filho, Britaldo and Nunes, Felipe and Börner, Jan and Machado, Lilian and Assis, Débora and Oliveira, Amanda and Pinto, Luis and Ribeiro, Vivian and Rausch, Lisa and Gibbs, Holly and Figueira, Danilo},
+  journal = {Science},
+  title   = {The rotten apples of {B}razil's agribusiness},
+  year    = {2020},
+  month   = jul,
+  number  = {6501},
+  pages   = {246},
+  volume  = {369},
+  file    = {:Science/2020 Assis et al - The rotten aples of brazil agribusiness.pdf:PDF},
+  url     = {http://science.sciencemag.org/content/369/6501/246.abstract},
+}
+
+@Article{Staal2020,
+  author   = {Staal, Arie and Fetzer, Ingo and Wang-Erlandsson, Lan and Bosmans, Joyce H. C. and Dekker, Stefan C. and van Nes, Egbert H. and Rockström, Johan and Tuinenburg, Obbe A.},
+  journal  = {Nature Communications},
+  title    = {Hysteresis of tropical forests in the 21st century},
+  year     = {2020},
+  issn     = {2041-1723},
+  number   = {1},
+  pages    = {4978},
+  volume   = {11},
+  abstract = {Tropical forests modify the conditions they depend on through feedbacks at different spatial scales. These feedbacks shape the hysteresis (history-dependence) of tropical forests, thus controlling their resilience to deforestation and response to climate change. Here, we determine the emergent hysteresis from local-scale tipping points and regional-scale forest-rainfall feedbacks across the tropics under the recent climate and a severe climate-change scenario. By integrating remote sensing, a global hydrological model, and detailed atmospheric moisture tracking simulations, we find that forest-rainfall feedback expands the geographic range of possible forest distributions, especially in the Amazon. The Amazon forest could partially recover from complete deforestation, but may lose that resilience later this century. The Congo forest currently lacks resilience, but is predicted to gain it under climate change, whereas forests in Australasia are resilient under both current and future climates. Our results show how tropical forests shape their own distributions and create the climatic conditions that enable them.},
+  file     = {:Nature/2020 - Hysteresis of tropical forests in the 21st century.pdf:PDF},
+  refid    = {Staal2020},
+  url      = {https://doi.org/10.1038/s41467-020-18728-7},
 }
 
 @Comment{jabref-meta: databaseType:bibtex;}

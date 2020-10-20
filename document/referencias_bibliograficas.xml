@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<b:Sources xmlns:b="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" xmlns="http://schemas.openxmlformats.org/officeDocument/2006/bibliography" SelectedStyle="">
+    <b:Source>
+        <b:BIBTEX_Entry>unpublished</b:BIBTEX_Entry>
+        <b:Comments>IBGE. Diretoria de Pesquisas. Coordenação de População e Indicadores Sociais. Gerência de Estudos e Análises da Dinâmica Demográfica</b:Comments>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Projeção da população do Brasil e Unidades da Federação por sexo e idade para o período 2010-2060</b:Title>
+        <b:Tag>DiretoriaIBGE</b:Tag>
+        <b:URL>https://sidra.ibge.gov.br/home/pms/brasil</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>IBGE</b:Last>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:ThesisType>unpublished</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2020</b:Year>
+        <b:Volume>369</b:Volume>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>The rotten apples of Brazil's agribusiness</b:Title>
+        <b:Tag>Rajao2020</b:Tag>
+        <b:URL>http://science.sciencemag.org/content/369/6501/246.abstract</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Rajão</b:Last>
+                        <b:First>Raoni</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Soares-Filho</b:Last>
+                        <b:First>Britaldo</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Nunes</b:Last>
+                        <b:First>Felipe</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Börner</b:Last>
+                        <b:First>Jan</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Machado</b:Last>
+                        <b:First>Lilian</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Assis</b:Last>
+                        <b:First>Débora</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Oliveira</b:Last>
+                        <b:First>Amanda</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Pinto</b:Last>
+                        <b:First>Luis</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Ribeiro</b:Last>
+                        <b:First>Vivian</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Rausch</b:Last>
+                        <b:First>Lisa</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Gibbs</b:Last>
+                        <b:First>Holly</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Figueira</b:Last>
+                        <b:First>Danilo</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Pages>246</b:Pages>
+        <b:Month>7</b:Month>
+        <b:JournalName>Science</b:JournalName>
+        <b:Number>6501</b:Number>
+    </b:Source>
+    <b:Source>
+        <b:BIBTEX_Entry>unpublished</b:BIBTEX_Entry>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Data Zoom, PUC-Rio - Departamento de Economia</b:Title>
+        <b:Tag>datazoom</b:Tag>
+        <b:URL>https://sidra.ibge.gov.br/home/pms/brasil</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:Corporate>Data Zoom</b:Corporate>
+            </b:Author>
+        </b:Author>
+        <b:ThesisType>unpublished</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2015</b:Year>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>O fim do bônus demográfico e o processo de envelhecimento no Brasil.</b:Title>
+        <b:Tag>Alves2015</b:Tag>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Alves</b:Last>
+                        <b:Middle>Eustáquio Diniz</b:Middle>
+                        <b:First>José</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:JournalName>Revista Longeviver</b:JournalName>
+        <b:Number>45</b:Number>
+    </b:Source>
+    <b:Source>
+        <b:Year>2020</b:Year>
+        <b:Volume>11</b:Volume>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>Hysteresis of tropical forests in the 21st century</b:Title>
+        <b:Tag>Staal2020</b:Tag>
+        <b:BIBTEX_Abstract>Tropical forests modify the conditions they depend on through feedbacks at different spatial scales. These feedbacks shape the hysteresis (history-dependence) of tropical forests, thus controlling their resilience to deforestation and response to climate change. Here, we determine the emergent hysteresis from local-scale tipping points and regional-scale forest-rainfall feedbacks across the tropics under the recent climate and a severe climate-change scenario. By integrating remote sensing, a global hydrological model, and detailed atmospheric moisture tracking simulations, we find that forest-rainfall feedback expands the geographic range of possible forest distributions, especially in the Amazon. The Amazon forest could partially recover from complete deforestation, but may lose that resilience later this century. The Congo forest currently lacks resilience, but is predicted to gain it under climate change, whereas forests in Australasia are resilient under both current and future climates. Our results show how tropical forests shape their own distributions and create the climatic conditions that enable them.</b:BIBTEX_Abstract>
+        <b:URL>https://doi.org/10.1038/s41467-020-18728-7</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Staal</b:Last>
+                        <b:First>Arie</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Fetzer</b:Last>
+                        <b:First>Ingo</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Wang-Erlandsson</b:Last>
+                        <b:First>Lan</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Bosmans</b:Last>
+                        <b:Middle>H. C.</b:Middle>
+                        <b:First>Joyce</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Dekker</b:Last>
+                        <b:Middle>C.</b:Middle>
+                        <b:First>Stefan</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>van Nes</b:Last>
+                        <b:Middle>H.</b:Middle>
+                        <b:First>Egbert</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Rockström</b:Last>
+                        <b:First>Johan</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Tuinenburg</b:Last>
+                        <b:Middle>A.</b:Middle>
+                        <b:First>Obbe</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Pages>4978</b:Pages>
+        <b:JournalName>Nature Communications</b:JournalName>
+        <b:Number>1</b:Number>
+        <b:StandardNumber> ISSN: 2041-1723</b:StandardNumber>
+    </b:Source>
+    <b:Source>
+        <b:Year>1996</b:Year>
+        <b:Volume>12</b:Volume>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>Níveis e tendências da mortalidade na Região Norte</b:Title>
+        <b:Tag>Teixeira1996</b:Tag>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Teixeira</b:Last>
+                        <b:First>P.</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Pages>341-356</b:Pages>
+        <b:Month>7</b:Month>
+        <b:JournalName>Cadernos de Estudos Sociais</b:JournalName>
+        <b:Number>2</b:Number>
+    </b:Source>
+    <b:Source>
+        <b:Year>2010</b:Year>
+        <b:BIBTEX_Entry>unpublished</b:BIBTEX_Entry>
+        <b:Comments>Sidra: sistema IBGE de recuperação automática</b:Comments>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Censo Demorgráfico 2010: características da população e dos domicílios: resultados do universo</b:Title>
+        <b:Tag>IBGE2010</b:Tag>
+        <b:URL>https://sidra.ibge.gov.br/home/pms/brasil</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>IBGE</b:Last>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:ThesisType>unpublished</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2010</b:Year>
+        <b:BIBTEX_Entry>techreport</b:BIBTEX_Entry>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Estrutura etária, bônus demográfico e população economicamente ativa no Brasil: cenários de longo prazo e suas implicações para o mercado de trabalho</b:Title>
+        <b:Tag>Alves2010</b:Tag>
+        <b:Institution>Instituto de Pesquisa Econômica Aplicada (IPEA)</b:Institution>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Alves</b:Last>
+                        <b:Middle>Eustáquio Diniz</b:Middle>
+                        <b:First>José</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Vasconcelos</b:Last>
+                        <b:Middle>de Santana</b:Middle>
+                        <b:First>Daniel</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Alves de Carvalho</b:Last>
+                        <b:First>Angelita</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Number>1528</b:Number>
+        <b:City>Brasília</b:City>
+        <b:ThesisType>Tech. rep.</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2018</b:Year>
+        <b:BIBTEX_Entry>unpublished</b:BIBTEX_Entry>
+        <b:Comments>Sidra: sistema IBGE de recuperação automática</b:Comments>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Pesquisa Nacional por Amostra de Domicílios</b:Title>
+        <b:Tag>IBGE2018</b:Tag>
+        <b:URL>https://sidra.ibge.gov.br/home/pms/brasil</b:URL>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>IBGE</b:Last>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:ThesisType>unpublished</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2019</b:Year>
+        <b:Volume>57</b:Volume>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>Apprenticeship as a stepping stone to better jobs: Evidence from Brazilian matched employer-employee data</b:Title>
+        <b:Tag>Corseuil2019</b:Tag>
+        <b:BIBTEX_Abstract>The objective of this paper is to evaluate the Brazilian Apprenticeship program adopted at a large scale since 2000. In particular, we investigate whether the program is a better stepping stone to permanent jobs when compared to other forms of temporary jobs. Similar to other apprenticeship initiatives around the world, the Brazilian program trains young workers under special temporary contracts aiming to help them successfully complete the transition from school to work. We make use of a matched employee-employer dataset covering all formal employees in Brazil, including apprentices. Our identification strategy exploits a discontinuity in the eligibility to enter the program in the early 2000s, when 17 was the age limit to take part in the program. This strategy allows us to consider selection based on unobservable characteristics. We find that the program increases the probability of employment in permanent jobs and decreases turnover rates and formal labor market experience in 2-3- and 4-5-year horizons. These results are consistent with a positive effect of the program on reservation utilities of workers and on their efforts to expand skills. This is also confirmed by the data as we find substantial impacts on schooling attainment. We also find evidence that the skill requirements of the apprentices’ occupation affect the likelihood of obtaining an open-ended job in the short run and the education achievement in the medium run. The results also evince much larger effects of the program for workers who had their first job in large firms.</b:BIBTEX_Abstract>
+        <b:BIBTEX_KeyWords>Apprenticeship, Youth-targeted training program, Adjusted matching</b:BIBTEX_KeyWords>
+        <b:URL>http://www.sciencedirect.com/science/article/pii/S0927537119300089</b:URL>
+        <b:DOI>https://doi.org/10.1016/j.labeco.2019.02.002</b:DOI>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Corseuil</b:Last>
+                        <b:Middle>Henrique</b:Middle>
+                        <b:First>Carlos</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Foguel</b:Last>
+                        <b:Middle>N.</b:Middle>
+                        <b:First>Miguel</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Gonzaga</b:Last>
+                        <b:First>Gustavo</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Pages>177-194</b:Pages>
+        <b:JournalName>Labour Economics</b:JournalName>
+        <b:StandardNumber> ISSN: 0927-5371</b:StandardNumber>
+    </b:Source>
+    <b:Source>
+        <b:Year>2019</b:Year>
+        <b:Volume>36</b:Volume>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>A transição da fecundidade no Brasil ao longo do século XX–uma perspectiva regional</b:Title>
+        <b:Tag>Goncalves2019</b:Tag>
+        <b:Publisher>SciELO Brasil</b:Publisher>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Gonçalves</b:Last>
+                        <b:Middle>Quaresma</b:Middle>
+                        <b:First>Guilherme</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Carvalho</b:Last>
+                        <b:Middle>Alberto Magno de</b:Middle>
+                        <b:First>José</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Wong</b:Last>
+                        <b:Middle>Lı́dia Rodrı́guez</b:Middle>
+                        <b:First>Laura</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Turra</b:Last>
+                        <b:Middle>Maldonado</b:Middle>
+                        <b:First>Cássio</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:JournalName>Revista Brasileira de Estudos de População</b:JournalName>
+    </b:Source>
+    <b:Source>
+        <b:Year>2020</b:Year>
+        <b:BIBTEX_Entry>unpublished</b:BIBTEX_Entry>
+        <b:SourceType>Report</b:SourceType>
+        <b:Title>Pesquisa nacional por amostra de domicílios contínua : notas técnicas : versão 1.8</b:Title>
+        <b:Tag>IBGE2020</b:Tag>
+        <b:Institution>IBGE - Instituto Brasileiro de Geografia e Estatística. Coordenação de Trabalho e Rendimento</b:Institution>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>IBGE</b:Last>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:City>Rio de Janeiro</b:City>
+        <b:ThesisType>unpublished</b:ThesisType>
+    </b:Source>
+    <b:Source>
+        <b:Year>2005</b:Year>
+        <b:BIBTEX_Entry>inproceedings</b:BIBTEX_Entry>
+        <b:SourceType>ConferenceProceedings</b:SourceType>
+        <b:Title>Demographic bonuses and challenges of the age structural transition in Brazil</b:Title>
+        <b:Tag>Wong2005</b:Tag>
+        <b:BookTitle>XXV IUSSP general population conference. Tours, France</b:BookTitle>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Wong</b:Last>
+                        <b:First>L.</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Carvalho</b:Last>
+                        <b:Middle>Alberto M. de</b:Middle>
+                        <b:First>José</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Pages>18–23</b:Pages>
+        <b:ConferenceName>XXV IUSSP general population conference. Tours, France</b:ConferenceName>
+    </b:Source>
+    <b:Source>
+        <b:Year>1989</b:Year>
+        <b:BIBTEX_Entry>book</b:BIBTEX_Entry>
+        <b:SourceType>Book</b:SourceType>
+        <b:Title>Polı́ticas de governo e regulação da fecundidade: conseqüências não antecipadas e efeitos perversos</b:Title>
+        <b:Tag>Faria1989</b:Tag>
+        <b:Publisher>ANPOCS. Ciências sociais hoje. São Paulo: Anpocs/Vértice</b:Publisher>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Faria</b:Last>
+                        <b:First>Vilmar</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:Number>p. 62-103</b:Number>
+    </b:Source>
+    <b:Source>
+        <b:Year>2009</b:Year>
+        <b:BIBTEX_Entry>article</b:BIBTEX_Entry>
+        <b:SourceType>JournalArticle</b:SourceType>
+        <b:Title>Antes de que sea demasiado tarde: transición demográfica, mano de obra disponible y problemas de la seguridad social en el Brasil</b:Title>
+        <b:Tag>Turra2009</b:Tag>
+        <b:Author>
+            <b:Author>
+                <b:NameList>
+                    <b:Person>
+                        <b:Last>Turra</b:Last>
+                        <b:Middle>M.</b:Middle>
+                        <b:First>Cassio</b:First>
+                    </b:Person>
+                    <b:Person>
+                        <b:Last>Queiroz</b:Last>
+                        <b:Middle>L.</b:Middle>
+                        <b:First>Bernardo</b:First>
+                    </b:Person>
+                </b:NameList>
+            </b:Author>
+        </b:Author>
+        <b:JournalName>Notas de población</b:JournalName>
+        <b:Number>86</b:Number>
+    </b:Source>
+</b:Sources>

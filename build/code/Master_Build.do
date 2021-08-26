@@ -109,7 +109,7 @@ export excel using "$output_dir\_retrato_emprego_resto_brasil.xls", /*
 
 global area_geografica = "Amazônia Legal"
 
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	*sample 1
@@ -121,7 +121,7 @@ forvalues yr = 2012(1)2020{
 
 * append temporary data base
 clear
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
 }
@@ -137,7 +137,7 @@ export excel using "$output_dir\_estrutura_emprego_amazonia_legal.xls", /*
 
 global area_geografica = "Resto do Brasil"
 
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	*sample 1
@@ -149,7 +149,7 @@ forvalues yr = 2012(1)2020{
 
 * append temporary data base
 clear
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
 }
@@ -171,7 +171,7 @@ export excel using "$output_dir\_estrutura_emprego_resto_brasil.xls", /*
 
 global area_geografica = "Amazônia Legal"
 
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	*sample 1
@@ -183,7 +183,7 @@ forvalues yr = 2012(1)2020{
 
 * append temporary data base
 clear
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	append using "$tmp_dir\_temp_estrutura_renda_PNADC`yr'.dta"
 }
@@ -199,7 +199,7 @@ export excel using "$output_dir\_estrutura_renda_amazonia_legal.xls", /*
 
 global area_geografica = "Resto do Brasil"
 
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	use "$input_advanc\PNADC`yr'.dta", clear
 	* run code
@@ -210,7 +210,7 @@ forvalues yr = 2012(1)2020{
 
 * append temporary data base
 clear
-forvalues yr = 2012(1)2020{
+forvalues yr = 2012(1)2021{
 	* call data
 	append using "$tmp_dir\_temp_estrutura_renda_PNADC`yr'.dta"
 }

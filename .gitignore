@@ -120,11 +120,6 @@ build/output/_composicao_demografica_amazonia_legal_domicilio_rural.xls
 build/output/_composicao_demografica_amazonia_legal_domicilio_rural.dta
 build/output/_composicao_demografica_amazonia_legal_area_regiao_metropolitana.xls
 build/output/_composicao_demografica_amazonia_legal_area_regiao_metropolitana.dta
-*.gph
-*.png
-*.xls
-*.xlsx
-*.png
 build/output/_teste_resto_amz.dta
 build/code/teste.do
 build/output/_teste_resto_brasil.dta
@@ -135,11 +130,7 @@ build/output/_teste_resto_brasil.dta
 *.aux
 *.nav
 *.snm
-*.gph
 *.log
-*.dta
-*.dta
-*.dta
 *.dta
 build/output/_transicao_ocupacao_resto_brasil_trimestral.dta
 build/output/_transicao_ocupacao_resto_brasil_matriz.dta
@@ -150,7 +141,6 @@ build/output/_estrutura_renda_resto_brasil.dta
 build/output/_estrutura_renda_amazonia_legal.dta
 build/output/_estrutura_emprego_resto_brasil.dta
 build/output/_estrutura_emprego_amazonia_legal.dta
-.gph
 document/tex_code/AMZ2030_Latex_Template.pdf
 document/tex_code/AMZ2030_Template.pdf
 document/AMZ2030 Report Template.docx

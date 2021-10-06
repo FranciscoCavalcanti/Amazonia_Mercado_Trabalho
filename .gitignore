@@ -131,7 +131,6 @@ build/output/_teste_resto_brasil.dta
 *.nav
 *.snm
 *.log
-*.dta
 build/output/_transicao_ocupacao_resto_brasil_trimestral.dta
 build/output/_transicao_ocupacao_resto_brasil_matriz.dta
 build/output/_transicao_ocupacao_amazonia_legal_trimestral.dta
@@ -170,3 +169,10 @@ document/bibliografia.bib.bak
 document/bibliografia.bib.bak
 document/AMZ2030 Report - Mercado de Trabalho na Amazonia_20Out2020.pdf
 document/AMZ2030 Report - Mercado de Trabalho na Amazonia.pdf
+build/output/_desigualdade_renda_amazonia_legal.dta
+build/output/_desigualdade_renda_resto_brasil.dta
+build/tmp/_temp_estrutura_emprego_PNADC2021.dta
+build/output/_transicao_ocupacao_amazonia_legal_anual.dta
+build/output/_transicao_ocupacao_amazonia_legal_matriz_anual.dta
+build/output/_transicao_ocupacao_resto_brasil_anual.dta
+build/output/_transicao_ocupacao_resto_brasil_matriz_anual.dta

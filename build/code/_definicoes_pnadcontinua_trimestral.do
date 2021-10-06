@@ -56,6 +56,53 @@ if "$area_geografica" == "Amazônia Legal"   {
 	
 	local area = "amazonia_legal"
 }
+if "$area_geografica" == "Rondônia"   {
+    keep if UF == 11 	/* 	Rondônia
+	*/ 
+	
+	local area = "rondonia"
+}
+if "$area_geografica" == "Acre"   {
+    keep if UF == 12 	/* Acre
+	*/ 	
+
+	local area = "acre"
+}
+if "$area_geografica" == "Amazonas"   {
+    keep if UF == 13 	/* Amazonas
+	*/ 	
+
+	local area = "amazonas"
+}
+if "$area_geografica" == "Roraima"   {
+    keep if UF == 14 	/* Roraima
+	*/ 	
+
+	local area = "roraima"
+}
+if "$area_geografica" == "Pará"   {
+    keep if UF == 15 	/* Pará
+	*/ 	
+	local area = "para"
+}
+if "$area_geografica" == "Amapá"   {
+    keep if UF == 16 	/* Amapá
+	*/ 	
+
+	local area = "amapa"
+}
+if "$area_geografica" == "Tocantins"   {
+    keep if UF == 17 	/* Tocantins
+	*/ 	
+
+	local area = "tocantins"
+}
+if "$area_geografica" == "Mato Grosso"   {
+    keep if UF == 51 	/* Mato Grosso
+	*/ 	
+
+	local area = "mato_grosso"
+}
 else if "$area_geografica" == "Resto do Brasil"   {
     drop if UF == 11 	/* 	Rondônia
 	*/ 	| UF == 12 	/* Acre

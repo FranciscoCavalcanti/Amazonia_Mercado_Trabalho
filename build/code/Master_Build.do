@@ -126,10 +126,10 @@ forvalues yr = 2012(1)2021{
 	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
 }
 
+cap gen idin = "amazonia_legal"
+
 * save in the output directory
 save "$output_dir\_estrutura_emprego_amazonia_legal.dta", replace
-export excel using "$output_dir\_estrutura_emprego_amazonia_legal.xls", /*
-	*/	firstrow(varlabels) replace
 
 **********************
 **	Resto do Brasil	**
@@ -154,10 +154,216 @@ forvalues yr = 2012(1)2021{
 	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
 }
 
+cap gen idin = "resto_brasil"
+
 * save in the output directory
 save "$output_dir\_estrutura_emprego_resto_brasil.dta", replace
 export excel using "$output_dir\_estrutura_emprego_resto_brasil.xls", /*
 	*/	firstrow(varlabels) replace
+
+**********************
+**	Rondônia	**
+**********************
+
+global area_geografica = "Rondônia"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "rondonia"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_rondonia.dta", replace	
+
+**********************
+**	Acre	**
+**********************
+
+global area_geografica = "Acre"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "acre"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_acre.dta", replace
+
+
+**********************
+**	Amazonas	**
+**********************
+
+global area_geografica = "Amazonas"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "amazonas"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_amazonas.dta", replace
+
+**********************
+**	Roraima	**
+**********************
+
+global area_geografica = "Roraima"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "roraima"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_roraima.dta", replace
+
+**********************
+**	Pará	**
+**********************
+
+global area_geografica = "Pará"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "para"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_para.dta", replace
+
+**********************
+**	Amapá	**
+**********************
+
+global area_geografica = "Amapá"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "amapa"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_amapa.dta", replace
+
+**********************
+**	Tocantins	**
+**********************
+
+global area_geografica = "Tocantins"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "tocantins"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_tocantins.dta", replace
 
 //////////////////////////////////////////////
 //	

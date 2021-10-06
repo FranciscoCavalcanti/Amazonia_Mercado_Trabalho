@@ -22,6 +22,17 @@ cap drop iten*
 *sample 2
 
 /////////////////////////////////////////////////////////
+//	População total
+/////////////////////////////////////////////////////////
+
+* Número total
+gen iten1 = 1 * V1028 
+by Ano Trimestre, sort: egen n_populacao = total(iten1)
+replace n_populacao = round(n_populacao)
+label variable n_populacao "Número total de pessoas"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
 //	A) Taxa de desemprego
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if desocupado == 1

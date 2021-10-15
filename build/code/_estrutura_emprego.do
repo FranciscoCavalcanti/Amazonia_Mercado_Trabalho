@@ -369,6 +369,62 @@ foreach v of var `faixa' {
 	replace n_de_nemnem_`v' = round(n_de_nemnem_`v')
 	label variable n_de_nemnem_`v' "Número de nem-nem"
 	cap drop iten*	
+	
+	/////////////////////////////////////////////////////////
+	//	Número de empregadoSC
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if empregadoSC == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_empregadoSC_`v' = total(iten1)
+	replace n_de_empregadoSC_`v' = round(n_de_empregadoSC_`v')
+	label variable n_de_empregadoSC_`v' "Número "
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de empregadoCC
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if empregadoCC == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_empregadoCC_`v' = total(iten1)
+	replace n_de_empregadoCC_`v' = round(n_de_empregadoCC_`v')
+	label variable n_de_empregadoCC_`v' "Número "
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de cpropriaC
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if cpropriaC == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_cpropriaC_`v' = total(iten1)
+	replace n_de_cpropriaC_`v' = round(n_de_cpropriaC_`v')
+	label variable n_de_cpropriaC_`v' "Número "
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de cpropriaNc
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if cpropriaNc == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_cpropriaNc_`v' = total(iten1)
+	replace n_de_cpropriaNc_`v' = round(n_de_cpropriaNc_`v')
+	label variable n_de_cpropriaNc_`v' "Número "
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de empregador
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if empregador == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_empregador_`v' = total(iten1)
+	replace n_de_empregador_`v' = round(n_de_empregador_`v')
+	label variable n_de_empregador_`v' "Número "
+	cap drop iten*
+	
+	/////////////////////////////////////////////////////////
+	//	Número de militar
+	/////////////////////////////////////////////////////////
+	gen iten1 = 1 * V1028 if militar == 1 & `v'==1
+	by Ano Trimestre, sort: egen n_de_militar_`v' = total(iten1)
+	replace n_de_militar_`v' = round(n_de_militar_`v')
+	label variable n_de_militar_`v' "Número "
+	cap drop iten*
+	
+
 }
 
 **************************************

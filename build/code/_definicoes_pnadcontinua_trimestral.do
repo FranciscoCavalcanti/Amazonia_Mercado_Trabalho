@@ -122,8 +122,7 @@ else if "$area_geografica" == "Resto do Brasil"   {
 **********************************
 
 * rendimento de todos os trabalhos
-gen rendatotal =  VD4019 	// Rendimento mensal habitual de todos os trabalhos
-replace rendatotal = 0 if rendatotal ==. 
+gen rendatotal =  VD4019 	// Rendimento mensal habitual de todos os trabalhos 
 
 * pessoa ocupado
 gen ocupado = 1 if VD4002 == 1 	// Pessoas ocupadas 

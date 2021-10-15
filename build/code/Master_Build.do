@@ -19,14 +19,20 @@ set more off, perm
 // caminhos (check your username by typing "di c(username)" in Stata) ----
 if "`c(username)'" == "Francisco"   {
     global ROOT "C:\Users\Francisco\Dropbox"
+	global RAIZ "C:\Users\Francisco\Dropbox"	
 }
 else if "`c(username)'" == "f.cavalcanti"   {
     global ROOT "C:\Users\Francisco\Dropbox"
+	global RAIZ "C:\Users\Francisco\Dropbox"	
 }	
+else if "`c(username)'" == "DELL"   {
+    global ROOT "C:/Users/DELL/Documents/GitHub"	
+	global RAIZ "D:/Dropbox"	
+}
 
-global input_basiic		"${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\basico"  
-global input_advanc     "${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\avancado"
-global input_pnadanual	"${ROOT}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_anual_20191016\Stata"      
+global input_basiic		"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\basico"  
+global input_advanc     "${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\avancado"
+global input_pnadanual	"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_anual_20191016\Stata"      
 global tmp_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\tmp"   
 global code_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\code"   
 global output_dir		"${ROOT}\Amazonia_Mercado_Trabalho\build\output"   

@@ -371,6 +371,36 @@ cap gen idin = "tocantins"
 * save in the output directory
 save "$output_dir\_estrutura_emprego_tocantins.dta", replace
 
+
+**********************
+**	Mato Grosso	**
+**********************
+
+global area_geografica = "Mato Grosso"
+
+forvalues yr = 2012(1)2021{
+	* call data
+	use "$input_advanc\PNADC`yr'.dta", clear
+	*sample 1
+	* run code
+	do "$code_dir\_estrutura_emprego"
+	* save as temporary
+	save "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta", replace
+}
+
+* append temporary data base
+clear
+forvalues yr = 2012(1)2021{
+	* call data
+	append using "$tmp_dir\_temp_estrutura_emprego_PNADC`yr'.dta"
+}
+
+*
+cap gen idin = "matogrosso"
+
+* save in the output directory
+save "$output_dir\_estrutura_emprego_matogrosso.dta", replace
+
 //////////////////////////////////////////////
 //	
 //	2) Descrever a estrutura da renda

@@ -22,8 +22,8 @@ if "`c(username)'" == "Francisco"   {
 	global RAIZ "C:\Users\Francisco\Dropbox"	
 }
 else if "`c(username)'" == "f.cavalcanti"   {
-    global ROOT "C:\Users\Francisco\Dropbox"
-	global RAIZ "C:\Users\Francisco\Dropbox"	
+    global ROOT "C:\Users\f.cavalcanti\Documents\GitHub"
+	global RAIZ "C:\Users\f.cavalcanti\Dropbox"	
 }	
 else if "`c(username)'" == "DELL"   {
     global ROOT "C:/Users/DELL/Documents/GitHub"	
@@ -31,7 +31,7 @@ else if "`c(username)'" == "DELL"   {
 }
 
 global input_basiic		"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\basico"  
-global input_advanc     "${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\avancado"
+global input_advanc     "${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20211130\pnad_painel\avancado"
 global input_pnadanual	"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_anual_20191016\Stata"      
 global tmp_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\tmp"   
 global code_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\code"   
@@ -675,7 +675,7 @@ clear
 global area_geografica = "Resto do Brasil"
 
 * loop over all panel data
-forvalues yr = 2(1)7{
+forvalues yr = 2(1)8{
 	* call data
 	use "$input_advanc\PNAD_painel_`yr'_rs.dta", clear
 	*sample 1
@@ -687,7 +687,7 @@ forvalues yr = 2(1)7{
 
 * append temporary data base
 clear
-forvalues yr = 2(1)7{
+forvalues yr = 2(1)8{
 	* call data
 	append using "$tmp_dir\_temp_transicao_ocupacao_PNADC`yr'.dta"
 }

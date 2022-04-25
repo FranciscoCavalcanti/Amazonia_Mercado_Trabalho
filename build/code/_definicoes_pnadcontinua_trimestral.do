@@ -320,7 +320,9 @@ gen faixa_urbana = 1 if V1022 ==1 // 1 Urbana
  
 * generate variable of quartely date
 	tostring Ano, gen(iten1)
+	cap tostring Trimestre, replace
 	gen iten3 = iten1 + "." + Trimestre
 	gen  trim = quarterly(iten3, "YQ")
+	cap destring Trimestre, replace
 	cap drop iten*
 	cap drop tool*

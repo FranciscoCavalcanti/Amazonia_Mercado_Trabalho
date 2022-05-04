@@ -31,7 +31,7 @@ else if "`c(username)'" == "DELL"   {
 }
 
 global input_basiic		"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20190729\pnad_painel\basico"  
-global input_advanc     "${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_20211130\pnad_painel\avancado"
+global input_advanc     "${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_trimestral_2022024\Stata\pnadcontinua"
 global input_pnadanual	"${RAIZ}\DataZoom\BasesIBGE\datazoom_rar\PNAD_CONTINUA\pnadcontinua_anual_20191016\Stata"      
 global tmp_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\tmp"   
 global code_dir			"${ROOT}\Amazonia_Mercado_Trabalho\build\code"   
@@ -164,8 +164,6 @@ cap gen idin = "resto_brasil"
 
 * save in the output directory
 save "$output_dir\_estrutura_emprego_resto_brasil.dta", replace
-export excel using "$output_dir\_estrutura_emprego_resto_brasil.xls", /*
-	*/	firstrow(varlabels) replace
 
 **********************
 **	Rondônia	**

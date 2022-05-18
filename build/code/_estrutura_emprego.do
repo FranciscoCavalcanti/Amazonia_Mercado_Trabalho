@@ -33,6 +33,17 @@ label variable n_populacao "Número total de pessoas"
 cap drop iten*
 
 /////////////////////////////////////////////////////////
+//	População Idade Ativa total
+/////////////////////////////////////////////////////////
+
+* Número total
+gen iten1 = 1 * V1028 if pia == 1
+by Ano Trimestre, sort: egen n_pia = total(iten1)
+replace n_pia = round(n_pia)
+label variable n_pia "Número total da PIA"
+cap drop iten*
+
+/////////////////////////////////////////////////////////
 //	A) Taxa de desemprego
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if desocupado == 1

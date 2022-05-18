@@ -17,6 +17,9 @@ if "`c(username)'" == "Francisco"   {
 else if "`c(username)'" == "f.cavalcanti"   {
     global ROOT "C:\Users\Francisco\Dropbox"
 }	
+else if "`c(username)'" == "DELL"   {
+    global ROOT "C:/Users/DELL/Documents/GitHub"
+}
 
 global output_dir_build	"${ROOT}\Amazonia_Mercado_Trabalho\build\output"      
 global tmp_dir			"${ROOT}\Amazonia_Mercado_Trabalho\analysis\tmp"   

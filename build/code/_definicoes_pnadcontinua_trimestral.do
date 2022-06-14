@@ -160,7 +160,11 @@ replace forcatrabalhofora = 0 if forcatrabalhofora ==.
 
 * pessoa com idade ativa
 gen pia = 1 if V2009 >= 14	// PIA = pessoas em idade de trabalhar inclui as pessoas de 14 anos
-replace forcatrabalhofora = 0 if forcatrabalhofora ==. 
+replace pia = 0 if pia ==.
+
+* pessoa com idade ativa (15 a 64 anos)
+gen idade_de_trabalhar = 1 if V2009 >= 15 & V2009 <= 64	
+replace idade_de_trabalhar = 0 if idade_de_trabalhar ==.  
 
 * pessoa com economicamente ativa
 gen pea = 1 if VD4002 ==1 | VD4002 ==2  // PEA = população ocupada + população desocupada

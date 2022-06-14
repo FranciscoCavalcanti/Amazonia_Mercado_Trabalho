@@ -43,6 +43,16 @@ replace n_pia = round(n_pia)
 label variable n_pia "Número total da PIA"
 cap drop iten*
 
+
+/////////////////////////////////////////////////////////
+//	B1) Número de ocupados (15 a 64 anos)
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if idade_de_trabalhar ==1
+by Ano Trimestre, sort: egen n_idade_de_trabalhar = total(iten1)
+label variable n_idade_de_trabalhar "Número de pessoas entre 15 e 64 anos"
+cap drop iten*
+cap drop tool* 
+
 /////////////////////////////////////////////////////////
 //	A) Taxa de desemprego
 /////////////////////////////////////////////////////////
@@ -209,11 +219,38 @@ cap drop iten*
 cap drop tool* 
 
 /////////////////////////////////////////////////////////
+//	A1) Número de desemprego (15 a 64 anos)
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if desocupado == 1 & idade_de_trabalhar ==1
+by Ano Trimestre, sort: egen n_de_desemprego_idade = total(iten1)
+label variable n_de_desemprego_idade "Número de desempregados (15 a 64 anos)"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
 //	B) Número de ocupados
 /////////////////////////////////////////////////////////
 gen iten1 = 1 * V1028 if ocupado == 1
 by Ano Trimestre, sort: egen n_de_ocupacao = total(iten1)
 label variable n_de_ocupacao "Número de ocupados"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	B1) Número de ocupados (15 a 64 anos)
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if ocupado == 1 & idade_de_trabalhar ==1
+by Ano Trimestre, sort: egen n_de_ocupacao_idade = total(iten1)
+label variable n_de_ocupacao_idade "Número de ocupados (15 a 64 anos)"
+cap drop iten*
+cap drop tool* 
+
+/////////////////////////////////////////////////////////
+//	B2) Número fora da força de trabalho (15 a 64 anos)
+/////////////////////////////////////////////////////////
+gen iten1 = 1 * V1028 if forcatrabalhofora == 1 & idade_de_trabalhar ==1
+by Ano Trimestre, sort: egen n_de_nforca_idade = total(iten1)
+label variable n_de_nforca_idade "Número de fora da força de trabalho (15 a 64 anos)"
 cap drop iten*
 cap drop tool* 
 
